@@ -1,5 +1,5 @@
 \RequirePackage{fix-cm}
-\documentclass[12pt,final,CPage]{ufthesis} %Use this line for Windows OS
+\documentclass[12pt,final,CPage]{eththesis} %Use this line for Windows OS
 
 \include{packages}
 \usepackage{braket}
@@ -22,7 +22,6 @@
 \newcommand{\Reeof}{\ensuremath{R_{\Pe\Pe\text{/DF}}}\xspace}
 \newcommand{\Rmmof}{\ensuremath{R_{\Pgm\Pgm\text{/DF}}}\xspace}
 \newcommand{\RT}{\ensuremath{R_{\text{T}}}\xspace}
-\newcommand{\mt}{\ensuremath{M_{\text{T}}}\xspace}
 \newcommand{\mttwol}{\ensuremath{M_{\text{T2}}(\ell\ell)}\xspace}
 \newcommand{\mttwolb}{\ensuremath{M_{\text{T2}}(\ell \PQb \ell \PQb)}\xspace}
 \newcommand{\slep}{\ensuremath{\widetilde{\ell}}\xspace}
@@ -30,16 +29,35 @@
 \newcommand{\smuR}{\ensuremath{\widetilde{\mu}_\cmsSymbolFace{R}}\xspace}
 \newcommand{\stauL}{\ensuremath{\widetilde{\tau}_\cmsSymbolFace{L}}\xspace}
 \newcommand{\stauR}{\ensuremath{\widetilde{\tau}_\cmsSymbolFace{R}}\xspace}            
-
-
-
-
-
-
-
-
-
-
+\newcommand{\pt}{\ensuremath{p_{\rm{T}}\xspace}
+\newcommand{\ptvec}{\ensuremath{p_{\rm{T}}}\xspace}
+\newcommand{\ptvecmiss}{\ensuremath{\vec{p}_{\rm{T}}^{\rm{ miss}}}\xspace}
+\newcommand{\kt}{\ensuremath{k_{\rm{T}}}\xspace}
+\newcommand{\DR}{\ensuremath{\Delta\rm{R}}\xspace}
+\newcommand{\ptmiss}{\ensuremath{p_{\rm{T}}^{\rm{miss}}}\xspace}
+\newcommand{\ptmisstrig}{\ensuremath{p_{\rm{T, trig}}^{\rm{miss}}}\xspace}
+\newcommand{\mhttrig}{\ensuremath{H_{\rm{T, trig}}^{\rm{miss}}}\xspace}
+\newcommand{\Zmm}{\ensuremath{Z\to\mu^+\mu^-}}
+\newcommand{\Zee}{\ensuremath{Z\to \text{e}^+\text{e}^-}}
+\newcommand{\qt}{\ensuremath{{q}_{\rm T}}\xspace}
+\newcommand{\Wenu}{\ensuremath{W\rightarrow \mathrm{e}\nu}}
+\newcommand{\Wmn}{\ensuremath{W\rightarrow \mu\nu}}
+\newcommand{\vet}{\ensuremath{\vec\varepsilon}}
+\newcommand{\like}{\ensuremath{{\cal L}}}
+\newcommand{\metsig}{\ensuremath{{\mathcal S}}}
+\newcommand{\vqt}{\ensuremath{\vec{q}_{\rm T}}\xspace}
+\newcommand{\vut}{\ensuremath{\vec{u}_{\rm T}}\xspace}
+\newcommand{\upar}{\ensuremath{u_\Vert}}
+\newcommand{\uperp}{\ensuremath{u_\perp}}
+\newcommand{\redupara}{\ensuremath{u_\Vert+\qt}\xspace}
+\newcommand{\PGt}{\ensuremath{\tau}}
+\newcommand{\PGg}{\ensuremath{\gamma}}
+\newcommand{\PW}{W}
+\newcommand{\PZ}{Z}
+\newcommand{\GeV}{GeV}
+\newcommand{\TeV}{TeV}
+\newcommand{\nvtx}{\ensuremath{\text{N}_{\text{vtx}}}}
+\newcommand{\et}{\ensuremath{E}_{\rm T}}                                        
 %\input{preamble/general}
 %\def\UrlFont{\rmfamily} %use this line for Times New Roman
 %\def\UrlFont{\sffamily} %use this line for CMSS
@@ -91,7 +109,7 @@
 %\bibliographystyle{bst/mla-good}
 %\bibliographystyle{bst/prsty}
 %\bibliographystyle{bst/apsrev4-1}
-%\bibliographystyle{bst/naturemag}
+\bibliographystyle{bst/naturemag}
 %\bibliographystyle{bst/elsarticle-num}
 %\bibliographystyle{bst/aipauth4-1}
 %\bibliographystyle{bst/plainnat}
@@ -129,10 +147,11 @@
 \addtocontents{toc}{\protect\addvspace{10pt}\noindent{CHAPTER}\protect\hfill\par}{}% This extra line adds the word CHAPTER to the table of contents %
 \phantomsection
 \include{tex/abstract} %The abstract is created using this file and userinfo.tex
-\include{tex/introduction}
-%\include{tex/lhc-cms}
-%\include{tex/standard-model}
-%\include{tex/coinflip}
+%\include{tex/introduction}
+%\include{tex/standardModel}
+\include{tex/met}
+
+\bibliography{bib/biblio}
 \end{document}
 
 %-------------------------------------------------------------------------------------------------------%

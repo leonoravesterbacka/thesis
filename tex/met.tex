@@ -1,2 +1,26 @@
-\chapter{MET} \label{met}
-
+\chapter{Performance of missing transverse momentum}\label{}
+At the forefront of SUSY physics program are searches where R-parity is conserved, resulting in the LSPs escaping detection. The existence of such particles can be inferred by the momentum imbalance in the transverse plane, \ptvecmiss, with its magnitude denoted \ptmiss. When the LSPs are massive, the \ptmiss provides an excellent search tool for SUSY. But other sources can contribute to a large momentum imbalance. Any process with a leptonically decaying W-boson produces a neutrino that escape the detector similarly as the LSP. Additionally, as jets are complex objects to measure, and their energy are corrected through JECs, any over or undermeasurement in the jets can create \ptmiss. In order to perform a SUSY search, a deep understanding of the \ptmiss is needed to enable differentiation between the \ptmiss originating from LSPs, from SM neutrinos and from jet mismeasurements and detector inefficiencies. As the reconstruction of various physics objects is relying on the ability to successfully differentiate tracks from the primary vertex with tracks from overlapping bunch crossings in multiple pp collisions (pileup), the \ptmiss reconstruction as a result is very pileup dependent. A detailed study of the performance of two commonly used \ptmiss reconstruction algorithms is presented in this chapter, along with a specific study analyzing the performance of the algorithms under extreme pileup conditions, as is expected in the High Lumi phase of the LHC.    
+\section{Missing transverse momentum and hadronic recoil in CMS}
+\label{sec:introduction}
+In collision events, the transverse momentum of the partons is small compared to the energy available in the center of mass, and does not depend on their longitudinal energy. A hypothesis is then made by considering that the initial transversal momentum of the system formed by the partons is zero. If particles escape detection, a transverse energy equilibrium is created and a missing transverse energy appears. The final states containing one or more neutrinos are therefore a significant missing energy corresponding to the vectorial sum of the neutrino momenta. 
+In the absence of invisible particles, the missing transverse energy fluctuates around zero because of the noise of the detector. The resolution of the \ptmiss and the energy scale of the \ptmiss can then be studied from equilibrated energetic events, such as events containing a Z boson decaying to two electrons or two muons, or events containing a single photon. 
+\label{sec:reconstruction}
+\ptmiss is defined as the negative vectorial sum of the particles in the event
+\begin{equation}
+\ptvecmiss =- \sum \vec{p}_\mathrm{T}
+\label{eq:MET}
+\end{equation}                                                                      
+and its magnitude is denoted \ptmiss. 
+In CMS, two algorithms for the \ptmiss reconstruction are used, PF \ptmiss and Puppi \ptmiss. 
+\subsection{PF \ptmiss reconstruction}
+The first reconstruction algorithm is PF \ptmiss, which is the magnitude of the negative of the vectorial sum of all PF candidates in an event:
+\begin{equation}
+\ptvecmiss =- \sum_{i\in PF} \vec{p}_\mathrm{T, i}
+\label{eq:MET}
+\end{equation}                                                                      
+As will be shown in the following, the PF \ptmiss algorithm is highly performant and is therefore used in the majority of CMS analyses.
+ 
+\subsection{Puppi \ptmiss reconstruction}
+The Puppi \ptmiss algorithm uses the 'pileup per particle identification' method~\cite{Bertolini:2014bba}. This method has been developed to reduce the dependence of pileup on physics objects. The idea is to estimate how likely the PF candidates are to be originating from pileup, and reweight the candidate accordingly. For this purpose tracking information is used and the structure in the neighborhood of each particle.  
+\clearpage
+\bibliography{auto_generated}

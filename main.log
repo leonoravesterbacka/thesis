@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2018.9.8)  11 SEP 2018 13:46
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2018.6.29)  12 SEP 2018 16:30
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -16,7 +16,11 @@ Package: fix-cm 2006/03/24 v1.1n fixes to LaTeX
 
 (/usr/share/texmf/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-)) (./ufthesis.cls
+)) (./eththesis.cls
+
+LaTeX Warning: You have requested document class `eththesis',
+               but the document class provides `ufthesis'.
+
 Document Class: ufthesis 2002/09/20 v2.0c UF Thesis Class (Ron Smith)
 (/usr/share/texmf/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
@@ -445,33 +449,37 @@ File: pppdftex.def 2006/08/12 v0.4a Pdfpages driver for pdfTeX (AM)
 \c@proposition=\count133
 \c@algorithm=\count134
 ) (./main.aux (./tex/TOC.aux) (./tex/abstract.aux)
-(./tex/introduction.aux))
+(./tex/met.aux
+
+LaTeX Warning: Label `eq:MET' multiply defined.
+
+))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Info: Redefining \selectfont on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Info: Redefining \selectfont on input line 85.
 
 **************************************
 * Executing Begin Document Statement *
 **************************************
 Package caption Info: hyperref package v6.74m (or newer) detected on input line
- 67.
-Package hyperref Info: Link coloring OFF on input line 67.
+ 85.
+Package hyperref Info: Link coloring OFF on input line 85.
 (/usr/share/texmf/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
@@ -480,8 +488,8 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 \c@section@level=\count135
 )
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \ref on input line 85.
+LaTeX Info: Redefining \pageref on input line 85.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -503,13 +511,13 @@ Package color Info: Driver file: pdftex.def on input line 130.
 
 
 {/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 113.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 131.
 
  (/usr/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 131.
  [2
 
 
@@ -565,67 +573,80 @@ Package hyperref Warning: bookmark level for unknown extrachapter defaults to 0
 
 
 ] [7])
-\openout2 = `tex/introduction.aux'.
+\openout2 = `tex/met.aux'.
 
-
-(./tex/introduction.tex
+ (./tex/met.tex
 ***************************
 CHAPTER 1.
 ***************************
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `\uppercase' on input line 1.
-
-
-Package natbib Warning: Citation `higgs1' on page 8 undefined on input line 5.
-
-
-Package natbib Warning: Citation `higgs2' on page 8 undefined on input line 5.
-
-
-Package natbib Warning: Citation `higgs3' on page 8 undefined on input line 5.
-
-
-Package natbib Warning: Citation `qftam' on page 8 undefined on input line 5.
-
-
-Package natbib Warning: Citation `atlasdiscovery' on page 8 undefined on input 
-line 5.
-
-
-Package natbib Warning: Citation `cmsdiscovery2012' on page 8 undefined on inpu
-t line 5.
-
-
-Package natbib Warning: Citation `cmsdiscovery2013' on page 8 undefined on inpu
-t line 5.
-
-) [8
+[8
 
 
 
 
 ]
 
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 15.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 15.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `superscript' on input line 15.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 15.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 23.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `subscript' on input line 23.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `superscript' on input line 23.
+
+
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 23.
+
+
+Package natbib Warning: Citation `Bertolini:2014bba' on page 9 undefined on inp
+ut line 24.
+
+[9] (./main.bbl)) (./main.bbl)
+
 Package natbib Warning: There were undefined citations.
 
-(./main.aux (./tex/TOC.aux) (./tex/abstract.aux) (./tex/introduction.aux)) ) 
+(./main.aux (./tex/TOC.aux) (./tex/abstract.aux) (./tex/met.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6539 strings out of 256214
- 93084 string characters out of 1917001
- 156696 words of memory out of 1500000
- 9626 multiletter control sequences out of 10000+200000
- 9219 words of font info for 37 fonts, out of 1200000 for 2000
+ 6582 strings out of 256214
+ 93328 string characters out of 1917000
+ 156667 words of memory out of 1500000
+ 9656 multiletter control sequences out of 10000+200000
+ 9825 words of font info for 39 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 39i,6n,40p,662b,414s stack positions out of 5000i,500n,6000p,200000b,15000s
-</u
-sr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/
-bluesky/cm/cmmi12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/
-share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/blues
-ky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb>
-Output written on main.pdf (8 pages, 38558 bytes).
+ 39i,6n,41p,1513b,404s stack positions out of 5000i,500n,6000p,200000b,15000s
+</usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/t
+ype1/bluesky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb>
+</usr/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type
+1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/
+share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/blu
+esky/cm/cmsy8.pfb>
+Output written on main.pdf (9 pages, 55722 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 131072)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 128 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 131072)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

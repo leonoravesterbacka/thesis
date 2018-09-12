@@ -1,13 +1,27 @@
 This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: main.aux
+I couldn't open style file bst/naturemag.bst
+---line 14 of file main.aux
+ : \bibstyle{bst/naturemag
+ :                        }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: tex/TOC.aux
 A level-1 auxiliary file: tex/abstract.aux
-A level-1 auxiliary file: tex/introduction.aux
-I found no \bibdata command---while reading file main.aux
-I found no \bibstyle command---while reading file main.aux
-You've used 7 entries,
+A level-1 auxiliary file: tex/met.aux
+I couldn't open database file auto_generated.bib
+---line 11 of file tex/met.aux
+ : \bibdata{auto_generated
+ :                        }
+I'm skipping whatever remains of this command
+Illegal, another \bibdata command---line 19 of file main.aux
+ : \bibdata
+ :         {bib/biblio}
+I'm skipping whatever remains of this command
+I found no database files---while reading file main.aux
+I found no style file---while reading file main.aux
+You've used 1 entry,
             0 wiz_defined-function locations,
-            93 strings with 598 characters,
+            90 strings with 581 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0
@@ -46,4 +60,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 0
-(There were 2 error messages)
+(There were 5 error messages)
