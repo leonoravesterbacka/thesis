@@ -7,20 +7,51 @@ In the absence of invisible particles, the missing transverse energy fluctuates 
 \label{sec:reconstruction}
 \ptmiss is defined as the negative vectorial sum of the particles in the event
 \begin{equation}
-\ptvecmiss =- \sum \vec{p}_\mathrm{T}
-\label{eq:MET}
+\ptvecmiss =- \sum \vec{p}_{\mathrm{T}}
 \end{equation}                                                                      
 and its magnitude is denoted \ptmiss. 
-In CMS, two algorithms for the \ptmiss reconstruction are used, PF \ptmiss and Puppi \ptmiss. 
+In CMS, two algorithms for the \ptmiss reconstruction are used, PF \ptmiss and PUPPI \ptmiss. 
 \subsection{PF \ptmiss reconstruction}
 The first reconstruction algorithm is PF \ptmiss, which is the magnitude of the negative of the vectorial sum of all PF candidates in an event:
 \begin{equation}
-\ptvecmiss =- \sum_{i\in PF} \vec{p}_\mathrm{T, i}
+\ptvecmiss =- \sum_{i\in PF} \vec{p}_{\mathrm{T, i}}
 \label{eq:MET}
 \end{equation}                                                                      
 As will be shown in the following, the PF \ptmiss algorithm is highly performant and is therefore used in the majority of CMS analyses.
  
-\subsection{Puppi \ptmiss reconstruction}
-The Puppi \ptmiss algorithm uses the 'pileup per particle identification' method~\cite{Bertolini:2014bba}. This method has been developed to reduce the dependence of pileup on physics objects. The idea is to estimate how likely the PF candidates are to be originating from pileup, and reweight the candidate accordingly. For this purpose tracking information is used and the structure in the neighborhood of each particle.  
+\subsection{PUPPI \ptmiss reconstruction}
+The PUPPI \ptmiss algorithm uses the 'pileup per particle identification' method~\cite{Bertolini:2014bba}. This method has been developed to reduce the dependence of pileup on physics objects. 
+The idea is to estimate how likely the PF candidates are to be originating from pileup, and reweight the particle four-momentum accordingly, with a weight, $w_{i}$, close to 1 if the candidate is from the hard scatter and close to 0 for particles from pileup. 
+The procedure to calculate the $w_{i}$ starts with defining a shape $\alpha_{i}$ for each particle, 
+\begin{equation}
+  \alpha_i = \log \sum_{\substack{j \in \text{event} \\ j \neq i}} \left(\frac{p_{T, j}}{\Delta R_{ij}}\right)^{2} \times \Theta(\Delta R_{ij}-R_{min})\times \Theta(R_{0}-\Delta R_{ij}),
+\end{equation}
+where $\Theta$ is the Heaviside step function. 
+The $\alpha$ of the $i$-th particle is thus depending on the \pt of the surrounding particles, and the distance between them in $\eta-\phi$ space, defined as the cone $\Delta R_{ij}$.
+Only particles within some $R_{0}$ around particle $i$ are considered. A minimum radius $R_{min}$ is used to discard particles $i$ that are too close to the particle $j$, to reduce the effect from collinear splittings. 
+When the particle $i$ is from hard scattering, the surrounding particles tend to be close in $\Delta R$ because of the collinear singularity of the parton shower, resulting in a relatively larger $\alpha_{i}$. 
+A wider separation in $\Delta R$ is consequently expected for particles originating from pileup, as they should have no correlation with the direction of particle $i$, resulting in a smaller value for $\alpha_{i}$. 
+The \pt of the $j$-th particles is also used in the calculation of $\alpha_{i}$, and the characteristic of this variable is that it is generally softer for particles originating from pileup, yielding the desired smaller value of $\alpha_{i}$, and the opposite for when the particle is from the hard scattering. 
+The use of the logarithm in the definition of $\alpha_{i}$ is just for the purpose of rescaling the range. 
+Now that the $\alpha_{i}$ is defined, the question of what particles should be summed over arise. For this, two regions are used, reflecting the design of the detector. 
+The central region ($|\eta|\leq2.4$), for which the tracking can distinguish charged tracks from the primary vertex from charged tracks from pileup vertices, and the forward region ($|\eta|>2.4$) where this discrimination is not possible.
+Where tracking is available, the PF algorithm can provide the following PF candidates; neutral particles, charged hadrons from the primary vertex and chanrged hadrons from pileup vertices.   
+This results in two different computations of $\alpha_{i}$, namely
+\begin{equation}
+  \alpha_i^{C} = \log \sum_{\substack{j \in \text{Ch, LV} \\ j \neq i}} \left(\frac{p_{T, j}}{\Delta R_{ij}}\right)^{2} \times \Theta(\Delta R_{ij}-R_{min})\times \Theta(R_{0}-\Delta R_{ij}),
+\end{equation}
+\begin{equation}
+  \alpha_i^{F} = \log \sum_{\substack{j \in \text{event} \\ j \neq i}} \left(\frac{p_{T, j}}{\Delta R_{ij}}\right)^{2} \times \Theta(\Delta R_{ij}-R_{min})\times \Theta(R_{0}-\Delta R_{ij}),
+\end{equation}
+where $\alpha_{i}^{C}$ can sum over the PF candidates, whereas the $\alpha_{i}^{F}$ just simply sums over all particles in the event. 
+The difference between these two computations is that in the central case, a particle $j$ originating from pileup is discarded from the event, whereas this distinction can not be done in the forward case. 
+However, both methods calculate the $w_{i}$ from the $\alpha_{i}$ similarly for each particle, that is used to rescale its four momentum.  
+However, the both methods translate the $\alpha_{i}$ to $w_{i}$, and rescale particle $i$ by this $w_{i}$. The actual translation to a weight ranging from 0 to 1 is done by introducing the following quantity
+\begin{equation}
+\chi_i^2=\Theta(\alpha_{i}-\bar{\alpha}_{\text{PU}})\times \frac{(\alpha_{i}-\bar{\alpha}_{\mathrm{PU}})^{2}}{\sigma_{\mathrm{PU}}^{2}}
+\end{equation}
+
+
+
 \clearpage
 \bibliography{auto_generated}

@@ -4,5 +4,5 @@
 \addvspace {10pt}\noindent {CHAPTER}\hfill \par 
 \contentsline {chapter}{\numberline {1}}{8}{chapter.1}
 \contentsline {section}{\numberline {1.1}Missing transverse momentum and hadronic recoil in CMS}{9}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}PF \ensuremath {p_{\rm {T}}^{\rm {miss}}}reconstruction}{9}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Puppi \ensuremath {p_{\rm {T}}^{\rm {miss}}}reconstruction}{9}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.1}PF \ensuremath {p_{\mathrm {T}}^{\mathrm {miss}}}\xspace reconstruction}{9}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}PUPPI \ensuremath {p_{\mathrm {T}}^{\mathrm {miss}}}\xspace reconstruction}{9}{subsection.1.1.2}
