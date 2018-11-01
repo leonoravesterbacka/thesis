@@ -5,8 +5,113 @@
 \usepackage{braket}
 \usepackage{etex}
 \usepackage{xspace}
+\usepackage{cancel}
 \usepackage[final]{pdfpages}
 \newcommand{\lint}{35.9\fbinv}
+\newcommand{\EVTGEN} {{\textsc{evtgen}}\xspace}
+\newcommand{\FAMOS} {{\textsc{famos}}\xspace}
+\newcommand{\FASTJET} {{\textsc{FastJet}}\xspace}
+\newcommand{\FEWZ} {{\textsc{fewz}}\xspace}
+\newcommand{\GARCON} {\textsc{garcon}\xspace}
+\newcommand{\GARFIELD} {{\textsc{garfield}}\xspace}
+\newcommand{\GEANE} {{\textsc{geane}}\xspace}
+\newcommand{\GEANTfour} {{\textsc{Geant4}}\xspace}
+\newcommand{\GEANTthree} {{\textsc{geant3}}\xspace}
+\newcommand{\GEANT} {{\textsc{geant}}\xspace}
+\newcommand{\HDECAY} {\textsc{hdecay}\xspace}
+\newcommand{\HERWIG} {{\textsc{herwig}}\xspace}
+\newcommand{\HERWIGpp} {{\textsc{herwig++}}\xspace}
+\newcommand{\POWHEG} {{\textsc{powheg}}\xspace}
+\newcommand{\HIGLU} {{\textsc{higlu}}\xspace}
+\newcommand{\HIJING} {{\textsc{hijing}}\xspace}
+\newcommand{\HYDJET} {{\textsc{hydjet}}\xspace}
+\newcommand{\IGUANA} {\textsc{iguana}\xspace}
+\newcommand{\ISAJET} {{\textsc{isajet}}\xspace}
+\newcommand{\ISAPYTHIA} {{\textsc{isapythia}}\xspace}
+\newcommand{\ISASUGRA} {{\textsc{isasugra}}\xspace}
+\newcommand{\ISASUSY} {{\textsc{isasusy}}\xspace}
+\newcommand{\ISAWIG} {{\textsc{isawig}}\xspace}
+\newcommand{\MADGRAPH} {\textsc{MadGraph}\xspace}
+\newcommand{\MCATNLO} {\textsc{mc@nlo}\xspace}
+\newcommand{\MCFM} {\textsc{mcfm}\xspace}
+\newcommand{\MILLEPEDE} {{\textsc{millepede}}\xspace}
+\newcommand{\ORCA} {{\textsc{orca}}\xspace}
+\newcommand{\OSCAR} {{\textsc{oscar}}\xspace}
+\newcommand{\PHOTOS} {\textsc{photos}\xspace}
+\newcommand{\PROSPINO} {\textsc{prospino}\xspace}
+\newcommand{\PYTHIA} {{\textsc{pythia}}\xspace}
+\newcommand{\SHERPA} {{\textsc{sherpa}}\xspace}
+\newcommand{\TAUOLA} {\textsc{tauola}\xspace}
+\newcommand{\TOPREX} {\textsc{TopReX}\xspace}
+\newcommand{\XDAQ} {{\textsc{xdaq}}\xspace}
+\newcommand{\MGvATNLO}{\MADGRAPH{}5\_a\MCATNLO}
+\newcommand{\de}{\ensuremath{^\circ}}
+\newcommand{\ten}[1]{\ensuremath{\times \text{10}^\text{#1}}}
+\newcommand{\unit}[1]{\ensuremath{\text{\,#1}}\xspace}
+\newcommand{\mum}{\ensuremath{\,\mu\text{m}}\xspace}
+\newcommand{\micron}{\ensuremath{\,\mu\text{m}}\xspace}
+\newcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
+\newcommand{\mm}{\ensuremath{\,\text{mm}}\xspace}
+\newcommand{\mus}{\ensuremath{\,\mu\text{s}}\xspace}
+\newcommand{\keV}{\ensuremath{\,\text{ke\hspace{-.08em}V}}\xspace}
+\newcommand{\MeV}{\ensuremath{\,\text{Me\hspace{-.08em}V}}\xspace}
+\newcommand{\MeVns}{\ensuremath{\text{Me\hspace{-.08em}V}}\xspace} % no leading thinspace
+\newcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
+\newcommand{\GeVns}{\ensuremath{\text{Ge\hspace{-.08em}V}}\xspace} % no leading thinspace
+\newcommand{\gev}{\GeV}
+\newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
+\newcommand{\TeVns}{\ensuremath{\text{Te\hspace{-.08em}V}}\xspace} % no leading thinspace
+\newcommand{\PeV}{\ensuremath{\,\text{Pe\hspace{-.08em}V}}\xspace}
+\newcommand{\keVc}{\ensuremath{{\,\text{ke\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
+\newcommand{\MeVc}{\ensuremath{{\,\text{Me\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
+\newcommand{\GeVc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
+\newcommand{\GeVcns}{\ensuremath{{\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace} % no leading thinspace
+\newcommand{\TeVc}{\ensuremath{{\,\text{Te\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
+\newcommand{\keVcc}{\ensuremath{{\,\text{ke\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
+\newcommand{\MeVcc}{\ensuremath{{\,\text{Me\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
+\newcommand{\GeVcc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
+\newcommand{\GeVccns}{\ensuremath{{\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace} % no leading thinspace
+\newcommand{\TeVcc}{\ensuremath{{\,\text{Te\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
+\newcommand{\pbinv} {\mbox{\ensuremath{\,\text{pb}^\text{$-$1}}}\xspace}
+\newcommand{\fbinv} {\mbox{\ensuremath{\,\text{fb}^\text{$-$1}}}\xspace}
+\newcommand{\nbinv} {\mbox{\ensuremath{\,\text{nb}^\text{$-$1}}}\xspace}
+\newcommand{\mubinv} {\ensuremath{\,\mu\mathrm{b}^{-1}}\xspace}
+\newcommand{\mbinv} {\ensuremath{\,\mathrm{mb}^{-1}}\xspace}
+\newcommand{\percms}{\ensuremath{\,\text{cm}^\text{$-$2}\,\text{s}^\text{$-$1}}\xspace}
+\newcommand{\lumi}{\ensuremath{\mathcal{L}}\xspace}
+\newcommand{\Lumi}{\ensuremath{\mathcal{L}}\xspace}
+\newcommand{\PT}{\ensuremath{p_{\mathrm{T}}}\xspace}
+\newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
+\newcommand{\ET}{\ensuremath{E_{\mathrm{T}}}\xspace}
+\newcommand{\HT}{\ensuremath{H_{\mathrm{T}}}\xspace}
+\newcommand{\mT}{\ensuremath{m_{\mathrm{T}}}\xspace}
+\newcommand{\mTii}{\ensuremath{m_{\mathrm{T2}}}\xspace}
+\newcommand{\et}{\ensuremath{E_{\mathrm{T}}}\xspace}
+\newcommand{\Em}{\ensuremath{E\hspace{-0.6em}/}\xspace}
+\newcommand{\Pm}{\ensuremath{p\hspace{-0.5em}/}\xspace}
+\newcommand{\PTm}{\ensuremath{{p}_\mathrm{T}\hspace{-1.02em}/\kern 0.5em}\xspace}
+\newcommand{\PTslash}{\PTm}
+\newcommand{\ETm}{\ensuremath{E_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\MET}{\ETm}
+\newcommand{\ETmiss}{\ETm}
+\newcommand{\ptmiss}{\ensuremath{\pt^\text{miss}}\xspace}
+\newcommand{\ETslash}{\ensuremath{E_{\mathrm{T}}\hspace{-1.1em}/\kern0.45em}\xspace}
+\newcommand{\VEtmiss}{\ensuremath{{\vec E}_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\ptvec}{\ensuremath{{\vec p}_{\mathrm{T}}}\xspace}
+\newcommand{\ptvecmiss}{\ensuremath{{\vec p}_{\mathrm{T}}^{\kern1pt\text{miss}}}\xspace}
+\newcommand{\tauh}{\ensuremath{\PGt_\mathrm{h}}\xspace}
+\newcommand{\sqrtsNN}{\ensuremath{\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}}\xspace}
+\newcommand{\mht}{\ensuremath{H_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\PW}{\ensuremath{\mathrm{W}}}
+\newcommand{\PZ}{\ensuremath{\mathrm{Z}}}
+\newcommand{\htvecmiss}{\ensuremath{\vec{H}_{\text{T}}^{\text{miss}}}\xspace}
+\newcommand{\CL}{\ensuremath{\text{CL}}\xspace}
+\newcommand{\CLs}{\ensuremath{\text{CL}_\text{s}}\xspace}
+\newcommand{\CLsb}{\ensuremath{\text{CL}_\text{s+b}}\xspace}
+\newcommand{\ttbar}{\ensuremath{{t\overline{t}}}\xspace} % t-tbar
+
+%old
+
 \newcommand{\mll}{\ensuremath{m_{\ell\ell}}\xspace}
 \newcommand{\mlsp}{\ensuremath{m_{\PSGczDo}}\xspace}
 \newcommand{\mslep}{\ensuremath{m_{\slep}}\xspace}
@@ -16,6 +121,7 @@
 \newcommand{\MuMu}{\ensuremath{\Pgm^\pm\Pgm^\mp}\xspace}
 \newcommand{\ElEl}{\ensuremath{\Pe^\pm\Pe^\mp}\xspace}
 \newcommand{\TauTau}{\ensuremath{\tau^\pm\tau^\mp}\xspace}
+\newcommand{\Tau}{\ensuremath{\tau}\xspace}
 \newcommand{\EM}{\ensuremath{\Pe^\pm\Pgm^\mp}\xspace}
 \newcommand{\rmue}{\ensuremath{r_{\Pgm/\Pe}}\xspace}
 \newcommand{\rmuec}{\ensuremath{r_{\Pgm/\Pe,\text{c}}}\xspace}
@@ -30,12 +136,8 @@
 \newcommand{\smuR}{\ensuremath{\widetilde{\mu}_\cmsSymbolFace{R}}\xspace}
 \newcommand{\stauL}{\ensuremath{\widetilde{\tau}_\cmsSymbolFace{L}}\xspace}
 \newcommand{\stauR}{\ensuremath{\widetilde{\tau}_\cmsSymbolFace{R}}\xspace}            
-\newcommand{\pt}{\ensuremath{p_{\mathrm{T}}\xspace}}
-\newcommand{\ptvec}{\ensuremath{p_{\mathrm{T}}}\xspace}
-\newcommand{\ptvecmiss}{\ensuremath{\vec{p}_{\mathrm{T}}^{\mathrm{miss}}}\xspace}
 \newcommand{\kt}{\ensuremath{k_{\mathrm{T}}}\xspace}
 \newcommand{\DR}{\ensuremath{\Delta\mathrm{R}}\xspace}
-\newcommand{\ptmiss}{\ensuremath{p_{\mathrm{T}}^{\mathrm{miss}}}\xspace}
 \newcommand{\ptmisstrig}{\ensuremath{p_{\mathrm{T, trig}}^{\mathrm{miss}}}\xspace}
 \newcommand{\mhttrig}{\ensuremath{H_{\mathrm{T, trig}}^{\mathrm{miss}}}\xspace}
 \newcommand{\Zmm}{\ensuremath{Z\to\mu^+\mu^-}}
@@ -53,12 +155,16 @@
 \newcommand{\redupara}{\ensuremath{u_\Vert+\qt}\xspace}
 \newcommand{\PGt}{\ensuremath{\tau}}
 \newcommand{\PGg}{\ensuremath{\gamma}}
-\newcommand{\PW}{W}
-\newcommand{\PZ}{Z}
-\newcommand{\GeV}{GeV}
-\newcommand{\TeV}{TeV}
+\newcommand{\mttwo}{$M_{T2}$\xspace}
+\newcommand{\dr}{$\Delta R$\xspace}
+\newcommand{\dphi}{$\Delta \phi$\xspace}
 \newcommand{\nvtx}{\ensuremath{\mathrm{N}_{\mathrm{vtx}}}}
-\newcommand{\et}{\ensuremath{E}_{\rm T}}                                        
+\newcommand{\MHz}{MHz}                                        
+\newcommand{\kHz}{kHz}                                        
+\newcommand{\GHz}{GHz}                                        
+\newcommand{\Hz}{Hz}                                        
+\newcommand{\ns}{ns}                                        
+\newcommand{\MHT}{\ensuremath{\slash{H_{T}}}\xspace}                                        
 %\input{preamble/general}
 %\def\UrlFont{\rmfamily} %use this line for Times New Roman
 %\def\UrlFont{\sffamily} %use this line for CMSS
@@ -149,7 +255,8 @@
 \phantomsection
 \include{tex/abstract} %The abstract is created using this file and userinfo.tex
 %\include{tex/introduction}
-%\include{tex/standardModel}
+\include{tex/eventReconstructionSimulation}
+\include{tex/samplesObjects}
 \include{tex/met}
 
 \bibliography{bib/biblio}

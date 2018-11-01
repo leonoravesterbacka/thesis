@@ -1,34 +1,43 @@
-\chapter{Event samples and selections} \label{samples}
+\chapter{Event samples and selections}
+
+Now that the LHC, the CMS detector, the collision data and simulated data formats have been presented, the two analyses and the \ptmiss study can be presented. 
+This section first presents the datasets used for all parts of the thesis, the triggers used to collect the data and the simulated MC samples. 
+Secondly, the physics objects common to the SUSY searches and the \ptmiss performance study are presented. Subsequent to this chapter is the chapter containing the \ptmiss performance study. 
+  
+\section{Datasets}
 \label{sec:samplesObjects}
 
-\section{Datasets}
-\label{subsec:datasets}
-
-The  datasets used in this analysis are the dileptonic streams of 13 TeV pp collision data recorded by CMS at a bunch spacing of 25 ns. The list of the analyzed samples is given in Table~\ref{tab:datasets}.  
-All events used for the final event counts in the three channels ($ee$, $e\mu$, and $\mu\mu$) were made sure to be assigned to the correct triggering dataset.
-The simulation is normalized to luminosity using cross sections from \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns}.
-MiniAODv2 samples are used consistently for data and MC.
+The data analyzed throughout this thesis consists mainly of the dileptonic streams of 13\TeV pp collision data.  
+Additionally, datasets collected with MET and JetHT triggers are analyzed in the context of the FS background prediction method, and single photon samples are used for the \ptmiss study. 
+All datasamples are summarized in Table~\ref{tab:datasets}.  
+%All events used for the final event counts in the three channels (\EE, \EMu, and \MuMu) were made sure to be assigned to the correct triggering dataset.
+%The simulation is normalized to luminosity using cross sections from \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns}.
+%MiniAODv2 samples are used consistently for data and MC.
 
 \begin{table}[ht!]
 \def\arraystretch{1.2}
-    \caption{Datasets used in the analysis. All samples are of the \texttt{MINIAOD} data format.}
+    \caption{Datasets used in the slepton/EWK searches and \ptmiss study}
     \label{tab:datasets}
     \begin{center}
         \begin{tabular}{ l}
-        \hline \hline              \\
-        Name         \\
+        \hline\hline 
+        \multicolumn{1}{c}{\textbf{Signal events for slepton/EWK search and \ptmiss study}} \\
+        \hline
         \texttt{/DoubleEG/Run2016B-03Feb2017\_ver2-v2/MINIAOD}    \\
         \texttt{/DoubleEG/Run2016(C-G)-03Feb2017-v1/MINIAOD}     \\
         \texttt{/DoubleEG/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
         \texttt{/DoubleEG/Run2016H-03Feb2017\_ver3-v1/MINIAOD}    \\
-        \texttt{/MuonEG/Run2016B-03Feb2017\_ver2-v2/MINIAOD}    \\
-        \texttt{/MuonEG/Run2016(C-G)-03Feb2017-v1/MINIAOD}    \\
-        \texttt{/MuonEG/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
-        \texttt{/MuonEG/Run2016H-03Feb2017\_ver3-v1/MINIAOD}    \\
-        \texttt{/DoubleMuon/RRun2016B-03Feb2017\_ver2-v2/MINIAOD}   \\
+        \texttt{/DoubleMuon/Run2016B-03Feb2017\_ver2-v2/MINIAOD}   \\
         \texttt{/DoubleMuon/Run2016(C-G)-03Feb2017-v1/MINIAOD}  \\
         \texttt{/DoubleMuon/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
         \texttt{/DoubleMuon/Run2016H-03Feb2017\_ver3-v1/MINIAOD}   \\
+        \hline        
+        \multicolumn{1}{c}{\textbf{Datasets for background prediction}} \\
+        \hline
+        \texttt{/MuonEG/Run2016B-03Feb2017\_ver2-v2/MINIAOD}    \\
+        \texttt{/MuonEG/Run2016(C-G)-03Feb2017-v1/MINIAOD}    \\
+        \texttt{/MuonEG/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
+        \texttt{/MuonEG/Run2016H-03Feb2017\_ver3-v1/MINIAOD}    \\           
         \texttt{/JetHT/Run2016B-03Feb2017\_ver2-v2/MINIAOD}   \\
         \texttt{/JetHT/Run2016(C-G)-03Feb2017-v1/MINIAOD}   \\
         \texttt{/JetHT/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
@@ -37,15 +46,22 @@ MiniAODv2 samples are used consistently for data and MC.
         \texttt{/MET/Run2016(C-G)-03Feb2017-v1/MINIAOD}   \\
         \texttt{/MET/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
         \texttt{/MET/Run2016H-03Feb2017\_ver3-v1/MINIAOD}   \\     
-        
+        \hline
+        \multicolumn{1}{c}{\textbf{Datasets for \ptmiss study}} \\
+        \hline
+        \texttt{/SinglePhoton/Run2016B-03Feb2017\_ver2-v2/MINIAOD}   \\            
+        \texttt{/SinglePhoton/Run2016(C-G)-03Feb2017-v1/MINIAOD}   \\
+        \texttt{/SinglePhoton/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
+        \texttt{/SinglePhoton/Run2016H-03Feb2017\_ver3-v1/MINIAOD}   \\     
 \hline\hline
 \end{tabular}
 \end{center}
 \end{table}
-Several Monte Carlo (MC) event generators are used to simulated the background and signal processes in this analysis, and the detector response is simulated using the GEANT package that 
+
+Several Monte Carlo (MC) event generators are used to simulate the background and signal processes in this analysis, and the detector response is simulated using the GEANT package that 
 provides a detailed description of the CMS detectora and the event reconstruction is perfromed similarly for data as for simulation. The MC samples are weighted to match the data in the number of 
 pileup. The simulation is normalized to luminosity using cross sections from \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns}.
-The \texttt{PYTHIA8} \cite{Sjostrand:2006za} package is used for parton showering, hadronization and undelying event simulation with the tune \texttt{CUETP8M1}.
+The \texttt{PYTHIA8} \cite{Sjostrand:2006za} package is used for parton showering, hadronization and undelying event simulation with the tune \texttt{CUETP8M1}, as described in Section~\ref{eventReconstructionSimulation}.
 In Tables~\ref{tab:MCsamples}, ~\ref{tab:4lMCsamples}, ~\ref{tab:3lMCsamples} and  ~\ref{tab:MCsamplesNonFS}, the various MC simulations used for the different background prediction methods 
 are listed.
 \begin{table}[ht!]
@@ -108,12 +124,12 @@ and \texttt{Tune} is short for the pythia8 tune \texttt{CUETP8M1}. The k-factor 
         \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 4\mu$}}     & \scriptsize{\texttt{/GluGluToContinToZZTo4mu\_13TeV\_MCFM701\_pythia8}}  &  \scriptsize{ 0.001586 $\times$ 2.3}      \\    
         \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 4\tau$}}     & \scriptsize{\texttt{/GluGluToContinToZZTo4tau\_13TeV\_MCFM701\_pythia8}}  &  \scriptsize{ 0.001586 $\times$ 2.3}      \\    
         \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\tau$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2e2tau\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3}      \\    
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\mu$}}     & \scriptsize{\texttt{/GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3}      \\    
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2\mu2\tau$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3}      \\    
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\mu$}} & \scriptsize{\texttt{/GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3}      \\    
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2\mu2\tau$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3} \\    
         ZZ $\rightarrow 2l 2\nu$     &    &            \\
         \scriptsize{\texttt{$ZZ\rightarrow 2l2\nu$}}     & \scriptsize{\texttt{/ZZTo2L2Nu\_13TeV\_powheg\_pythia8}}  &  \scriptsize{0.564$\times$ k-factor}      \\
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\nu$}}     & \scriptsize{\texttt{/GluGluToContinToZZTo2e2nu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.001720 $\times$ 2.3}      \\    
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2\mu2\nu$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2mu2nu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.001720 $\times$ 2.3}      \\    
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\nu$}} & \scriptsize{\texttt{/GluGluToContinToZZTo2e2nu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.001720 $\times$ 2.3}      \\    
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2\mu2\nu$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2mu2nu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.001720 $\times$ 2.3} \\    
         Others     &    &            \\
         \scriptsize{\texttt{$ZZ\rightarrow 2l2q$}}     & \scriptsize{\texttt{/ZZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}}  &  \scriptsize{3.28}      \\
         \scriptsize{\texttt{$ZZZ$}}     & \scriptsize{\texttt{/ZZZ\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{ 0.0139}      \\                               
@@ -171,18 +187,27 @@ and \texttt{Tune} is short for the pythia8 tune \texttt{CUETP8M1}. The k-factor 
 \label{higherOrderCorr}
 For the $WZ\rightarrow  l^{+}l^{-} l\nu$ and $WZ\rightarrow  l^{+}l^{-}2q$ processes, a NLO to NNLO correction factor of 1.109 is applied \cite{Grazzini:2016swo}. For the qq$\rightarrow$ZZ 
 process, a QCD NLO to NNLO correction factor is applied as a function of generator-level \pt of the diboson system, which is described more in depth in Section~\ref{4l}.
-%\begin{figure}[!h]
-%\begin{center}
-%\begin{tabular}{cc}
-%\includegraphics[width=0.9\textwidth]{figures/kfactors.pdf} \\
-%\end{tabular}
-%\caption{QCD NNLO/NLO k factors for the qq$\rightarrow$ZZ process in generator level variables of the diboson system. }
-%\label{fig:ZZkfactor}
-%\end{center}
-%\end{figure}                                                                                                                                                                                
+\begin{figure}[!h]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=0.9\textwidth]{images/slepton/kfactors.pdf} \\
+\end{tabular}
+\caption{QCD NNLO/NLO k factors for the qq$\rightarrow$ZZ process in generator level variables of the diboson system. }
+\label{fig:ZZkfactor}
+\end{center}
+\end{figure}                                                                                                                                                                                
 
 
 \section{Triggers}
+The trigger selection for the slepton and EWK analyses is driven by the requirement of at least two leptons at the HLT.
+More precisely, the signal events in both analyses and the \ptmiss study are collected using dielectron and dimuon triggers.
+Additionally, electron-muon triggers are used to collect a sample dominated by \ttbar events for the FS prediction method.
+
+Various requirements on the isolation are imposed on the
+The triggers are chosen as a combination of
+These triggers are a combination of non-isolated and isolated requirements on the leptons to ensure
+The \pt requirements are asymmetric and depend on the flavor composition of the triggers.
+
 Concerning triggers, the selection is dominated by the di-lepton and high \ptmiss signatures. Trigger paths requiring isolated leptons are the main paths. Due to the changes in instantaneous 
 luminosity, different di-lepton triggers were active at different times and with varying prescales. This results in the need for a variety of triggers with slighlty different requirements.
 Non isolated double lepton paths are included to increase the efficiency in events with large dilepton system \pt. Supporting triggers are used for the study of the 
