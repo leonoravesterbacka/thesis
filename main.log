@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2018.10.23)  1 NOV 2018 14:47
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2018.10.29)  7 NOV 2018 16:20
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -455,34 +455,34 @@ File: pppdftex.def 2006/08/12 v0.4a Pdfpages driver for pdfTeX (AM)
 \c@proposition=\count133
 \c@algorithm=\count134
 ) (./main.aux (./tex/TOC.aux) (./tex/abstract.aux)
-(./tex/eventReconstructionSimulation.aux) (./tex/samplesObjects.aux)
-(./tex/met.aux))
+(./tex/eventReconstructionSimulation.aux) (./tex/search.aux)
+(./tex/samplesObjects.aux) (./tex/met.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 192.
-LaTeX Font Info:    ... okay on input line 192.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 192.
-LaTeX Font Info:    ... okay on input line 192.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 192.
-LaTeX Font Info:    ... okay on input line 192.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 192.
-LaTeX Font Info:    ... okay on input line 192.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 192.
-LaTeX Font Info:    ... okay on input line 192.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 192.
-LaTeX Font Info:    ... okay on input line 192.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 192.
-LaTeX Font Info:    ... okay on input line 192.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 192.
-LaTeX Font Info:    ... okay on input line 192.
-LaTeX Info: Redefining \selectfont on input line 192.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Info: Redefining \selectfont on input line 206.
 
 **************************************
 * Executing Begin Document Statement *
 **************************************
 Package caption Info: hyperref package v6.74m (or newer) detected on input line
- 192.
-Package hyperref Info: Link coloring OFF on input line 192.
+ 206.
+Package hyperref Info: Link coloring OFF on input line 206.
 (/usr/share/texmf/tex/latex/hyperref/nameref.sty
 Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
 
@@ -491,8 +491,8 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 \c@section@level=\count135
 )
-LaTeX Info: Redefining \ref on input line 192.
-LaTeX Info: Redefining \pageref on input line 192.
+LaTeX Info: Redefining \ref on input line 206.
+LaTeX Info: Redefining \pageref on input line 206.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -514,13 +514,13 @@ Package color Info: Driver file: pdftex.def on input line 130.
 
 
 {/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 238.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 252.
 
  (/usr/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 238.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 252.
  [2
 
 
@@ -628,57 +628,63 @@ s displayed for both the components
 LaTeX Warning: Reference `Ball:2017nwa' on page 7 undefined on input line 3.
 
 
-Overfull \hbox (0.89519pt too wide) in paragraph at lines 5--5
+Overfull \hbox (30.31189pt too wide) in paragraph at lines 4--4
+ []$ \OT1/cmr/m/n/12 and $[]$ decaying into vector bosons and the LSP. (Lower) 
+Diagrams corresponding 
+ []
+
+
+Overfull \hbox (2.56183pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/m/n/12 to the neutralino-neutralino model of where the neutralinos ar
+e allowed to decay 
+ []
+
+
+Overfull \hbox (11.11313pt too wide) in paragraph at lines 4--4
+ \OT1/cmr/m/n/12 to a gravitino and a $Z$ boson (left) and where the neutralino
+s are allowed to decay 
+ []
+
+
+Overfull \hbox (13.82005pt too wide) in paragraph at lines 5--5
+ [][] [][]\OT1/cmr/m/n/12 Diagram corresponding to the slepton model with two s
+electrons (smuons) directly 
+ []
+
+
+Overfull \hbox (0.89519pt too wide) in paragraph at lines 7--7
  \OT1/cmr/m/n/12 The Diboson contribution corresponds to processes with two ele
 ctroweak bosons 
  []
 
 
-Overfull \hbox (13.26312pt too wide) in paragraph at lines 5--5
+Overfull \hbox (13.26312pt too wide) in paragraph at lines 7--7
  \OT1/cmr/m/n/12 anti-top pair and single top production processes. Lower panel
 : Data to simulation 
  []
 
 
-Overfull \hbox (6.40903pt too wide) in paragraph at lines 6--6
+Overfull \hbox (6.40903pt too wide) in paragraph at lines 8--8
  \OT1/cmr/m/n/12 single top production processes. Lower panel: Data to simulati
 on ratio. The band 
  []
 
 
-Overfull \hbox (1.1831pt too wide) in paragraph at lines 7--7
+Overfull \hbox (1.1831pt too wide) in paragraph at lines 9--9
  [][] [][]\OT1/cmr/m/n/12 Event display for a beam halo event with collinear hi
 ts in the CSC (black), $\OML/cmm/m/it/12 p[]$ 
  []
 
 
-Overfull \hbox (13.39783pt too wide) in paragraph at lines 8--8
+Overfull \hbox (13.39783pt too wide) in paragraph at lines 10--10
  \OT1/cmr/m/n/12 and monojet (right) selection with the event filtering algorit
 hms applied, including 
  []
 
 
-Overfull \hbox (19.53387pt too wide) in paragraph at lines 8--8
+Overfull \hbox (19.53387pt too wide) in paragraph at lines 10--10
  \OT1/cmr/m/n/12 filtering algorithms applied (open markers), and from simulati
 on (solid histograms). 
- []
-
-
-Overfull \hbox (28.60323pt too wide) in paragraph at lines 9--9
- [][] [][]\OT1/cmr/m/n/12 Illustration of the $Z$boson (left) and photon (right
-) event kinematics in the transverse 
- []
-
-
-Overfull \hbox (21.23108pt too wide) in paragraph at lines 10--10
- \OT1/cmr/m/n/12 photon (right) selections, in data (black markers) and simulat
-ion (solid histograms). 
- []
-
-
-Overfull \hbox (23.12411pt too wide) in paragraph at lines 10--10
- \OT1/cmr/m/n/12 The lower bands show the data to simulation ratio with the sys
-tematic uncertainties 
  []
 
 [7
@@ -686,64 +692,82 @@ tematic uncertainties
 
 
 ]
-Overfull \hbox (4.62335pt too wide) in paragraph at lines 11--11
+Overfull \hbox (32.51985pt too wide) in paragraph at lines 11--11
+ [][] [][]\OT1/cmr/m/n/12 Illustration of the $Z$ boson (left) and photon (righ
+t) event kinematics in the transverse 
+ []
+
+
+Overfull \hbox (21.23108pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/m/n/12 photon (right) selections, in data (black markers) and simulat
+ion (solid histograms). 
+ []
+
+
+Overfull \hbox (23.12411pt too wide) in paragraph at lines 12--12
+ \OT1/cmr/m/n/12 The lower bands show the data to simulation ratio with the sys
+tematic uncertainties 
+ []
+
+
+Overfull \hbox (4.62335pt too wide) in paragraph at lines 13--13
  [][] [][]\OT1/cmr/m/n/12 Distribution of $\OML/cmm/m/it/12 u[]$\OT1/cmr/m/n/12
  +$\OML/cmm/m/it/12 q[]$ \OT1/cmr/m/n/12 (upper) and $\OML/cmm/m/it/12 u[]$ \OT
 1/cmr/m/n/12 (lower) components of the hadronic recoil, 
  []
 
 
-Overfull \hbox (31.6588pt too wide) in paragraph at lines 12--12
+Overfull \hbox (31.6588pt too wide) in paragraph at lines 14--14
  \OT1/cmr/m/n/12 uncertainties due to the JES, the JER, and variations in the U
 E added in quadrature, 
  []
 
 
-Overfull \hbox (12.20622pt too wide) in paragraph at lines 13--13
+Overfull \hbox (12.20622pt too wide) in paragraph at lines 15--15
  \OT1/cmr/m/n/12 systematic uncertainties due to the JES, the JER, and variatio
 ns in the UE added 
  []
 
 
-Overfull \hbox (35.42677pt too wide) in paragraph at lines 14--14
+Overfull \hbox (35.42677pt too wide) in paragraph at lines 16--16
  \OT1/cmr/m/n/12 panels: Data-to-simulation ratio. The band corresponds to the 
 systematic uncertainties 
  []
 
 
-Overfull \hbox (15.66591pt too wide) in paragraph at lines 14--14
+Overfull \hbox (15.66591pt too wide) in paragraph at lines 16--16
  \OT1/cmr/m/n/12 due to the JES, the JER, and variations in the UE added in qua
 drature, estimated 
  []
 
 
-Overfull \hbox (21.2922pt too wide) in paragraph at lines 15--15
+Overfull \hbox (21.2922pt too wide) in paragraph at lines 17--17
  \OT1/cmr/m/n/12 all events below -195 and above +195, respectively. Lower pane
 l: Data-to-simulation 
  []
 
-
-Overfull \hbox (24.50539pt too wide) in paragraph at lines 17--17
+[8]
+Overfull \hbox (24.50539pt too wide) in paragraph at lines 19--19
  [][] [][]\OT1/cmr/m/n/12 Upper panels: PUPPI and PF $\OML/cmm/m/it/12 p[]$ \OT
 1/cmr/m/n/12 resolution of $\OML/cmm/m/it/12 u[]$ \OT1/cmr/m/n/12 (left) and $\
 OML/cmm/m/it/12 u[]$ \OT1/cmr/m/n/12 (right) components 
  []
 
 
-Overfull \hbox (2.41882pt too wide) in paragraph at lines 17--17
+Overfull \hbox (2.41882pt too wide) in paragraph at lines 19--19
  \OT1/cmr/m/n/12 Data-to-simulation ratio. The systematic uncertainties due to 
 the JES, the JER, 
  []
 
 
-Overfull \hbox (24.50539pt too wide) in paragraph at lines 18--18
+Overfull \hbox (24.50539pt too wide) in paragraph at lines 20--20
  [][] [][]\OT1/cmr/m/n/12 Upper panels: PUPPI and PF $\OML/cmm/m/it/12 p[]$ \OT
 1/cmr/m/n/12 resolution of $\OML/cmm/m/it/12 u[]$ \OT1/cmr/m/n/12 (left) and $\
 OML/cmm/m/it/12 u[]$ \OT1/cmr/m/n/12 (right) components 
  []
 
 
-Overfull \hbox (2.41882pt too wide) in paragraph at lines 18--18
+Overfull \hbox (2.41882pt too wide) in paragraph at lines 20--20
  \OT1/cmr/m/n/12 Data-to-simulation ratio. The systematic uncertainties due to 
 the JES, the JER, 
  []
@@ -752,7 +776,7 @@ the JES, the JER,
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [8] [9])
+ [9])
 \openout2 = `tex/abstract.aux'.
 
  (./tex/abstract.tex [10
@@ -763,8 +787,7 @@ the JES, the JER,
 ] [11])
 \openout2 = `tex/eventReconstructionSimulation.aux'.
 
-
-(./tex/eventReconstructionSimulation.tex
+ (./tex/eventReconstructionSimulation.tex
 ***************************
 CHAPTER 1.
 ***************************
@@ -776,192 +799,265 @@ CHAPTER 1.
 ]
 
 LaTeX Warning: Reference `Khachatryan:2016bia' on page 13 undefined on input li
-ne 19.
+ne 18.
 
-<images/detector/figures_L1-overview.png, id=457, 301.125pt x 225.84375pt>
+<images/detector/figures_L1-overview.png, id=478, 301.125pt x 225.84375pt>
 File: images/detector/figures_L1-overview.png Graphic file (type png)
 
 <use images/detector/figures_L1-overview.png> [13 <./images/detector/figures_L1
 -overview.png>]
 
-LaTeX Warning: Reference `met' on page 14 undefined on input line 54.
+LaTeX Warning: Reference `met' on page 14 undefined on input line 53.
 
-<images/met/Figure_006.pdf, id=466, 569.12625pt x 548.0475pt>
+<images/met/Figure_006.pdf, id=487, 569.12625pt x 548.0475pt>
 File: images/met/Figure_006.pdf Graphic file (type pdf)
 
 <use images/met/Figure_006.pdf> [14] [15] [16 <./images/met/Figure_006.pdf, pag
 e is rotated 90 degrees>]
 
-LaTeX Warning: Reference `theory' on page 17 undefined on input line 78.
+LaTeX Warning: Reference `theory' on page 17 undefined on input line 77.
 
 
-LaTeX Warning: Reference `theory' on page 17 undefined on input line 85.
+LaTeX Warning: Reference `theory' on page 17 undefined on input line 84.
 
 [17]
 
-LaTeX Warning: Reference `Ball:2014uwa' on page 18 undefined on input line 94.
+LaTeX Warning: Reference `Ball:2014uwa' on page 18 undefined on input line 93.
 
-<images/detector/NNPDF31.png, id=530, 853.1875pt x 572.1375pt>
+<images/detector/NNPDF31.png, id=551, 853.1875pt x 572.1375pt>
 File: images/detector/NNPDF31.png Graphic file (type png)
 
 <use images/detector/NNPDF31.png>
 
-LaTeX Warning: Reference `Ball:2017nwa' on page 18 undefined on input line 104.
+LaTeX Warning: Reference `Ball:2017nwa' on page 18 undefined on input line 103.
 
-
-
-Package natbib Warning: Citation `Alwall:2014hca' on page 18 undefined on input
- line 111.
-
-
-Package natbib Warning: Citation `Mangano:2006rw' on page 18 undefined on input
- line 111.
-
-
-Package natbib Warning: Citation `Oleari:2010nx' on page 18 undefined on input 
-line 114.
-
-
-Package natbib Warning: Citation `Alioli:2009je' on page 18 undefined on input 
-line 114.
 
 [18]
 
-Package natbib Warning: Citation `Sjostrand:2014zea' on page 19 undefined on in
-put line 124.
+Package natbib Warning: Citation `Alwall:2014hca' on page 19 undefined on input
+ line 110.
+
+
+Package natbib Warning: Citation `Mangano:2006rw' on page 19 undefined on input
+ line 110.
+
+
+Package natbib Warning: Citation `Oleari:2010nx' on page 19 undefined on input 
+line 113.
+
+
+Package natbib Warning: Citation `Alioli:2009je' on page 19 undefined on input 
+line 113.
 
 [19 <./images/detector/NNPDF31.png (PNG copy)>]
 
 Package natbib Warning: Citation `Sjostrand:2014zea' on page 20 undefined on in
-put line 128.
+put line 123.
+
+
+Package natbib Warning: Citation `Sjostrand:2014zea' on page 20 undefined on in
+put line 127.
 
 
 Package natbib Warning: Citation `Andersson:1983ia' on page 20 undefined on inp
-ut line 129.
+ut line 128.
 
-[20] [21]) [22]
-\openout2 = `tex/samplesObjects.aux'.
+[20] [21] [22]) [23]
+\openout2 = `tex/search.aux'.
 
- (./tex/samplesObjects.tex
+ (./tex/search.tex
 ***************************
 CHAPTER 2.
 ***************************
 
-Package natbib Warning: Citation `Sjostrand:2006za' on page 23 undefined on inp
-ut line 60.
+LaTeX Warning: Reference `theory' on page 24 undefined on input line 3.
 
 
-Overfull \hbox (38.91035pt too wide) in paragraph at lines 67--67
-\OT1/cmtt/m/n/12 RunIISummer16MiniAODv2-PUMoriond17[]80X[]mcRun2[]asymptotic[]2
-016[]TrancheIV[]v6/ 
+LaTeX Warning: Reference `edge2016' on page 24 undefined on input line 17.
+
+
+LaTeX Warning: Reference `sleptons2016' on page 24 undefined on input line 18.
+
+
+Overfull \hbox (11.36584pt too wide) in paragraph at lines 1--19
+[]\OT1/cmr/m/n/12 strategySlepton After having introduced the CMS detector, its
+ abilities of reconstructing 
  []
 
-
-Overfull \hbox (16.33647pt too wide) in paragraph at lines 70--102
- [] 
- []
-
-
-Overfull \hbox (38.91035pt too wide) in paragraph at lines 110--110
-\OT1/cmtt/m/n/12 RunIISummer16MiniAODv2-PUMoriond17[]80X[]mcRun2[]asymptotic[]2
-016[]TrancheIV[]v6/ 
- []
-
-
-Overfull \hbox (38.91035pt too wide) in paragraph at lines 145--145
-\OT1/cmtt/m/n/12 RunIISummer16MiniAODv2-PUMoriond17[]80X[]mcRun2[]asymptotic[]2
-016[]TrancheIV[]v6/ 
- []
-
-
-Overfull \hbox (38.91035pt too wide) in paragraph at lines 161--161
-\OT1/cmtt/m/n/12 RunIISummer16MiniAODv2-PUMoriond17[]80X[]mcRun2[]asymptotic[]2
-016[]TrancheIV[]v6/ 
- []
-
-
-Package natbib Warning: Citation `Grazzini:2016swo' on page 23 undefined on inp
-ut line 184.
-
-
-LaTeX Warning: Reference `4l' on page 23 undefined on input line 185.
-
-<images/slepton/kfactors.pdf, id=563, 569.12625pt x 385.44pt>
-File: images/slepton/kfactors.pdf Graphic file (type pdf)
-
-<use images/slepton/kfactors.pdf> [23
+[24
 
 
 
 ]
 
+Package natbib Warning: Citation `Matchev:1999ft' on page 25 undefined on input
+ line 26.
+
+
+Package natbib Warning: Citation `Meade:2009qv' on page 25 undefined on input l
+ine 26.
+
+
+Package natbib Warning: Citation `Ruderman' on page 25 undefined on input line 
+26.
+
+
+Package natbib Warning: Citation `Skands:2003cj' on page 25 undefined on input 
+line 33.
+
+<images/ewk/Figure_001-b.pdf, id=589, 199.74625pt x 132.495pt>
+File: images/ewk/Figure_001-b.pdf Graphic file (type pdf)
+
+<use images/ewk/Figure_001-b.pdf>
+<images/ewk/Figure_001-c.pdf, id=590, 197.73875pt x 131.49126pt>
+File: images/ewk/Figure_001-c.pdf Graphic file (type pdf)
+
+<use images/ewk/Figure_001-c.pdf>
+<images/ewk/Figure_001-d.pdf, id=591, 197.73875pt x 131.49126pt>
+File: images/ewk/Figure_001-d.pdf Graphic file (type pdf)
+
+<use images/ewk/Figure_001-d.pdf>
+
+LaTeX Warning: Reference `fig:feynmanSlepton' on page 25 undefined on input lin
+e 49.
+
+<images/slepton/Figure_001.pdf, id=592, 242.29361pt x 144.49965pt>
+File: images/slepton/Figure_001.pdf Graphic file (type pdf)
+
+<use images/slepton/Figure_001.pdf>) [25]
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24] [25] [26] [27 <./images/slepton/kfactors.pdf, page is rotated 90 degrees>]
 
-LaTeX Warning: Float too large for page by 30.697pt on input line 268.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[28
+[26] [27 <./images/ewk/Figure_001-b.pdf> <./images/ewk/Figure_001-c.pdf> <./ima
+ges/ewk/Figure_001-d.pdf> <./images/slepton/Figure_001.pdf>] [28]
+\openout2 = `tex/samplesObjects.aux'.
 
-] [29]
 
-Package natbib Warning: Citation `CMS_AN_2016-482' on page 30 undefined on inpu
-t line 272.
+(./tex/samplesObjects.tex
+***************************
+CHAPTER 3.
+***************************
 
-[30
+Package natbib Warning: Citation `Sjostrand:2006za' on page 29 undefined on inp
+ut line 64.
 
-] [31] [32]
+
+Overfull \hbox (38.91035pt too wide) in paragraph at lines 71--71
+\OT1/cmtt/m/n/12 RunIISummer16MiniAODv2-PUMoriond17[]80X[]mcRun2[]asymptotic[]2
+016[]TrancheIV[]v6/ 
+ []
+
+
+Overfull \hbox (16.33647pt too wide) in paragraph at lines 74--106
+ [] 
+ []
+
+[29
+
+
+
+]
+Overfull \hbox (38.91035pt too wide) in paragraph at lines 114--114
+\OT1/cmtt/m/n/12 RunIISummer16MiniAODv2-PUMoriond17[]80X[]mcRun2[]asymptotic[]2
+016[]TrancheIV[]v6/ 
+ []
+
+
+Overfull \hbox (38.91035pt too wide) in paragraph at lines 149--149
+\OT1/cmtt/m/n/12 RunIISummer16MiniAODv2-PUMoriond17[]80X[]mcRun2[]asymptotic[]2
+016[]TrancheIV[]v6/ 
+ []
+
+
+Overfull \hbox (38.91035pt too wide) in paragraph at lines 165--165
+\OT1/cmtt/m/n/12 RunIISummer16MiniAODv2-PUMoriond17[]80X[]mcRun2[]asymptotic[]2
+016[]TrancheIV[]v6/ 
+ []
+
+
+Package natbib Warning: Citation `Grazzini:2016swo' on page 30 undefined on inp
+ut line 188.
+
+
+LaTeX Warning: Reference `4l' on page 30 undefined on input line 189.
+
+<images/slepton/kfactors.pdf, id=717, 569.12625pt x 385.44pt>
+File: images/slepton/kfactors.pdf Graphic file (type pdf)
+
+<use images/slepton/kfactors.pdf> [30] [31]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[32]
+
+LaTeX Warning: Text page 33 contains only floats.
+
+[33 <./images/slepton/kfactors.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: Float too large for page by 30.697pt on input line 272.
+
+[34] [35]
+
+Package natbib Warning: Citation `CMS_AN_2016-482' on page 36 undefined on inpu
+t line 276.
+
+[36
+
+] [37] [38]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 378.
+(hyperref)                removing `math shift' on input line 382.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `subscript' on input line 378.
+(hyperref)                removing `subscript' on input line 382.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `superscript' on input line 378.
+(hyperref)                removing `superscript' on input line 382.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 378.
+(hyperref)                removing `math shift' on input line 382.
 
 
-Overfull \hbox (9.63681pt too wide) in paragraph at lines 380--389
+Overfull \hbox (9.63681pt too wide) in paragraph at lines 384--393
 \OT1/cmr/m/n/12 leptons by 0.4 in $^^A$R. Jet energy corrections are applied, n
 amely the \OT1/cmtt/m/n/12 Spring16[]23Sep2016V2 
  []
 
-[33]
+[39]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 389.
-
-
-Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `subscript' on input line 389.
+(hyperref)                removing `math shift' on input line 393.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `math shift' on input line 389.
+(hyperref)                removing `subscript' on input line 393.
 
 
-Package natbib Warning: Citation `MT2variable' on page 34 undefined on input li
-ne 392.
+Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
+(hyperref)                removing `math shift' on input line 393.
 
 
-Package natbib Warning: Citation `MT2variable2' on page 34 undefined on input l
-ine 392.
+Package natbib Warning: Citation `MT2variable' on page 40 undefined on input li
+ne 396.
 
-) [34]
+
+Package natbib Warning: Citation `MT2variable2' on page 40 undefined on input l
+ine 396.
+
+) [40]
 \openout2 = `tex/met.aux'.
 
  (./tex/met.tex
 ***************************
-CHAPTER 3.
+CHAPTER 4.
 ***************************
-[35
+[41
 
 
 
@@ -1015,14 +1111,15 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 32.
 
 
-Package natbib Warning: Citation `Bertolini:2014bba' on page 36 undefined on in
+Package natbib Warning: Citation `Bertolini:2014bba' on page 42 undefined on in
 put line 33.
 
+[42]
 
-Package natbib Warning: Citation `Bertolini:2014bba' on page 36 undefined on in
+Package natbib Warning: Citation `Bertolini:2014bba' on page 43 undefined on in
 put line 35.
 
-[36] [37] [38]
+[43] [44]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 85.
@@ -1072,30 +1169,30 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 95.
 
 
-LaTeX Warning: Reference `chapter:jec' on page 39 undefined on input line 98.
+LaTeX Warning: Reference `chapter:jec' on page 45 undefined on input line 98.
 
-[39]
+[45]
 
-Package natbib Warning: Citation `Sirunyan:2017ulk' on page 40 undefined on inp
+Package natbib Warning: Citation `Sirunyan:2017ulk' on page 46 undefined on inp
 ut line 122.
 
 
-Package natbib Warning: Citation `TRK-11-001' on page 40 undefined on input lin
+Package natbib Warning: Citation `TRK-11-001' on page 46 undefined on input lin
 e 122.
 
 
-Package natbib Warning: Citation `CMS:EGM-14-001' on page 40 undefined on input
+Package natbib Warning: Citation `CMS:EGM-14-001' on page 46 undefined on input
  line 122.
 
-[40] <images/met/Figure_001-a.pdf, id=705, 569.12625pt x 546.04pt>
+[46] <images/met/Figure_001-a.pdf, id=857, 569.12625pt x 546.04pt>
 File: images/met/Figure_001-a.pdf Graphic file (type pdf)
 
 <use images/met/Figure_001-a.pdf>
-<images/met/Figure_001-b.pdf, id=706, 569.12625pt x 546.04pt>
+<images/met/Figure_001-b.pdf, id=858, 569.12625pt x 546.04pt>
 File: images/met/Figure_001-b.pdf Graphic file (type pdf)
 
-<use images/met/Figure_001-b.pdf> [41]
-<images/met/Figure_002.pdf, id=713, 569.12625pt x 546.04pt>
+<use images/met/Figure_001-b.pdf> [47]
+<images/met/Figure_002.pdf, id=865, 569.12625pt x 546.04pt>
 File: images/met/Figure_002.pdf Graphic file (type pdf)
 
 <use images/met/Figure_002.pdf>
@@ -1104,7 +1201,7 @@ Overfull \hbox (7.39227pt too wide) in paragraph at lines 160--174
 et of isolated single-photon 
  []
 
-[42 <./images/met/Figure_001-a.pdf, page is rotated 90 degrees> <./images/met/F
+[48 <./images/met/Figure_001-a.pdf, page is rotated 90 degrees> <./images/met/F
 igure_001-b.pdf, page is rotated 90 degrees>]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
@@ -1136,7 +1233,7 @@ Overfull \hbox (15.444pt too wide) in paragraph at lines 176--179
 m/n/12 events can arise because of a variety of reconstruction 
  []
 
-[43 <./images/met/Figure_002.pdf, page is rotated 90 degrees>]
+[49 <./images/met/Figure_002.pdf, page is rotated 90 degrees>]
 Overfull \hbox (0.39514pt too wide) in paragraph at lines 186--193
 \OT1/cmr/m/n/12 front-end electronics of the ECAL super crystals, creating a la
 rge false signal. Additionally, 
@@ -1148,7 +1245,7 @@ Overfull \hbox (1.34375pt too wide) in paragraph at lines 186--193
 five ECAL endcap supercrystals 
  []
 
-<images/met/Figure_004.png, id=856, 1861.95625pt x 1034.86626pt>
+[50] <images/met/Figure_004.png, id=1012, 1861.95625pt x 1034.86626pt>
 File: images/met/Figure_004.png Graphic file (type png)
 
 <use images/met/Figure_004.png>
@@ -1160,18 +1257,26 @@ Overfull \hbox (46.90286pt too wide) in paragraph at lines 201--202
 
 pdfTeX warning: pdflatex (file ./images/met/Figure_005-a.pdf): PDF inclusion: f
 ound PDF version <1.5>, but at most version <1.4> allowed
-<images/met/Figure_005-a.pdf, id=859, 569.12625pt x 546.04pt>
+<images/met/Figure_005-a.pdf, id=1015, 569.12625pt x 546.04pt>
 File: images/met/Figure_005-a.pdf Graphic file (type pdf)
 
 <use images/met/Figure_005-a.pdf>
 
 pdfTeX warning: pdflatex (file ./images/met/Figure_005-b.pdf): PDF inclusion: f
 ound PDF version <1.5>, but at most version <1.4> allowed
-<images/met/Figure_005-b.pdf, id=860, 569.12625pt x 546.04pt>
+<images/met/Figure_005-b.pdf, id=1016, 569.12625pt x 546.04pt>
 File: images/met/Figure_005-b.pdf Graphic file (type pdf)
 
-<use images/met/Figure_005-b.pdf> [44] [45 <./images/met/Figure_004.png (PNG co
-py)>]
+<use images/met/Figure_005-b.pdf> [51] [52 <./images/met/Figure_004.png (PNG co
+py)> <./images/met/Figure_005-a.pdf
+
+pdfTeX warning: pdflatex (file ./images/met/Figure_005-a.pdf): PDF inclusion: P
+age Group detected which pdfTeX can't handle. Ignoring it.
+> <./images/met/Figure_005-b.pdf
+
+pdfTeX warning: pdflatex (file ./images/met/Figure_005-b.pdf): PDF inclusion: P
+age Group detected which pdfTeX can't handle. Ignoring it.
+>]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 216.
@@ -1196,15 +1301,6 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 216.
 
-[46 <./images/met/Figure_005-a.pdf
-
-pdfTeX warning: pdflatex (file ./images/met/Figure_005-a.pdf): PDF inclusion: P
-age Group detected which pdfTeX can't handle. Ignoring it.
-> <./images/met/Figure_005-b.pdf
-
-pdfTeX warning: pdflatex (file ./images/met/Figure_005-b.pdf): PDF inclusion: P
-age Group detected which pdfTeX can't handle. Ignoring it.
->]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 225.
@@ -1229,14 +1325,14 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 225.
 
-<images/met/Figure_007-a.png, id=1202, 1505.625pt x 1129.21875pt>
+<images/met/Figure_007-a.png, id=1354, 1505.625pt x 1129.21875pt>
 File: images/met/Figure_007-a.png Graphic file (type png)
 
 <use images/met/Figure_007-a.png>
-<images/met/Figure_007-b.png, id=1203, 1505.625pt x 1129.21875pt>
+<images/met/Figure_007-b.png, id=1355, 1505.625pt x 1129.21875pt>
 File: images/met/Figure_007-b.png Graphic file (type png)
 
-<use images/met/Figure_007-b.png>
+<use images/met/Figure_007-b.png> [53]
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 242.
@@ -1262,95 +1358,95 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 242.
 
 
-Package natbib Warning: Citation `Khachatryan:2016kdb' on page 47 undefined on 
+Package natbib Warning: Citation `Khachatryan:2016kdb' on page 54 undefined on 
 input line 244.
 
 
-Package natbib Warning: Citation `CMS:EGM-14-001' on page 47 undefined on input
+Package natbib Warning: Citation `CMS:EGM-14-001' on page 54 undefined on input
  line 245.
 
 
-Package natbib Warning: Citation `Sirunyan:2018fpa' on page 47 undefined on inp
+Package natbib Warning: Citation `Sirunyan:2018fpa' on page 54 undefined on inp
 ut line 245.
 
-<images/met/Figure_008-a.pdf, id=1206, 569.12625pt x 546.04pt>
+<images/met/Figure_008-a.pdf, id=1362, 569.12625pt x 546.04pt>
 File: images/met/Figure_008-a.pdf Graphic file (type pdf)
 
 <use images/met/Figure_008-a.pdf>
-<images/met/Figure_008-b.pdf, id=1207, 569.12625pt x 546.04pt>
+<images/met/Figure_008-b.pdf, id=1363, 569.12625pt x 546.04pt>
 File: images/met/Figure_008-b.pdf Graphic file (type pdf)
 
 <use images/met/Figure_008-b.pdf>
-<images/met/Figure_008-c.pdf, id=1208, 569.12625pt x 546.04pt>
+<images/met/Figure_008-c.pdf, id=1364, 569.12625pt x 546.04pt>
 File: images/met/Figure_008-c.pdf Graphic file (type pdf)
 
 <use images/met/Figure_008-c.pdf>
-<images/met/Figure_009-a.pdf, id=1210, 569.12625pt x 546.04pt>
+<images/met/Figure_009-a.pdf, id=1366, 569.12625pt x 546.04pt>
 File: images/met/Figure_009-a.pdf Graphic file (type pdf)
 
 <use images/met/Figure_009-a.pdf>
-<images/met/Figure_009-c.pdf, id=1211, 569.12625pt x 546.04pt>
+<images/met/Figure_009-c.pdf, id=1367, 569.12625pt x 546.04pt>
 File: images/met/Figure_009-c.pdf Graphic file (type pdf)
 
 <use images/met/Figure_009-c.pdf>
-<images/met/Figure_009-e.pdf, id=1212, 569.12625pt x 546.04pt>
+<images/met/Figure_009-e.pdf, id=1368, 569.12625pt x 546.04pt>
 File: images/met/Figure_009-e.pdf Graphic file (type pdf)
 
 <use images/met/Figure_009-e.pdf>
-<images/met/Figure_009-b.pdf, id=1213, 569.12625pt x 546.04pt>
+<images/met/Figure_009-b.pdf, id=1369, 569.12625pt x 546.04pt>
 File: images/met/Figure_009-b.pdf Graphic file (type pdf)
 
 <use images/met/Figure_009-b.pdf>
-<images/met/Figure_009-d.pdf, id=1214, 569.12625pt x 546.04pt>
+<images/met/Figure_009-d.pdf, id=1370, 569.12625pt x 546.04pt>
 File: images/met/Figure_009-d.pdf Graphic file (type pdf)
 
 <use images/met/Figure_009-d.pdf>
-<images/met/Figure_009-f.pdf, id=1215, 569.12625pt x 546.04pt>
+<images/met/Figure_009-f.pdf, id=1371, 569.12625pt x 546.04pt>
 File: images/met/Figure_009-f.pdf Graphic file (type pdf)
 
 <use images/met/Figure_009-f.pdf>
-<images/met/Figure_010.pdf, id=1218, 569.12625pt x 641.39626pt>
+<images/met/Figure_010.pdf, id=1374, 569.12625pt x 641.39626pt>
 File: images/met/Figure_010.pdf Graphic file (type pdf)
 
 <use images/met/Figure_010.pdf>
-<images/met/Figure_010-b.pdf, id=1219, 569.12625pt x 641.39626pt>
+<images/met/Figure_010-b.pdf, id=1375, 569.12625pt x 641.39626pt>
 File: images/met/Figure_010-b.pdf Graphic file (type pdf)
 
-<use images/met/Figure_010-b.pdf> [47 <./images/met/Figure_007-a.png> <./images
-/met/Figure_007-b.png>] [48 <./images/met/Figure_008-a.pdf, page is rotated 90 
+<use images/met/Figure_010-b.pdf> [54 <./images/met/Figure_007-a.png> <./images
+/met/Figure_007-b.png>] [55 <./images/met/Figure_008-a.pdf, page is rotated 90 
 degrees> <./images/met/Figure_008-b.pdf, page is rotated 90 degrees> <./images/
-met/Figure_008-c.pdf, page is rotated 90 degrees>] [49 <./images/met/Figure_009
+met/Figure_008-c.pdf, page is rotated 90 degrees>] [56 <./images/met/Figure_009
 -a.pdf, page is rotated 90 degrees> <./images/met/Figure_009-c.pdf, page is rot
 ated 90 degrees> <./images/met/Figure_009-e.pdf, page is rotated 90 degrees> <.
 /images/met/Figure_009-b.pdf, page is rotated 90 degrees> <./images/met/Figure_
 009-d.pdf, page is rotated 90 degrees> <./images/met/Figure_009-f.pdf, page is 
-rotated 90 degrees>] [50 <./images/met/Figure_010.pdf> <./images/met/Figure_010
--b.pdf>]
+rotated 90 degrees>]
 
-Package natbib Warning: Citation `CMS-DP-2017-015' on page 51 undefined on inpu
+Package natbib Warning: Citation `CMS-DP-2017-015' on page 57 undefined on inpu
 t line 304.
 
-<images/met/Figure_011-a.pdf, id=1729, 569.12625pt x 641.39626pt>
+[57 <./images/met/Figure_010.pdf> <./images/met/Figure_010-b.pdf>]
+<images/met/Figure_011-a.pdf, id=1886, 569.12625pt x 641.39626pt>
 File: images/met/Figure_011-a.pdf Graphic file (type pdf)
 
 <use images/met/Figure_011-a.pdf>
-<images/met/Figure_011-b.pdf, id=1730, 569.12625pt x 641.39626pt>
+<images/met/Figure_011-b.pdf, id=1887, 569.12625pt x 641.39626pt>
 File: images/met/Figure_011-b.pdf Graphic file (type pdf)
 
 <use images/met/Figure_011-b.pdf>
-<images/met/Figure_011-c.pdf, id=1731, 569.12625pt x 641.39626pt>
+<images/met/Figure_011-c.pdf, id=1888, 569.12625pt x 641.39626pt>
 File: images/met/Figure_011-c.pdf Graphic file (type pdf)
 
 <use images/met/Figure_011-c.pdf>
-<images/met/Figure_011-d.pdf, id=1732, 569.12625pt x 641.39626pt>
+<images/met/Figure_011-d.pdf, id=1889, 569.12625pt x 641.39626pt>
 File: images/met/Figure_011-d.pdf Graphic file (type pdf)
 
 <use images/met/Figure_011-d.pdf>
-<images/met/Figure_011-e.pdf, id=1733, 569.12625pt x 641.39626pt>
+<images/met/Figure_011-e.pdf, id=1890, 569.12625pt x 641.39626pt>
 File: images/met/Figure_011-e.pdf Graphic file (type pdf)
 
 <use images/met/Figure_011-e.pdf>
-<images/met/Figure_011-f.pdf, id=1734, 569.12625pt x 641.39626pt>
+<images/met/Figure_011-f.pdf, id=1891, 569.12625pt x 641.39626pt>
 File: images/met/Figure_011-f.pdf Graphic file (type pdf)
 
 <use images/met/Figure_011-f.pdf>
@@ -1386,46 +1482,42 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `math shift' on input line 374.
 
-[51] [52 <./images/met/Figure_011-a.pdf> <./images/met/Figure_011-b.pdf> <./ima
+[58] [59 <./images/met/Figure_011-a.pdf> <./images/met/Figure_011-b.pdf> <./ima
 ges/met/Figure_011-c.pdf> <./images/met/Figure_011-d.pdf> <./images/met/Figure_
-011-e.pdf> <./images/met/Figure_011-f.pdf>] [53]
-<images/met/Figure_012-a.pdf, id=2014, 569.12625pt x 546.04pt>
+011-e.pdf> <./images/met/Figure_011-f.pdf>]
+<images/met/Figure_012-a.pdf, id=2166, 569.12625pt x 546.04pt>
 File: images/met/Figure_012-a.pdf Graphic file (type pdf)
 
 <use images/met/Figure_012-a.pdf>
-<images/met/Figure_012-b.pdf, id=2015, 569.12625pt x 546.04pt>
+<images/met/Figure_012-b.pdf, id=2167, 569.12625pt x 546.04pt>
 File: images/met/Figure_012-b.pdf Graphic file (type pdf)
 
 <use images/met/Figure_012-b.pdf>
-<images/met/Figure_013-a.pdf, id=2017, 569.12625pt x 546.04pt>
+<images/met/Figure_013-a.pdf, id=2169, 569.12625pt x 546.04pt>
 File: images/met/Figure_013-a.pdf Graphic file (type pdf)
 
 <use images/met/Figure_013-a.pdf>
-<images/met/Figure_013-b.pdf, id=2018, 569.12625pt x 546.04pt>
+<images/met/Figure_013-b.pdf, id=2170, 569.12625pt x 546.04pt>
 File: images/met/Figure_013-b.pdf Graphic file (type pdf)
 
 <use images/met/Figure_013-b.pdf>
-<images/met/Figure_013-c.pdf, id=2019, 569.12625pt x 546.04pt>
+<images/met/Figure_013-c.pdf, id=2171, 569.12625pt x 546.04pt>
 File: images/met/Figure_013-c.pdf Graphic file (type pdf)
 
 <use images/met/Figure_013-c.pdf>
-<images/met/Figure_013-d.pdf, id=2020, 569.12625pt x 546.04pt>
+<images/met/Figure_013-d.pdf, id=2172, 569.12625pt x 546.04pt>
 File: images/met/Figure_013-d.pdf Graphic file (type pdf)
 
-<use images/met/Figure_013-d.pdf> [54 <./images/met/Figure_012-a.pdf, page is r
-otated 90 degrees> <./images/met/Figure_012-b.pdf, page is rotated 90 degrees>]
-[55 <./images/met/Figure_013-a.pdf, page is rotated 90 degrees> <./images/met/F
-igure_013-b.pdf, page is rotated 90 degrees> <./images/met/Figure_013-c.pdf, pa
-ge is rotated 90 degrees> <./images/met/Figure_013-d.pdf, page is rotated 90 de
-grees>] <images/met/Figure_014.pdf, id=2295, 569.12625pt x 641.39626pt>
+<use images/met/Figure_013-d.pdf> [60]
+<images/met/Figure_014.pdf, id=2178, 569.12625pt x 641.39626pt>
 File: images/met/Figure_014.pdf Graphic file (type pdf)
 
 <use images/met/Figure_014.pdf>
-<images/met/Figure_016-a.pdf, id=2297, 569.12625pt x 641.39626pt>
+<images/met/Figure_016-a.pdf, id=2180, 569.12625pt x 641.39626pt>
 File: images/met/Figure_016-a.pdf Graphic file (type pdf)
 
 <use images/met/Figure_016-a.pdf>
-<images/met/Figure_016-b.pdf, id=2298, 569.12625pt x 641.39626pt>
+<images/met/Figure_016-b.pdf, id=2181, 569.12625pt x 641.39626pt>
 File: images/met/Figure_016-b.pdf Graphic file (type pdf)
 
 <use images/met/Figure_016-b.pdf>
@@ -1433,52 +1525,59 @@ Overfull \hbox (12.46248pt too wide) in paragraph at lines 437--450
  [][] 
  []
 
-
-<images/met/met_uPara__vs_nVertType1_PFvsPuppiMM.pdf, id=2301, 569.12625pt x 64
+[61 <./images/met/Figure_012-a.pdf, page is rotated 90 degrees> <./images/met/F
+igure_012-b.pdf, page is rotated 90 degrees>] [62 <./images/met/Figure_013-a.pd
+f, page is rotated 90 degrees> <./images/met/Figure_013-b.pdf, page is rotated 
+90 degrees> <./images/met/Figure_013-c.pdf, page is rotated 90 degrees> <./imag
+es/met/Figure_013-d.pdf, page is rotated 90 degrees>] [63 <./images/met/Figure_
+014.pdf> <./images/met/Figure_016-a.pdf> <./images/met/Figure_016-b.pdf>]
+<images/met/met_uPara__vs_nVertType1_PFvsPuppiMM.pdf, id=2593, 569.12625pt x 64
 1.39626pt>
 File: images/met/met_uPara__vs_nVertType1_PFvsPuppiMM.pdf Graphic file (type pd
 f)
  <use images/met/met_uPara__vs_nVertType1_PFvsPuppiMM.pdf>
-<images/met/met_uPerp__vs_nVertType1_PFvsPuppiMM.pdf, id=2302, 569.12625pt x 64
+<images/met/met_uPerp__vs_nVertType1_PFvsPuppiMM.pdf, id=2594, 569.12625pt x 64
 1.39626pt>
 File: images/met/met_uPerp__vs_nVertType1_PFvsPuppiMM.pdf Graphic file (type pd
 f)
- <use images/met/met_uPerp__vs_nVertType1_PFvsPuppiMM.pdf> [56 <./images/met/Fi
-gure_014.pdf>] [57 <./images/met/Figure_016-a.pdf> <./images/met/Figure_016-b.p
-df>] [58 <./images/met/met_uPara__vs_nVertType1_PFvsPuppiMM.pdf> <./images/met/
-met_uPerp__vs_nVertType1_PFvsPuppiMM.pdf>] [59]) (./main.bbl)
+ <use images/met/met_uPerp__vs_nVertType1_PFvsPuppiMM.pdf> [64]
+[65 <./images/met/met_uPara__vs_nVertType1_PFvsPuppiMM.pdf> <./images/met/met_u
+Perp__vs_nVertType1_PFvsPuppiMM.pdf>] [66]) (./main.bbl)
 
 Package natbib Warning: There were undefined citations.
 
 (./main.aux (./tex/TOC.aux) (./tex/abstract.aux)
-(./tex/eventReconstructionSimulation.aux) (./tex/samplesObjects.aux)
-(./tex/met.aux))
+(./tex/eventReconstructionSimulation.aux) (./tex/search.aux)
+(./tex/samplesObjects.aux) (./tex/met.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7225 strings out of 256214
- 104689 string characters out of 1916999
- 192913 words of memory out of 1500000
- 10096 multiletter control sequences out of 10000+200000
- 11835 words of font info for 48 fonts, out of 1200000 for 2000
+ 7318 strings out of 256214
+ 106092 string characters out of 1916999
+ 195160 words of memory out of 1500000
+ 10162 multiletter control sequences out of 10000+200000
+ 17636 words of font info for 73 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
  39i,13n,41p,1149b,448s stack positions out of 5000i,500n,6000p,200000b,15000s
-</usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/t
-ype1/bluesky/cm/cmbx8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmcsc10.pfb>
-</usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb></usr/share/texmf/fonts/typ
-e1/bluesky/cm/cmmi12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb></u
-sr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/b
-luesky/cm/cmr6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/shar
-e/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky
-/cm/cmsy6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/te
-xmf/fonts/type1/bluesky/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/
-cmtt8.pfb></usr/share/texmf/fonts/type1/bluesky/latex-fonts/line10.pfb></usr/sh
-are/texmf/fonts/type1/bluesky/ams/msam10.pfb>
-Output written on main.pdf (59 pages, 1451011 bytes).
+</usr/share/texmf/fonts/type1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/t
+ype1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx8.pfb><
+/usr/share/texmf/fonts/type1/bluesky/cm/cmcsc10.pfb></usr/share/texmf/fonts/typ
+e1/bluesky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></
+usr/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/share/texmf/fonts/type1
+/bluesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/
+share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/blue
+sky/cm/cmr6.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr7.pfb></usr/share/t
+exmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/c
+msy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy6.pfb></usr/share/texmf/
+fonts/type1/bluesky/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8
+.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb></usr/share/texmf/font
+s/type1/bluesky/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/bluesky/latex-fonts/
+line10.pfb></usr/share/texmf/fonts/type1/bluesky/ams/msam10.pfb>
+Output written on main.pdf (66 pages, 1622891 bytes).
 PDF statistics:
- 2626 PDF objects out of 2984 (max. 8388607)
- 155 named destinations out of 1000 (max. 131072)
- 625 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2792 PDF objects out of 2984 (max. 8388607)
+ 166 named destinations out of 1000 (max. 131072)
+ 661 words of extra memory for PDF output out of 10000 (max. 10000000)
 

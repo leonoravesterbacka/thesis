@@ -8,12 +8,13 @@ I'm skipping whatever remains of this command
 A level-1 auxiliary file: tex/TOC.aux
 A level-1 auxiliary file: tex/abstract.aux
 A level-1 auxiliary file: tex/eventReconstructionSimulation.aux
+A level-1 auxiliary file: tex/search.aux
 A level-1 auxiliary file: tex/samplesObjects.aux
 A level-1 auxiliary file: tex/met.aux
 I found no style file---while reading file main.aux
-You've used 18 entries,
+You've used 22 entries,
             0 wiz_defined-function locations,
-            126 strings with 1130 characters,
+            135 strings with 1238 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0

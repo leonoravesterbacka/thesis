@@ -19,33 +19,35 @@
 \BOOKMARK [2][-]{subsection.1.4.1}{Dataformats}{section.1.4}
 \BOOKMARK [2][-]{subsection.1.4.2}{Event weights}{section.1.4}
 \BOOKMARK [0][-]{chapter.2}{}{}
-\BOOKMARK [1][-]{section.2.1}{Datasets}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.1.1}{Higher order corrections}{section.2.1}
-\BOOKMARK [1][-]{section.2.2}{Triggers}{chapter.2}
-\BOOKMARK [1][-]{section.2.3}{Physics Objects}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.3.1}{Electrons}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.2}{Muons}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.3}{Lepton pair selection}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.4}{Isotrack veto}{section.2.3}
-\BOOKMARK [2][-]{subsection.2.3.5}{Jets and pTmiss}{section.2.3}
-\BOOKMARK [3][-]{subsubsection.2.3.5.1}{MT2}{subsection.2.3.5}
-\BOOKMARK [2][-]{subsection.2.3.6}{Event selection}{section.2.3}
+\BOOKMARK [1][-]{section.2.1}{Charginos, neutralinos and sleptons}{chapter.2}
 \BOOKMARK [0][-]{chapter.3}{}{}
-\BOOKMARK [1][-]{section.3.1}{Missing transverse momentum algorithms in CMS}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.1.1}{Particle Flow pTmiss reconstruction}{section.3.1}
-\BOOKMARK [2][-]{subsection.3.1.2}{PUPPI pTmiss reconstruction}{section.3.1}
-\BOOKMARK [3][-]{subsubsection.3.1.2.1}{PUPPI algorithm}{subsection.3.1.2}
-\BOOKMARK [3][-]{subsubsection.3.1.2.2}{PUPPI pTmiss reconstruction}{subsection.3.1.2}
-\BOOKMARK [1][-]{section.3.2}{Calibration of pTmiss}{chapter.3}
-\BOOKMARK [1][-]{section.3.3}{Event selection}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.3.1}{Dilepton event samples}{section.3.3}
-\BOOKMARK [2][-]{subsection.3.3.2}{Single-photon event sample}{section.3.3}
-\BOOKMARK [1][-]{section.3.4}{pTmiss filters}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.4.1}{HCAL filters}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.2}{ECAL filters}{section.3.4}
-\BOOKMARK [2][-]{subsection.3.4.3}{Beam halo filter}{section.3.4}
-\BOOKMARK [1][-]{section.3.5}{pTmiss performance}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.5.1}{pTmiss performance using hadronic recoil}{section.3.5}
-\BOOKMARK [2][-]{subsection.3.5.2}{Performance of PF pTmiss algorithm}{section.3.5}
-\BOOKMARK [2][-]{subsection.3.5.3}{Performance of PUPPI pTmiss algorithm}{section.3.5}
-\BOOKMARK [2][-]{subsection.3.5.4}{High pileup studies}{section.3.5}
+\BOOKMARK [1][-]{section.3.1}{Datasets}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Higher order corrections}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Triggers}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{Physics Objects}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{Electrons}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.2}{Muons}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.3}{Lepton pair selection}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.4}{Isotrack veto}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.5}{Jets and pTmiss}{section.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.5.1}{MT2}{subsection.3.3.5}
+\BOOKMARK [2][-]{subsection.3.3.6}{Event selection}{section.3.3}
+\BOOKMARK [0][-]{chapter.4}{}{}
+\BOOKMARK [1][-]{section.4.1}{Missing transverse momentum algorithms in CMS}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.1.1}{Particle Flow pTmiss reconstruction}{section.4.1}
+\BOOKMARK [2][-]{subsection.4.1.2}{PUPPI pTmiss reconstruction}{section.4.1}
+\BOOKMARK [3][-]{subsubsection.4.1.2.1}{PUPPI algorithm}{subsection.4.1.2}
+\BOOKMARK [3][-]{subsubsection.4.1.2.2}{PUPPI pTmiss reconstruction}{subsection.4.1.2}
+\BOOKMARK [1][-]{section.4.2}{Calibration of pTmiss}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Event selection}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.3.1}{Dilepton event samples}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.2}{Single-photon event sample}{section.4.3}
+\BOOKMARK [1][-]{section.4.4}{pTmiss filters}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.4.1}{HCAL filters}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.2}{ECAL filters}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.3}{Beam halo filter}{section.4.4}
+\BOOKMARK [1][-]{section.4.5}{pTmiss performance}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.5.1}{pTmiss performance using hadronic recoil}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.2}{Performance of PF pTmiss algorithm}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.3}{Performance of PUPPI pTmiss algorithm}{section.4.5}
+\BOOKMARK [2][-]{subsection.4.5.4}{High pileup studies}{section.4.5}

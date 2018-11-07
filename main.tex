@@ -102,14 +102,24 @@
 \newcommand{\tauh}{\ensuremath{\PGt_\mathrm{h}}\xspace}
 \newcommand{\sqrtsNN}{\ensuremath{\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}}\xspace}
 \newcommand{\mht}{\ensuremath{H_{\mathrm{T}}^{\text{miss}}}\xspace}
-\newcommand{\PW}{\ensuremath{\mathrm{W}}}
-\newcommand{\PZ}{\ensuremath{\mathrm{Z}}}
+\newcommand{\PW}{\ensuremath{\mathrm{W}}\xspace}
+\newcommand{\PZ}{\ensuremath{\mathrm{Z}}\xspace}
 \newcommand{\htvecmiss}{\ensuremath{\vec{H}_{\text{T}}^{\text{miss}}}\xspace}
 \newcommand{\CL}{\ensuremath{\text{CL}}\xspace}
 \newcommand{\CLs}{\ensuremath{\text{CL}_\text{s}}\xspace}
 \newcommand{\CLsb}{\ensuremath{\text{CL}_\text{s+b}}\xspace}
 \newcommand{\ttbar}{\ensuremath{{t\overline{t}}}\xspace} % t-tbar
-
+\newcommand{\secondchi}{\PSGczDt}
+\newcommand{\firstchi}{\PSGczDo}
+\newcommand{\firstcharg}{\PSGcpmDo}
+\newcommand{\gravitino}{\sGra}
+\newcommand{\gluino}{\PSg}
+\providecommand{\PSGczDo}{\ensuremath{\widetilde{\chi}^{0}_{1}}\xspace} % neutralino
+\providecommand{\PSGcmDo}{\ensuremath{\widetilde{\chi}^{-}_{1}}\xspace} % neutralino
+\providecommand{\PSGczDt}{\ensuremath{\widetilde{\chi}^{0}_{2}}\xspace} % neutralino
+\providecommand{\PSGcpm}{\ensuremath{\widetilde{\chi}^\pm}\xspace} % neutralino
+\providecommand{\PSGcpmDo}{\ensuremath{\widetilde{\chi}^\pm_{1}}\xspace} % neutralino
+\providecommand{\PSGcpDo}{\ensuremath{\widetilde{\chi}^{+}_{1}}\xspace} % neutralino
 %old
 
 \newcommand{\mll}{\ensuremath{m_{\ell\ell}}\xspace}
@@ -132,10 +142,12 @@
 \newcommand{\mttwol}{\ensuremath{M_{\text{T2}}(\ell\ell)}\xspace}
 \newcommand{\mttwolb}{\ensuremath{M_{\text{T2}}(\ell \PQb \ell \PQb)}\xspace}
 \newcommand{\slep}{\ensuremath{\widetilde{\ell}}\xspace}
-\newcommand{\smuL}{\ensuremath{\widetilde{\mu}_\cmsSymbolFace{L}}\xspace}
-\newcommand{\smuR}{\ensuremath{\widetilde{\mu}_\cmsSymbolFace{R}}\xspace}
-\newcommand{\stauL}{\ensuremath{\widetilde{\tau}_\cmsSymbolFace{L}}\xspace}
-\newcommand{\stauR}{\ensuremath{\widetilde{\tau}_\cmsSymbolFace{R}}\xspace}            
+\newcommand{\seL}{\ensuremath{\widetilde{e}_{L}}\xspace}
+\newcommand{\seR}{\ensuremath{\widetilde{e}_{R}}\xspace}
+\newcommand{\smuL}{\ensuremath{\widetilde{\mu}_{L}}\xspace}
+\newcommand{\smuR}{\ensuremath{\widetilde{\mu}_{R}}\xspace}
+\newcommand{\stauL}{\ensuremath{\widetilde{\tau}_{L}}\xspace}
+\newcommand{\stauR}{\ensuremath{\widetilde{\tau}_{R}}\xspace}            
 \newcommand{\kt}{\ensuremath{k_{\mathrm{T}}}\xspace}
 \newcommand{\DR}{\ensuremath{\Delta\mathrm{R}}\xspace}
 \newcommand{\ptmisstrig}{\ensuremath{p_{\mathrm{T, trig}}^{\mathrm{miss}}}\xspace}
@@ -159,6 +171,8 @@
 \newcommand{\dr}{$\Delta R$\xspace}
 \newcommand{\dphi}{$\Delta \phi$\xspace}
 \newcommand{\nvtx}{\ensuremath{\mathrm{N}_{\mathrm{vtx}}}}
+\newcommand{\MB}{MB}                                        
+\newcommand{\kB}{kB}                                        
 \newcommand{\MHz}{MHz}                                        
 \newcommand{\kHz}{kHz}                                        
 \newcommand{\GHz}{GHz}                                        
@@ -256,6 +270,7 @@
 \include{tex/abstract} %The abstract is created using this file and userinfo.tex
 %\include{tex/introduction}
 \include{tex/eventReconstructionSimulation}
+\include{tex/search}
 \include{tex/samplesObjects}
 \include{tex/met}
 

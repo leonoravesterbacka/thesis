@@ -8,44 +8,46 @@
 \contentsline {subsection}{\numberline {1.1.2}The HLT}{14}{subsection.1.1.2}
 \contentsline {section}{\numberline {1.2}Data reconstruction}{16}{section.1.2}
 \contentsline {section}{\numberline {1.3}Simulated events}{17}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Hard parton scattering}{17}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.1}Hard parton scattering}{18}{subsection.1.3.1}
 \contentsline {subsubsection}{\numberline {1.3.1.1}Parton distribution functions}{18}{subsubsection.1.3.1.1}
-\contentsline {subsubsection}{\numberline {1.3.1.2}Hard scattering processes}{18}{subsubsection.1.3.1.2}
-\contentsline {subsubsection}{\numberline {1.3.1.3}Multiparton interactions and parton showers}{19}{subsubsection.1.3.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1.2}Hard scattering processes}{19}{subsubsection.1.3.1.2}
+\contentsline {subsubsection}{\numberline {1.3.1.3}Multiparton interactions and parton showers}{20}{subsubsection.1.3.1.3}
 \contentsline {subsubsection}{\numberline {1.3.1.4}Hadronization}{20}{subsubsection.1.3.1.4}
-\contentsline {subsubsection}{\numberline {1.3.1.5}Decay}{20}{subsubsection.1.3.1.5}
+\contentsline {subsubsection}{\numberline {1.3.1.5}Decay}{21}{subsubsection.1.3.1.5}
 \contentsline {subsection}{\numberline {1.3.2}Detector simulation}{21}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}Datasets}{21}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Dataformats}{21}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Event weights}{22}{subsection.1.4.2}
-\contentsline {chapter}{\numberline {2}}{23}{chapter.2}
-\contentsline {section}{\numberline {2.1}Datasets}{23}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Higher order corrections}{24}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Triggers}{28}{section.2.2}
-\contentsline {section}{\numberline {2.3}Physics Objects}{30}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Electrons}{30}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Muons}{32}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Lepton pair selection}{32}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Isotrack veto}{33}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}Jets and $p_{T}^{miss}$}{33}{subsection.2.3.5}
-\contentsline {subsubsection}{\numberline {2.3.5.1}$M_{T2}$\xspace }{34}{subsubsection.2.3.5.1}
-\contentsline {subsection}{\numberline {2.3.6}Event selection}{34}{subsection.2.3.6}
-\contentsline {chapter}{\numberline {3}}{35}{chapter.3}
-\contentsline {section}{\numberline {3.1}Missing transverse momentum algorithms in CMS}{36}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Particle Flow \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace reconstruction}{36}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}PUPPI \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace reconstruction}{36}{subsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.2.1}PUPPI algorithm}{37}{subsubsection.3.1.2.1}
-\contentsline {subsubsection}{\numberline {3.1.2.2}PUPPI \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace reconstruction}{39}{subsubsection.3.1.2.2}
-\contentsline {section}{\numberline {3.2}Calibration of \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace }{39}{section.3.2}
-\contentsline {section}{\numberline {3.3}Event selection}{41}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Dilepton event samples}{41}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Single-photon event sample}{42}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}\ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace filters}{43}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}HCAL filters}{43}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}ECAL filters}{44}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Beam halo filter}{44}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}\ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace performance}{46}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}\ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace performance using hadronic recoil}{47}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Performance of PF \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace algorithm}{48}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Performance of PUPPI \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace algorithm}{53}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}High pileup studies}{59}{subsection.3.5.4}
+\contentsline {section}{\numberline {1.4}Datasets}{22}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Dataformats}{22}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Event weights}{23}{subsection.1.4.2}
+\contentsline {chapter}{\numberline {2}}{24}{chapter.2}
+\contentsline {section}{\numberline {2.1}Charginos, neutralinos and sleptons}{25}{section.2.1}
+\contentsline {chapter}{\numberline {3}}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Datasets}{29}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Higher order corrections}{31}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}Triggers}{34}{section.3.2}
+\contentsline {section}{\numberline {3.3}Physics Objects}{36}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Electrons}{36}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Muons}{38}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Lepton pair selection}{38}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Isotrack veto}{39}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Jets and $p_{T}^{miss}$}{39}{subsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.5.1}$M_{T2}$\xspace }{40}{subsubsection.3.3.5.1}
+\contentsline {subsection}{\numberline {3.3.6}Event selection}{40}{subsection.3.3.6}
+\contentsline {chapter}{\numberline {4}}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Missing transverse momentum algorithms in CMS}{42}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Particle Flow \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace reconstruction}{42}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}PUPPI \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace reconstruction}{43}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}PUPPI algorithm}{43}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}PUPPI \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace reconstruction}{45}{subsubsection.4.1.2.2}
+\contentsline {section}{\numberline {4.2}Calibration of \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace }{46}{section.4.2}
+\contentsline {section}{\numberline {4.3}Event selection}{47}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Dilepton event samples}{48}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Single-photon event sample}{49}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}\ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace filters}{50}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}HCAL filters}{50}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}ECAL filters}{50}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Beam halo filter}{51}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}\ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace performance}{53}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}\ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace performance using hadronic recoil}{53}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Performance of PF \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace algorithm}{54}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Performance of PUPPI \ensuremath {\ensuremath {p_{\mathrm {T}}}\xspace ^\text {miss}}\xspace algorithm}{60}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}High pileup studies}{64}{subsection.4.5.4}

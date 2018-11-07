@@ -254,47 +254,47 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%   Formattin Section Headings                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifthenelse{\boolean{RS@BfSet}}%
-{\sectionfont{\normalsize\normalfont\singlespace\bfseries}%
- \subsectionfont{\normalsize\normalfont\singlespace\bfseries}%
- \subsubsectionfont{\normalsize\normalfont\singlespace\bfseries}%
- \paragraphfont{\normalsize\normalfont\bfseries}%
- \renewcommand{\paragraph}[1]{\@paragraph{#1.}}%
- \newcommand{\@paragraph}{\@startsection{paragraph}{4}{\parindent}%
-    {0.1ex}%
-    {-1.0em}%
-    {\SS@parafont}}%
- \subparagraphfont{\normalsize\normalfont\bfseries}}%
-{\sectionfont{\normalsize\normalfont\singlespace\bf}%
- \subsectionfont{\normalsize\normalfont\singlespace\bfseries}%
- \subsubsectionfont{\normalsize\normalfont\singlespace\bfseries}%
- \paragraphfont{\normalsize\normalfont\bfseries}%
- \renewcommand{\paragraph}[1]{\@paragraph{#1}.}%
- \newcommand{\@paragraph}{\@startsection{paragraph}{4}{\parindent}%
-    {0.1ex}%
-    {0pt}%
-    {\SS@parafont}}%
- \subparagraphfont{\normalsize\normalfont\bfseries}}%
-\renewcommand{\section}{%
-    \@startsection{section}{1}{\z@}%
-    {-0\baselineskip}%
-    {0.1ex}%
-    {\SS@sectfont}}
-\renewcommand{\subsection}{%
-    \@startsection{subsection}{2}{\z@}%
-    {-0\baselineskip}%
-    {0.1ex}%
-    {\SS@subsectfont}}
-\renewcommand{\subsubsection}{%
-    \@startsection{subsubsection}{3}{0em}%
-    {-0\baselineskip}%
-    {0.1ex}%
-    {\SS@subsubsectfont}}
-\renewcommand{\subparagraph}{%
-    \@startsection{subparagraph}{5}{\z@}%
-    {0.1ex}%
-    {-1.0em}%
-    {\SS@subparafont}}
+%\ifthenelse{\boolean{RS@BfSet}}%
+%{\sectionfont{\normalsize\normalfont\singlespace\bfseries}%
+% \subsectionfont{\normalsize\normalfont\singlespace\bfseries}%
+% \subsubsectionfont{\normalsize\normalfont\singlespace\bfseries}%
+% \paragraphfont{\normalsize\normalfont\bfseries}%
+% \renewcommand{\paragraph}[1]{\@paragraph{#1.}}%
+% \newcommand{\@paragraph}{\@startsection{paragraph}{4}{\parindent}%
+%    {0.1ex}%
+%    {-1.0em}%
+%    {\SS@parafont}}%
+% \subparagraphfont{\normalsize\normalfont\bfseries}}%
+%{\sectionfont{\normalsize\normalfont\singlespace\bf}%
+% \subsectionfont{\normalsize\normalfont\singlespace\bfseries}%
+% \subsubsectionfont{\normalsize\normalfont\singlespace\bfseries}%
+% \paragraphfont{\normalsize\normalfont\bfseries}%
+% \renewcommand{\paragraph}[1]{\@paragraph{#1}.}%
+% \newcommand{\@paragraph}{\@startsection{paragraph}{4}{\parindent}%
+%    {0.1ex}%
+%    {0pt}%
+%    {\SS@parafont}}%
+% \subparagraphfont{\normalsize\normalfont\bfseries}}%
+%\renewcommand{\section}{%
+%    \@startsection{section}{1}{\z@}%
+%    {-0\baselineskip}%
+%    {0.1ex}%
+%    {\SS@sectfont}}
+%\renewcommand{\subsection}{%
+%    \@startsection{subsection}{2}{\z@}%
+%    {-0\baselineskip}%
+%    {0.1ex}%
+%    {\SS@subsectfont}}
+%\renewcommand{\subsubsection}{%
+%    \@startsection{subsubsection}{3}{0em}%
+%    {-0\baselineskip}%
+%    {0.1ex}%
+%    {\SS@subsubsectfont}}
+%\renewcommand{\subparagraph}{%
+%    \@startsection{subparagraph}{5}{\z@}%
+%    {0.1ex}%
+%    {-1.0em}%
+%    {\SS@subparafont}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Formatting Generated Lists -- TOC, LOF and LOT %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
