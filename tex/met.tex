@@ -142,8 +142,74 @@ Dilepton and single-photon samples are used to study the \ptmiss response and re
 These samples are chosen as they contain events where no genuine \ptmiss from neutrinos is expected, and serves as a good tool to measure the performance of the \ptmiss originating from detector inefficiencies or jet mismeasurements.  
 \subsection{Dilepton event samples}
 \label{sec:zselection}
-The dilepton samples are subdivided into two categories based on the flavor of the lepton, namely \Zmm\ and \Zee\ samples. 
-The events for the \Zmm\ and \Zee samples are recorded using dimuon and dielectron triggers that select events where the \pt of the two leading leptons are above asymmetric thresholds. 
+The dilepton samples are subdivided into two categories based on the flavor of the lepton, namely \Zmm\ and \Zee\ samples. The dileptonic datasets are presented in Table~\ref{tab:METdileptondatasets} 
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+    \caption{Datasets used for the \ptmiss study}
+    \label{tab:METdileptondatasets}
+    \begin{center}
+        \begin{tabular}{l}
+        \hline\hline 
+        \multicolumn{1}{c}{\textbf{Dilepton datasets used for \ptmiss performance study}} \\
+        \hline
+        \multicolumn{1}{c}{\texttt{Dielectron samples} }             \\
+        \hline
+        \texttt{/DoubleEG/Run2016B-03Feb2017\_ver2-v2/MINIAOD}    \\
+        \texttt{/DoubleEG/Run2016(C-G)-03Feb2017-v1/MINIAOD}     \\
+        \texttt{/DoubleEG/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
+        \texttt{/DoubleEG/Run2016H-03Feb2017\_ver3-v1/MINIAOD}    \\
+        \hline
+        \multicolumn{1}{c}{\texttt{Dimuon samples} }             \\
+        \hline
+        \texttt{/DoubleMuon/Run2016B-03Feb2017\_ver2-v2/MINIAOD}   \\
+        \texttt{/DoubleMuon/Run2016(C-G)-03Feb2017-v1/MINIAOD}  \\
+        \texttt{/DoubleMuon/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
+        \texttt{/DoubleMuon/Run2016H-03Feb2017\_ver3-v1/MINIAOD}   \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                  
+
+The events for the \Zmm\ and \Zee samples are recorded using dimuon and dielectron triggers, as presented in Table~\ref{tab:METdileptontriggers} that select events where the \pt of the two leading leptons are above asymmetric thresholds. 
+The simulated samples used are presented in Appendix B. 
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+    \caption{Triggers used for the \ptmiss performance  study.}
+    \label{tab:METdileptontriggers}
+    \begin{center}
+        \begin{tabular}{ l}
+        \hline \hline
+        \multicolumn{1}{c}{\textbf{Dilepton triggers used for \ptmiss study}} \\
+        \hline
+        \multicolumn{1}{c}{\texttt{Dimuon and single muon triggers} }             \\
+        \hline 
+        \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_v*}         \\
+        \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ\_v*}      \\
+        \texttt{HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_v*}       \\
+        \texttt{HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_DZ\_v*}     \\
+        \texttt{HLT\_Mu27\_TkMu8\_v*}                                \\ 
+        \texttt{HLT\_Mu30\_TkMu11\_v*}                               \\
+        \texttt{HLT\_Mu50\_v*}                               \\
+        \texttt{HLT\_IsoTkMu22\_v*}                               \\
+        \texttt{HLT\_IsoMu27\_v*}                               \\
+        \texttt{HLT\_IsoMu24\_v*}                               \\
+        \texttt{HLT\_IsoMu22\_v*}                               \\
+        \hline 
+        \multicolumn{1}{c}{\texttt{Dielectron triggers} }             \\
+        \hline 
+        \texttt{HLT\_Ele17\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*}   \\ 
+        \texttt{HLT\_Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ\_v*}    \\
+        \texttt{HLT\_DoubleEle33\_CaloIdL\_GsfTrkIdVL\_v*}               \\
+        \texttt{HLT\_DoubleEle33\_CaloIdL\_GsfTrkIdVL\_MW\_v*}               \\
+        \texttt{HLT\_Ele27\_eta2p1\_WPLoose\_Gsf\_v*}               \\
+        \texttt{HLT\_Ele27\_WPTight\_Gsf\_v*}               \\
+        \texttt{HLT\_Ele35\_WPLoose\_Gsf\_v*}               \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                          
+
 Candidate events are required to have both the leading (subleading) lepton \pt greater than 25 (20)\GeV and an invariant mass in the range of 80 to 100\GeV, compatible with the mass of the 
 $Z$ boson.
 In order to have a pure sample of dilepton events originating from Drell--Yan production, a veto is applied on any event containing a third lepton of $\pt > 20$\GeV. 
@@ -157,9 +223,50 @@ The spectrum of the $Z$ boson transverse momentum, \qt, is shown in Fig.~\ref{fi
 \end{figure}
 \subsection{Single-photon event sample}
 \label{sec:photonselection}
-The events in the single-photon sample are selected using a set of isolated single-photon triggers with varying thresholds. 
+The events in the single-photon sample are presented in Table~\ref{tab:METphotondatasets}, and are selected using a set of prescaled isolated single-photon triggers with varying thresholds, presented in Table~\ref{tab:METphotontriggers}. The simulated samples used are presented in Appendix B. 
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+    \caption{Datasets used for \ptmiss study}
+    \label{tab:METphotondatasets}
+    \begin{center}
+        \begin{tabular}{ l}
+        \hline\hline 
+        \multicolumn{1}{c}{\textbf{Datasets used for \ptmiss study}} \\
+        \hline
+        \texttt{/SinglePhoton/Run2016B-03Feb2017\_ver2-v2/MINIAOD}   \\            
+        \texttt{/SinglePhoton/Run2016(C-G)-03Feb2017-v1/MINIAOD}   \\
+        \texttt{/SinglePhoton/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
+        \texttt{/SinglePhoton/Run2016H-03Feb2017\_ver3-v1/MINIAOD}   \\     
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                  
+
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+    \caption{Triggers used for the \ptmiss performance study.}
+    \label{tab:METphotontriggers}
+    \begin{center}
+        \begin{tabular}{ l}
+        \hline \hline
+        \multicolumn{1}{c}{\textbf{Single photon triggers used for \ptmiss study}} \\
+        \hline
+        \texttt{HLT\_Photon30\_R9Id90\_HE10\_IsoM\_v*}         \\
+        \texttt{HLT\_Photon50\_R9Id90\_HE10\_IsoM\_v*}         \\
+        \texttt{HLT\_Photon75\_R9Id90\_HE10\_IsoM\_v*}         \\
+        \texttt{HLT\_Photon90\_R9Id90\_HE10\_IsoM\_v*}         \\
+        \texttt{HLT\_Photon120\_R9Id90\_HE10\_IsoM\_v*}         \\
+        \texttt{HLT\_Photon165\_R9Id90\_HE10\_IsoM\_v*}         \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                        
 The \pt thresholds of the triggers are 30, 50, 75, 90, 120, and 165\GeV, and the first five triggers had different L1 accept rate (prescale) during the data taking periods, following the luminosity. 
 Candidate events are weighted based on the prescale values of the triggers.
+
+
 One tight ID photon with $\pt > 50$\GeV is required and events are vetoed that contain leptons of $\pt > 20$\GeV. 
 In order to isolate the events needed for this study, a requirement to have at least one jet with \pt greater than 40\GeV that recoils off of the photon. 
 To match the trigger conditions, the leading photon is further required to have the ratio of the energy deposited in a $3\times3$ crystal region of the ECAL, centered around the crystal containing an energy deposit greater than all of its immediate neighbors, to the energy of the entire deposit of the photon greater than 0.9.

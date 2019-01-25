@@ -1,5 +1,4 @@
 \chapter{Event Reconstruction and Simulation}
-
 The basis of any LHC data analysis relies on the concept of an 'event'. 
 An event refers to a succesful collision of two protons that results in the full readout of the CMS detector, and subsequently the combination of subdetector information that forms physics objects. 
 The LHC delivers proton bunches at a rate of 40\MHz but only a small fraction of the protons in the bunches result in collisions of interest to the CMS physics program.
@@ -10,7 +9,7 @@ Furthermore, the way in which the subdetector information is combined to form ph
 Apart from only analyzing the recorded events that pass the two-tier trigger system, simulated events of the CMS detector are used to validate the performance of the physics object reconstruction, for the estimation of SM background processes and for visualizing how a potential BSM signal could be found. 
 The last part of this section is presenting how the physics processes are generated and how their interaction with the detector material is simulated. 
 \section{Trigger}
-\label{eventReconstructionSimulation}
+\label{trigger}
 During 2016 proton-proton run of the LHC, the LHC delivered proton bunches with a time separation of 25\ns, and a peak luminosity reaching the unprecedented value of $10^{-34}\mathrm{cm}^{-2}\mathrm{s}^{-1}$. 
 At this peak luminosity, the pp interaction rate exceeds 1\GHz, as the mean of the number of interaction per bunch is 25, which is a rate impossible to readout with the technology to date.   
 A two tier triggering system helps differentiate which of the 1\GHz contain interesting events, while discarding the rest. 
@@ -21,7 +20,7 @@ Tracking information is not included at this step, as it is too time consuming.
 \begin{figure}[!htp]
   \centering
    \includegraphics[width=0.42\textwidth]{images/detector/figures_L1-overview.png}
-   \caption{L1}
+   \caption{Chart showing the organization of the various components of any L1-accept. The calorimetry and muons systems work in parallel and are combined into a global trigger.}
    \label{fig:L1}
 \end{figure}                                                                           
 Instead, information from the calorimeters and the muon detectors is combined into a global trigger, as illustrated in Fig.~\ref{fig:L1}. 
@@ -60,7 +59,7 @@ This thesis contains a detailed study on the performance of the \ptmiss in Run 2
 \begin{figure}[!htp]
   \centering
    \includegraphics[width=0.42\textwidth]{images/met/Figure_006.pdf}
-   \caption{L1}
+   \caption{The \ptmiss trigger efficiency measured in the single-electron sample. The efficiency of each reconstruction algorithm, namely the L1, the calorimeter and the PF based \ptmiss algorithms, is shown separately. The numbers in parenthesis correspond to the online \ptmiss thresholds.}
    \label{fig:triggerMET}
 \end{figure}                                                                         
 The HLT reduces the rate from the L1 output of 100\kHz to ~1\kHz. The data that now have passed the L1 and HLT will be sent of the CERN Tier-0, described in the subsequent section. 
@@ -74,6 +73,7 @@ The next computing tiers are the Tier-2 and Tier-3, which consists of computing 
 Once the CMS HLT has decided what events to keep, they are sent to the Tier-0 at CERN, where the reconstruction of the event is initialized. 
 The CMS software, CMSSW, is a centrally maintained code base that reconstructs objects out of calorimeter deposits, hits in the muon chambers and tracks in the pixel and silicon trackers, and stores them in $Event$ $Data$ $Model$ format (EDM).    
 \section{Simulated events}
+\label{MC}
 Any search or measurement at the LHC are relying on simulated events, so called Monte Carlo (MC) generated events. 
 Physical processes are simulated in a chain, starting from the foundations dictated by the theoretical framework as described in Chapter\ref{theory}, followed by the decay, radiation and hadronization of the particles produced, and finally, the simulation of the interaction of the generated process with the detector material. 
 Events are generated from both known SM processes to predict some backgrounds in the searches, and in order to validate the data-driven backgrounds. 
@@ -141,13 +141,13 @@ Worth noting is that if there would be any hints of SUSY in a particlular scenar
 \section{Datasets}
 Once the collision data and the simulated data has been introduced, the datasets analyzed in this thesis is presented, along with a short introduction of the data formats and weighting of the MC samples. 
 \subsection{Dataformats}
-The collision data reconstruction processed at the Tier-0 is stored in RECO format, a format containing much of the detector information but very large event sizes of ~1.2 MB. 
+The reconstruction of the collision data is processed at the Tier-0 and is stored in RECO format, a format containing much of the detector information and is thus associated with very large event sizes of ~1.2\MB. 
 In order to make the storage and analysis as easy as possible, a set of data tiers are processed that keeps the event sizes to a minimum.
-The first step in the data tier format processing is the Analysis Object Data (AOD) which has discarded much of the RAW detector information not needed for analysis, and decreased the event size greatly to around 300kB. 
+The first step in the data tier format processing is the Analysis Object Data (AOD) which has discarded much of the RAW detector information not needed for analysis, and decreased the event size greatly to around 300\kB. 
 The last step is the MINIAOD format, that was introduced for the Run II of the LHC. 
-All high level physics objects are included with high level corrections for jets and \ptmiss, all particles returned by Particle Flow algorithm, all MC truth information for simulation, and all trigger information. 
-By only saving the above information needed for mainstream analyses, the event sizes kept at 30--50 kB. 
-In order to cope with the huge amounts of data collected during Run II, and the various year specific set of MC samples, a further reduction in the event size is needed, and to this end the so called nanoAOD is developed, that manages to keep the event size at 1 kB.  
+The MINIAOD contains all high level physics objects, all high level corrections for jets and \ptmiss, all particles returned by Particle Flow algorithm, all MC truth information for simulation, and all trigger information. 
+By only saving the above information needed for mainstream analyses, the event sizes kept at 30--50\kB. 
+In order to cope with the huge amounts of data collected during Run II, and the various year specific set of MC samples, a further reduction in the event size is needed, and to this end the so called nanoAOD is developed, that manages to keep the event size at 1\kB.  
 The MINIAOD data and MC samples are stored on the Tier-0 and Tier-1, and analysis specific frameworks are used to create subsets of samples containing the particlular datasets needed. 
 As the analyses presented in this thesis are based on different dileptonic datasets, the analysis specific framework used is aimed at picking data collected with dileptonic triggers and the various SM processes containing leptons, and store this in a format called Trees. 
 These trees are used on analysis level for plotting, counting, fitting and statistical analysis.      
@@ -160,4 +160,22 @@ where $\sigma$ is the cross section of that process, $\cal{L}$ is the integrated
 This weight is then multiplied to each event. From the above equation, one can see that for a process with large cross section, the more simulated events are needed to keep the weight to a desirable small value. 
 The motivation to keep the weight as small as possible, is the statistical error on the MC sample, which goes as the square root of the sum of squared event weights. 
 So the larger the $N$, the smaller the $w$ and thus the smaller the statistical error. 
+\subsection{Pileup}
+As described in Section\ref{CMS}, the LHC delivers more than one pp interaction per bunch crossing in order to increase chances for successful interactions. 
+The motivation for this originates from the PDFs discussed previously in this chapter, and the fact that most pp collisions at the LHC produced not so interesting low mass QCD interactions with little physical interest.  
+The number of interactions per bunch crossing is described by a Poissonian distribution, and has a mean of 27 interactions during the 2016 datataking, and is depicted in Fig.\ref{pileup}\cite{lumi}.
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.7\textwidth]{images/detector/pileup_pp_2016.pdf}
+   \caption{Mean number of interactions per bunch crossing for the 2016 pp run at 13\TeV. The cross section is taken to be 80 mb.}
+   \label{fig:pileup}
+\end{figure}
+This multiple pp interactions per bunch crossing, known as pileup, will be greatly discussed in the chapter on the performance of the \ptmiss algorithms. 
+The reason for this is the challenges that pileup poses on the experiment in efficiently distinguishing the primary vertex from pileup vertices, and results in inefficiencies in the energy assignment of various physics objects.    
+Specifically, the pileup has a significant effect on the reconstruction on the \ptmiss, which will be greatly discussed in the chapter on the performance of the \ptmiss algorithms. 
+As the multiple pp collisions per bunch crossing depends on the beam conditions, and can vary over time between LHC fills, the pileup distribution varies significantly over time. 
+For this reason, it is difficult to properly model the pileup in simulation, which results in the necessity of a correction of the modelled number of vertices in simulation to match the distribution in data. 
+This is known as ''pileup reweighting`` and is used for all simulated samples.  
+The two searches presented in this thesis use a pileup reweighting technique that reweights the total number of true interaction in the event, whereas the \ptmiss performance study reweights using the number of reconstructed vertices. 
+The slight mismodelling of the pileup in the simulated signal samples is taken into account as a systematic uncertainty in the signal interpretation, which will be further discussed later. 
 

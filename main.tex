@@ -1,11 +1,21 @@
 \RequirePackage{fix-cm}
 \documentclass[12pt,final,CPage]{eththesis} %Use this line for Windows OS
-
 \include{packages}
 \usepackage{braket}
 \usepackage{etex}
 \usepackage{xspace}
 \usepackage{cancel}
+\usepackage{feynmf}
+\usepackage{enumitem}
+\usepackage{wasysym}
+\newenvironment{packed_item}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+\newcommand{\todoItem}{\item \Square~}
+%\usepackage{feynmp}
 \usepackage[final]{pdfpages}
 \newcommand{\lint}{35.9\fbinv}
 \newcommand{\EVTGEN} {{\textsc{evtgen}}\xspace}
@@ -104,11 +114,14 @@
 \newcommand{\mht}{\ensuremath{H_{\mathrm{T}}^{\text{miss}}}\xspace}
 \newcommand{\PW}{\ensuremath{\mathrm{W}}\xspace}
 \newcommand{\PZ}{\ensuremath{\mathrm{Z}}\xspace}
+\newcommand{\PZZ}{\ensuremath{\mathrm{ZZ}}\xspace}
+\newcommand{\PWZ}{\ensuremath{\mathrm{WZ}}\xspace}
+\newcommand{\PWW}{\ensuremath{\mathrm{WW}}\xspace}
 \newcommand{\htvecmiss}{\ensuremath{\vec{H}_{\text{T}}^{\text{miss}}}\xspace}
 \newcommand{\CL}{\ensuremath{\text{CL}}\xspace}
 \newcommand{\CLs}{\ensuremath{\text{CL}_\text{s}}\xspace}
 \newcommand{\CLsb}{\ensuremath{\text{CL}_\text{s+b}}\xspace}
-\newcommand{\ttbar}{\ensuremath{{t\overline{t}}}\xspace} % t-tbar
+\newcommand{\ttbar}{\ensuremath{\mathrm{{t\overline{t}}}}\xspace} % t-tbar
 \newcommand{\secondchi}{\PSGczDt}
 \newcommand{\firstchi}{\PSGczDo}
 \newcommand{\firstcharg}{\PSGcpmDo}
@@ -268,11 +281,15 @@
 \addtocontents{toc}{\protect\addvspace{10pt}\noindent{CHAPTER}\protect\hfill\par}{}% This extra line adds the word CHAPTER to the table of contents %
 \phantomsection
 \include{tex/abstract} %The abstract is created using this file and userinfo.tex
-%\include{tex/introduction}
+\include{tex/standardModel}
+\include{tex/supersymmetry}
+\include{tex/experimentalApparatus}
 \include{tex/eventReconstructionSimulation}
 \include{tex/search}
 \include{tex/samplesObjects}
+\include{tex/eventSelections}
 \include{tex/met}
+\include{tex/TwoOrMoreAppendices}
 
 \bibliography{bib/biblio}
 \end{document}

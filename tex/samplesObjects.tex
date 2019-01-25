@@ -1,17 +1,300 @@
-\chapter{Event samples and selections}
-Following the introduction of the SUSY particles that these analyses are searching for, the specific data that is needed in the searches is presented in the section on the datasets and triggers. 
-Subsequently, the simulated samples and the objects used in the searches are presented.  
+\chapter{PHYSICS OBJECTS}
+Common to the searches for chargino, neutralino and slepton production is the final state containing two leptons and \ptmiss originating from the neutralino or gravitino LSP.
+The difference lies in the hadronic activity and whether the lepton pair is compatible with a \PZ boson or not. 
+This section presents the Particle Flow (algorithm) that combines subdetector information to form the physics objects that are used in these searches, and the quality criteria imposed on them to be considered a signal event or suitable to predict various SM background processes.  
+\section{The Particle Flow Algorithm}
+General purpose high energy particle physics detectors are built on the principle of layers of sub-detectors around the beam axis. 
+The calorimeter layers and muon systems are designed for particles to get completely absorbed or produce hits in them. 
+Intuitively, one would think that each layer would lend it self useful for reconstructing a certain type of particle: electrons and photons could be reconstructed from electromagnetic showers in the ECAL, hadrons reconstructed from hadronic showers in the HCAL, jets from combined calorimeter signals, muons from hits in the muon system. 
+However, the idea behind the PF algorithm is to instead optimally combine the information from the different sub-detector layers.   
+The following is a simplified description of the PF algorithm that closely follow that described in \ref{Sirunyan:2017ulk}.
+The design of the CMS detector as described in Section~\ref{CMS} has proven to be well-suited for particle-flow (PF) reconstruction of the physics objects. 
+Reasons behind this statement include the excellent muon detectors of CMS that provide efficient and pure identification of muons. 
+The combination of a fine-grained tracker and a strong magnetic field effectively measures charged particle tracks that make up ~65\% of the jet energy. 
+Additionally, the excellent resolution and the segmentation of the ECAL provides separation of energy deposits from particles in hadronic jets and accounts for ~25\% of the jet energy. 
+The segmentation of the HCAL allows to differentiate charged from neutral hadrons, and subsequently the measurement of the remaining ~10\% of the jet energy. 
+The algorithm can be summarized as follows:
+\begin{itemize}
+\item Tracks from the pixel and strip tracker are extrapolated from the last measured hit in the tracker to the calorimeters. 
+The track is linked to a cluster in the calorimeters according to some boundary conditions, and if several clusters are linked to a track, the cluster with the smallest distance to the track is kept. 
+Tracks are also extrapolated to the muon detector. 
+\item In the second step of the algorithm muons are identified by a set of requirements on global/tracker muons, as described in Section~\ref{muons}. 
+The tracks and clusters associated to these muons are not considered in the rest of the algorithm. 
+\item After muons have been identified, the electron and isolated photon identification follow. 
+Electron candidates are seeded from a GSF track if there are no additional tracks linked to that ECAL cluster. 
+Photon candidates are seeded from ECAL superclusters with \ET greater than 10\GeV and no link to a GSF track.
+The tracks and clusters are then removed from the remainder of the algorithm. 
+\item At this point, muons, electrons and isolated photons have been identified and their corresponding tracks and clusters removed. 
+Charged hadrons ($\pi^{\pm}$, $K^{\pm}$, protons etc.), neutral hadrons ($K_{L}^{0}$, neutrons etc.) and non-isolated photons (from $\pi^{0}$ decays) are identified. 
+Neutral hadrons and photons are identified by ECAL and HCAL clusters not linked to any track. 
+More precisely, within the tracker volume, an ECAL cluster give rise to a photon whereas a HCAL cluster give rise to a neutral hadron. 
+Outside of the tracker volume it is not possible to differentiate charged from neutral hadrons, and therefore ECAL and HCAL clusters that are linked are interpreted as charged or neutral hadrons, whereas only an ECAL cluster is identified as a photon. 
+\item The remaining HCAL clusters can be linked to the remaining tracks (that are not already linked to another HCAL cluster), that subsequently can be linked to the remaining ECAL clusters. 
+The total energy of the ECAL and HCAL clusters is then used to determine the $calibrated$ $calorimetric$ $energy$ under a single charged hadron hypothesis. 
+The sum of the track momenta is also computed and compared to the calibrated calorimetric energy. 
+If the calibrated calorimetric energy is larger than the sum of the track momenta, this can be interpreted as a photon or a neutral hadron. 
+If the calibrated calorimetric energy is compatible with the sum of the track momenta, this can be interpreted as a charged hadron. 
+If the calibrated calorimetric energy is smaller than the sum of the track momenta, this can be interpreted as a muon. 
+\end{itemize}
+To summarize; electrons, muons, photons, charged hadrons and neutral hadrons have been identified by the PF algorithm. 
+These $PF$ $candidates$ are subsequently used to reconstruct jets, \ptmiss and $\tau$ lepton candidates.   
+\section{Leptons}
+Two leptons are expected in all the studied signal processes, either from the decay of an on-shell \PZ boson or through the pair production of sleptons that decay to leptons and neutralinos. 
+There are several SM background processes that can result in opposite sign same flavor leptons, and common to these are that they include a decay of a \PZ boson, virtual photon or a \PW boson. 
+Although these bosons decay democratically to each lepton generation, as shown in Fig~\ref{fig:WZ}, only the first and second lepton generations are considered in this thesis. 
+In this work, dielectron ($ee$) and dimuon ($\mu\mu$) events are categorized as same flavor (SF) and events containing an electron and a muon ($e\mu$) are categorized as different flavor (DF). 
+The reason to exclude the third lepton generation, the $\tau^{\pm}$ leptons and their corresponding $\nu_{\tau}$'s, is due to the challenging final state. 
+The $\tau$ lepton, being the most massive of the leptons flavors, decay hadronically ~65\% of the time. 
+As an effect, including this decay mode in the various signal scenarios would result in the introduction of overwhelming backgrounds from multijet QCD processes, that in turn would decrease the sensitivity of the searches. 
+However, the search for direct stau production in leptonic and hadronic final states has been performed by CMS (add ref), where the challenging background due to $\tau$ leptons is taken into account.  
+\section{Electrons}
+\label{subsub:electrons}
+Electrons are reconstructed by associating ECAL clusters with a track reconstructed in the silicon detector. 
+The following contains a description of the clustering of the ECAL deposits, the electron track and the combination of the two, and is roughly based on \ref{Khachatryan:2015hwa}. 
+Finally, the identification and isolation requirements imposed on the electrons to be categorized as signal events or used for background estimation techniques are presented. 
+\subsection{Electron reconstruction}
+Bremsstrahlung causes electrons to lose energy when interacting with detector material. 
+Depending on the amount of tracker material before the ECAL, the electrons can lose more or less energy due to radiation of photons. 
+For this reason, the energy of the measured electrons will be underestimated if one does not take into account the radiated photons. 
+\subsubsection{Clustering}
+Clusters of ECAL crystals are constructed for this reason, with the aim to collect the energy deposits of the crystals surrounding a seed crystal. 
+Two clustering algorithms are deployed that group crystals together into supercrystals (SC) following a set of threshold criteria on the \ET of the seeded crystal, and taking into account the differing crystal layouts of the ECAL barrel and endcap.   
+Additionally, PF clusters are reconstructed by aggregating crystals surrounding a seed, following thresholds set on the electronic noise levels.  
+\subsubsection{Seeding}
+The electron seed, the first step in the electron track reconstruction, can either be an ECAL-based seed or a tracker-based seed. 
+As the naming suggests, the former seed is based on information from the SC that is extrapolated back to the vertex. 
+The latter is a part of the PF reconstruction algorithm. 
+The tracker-based procedure has advantages over the ECAL-based procedure for low \pt electrons that bend significantly in the magnetic field, the radiated photons are spread out and can not all be contained in a SC, making the extrapolation of the track starting from the SC in the ECAl-based approach sub-optimal, as not all radiated energy is contained in it. 
+Additionally, for electrons in jets, the SC position and energy is affected by the other particle contributions, making the ECAL-based approach inefficient. 
+To determine the tracker-based seed, the Kalman Filter (KF) track reconstruction can be used, but is sub-optimal when there is radiative losses of the electrons in the tracker material. 
+In the cases where a lot of bremsthralung took place, the KF algorithm will not be able to follow the change in the curvature of the electron trajectory as a result of the energy lost. 
+As a result, the hits can not be collected, or they are of bad quality. 
+To recover the trajectory of these bremstrahlung electron, the KF tracks are refitted using the Gaussian sum filter (GSF) algorithm.
+The GSF algorithm takes into account that the bremsstrahlung electron energy loss is non-Gaussian, and model the bremstrahlung energy loss by weighted sums of Gaussians instead of just one Gaussian used in the KF algorithm. 
+The $\chi^{2}$ of the KF and GSF fitting, together with energy matching of the ECAL and tracker are used in an MVA to select the tracker seed as the electron seed. 
+\subsubsection{Tracking}
+The ECAL-based seed and tracker-based seed are merged into a unique collection and are submitted to the full electron tracking with twelve GSF components.
+The track is built using the combinatorial KF method which starts at the electron seed and proceeds iteratively in the next layer of the tracker, and the hits are collected.
+\subsubsection{Track and cluster association}
+Electron candidates are constructed by associating a GSF track to an ECAL cluster. 
+ECAL-seeded electrons are now by construction associated to the ECAL cluster used to determine the ECAL-based seed. 
+The tracker-seeded electrons are associated to the aforementioned PF clusters. 
   
+\subsection{Electron identification and isolation}
+The rationale beind the electron identification is to efficiently differentiate prompt electrons from electrons from photon conversions, jets misidentified as electrons and electrons from b-quark decays.  
+As there are many discriminating variables available, the electron identification can be performed by either a sequential set of selections on these variables, or combine them in an MVA analysis for improved discrimination.
+The electron identification used in these searches use the MVA identification technique, and below follow a description of the variables used in the analysis. 
+\begin{itemize}\addtolength{\itemsep}{0.5\baselineskip}
+\item $\sigma_{\eta}\sigma_{\eta}:$ 
+The shower shape variable is a measure of the spread of the electron shower along the $\eta$ direction.
+\footnote{defined as ($\sigma_{\eta}\sigma_{\eta})^{2}=\frac{[\Sigma (\eta_i-\bar{\eta})^{2}w_i]}{\Sigma w_i}$ where the sums run over the 5x5 matrix of crystals around the highest \ET crystal of SC, and $w_i$ denotes a weight that is logarithmically dependent on the contained energy.}
+This variable exhibits a sharp peak for prompt electrons, whereas for misidentified electrons it is more spread, making it an ideal discrimination variable.  
+\item $|\Delta \eta| = |\eta_{SC}-\eta_{in}^{extrap}|:$
+denotes the separation between the SC energy-weighted $\eta$ position and the track $\eta$ extrapolated from the innermost track position and direction to the point of closest approach (PCA) to the SC.
+The $|\Delta \eta|$ increases with the amount of bremstrahlung. 
+\item $|\Delta \phi| = |\phi_{SC}-\phi_{in}^{extrap}|:$
+denotes the azimuthal separation between the SC energy-weighted $\phi$ position and the track $\phi$ extrapolated from the innermost track position and direction to the PCA to the SC.
+\item $H/E$: 
+The ratio $H/E$ \footnote{where $E$ is the energy of the SC, and $H$ the sum of the HCAL tower energies within $\Delta R = \sqrt((\Delta \eta )^{2}+ (\Delta \phi )^{2}) = 0.15$} is used to estimate the energy leakage into the HCAL. 
+A well-identified electron would be expected to have a low $H/E$ owing to the high $X_0$ of the CMS detector, thereby containing the EM showering before it reaches the HCAL. 
+Hadron fakes instead exhibit a larger $H/E$. 
+\item $|1/E - 1/p|$:
+This quantity expresses an energy-momentum matching requirement using the SC energy, $E$, and the track momentum, $p$, at the PCA to the track vertex. 
+The requirement helps to reject backgrounds from hadronic activity where the spread of the $E$ is not localized resulting in a low $E/p$, but also backgrounds where a $\pi^{0}\rightarrow\gamma\gamma$ decay occurs in the close vicinity of a charged hadron, resulting in a very high $E/p$ ratio.
+\item $d_{xy}$ and $d_{z}$:
+The transverse and longitudinal distance between the electron track and the primary interaction vertex.
+\item Missing hits:
+Missing hits are used to suppress electrons from photon conversions. 
+As photon conversions take place close to the beampipe or the pixel system, missing hits can occur due to the large change in curvature of the electron trajectory. 
+At most, one missing hit is allowed for an accepted trajectory candidate, and, to avoid including hits from converted bremsstrahlung photons in the reconstruction of primary electron tracks, an increased $\chi^{2}$ penalty is applied to trajectory candidates with one missing hit.
+\item Conversion veto: In order to reject secondary electrons produced in the conversion of photons in the tracker material, a vertexing algorithm is used. 
+The hits in the tracker from the converted photon are fit to a common vertex using the well-defined topological constraint that tracks from conversions have virtually the same tangent at the conversion vertex in both the ($r$, $\phi$) and ($r$, $z$) planes. 
+The convereted photon candidates are rejected according to the $\chi^{2}$ probability of the fit.
+\end{itemize}
+
+As isolation variable, the mini-isolation is used which features a shrinking cone-size with increasing \pt of the lepton. 
+Thus, the cone size in which the PF particles are summed to calculate the relative isolation is no longer constant, but a function of the \pt of the lepton
+\begin{equation*}
+    R = \frac{10.}{min\left[ max \left( \pt, 50 \right), 200 \right]} \quad.
+\end{equation*}
+
+For \pt values below 50\GeV, this leads to a constant cone size of 0.2. 
+For \pt values between 50\GeV and 200\GeV, the cone size shrinks from 0.2 to 0.05 at which it remains for higher \pt leptons.
+Corrections to the isolation are applied by subtracting the average energy density $\rho$ from the effective geometrical area of the lepton's isolation cone. 
+The variable cone size is taken into account for this correction.
+
+Table~\ref{tab:electrons} summarizes the identification and isolation criteria imposed on the electrons in order for them to be considered in the analysis. 
+The MVA trained discriminator is optimized on electrons from prompt W-boson decays in \ttbar versus leptons stemming from so-called ``fakes''\footnote{``Fake'' leptons are mostly semi-leptonic b-quark decays where $b \rightarrow cW \rightarrow c\ell \nu$} in \ttbar. 
+The working point used for the MVA identification discriminator corresponds to a ``tight'' value, developed at the end of 2016. 
+The actual MVA cut value depends on the lepton \pt and $|\eta|$. 
+In each $|\eta|$ bin the lower value is used for electrons with \pt $> 25$ GeV while the cut decreases linearly from the upper to the lower value for \pt between 15 and 25 GeV. 
+Additionally, conversion rejection cuts are applied.                        
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+    \caption{Electron selection criteria.}
+    \label{tab:electrons}
+    \begin{center}
+        \begin{tabular}{ l r}
+        \hline \hline
+        cut &  value                             \\ \hline
+        \multicolumn{2}{c}{\textbf{Identification}}                \\
+        MVA &  Tight 2016 Working point    \\
+        \multicolumn{2}{c}{\textbf{Conversion rejection}}                \\
+        number of lost hits & 0 \\
+        conversion veto & pass \\                          
+        \multicolumn{2}{c}{\textbf{Isolation}}                \\
+        mini Isolation  &  $<$ 0.1                         \\
+        \multicolumn{2}{c}{\textbf{Impact parameter}}                \\
+        $d_{xy}$ & $<5\mm$ \\
+        $d_{z}$ & $<10\mm$ \\
+        SIP3D    & $< 8$ \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                       
+
+\section{Muons}
+The calorimeters of CMS are efficiently stopping electrons, photons, charged and neutral hadrons, resulting in muons (and of course neutrinos) being the only particles reaching the muon systems.  
+The muon track reconstruction and identification described below is based on \ref{Sirunyan:2018fpa}. 
+Inner tracks and tracks in the muon systems are used as input for the muon-track reconstruction, that can be categorized in the following three ways:
+\begin{itemize}\addtolength{\itemsep}{0.5\baselineskip}
+\item Standalone-muon track:
+DT and CSC hits are clustered and the track segments formed are used as seeds for the fitting. DT, CSC and RPC hits are used in the final fitting to reconstruct a standalone-muon track.
+\item Tracker-muon track:
+An "inside-out" approach is used for the tracker-muon tracks. 
+If an inner track has \pt > 0.5\GeV and $p$ > 2.5\GeV, then it is extrapolated to the muon system. 
+If the extrapolated track and at least one track in a muon segment have an absolute difference in their position in $x$-coordinates less than 3\cm or the ratio of this distance to the uncertainty is less than 4, then tracks are considered to be matched.  
+\item Global-muon track:
+In contrast to the tracker-muon track, an "outside-in" approach is used for global muon tracks. 
+A standalone-muon track is matched to an inner track, if the position and momentum of the two tracks are compatible. 
+The two tracks are combined and fitted using KF technique to form a global muon track. 
+\end{itemize}
+The global muon track procedure improves the momentum resolution for muons of \pt > 200\GeV compared to a tracker-muon track only fit. 
+This is because large \pt muons have a higher probability to reach more than one muon segments, which is required for the global muon reconstruction. 
+Lower \pt muons benefit from the tracker-muon reconstruction as only one muon segment is required in the matching. 
+However, most muons are reconstructed as global muons, tracker muons or as both. The standalone-muon tracks have worse momentum resolution and can more often pick up cosmic muons. 
+
+\subsection{Muon identification and isolation}
+From an experimental point of view, muons are much easier to measure than electrons. 
+As the radiated power due to Bremsstrahlung is much lower for muons than for electrons\footnote{The radiated power due to Bremsstrahlung goes as $m^{-4}$, meaning that it is suppressed for more massive particles such as muons and protons.} there are less amibiguities in the muon reconstruction than in the electron reconstruction. 
+Additionally, the unlikely process of photon conversion to two muons make a conversion veto redundant.   
+Instead, the different variables used for the muon identification is listed below:
+\begin{itemize}\addtolength{\itemsep}{0.5\baselineskip}
+\item Reconstruction type: A muon can be identified using the various muon-track reconstruction categorization, i.e. require standalone-muon track, tracker-muon track, or global-muon track. PF muon identification requirement can also used imposed.
+\item Fraction of valid tracker hits: Fraction of hits from inner tracker layers that the muon traverses.  
+\item Segment compatibility: The muon segment compatibility is computed by propagating the tracker track to the muon system, and evaluating both the number of matched segments in all stations and the closeness of the matching in position and direction     
+\item Kink-finding: A kink-finding algorithm splits the tracker track into two separate tracks at several places along the trajectory
+For each split the algorithm makes a comparison between the two separate tracks, with a large $\chi^{2}$ indicating that the two tracks are incompatible with being a single track.
+\item Position match: the tracker and standalone tracks are matched according to their position. 
+\item Normalized $\chi^{2}$: Requirement on the global fit required to have goodness-of-fit per degree of freedom 
+\item $d_{xy}$ and $d_{z}$: Requirements on the transversal and longitudinal distance between the tracker track and the location of the primary vertex. This cut is applied to suppress events with cosmic muons, tracks from pile-up or muons originating from in-flight decays.
+\end{itemize}
+
+There are several identification categorizations developed in CMS for various analysis needs, with working points aimed to more or less efficienciently suppress fakes from punch through hadrons while keeping a high muon identification efficiency.
+In this work, the medium muon ID is used. The medium muon ID is optimized for prompt muons and for muons from heavy flavor decay, and the definition is summarized in Table~\ref{tab:muonsID}. 
+The isolation variable used for electrons, the mini-isolation, is also used for muons. 
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+    \caption{Muon selection criteria.}
+    \label{tab:muonsID}
+    \begin{center}
+        \begin{tabular}{ l r}
+        \hline \hline
+        cut         &  value                             \\ \hline
+        \multicolumn{2}{c}{\textbf{Loose Muon ID}}                \\
+             PF Muon ID                        &  True \\
+             Is Global OR Tracker Muon                        &  True \\
+        \multicolumn{2}{c}{\textbf{Medium Muon ID}}                \\
+             Loose Muon ID                        &  True \\
+             Global Muon                         &  True \\
+             Fraction of valid tracker hits      &  $>0.8$ \\
+             Normalized global-track $\chi^{2}$     &  $<3$ \\
+             Tracker-Standalone position match $\chi^{2}$   &  $<12$ \\
+             Kick-finder    &   $<20$\\
+             Tight Segment compatibility  & $>0.451$\\
+        \multicolumn{2}{c}{\textbf{Isolation}}                \\
+             mini Isolation                 &   $<0.2$                         \\
+        \multicolumn{2}{c}{\textbf{Impact parameter}}                \\
+        $d_{xy}$ & $<5\mm$ \\
+        $d_{z} $ & $<10\mm$ \\
+        SIP3D    & $< 8$ \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                      
+
+\section{Jets}
+The PF candidates found through the PF algorithm described in Section\ref{secPF} are used as input in a clustering algorithm for hadronic jets. 
+A variety of clustering algorithms are on the market, with different optimizations for high or low \pt jets or different shapes, with different computation speeds. 
+In the following the ingredients needed for well-measured jets are described, starting with pileup mitigation, followed by the sequential jet clustering algorithms, and finally the identification and corrections needed. 
+\subsection{Charged hadron subtraction}
+The clustering algorithms are efficient in forming jets while keeping the contamination of effects from pileup and underlying events at a minimum.
+During the clustering, there is a first line of defense against pileup called Charged Hadron Subtraction (CHS). 
+CHS is a type of particle-by-particle pileup subtraction performed on the PF candidates, that assigns charged hadrons to the primary vertex or pileup vertices, using tracking information. 
+Charged hadrons clearly associated to a pileup vertex are removed. 
+\subsection{Jet clustering algorithms}
+The clustering algorithm most commonly used today is the so-called anti$-k_t$ algorithm\cite{Cacciari:2008gp}, which is a member of a class of sequential recombination algorithms used at hadron colliders. 
+The idea behind these sequential clustering algorithms is to utilize the distance $d_{ij}$ between particles $i$ and $j$, the distance $d_{iB}$ between particle $i$ and the beam $B$ and the transverse momenta of the particles $k_{\mathrm{t}i,j}$ when forming a jet. 
+The distance parameters $d_{ij}$ and $d_{iB}$ are defined as:
+\begin{equation}
+d_{ij}=\mathrm{min}(k_{\mathrm{t}i}^{2a}, k_{\mathrm{t}j}^{2a})\times\frac{(\Delta_{ij}^{2})}{R^{2}},
+\end{equation}
+\begin{equation}
+d_{iB}=k_{\mathrm{T}i}^{a},
+\end{equation}
+where $\Delta_{ij}^{2}=(\eta_{i}-\eta_{j})^{2}+(\phi_{i}-\phi_{j})^{2}$, $\eta$ and $\phi$ the pseudorapidity and azimuth distance between the particles, and $R$ the radius parameter of the jet cone.
+The parameter $a$ determines the type of clustering algorithm. 
+The algorithm follows these steps: compute all distances $d_{ij}$ and $d_{iB}$, and find the smallest one. 
+If smallest is a $d_{ij}$, combine (sum four momenta) the two particles $i$ and $j$, update distances, proceed to find the next smallestdistance. 
+If smallest is a $d_{iB}$, remove particle $i$ and call it a jet. Repeat the following steps until all particles are clustered into jets. 
+The predecessors to the anti$-k_t$ algorithms are recovered for $a=1$ ($k_{t}$ algorithm\cite{Salam:2009jx}) or $a=0$ (Cambridge/Aachen (CA) algorithm\cite{Dokshitzer:1997in}).  
+Setting the $a=-1$ is the basis of the anti$-k_t$ algorithm. 
+The choice of a negative $a$ is motivated by the following reasoning. 
+Considering an event with a few hard particles and many soft particles. 
+The distance parameter $d_{i1}$ between the hard particle 1 and the various soft particles is dominated by the \pt of the hard particle, as a result of the negative exponent that makes the $d_{ij}$ small for a large \pt hard particle 1, and larger for equally separated soft particles. 
+As a result, the soft particles will more likely cluster with hard ones before they cluster with another soft particle. 
+A further consequence is that soft particles do not modify the shape of the jet whereas hard ones do, meaning that the jet boundary is resilient to soft radiation. 
+This is a desired feature, also known as infrared and collinear (IRC) safety. Namely that neither soft emissions or collinear splittings should not change the boundary of jets. 
+Comparing the shape of jets clustered with CA, $k_t$ and anti$-k_t$ algorithms respectively, the anti$-k_t$ algorithm results in more conical jets.
+In this work, jets are clustered with the anti$-k_t$ algorithm with a radius parameter of 0.4 (AK4). 
+\subsection{Jet identification}
+Identification criteria are imposed on the PF jets in order to suppress noise contributions from the calorimeters. 
+The selections are based on relative energy fractions carried by the PF candidates with respect to their total jet energy, and the number of PF candidates in a jet. 
+When tracking information is available ($|<2.4|$) additional cuts are applied on the charged candidates.  
+The Loose Jet ID working point is used in this work and its definition is summarized in Table~\ref{tab:jetId}. 
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+    \caption{Definition of Loose Jet ID working point.}
+    \label{tab:jetId}
+    \begin{center}
+        \begin{tabular}{ l c c c }
+        \hline \hline
+        Variable               &  $|\eta|<2.7$&  $<2.7|\eta|<3$ &  $|\eta|\geq3$     \\ \hline
+        Neutral hadron fraction & $<0.99$   & $<0.98$  & -      \\
+        Neutral EM fraction & $<0.99$   & $>0.01$  & $<0.90$      \\
+        Number of constituents & $>1$    & -  & -      \\
+        Number of neutrals & -    & $>2$  & $>10$      \\
+        \multicolumn{4}{c}{Additional cuts for $|\eta|<2.4$}                \\
+        Charged hadron fraction & $>0$   & $>0$  & $>0$      \\
+        Charged multiplicity & $>0$   & $>0$  & $>0$      \\
+        Charged EM fraction & $<0.99$   & $>0.99$  & $<0.90$      \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                             
+\subsection{Jet calibration}
+
+\subsection{$b$-jet tagging}
+\section{\ptmiss}
+\section{Isotracks}
 \section{Datasets}
 \label{sec:samplesObjects}
-
-The data analyzed throughout this thesis consists mainly of the dileptonic streams of 13\TeV pp collision data.  
-Additionally, datasets collected with MET and JetHT triggers are analyzed in the context of the FS background prediction method.
+As the searches presented in this thesis has the commonality that two same flavor opposite sign leptons are produced, naturally, the dielectron and dimuon streams of 13\TeV pp collision data are used.
+Further, additional datasets are used to predict a main SM background, collected with electron-muon, \ptmiss and JetHT triggers. 
 All datasamples are summarized in Table~\ref{tab:datasets}.  
-%All events used for the final event counts in the three channels (\EE, \EMu, and \MuMu) were made sure to be assigned to the correct triggering dataset.
-%The simulation is normalized to luminosity using cross sections from \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns}.
-%MiniAODv2 samples are used consistently for data and MC.
-
 \begin{table}[ht!]
 \def\arraystretch{1.2}
     \caption{Datasets used in the slepton/EWK searches and \ptmiss study}
@@ -19,7 +302,7 @@ All datasamples are summarized in Table~\ref{tab:datasets}.
     \begin{center}
         \begin{tabular}{ l}
         \hline\hline 
-        \multicolumn{1}{c}{\textbf{Signal events for slepton/EWK search and \ptmiss study}} \\
+        \multicolumn{1}{c}{\textbf{Signal events for slepton/EWK search}} \\
         \hline
         \texttt{/DoubleEG/Run2016B-03Feb2017\_ver2-v2/MINIAOD}    \\
         \texttt{/DoubleEG/Run2016(C-G)-03Feb2017-v1/MINIAOD}     \\
@@ -45,177 +328,25 @@ All datasamples are summarized in Table~\ref{tab:datasets}.
         \texttt{/MET/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
         \texttt{/MET/Run2016H-03Feb2017\_ver3-v1/MINIAOD}   \\     
         \hline
-%        \multicolumn{1}{c}{\textbf{Datasets for \ptmiss study}} \\
-%        \hline
-%        \texttt{/SinglePhoton/Run2016B-03Feb2017\_ver2-v2/MINIAOD}   \\            
-%        \texttt{/SinglePhoton/Run2016(C-G)-03Feb2017-v1/MINIAOD}   \\
-%        \texttt{/SinglePhoton/Run2016H-03Feb2017\_ver2-v1/MINIAOD}    \\
-%        \texttt{/SinglePhoton/Run2016H-03Feb2017\_ver3-v1/MINIAOD}   \\     
 \hline\hline
 \end{tabular}
 \end{center}
-\end{table}
-
-Several Monte Carlo (MC) event generators are used to simulate the background and signal processes in this analysis, and the detector response is simulated using the GEANT package that 
-provides a detailed description of the CMS detectora and the event reconstruction is perfromed similarly for data as for simulation. The MC samples are weighted to match the data in the number of 
-pileup. The simulation is normalized to luminosity using cross sections from \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns}.
-The \texttt{PYTHIA8} \cite{Sjostrand:2006za} package is used for parton showering, hadronization and undelying event simulation with the tune \texttt{CUETP8M1}, as described in Section~\ref{eventReconstructionSimulation}.
-In Tables~\ref{tab:MCsamples}, ~\ref{tab:4lMCsamples}, ~\ref{tab:3lMCsamples} and  ~\ref{tab:MCsamplesNonFS}, the various MC simulations used for the different background prediction methods 
-are listed.
-\begin{table}[ht!]
-\def\arraystretch{1.2}
-\caption{Simulated SM datasets used for the flavor symmetric (FS) background prediction. All samples are of the
-    \texttt{MINIAOD} data format and of the version \texttt{RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6/}
-    and \texttt{Tune} is short for the pythia8 tune \texttt{CUETP8M1}.}
-    \label{tab:MCsamples}
-    \begin{center}
-        \begin{tabular}{|l l l|}
-        \hline \hline    
-        Process     &  Dataset  &  $\sigma$ (pb)          \\\hline
-        ttbar     &    &            \\
-        \scriptsize{\texttt{$t\bar{t}\rightarrow l^{+}\nu b + l^{-}\bar{\nu}\bar{b}$}}     & \scriptsize{\texttt{/TTTo2L2Nu\_TuneCUETP8M2\_ttHtranche3\_13TeV-powheg-pythia8}}     &  \scriptsize{831.76$\times0.1086^{2}\times$9}      \\
-        \scriptsize{\texttt{$t\bar{t}\rightarrow l^{-}\bar{\nu}+$jets}} &\scriptsize{\texttt{/TTJets\_SingleLeptFromTbar\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8}} &   \scriptsize{182.2}      \\
-        \scriptsize{\texttt{$t\bar{t}\rightarrow l^{+}\nu+$jets}}     & \scriptsize{\texttt{/TTJets\_SingleLeptFromT\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8}}     &   \scriptsize{182.2}      \\
-        Single Top     &    &            \\
-        \scriptsize{\texttt{$W^{+}\rightarrow t\bar{b}$}}     & \scriptsize{\texttt{/ST\_s-channel\_4f\_leptonDecays\_13TeV-amcatnlo-pythia8}}      &  \scriptsize{3.36}       \\
-        \scriptsize{\texttt{$\bar{b}\rightarrow \bar{t}W^{+}$}}     & \scriptsize{\texttt{/ST\_tW\_antitop\_5f\_NoFullyHadronicDecays\_13TeV-powheg}}  &   \scriptsize{11.7}      \\
-        \scriptsize{\texttt{$b\rightarrow t W^{-}$}}     & \scriptsize{\texttt{/ST\_tW\_top\_5f\_NoFullyHadronicDecays\_13TeV-powheg}}      &  \scriptsize{11.7}       \\
-        \scriptsize{\texttt{$q\bar{b}\rightarrow q'\bar{t}$}} & \scriptsize{\texttt{/ST\_t-channel\_antitop\_4f\_inclDecays\_13TeV-powhegV2-madspin-pythia8}}&  \scriptsize{124.0}       \\
-        \scriptsize{\texttt{$qb\rightarrow q't$}}     & \scriptsize{\texttt{/ST\_t-channel\_top\_4f\_inclDecays\_13TeV-powhegV2-madspin-pythia8}}      &  \scriptsize{208.0}       \\
-        Diboson (FS)    &    &            \\
-        \scriptsize{\texttt{$WW\rightarrow l^{+}\nu l^{-}\bar{\nu}$}}     & \scriptsize{\texttt{/WWTo2L2Nu\_13TeV-powheg-pythia8}}  &  \scriptsize{(118.7-3.974)$\times0.1086^{2}\times$9}      \\          
-        \scriptsize{\texttt{$gg\rightarrow WW\rightarrow l^{+}\nu l^{-}\bar{\nu}$}}     & \scriptsize{\texttt{/GluGluWWTo2L2Nu\_MCFM\_13TeV}}  &  \scriptsize{(3.974$\times0.1086^{2}\times$9$\times$1.4}      \\          
-        \scriptsize{\texttt{$gg\rightarrow H \rightarrow WW$}}     & \scriptsize{\texttt{/GluGluHToWWTo2L2Nu\_M125\_13TeV\_powheg\_JHUgen\_pythia8}}  &  \scriptsize{1.002}      \\          
-        \scriptsize{\texttt{$WW$}}     & \scriptsize{\texttt{/WW\_DoubleScattering\_13TeV-pythia8 }}  &  \scriptsize{1.617}      \\          
-        \scriptsize{\texttt{$WW$}}     & \scriptsize{\texttt{/WpWpJJ\_EWK-QCD\_TuneCUETP8M1\_13TeV-madgraph-pythia8  }}  &  \scriptsize{0.037}      \\          
-        \scriptsize{\texttt{$q\bar{q}\rightarrow l\nu\gamma$}}     & \scriptsize{\texttt{/WGToLNuG\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 }}  &  \scriptsize{405.3}      \\          
-        Triboson (FS)    &    &            \\
-        \scriptsize{\texttt{WWW}}     & \scriptsize{\texttt{/WWW\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{ 0.209}      \\      
-        \scriptsize{\texttt{WW$\gamma$}}     & \scriptsize{\texttt{/WWG\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{ 0.215}      \\      
-        Rare (FS)    &    &            \\
-        \scriptsize{\texttt{$t\bar{t}W$}}     & \scriptsize{\texttt{/TTWJetsToLNu\_Tune\_13TeV-amcatnlo-madspin-pythia8}}  &  \scriptsize{0.204}     \\           
-        \scriptsize{\texttt{$t\bar{t}W$}}     & \scriptsize{\texttt{/TTWJetsToQQ\_Tune\_13TeV-amcatnloFXFX-madspin-pythia8}}  &  \scriptsize{0.406}     \\           
-        \scriptsize{\texttt{$t\bar{t}H$}}     & \scriptsize{\texttt{/ttHToNonbb\_M125\_TuneCUETP8M2\_ttHtranche3\_13TeV-powheg-pythia8}}  &  \scriptsize{0.215}     \\       
-        \scriptsize{\texttt{$VH$}}     & \scriptsize{\texttt{/VHToNonbb\_M125\_13TeV\_amcatnloFXFX\_madspin\_pythia8}}  &  \scriptsize{0.952}      \\                           
-        \scriptsize{\texttt{$tttt$}}     & \scriptsize{\texttt{/TTTT\_TuneCUETP8M2T4\_13TeV-amcatnlo-pythia8}}  &  \scriptsize{0.009}      \\    
-        \scriptsize{\texttt{$W$+jets}}     & \scriptsize{\texttt{/WJetsToLNu\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8}}  &  \scriptsize{61527}      \\             
-\hline\hline
-\end{tabular}
-\end{center}
-\end{table}                                                                                                                                                 
-
-\begin{table}[ht!]
-\begin{center}
-\def\arraystretch{1.2}
-    \caption{Simulated SM datasets used for the ZZ to 4 lepton control regions. All samples are of the
-    \texttt{MINIAOD} data format and of the version \texttt{RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6/}
-and \texttt{Tune} is short for the pythia8 tune \texttt{CUETP8M1}. The k-factor referred to is specified in Subsection~\ref{higherOrderCorr}}
-    \label{tab:4lMCsamples}
-        \begin{tabular}{|l l l|}
-        \hline \hline    
-        Process     &  Dataset  &  $\sigma$ (pb)          \\\hline
-        ZZ $\rightarrow 4l$     &    &            \\
-        \scriptsize{\texttt{$ZZ\rightarrow 4l$}}     & \scriptsize{\texttt{/ZZTo4L\_13TeV\_powheg\_pythia8}}                                 &   \scriptsize{1.256$\times$ k-factor}      \\ 
-        \scriptsize{\texttt{$gg\rightarrow H \rightarrow ZZ$}}     & \scriptsize{\texttt{/GluGluHToZZTo4L\_M125\-13TeV\_powheg2\_JHUgenV6\_pythia8}}&   \scriptsize{0.013}      \\ 
-        \scriptsize{\texttt{$qq\rightarrow H \rightarrow ZZ$}}     & \scriptsize{\texttt{/VBF\_HToZZTo4L\_M125\_13TeV\_powheg2\_JHUgenV6\_pythia8}}&   \scriptsize{0.001}      \\ 
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 4e $}}     & \scriptsize{\texttt{/GluGluToContinToZZTo4e\_13TeV\_MCFM701\_pythia8}}  &  \scriptsize{ 0.001586 $\times$ 2.3}      \\    
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 4\mu$}}     & \scriptsize{\texttt{/GluGluToContinToZZTo4mu\_13TeV\_MCFM701\_pythia8}}  &  \scriptsize{ 0.001586 $\times$ 2.3}      \\    
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 4\tau$}}     & \scriptsize{\texttt{/GluGluToContinToZZTo4tau\_13TeV\_MCFM701\_pythia8}}  &  \scriptsize{ 0.001586 $\times$ 2.3}      \\    
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\tau$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2e2tau\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3}      \\    
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\mu$}} & \scriptsize{\texttt{/GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3}      \\    
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2\mu2\tau$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3} \\    
-        ZZ $\rightarrow 2l 2\nu$     &    &            \\
-        \scriptsize{\texttt{$ZZ\rightarrow 2l2\nu$}}     & \scriptsize{\texttt{/ZZTo2L2Nu\_13TeV\_powheg\_pythia8}}  &  \scriptsize{0.564$\times$ k-factor}      \\
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\nu$}} & \scriptsize{\texttt{/GluGluToContinToZZTo2e2nu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.001720 $\times$ 2.3}      \\    
-        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2\mu2\nu$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2mu2nu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.001720 $\times$ 2.3} \\    
-        Others     &    &            \\
-        \scriptsize{\texttt{$ZZ\rightarrow 2l2q$}}     & \scriptsize{\texttt{/ZZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}}  &  \scriptsize{3.28}      \\
-        \scriptsize{\texttt{$ZZZ$}}     & \scriptsize{\texttt{/ZZZ\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{ 0.0139}      \\                               
-        \scriptsize{\texttt{$VH$}}     & \scriptsize{\texttt{/VHToNonbb\_M125\_13TeV\_amcatnloFXFX\_madspin\_pythia8}}  &  \scriptsize{0.952}      \\                           
-        \scriptsize{\texttt{$q\bar{q}\rightarrow l^{+}l^{-}\gamma$}}     & \scriptsize{\texttt{/ZGTo2LG\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8 }}         &   \scriptsize{123.9}      \\ 
-\hline\hline
-\end{tabular}
-\end{center}
-\end{table}                                                                                                                                                                                                                             
-
-
-\begin{table}[ht!]
-\begin{center}
-\def\arraystretch{1.2}
-    \caption{Simulated SM datasets used for the WZ control regions. All samples are of the
-    \texttt{MINIAOD} data format and of the version \texttt{RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6/}
-    and \texttt{Tune} is short for the pythia8 tune \texttt{CUETP8M1}.}
-    \label{tab:3lMCsamples}
-        \begin{tabular}{|l l l|}
-        \hline \hline    
-        Process     &  Dataset  &  $\sigma$ (pb)          \\\hline
-        \scriptsize{\texttt{$WZ\rightarrow  l^{+}l^{-} l\nu$}}     & \scriptsize{\texttt{/WZTo3LNu\_TuneCUETP8M1\_13TeV-powheg-pythia8}}  &  \scriptsize{4.429 $\times$ 1.109}      \\             
-        \scriptsize{\texttt{$WZ\rightarrow  l^{+}l^{-}2q$}}     & \scriptsize{\texttt{/WZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}}      &  \scriptsize{5.595 $\times$ 1.109}       \\    
-\hline\hline
-\end{tabular}
-\end{center}
-\end{table}                                                                                                                                                                                    
-
-\begin{table}[ht!]
-\begin{center}
-\def\arraystretch{1.2}
-    \caption{Various non flavor symmetric processes. All samples are of the \texttt{MINIAOD} data format and of the version 
-        \texttt{RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6/} and \texttt{Tune} is short for the pythia8 tune \texttt{CUETP8M1}.}
-    \label{tab:MCsamplesNonFS}
-        \begin{tabular}{|l l l|}
-        \hline \hline    
-        Process     &  Dataset  &  $\sigma$ (pb)          \\\hline
-        Drell-Yan     &    &            \\
-        \scriptsize{\texttt{$Z/\gamma^{*}\rightarrow l^{+}l^{-} (50)$}}     & \scriptsize{\texttt{/DYJetsToLL\_M-50\_Tune\_13TeV-madgraphMLM-pythia8}}      &  \scriptsize{1921.8 $\times$ 3}       \\
-        \scriptsize{\texttt{$Z/\gamma^{*}\rightarrow l^{+}l^{-} (10-50)$}}     & \scriptsize{\texttt{/DYJetsToLL\_M-10to50\_Tune\_13TeV-madgraphMLM-pythia8}}  &  \scriptsize{18610}      \\
-        Various non FS     &    &            \\
-        \scriptsize{\texttt{$t\bar{t}Z$}}     & \scriptsize{\texttt{/TTZToLL\_M-1to10\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8}}  &  \scriptsize{0.049}     \\                
-        \scriptsize{\texttt{$t\bar{t}Z$}}     & \scriptsize{\texttt{/TTZToLLNuNu\_M-10\_Tune\_13TeV-amcatnlo-pythia8}}  &  \scriptsize{0.253}     \\                
-        \scriptsize{\texttt{$t\bar{t}Z$}}     & \scriptsize{\texttt{/TTZToQQ\_Tune\_13TeV-amcatnlo-pythia8}}  &  \scriptsize{0.530}     \\              
-        \scriptsize{\texttt{$tZq$}}     & \scriptsize{\texttt{/tZq\_ll\_4f\_13TeV-amcatnlo-pythia8}}  &  \scriptsize{0.076}      \\                           
-        \scriptsize{\texttt{$tWZ$}}     & \scriptsize{\texttt{/ST\_tWll\_5f\_LO\_13TeV-MadGraph-pythia8}}  & \scriptsize{0.011}      \\     
-        \scriptsize{\texttt{WWZ}}     & \scriptsize{\texttt{/WWZ\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{ 0.165}      \\      
-        \scriptsize{\texttt{WZZ}}     & \scriptsize{\texttt{/WZZ\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{ 0.056}      \\      
-
-\hline\hline
-\end{tabular}
-\end{center}
-\end{table}                                                                                                                                                                              
-\subsection{Higher order corrections}
-\label{higherOrderCorr}
-For the $WZ\rightarrow  l^{+}l^{-} l\nu$ and $WZ\rightarrow  l^{+}l^{-}2q$ processes, a NLO to NNLO correction factor of 1.109 is applied \cite{Grazzini:2016swo}. For the qq$\rightarrow$ZZ 
-process, a QCD NLO to NNLO correction factor is applied as a function of generator-level \pt of the diboson system, which is described more in depth in Section~\ref{4l}.
-\begin{figure}[!h]
-\begin{center}
-\begin{tabular}{cc}
-\includegraphics[width=0.9\textwidth]{images/slepton/kfactors.pdf} \\
-\end{tabular}
-\caption{QCD NNLO/NLO k factors for the qq$\rightarrow$ZZ process in generator level variables of the diboson system. }
-\label{fig:ZZkfactor}
-\end{center}
-\end{figure}                                                                                                                                                                                
-
+\end{table}                                                                                  
 
 \section{Triggers}
 The trigger selection for the slepton and EWK analyses is driven by the requirement of at least two leptons at the HLT.
-More precisely, the signal events in both analyses and the \ptmiss study are collected using dielectron and dimuon triggers.
-Additionally, electron-muon triggers are used to collect a sample dominated by \ttbar events for the FS prediction method.
-
-Various requirements on the isolation are imposed on the
-The triggers are chosen as a combination of
-These triggers are a combination of non-isolated and isolated requirements on the leptons to ensure
+Due to the changes in instantaneous luminosity, different dilepton triggers were active at different times and with varying prescales. 
+This results in the need for a variety of triggers with slighlty different requirements.
+Non isolated double lepton paths are included to increase the efficiency in events with large dilepton system \pt. 
+Triggers with an isolation requirement on the leptons enable for the recording of lower \pt leptons. 
 The \pt requirements are asymmetric and depend on the flavor composition of the triggers.
+Supporting triggers, with requirements on the jet \HT or online \ptmiss, are used for the study of the trigger efficiencies used in the FS background prediction method, taken from hadronic events. 
+Additionally, triggers with requirements on the presence of an electron and a muon, are used to collect a sample dominated by \ttbar events for the FS prediction background method.
+All signal and supporting triggers are documented in Table~\ref{tab:triggers}.                                                                                                        
 
-Concerning triggers, the selection is dominated by the di-lepton and high \ptmiss signatures. Trigger paths requiring isolated leptons are the main paths. Due to the changes in instantaneous 
-luminosity, different di-lepton triggers were active at different times and with varying prescales. This results in the need for a variety of triggers with slighlty different requirements.
-Non isolated double lepton paths are included to increase the efficiency in events with large dilepton system \pt. Supporting triggers are used for the study of the 
-trigger efficiencies used in the flavor symmetric background prediction method, taken from hadronic events. 
-All triggers which are used one way or the other are documented in Table~\ref{tab:triggers}.
 \begin{table}[ht!]
 \def\arraystretch{1.2}
-    \caption{Triggers used in the analysis. The first section are the triggers
-    used in most control and signal regions, while the supporting triggers are mostly for the calculation
-    of the trigger efficiencies of the signal triggers.}
+    \caption{Triggers used in the searches for charginos, neutralinos and sleptons. The first section are the triggers used in most control and signal regions, while the supporting triggers are used for the calculation of the trigger efficiencies of the signal triggers.}
     \label{tab:triggers}
     \begin{center}
         \begin{tabular}{ l}
@@ -267,142 +398,10 @@ All triggers which are used one way or the other are documented in Table~\ref{ta
 \hline\hline
 \end{tabular}
 \end{center}
-\end{table}
+\end{table}                                                                                                          
 
-\section{Physics Objects}
-\label{subsec:objects}
-Since the principle behind the main background prediction method, described in a separate AN ( ~\cite{CMS_AN_2016-482}), relies on the lepton flavor symmetry of the W decay, the identification and 
-isolation requirements of 
-the leptons are chosen so that they are as similar as possible between the flavors. This principle is reflected in the selections of the trigger requirement of the leptons of \pt $>$ 23, 17, 12, 
-and 8~GeV depending on the exact path. Full efficiency for any of these three values is reached at a \pt of 25(20) GeV for the leading (trailing) lepton , which is
-the cut applied to all leptons. One specific selection of this analysis is that not only the electrons are rejected if they appear in the transition region between
-the barrel and the endcap, but also the muons. The reason for this is simply that the flavor symmetric background is taken from $e\mu$ events, thus
-the necessety of having symmetric cuts not only on the efficiency but also on the fiducial regions. For this reason any lepton within the $|\eta|$ region of 1.4 to 1.6 is rejected.
-In addition, selection criteria on jets and \ptmiss, are presented, which all follow standard CMS SUSY recommendations (including the leptons).
+Several MC event generators are used to simulate the background and signal processes in this analysis, with the different parts of the generators introduced in Section~\ref{MC}. 
+The simulation is normalized to luminosity using cross sections from \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns}.
+The \texttt{PYTHIA8} \cite{Sjostrand:2006za} package is used for parton showering, hadronization and undelying event simulation with the tune \texttt{CUETP8M1}, as described in Section~\ref{eventReconstructionSimulation}.
+The various simulated samples used are presented in Appendix A.  
 
-\subsection{Electrons}
-\label{subsub:electrons}
-
-Table~\ref{tab:electrons} summarizes briefly the most important selection criteria for electrons. Besides kinematical selections, an MVA-trained identification discriminator is used. 
-The discriminator is optimized on electrons from prompt W-boson decays in \ttbar versus leptons stemming from so-called ``fakes''\footnote{``Fake'' leptons
-are mostly semi-leptonic b-quark decays where $b \rightarrow cW \rightarrow c\ell \nu$} in \ttbar. The used working point for the MVA identification discriminator corresponds to the 
-SUSY-PAG-recommended ``tight'' value, developed at the end of 2016. The actual MVA cut value depends on the lepton \pt and $|\eta|$. In each $|\eta|$ bin the lower value is used for electrons
-with \pt $> 25$ GeV while the cut decreases linearly from the upper to the lower value for \pt between 15 and 25 GeV. Additionally, conversion rejection cuts are applied. 
-
-\begin{table}[ht!]
-\def\arraystretch{1.2}
-    \caption{Electron selection criteria.}
-    \label{tab:electrons}
-    \begin{center}
-        \begin{tabular}{ l r}
-        \hline \hline
-        cut         &  value                             \\ \hline
-        \multicolumn{2}{c}{\textbf{Kinematics}}                \\
-        \pt         &  $>$ 10 GeV                              \\
-        $|\eta|$    &  $<$ 2.4                                 \\
-        $|\eta|$    &  $\ni$ [1.4, 1.6]                       \\
-        \multicolumn{2}{c}{\textbf{Identification}}                \\
-        MVA tight         &  2016 Working point    \\
-               \multirow{2}{*}{conversion rejection} & maxLostHits == 0 \\
-                & passConversionVeto() \\                          
-        \multicolumn{2}{c}{\textbf{Isolation}}                \\
-             mini Isolation                 &  $<$ 0.1                         \\
-        \multicolumn{2}{c}{\textbf{Impact parameter}}                \\
-        $d_{xy}$ & 0.05 \\
-        $d_{z }$ & 0.10 \\
-        SIP3D    & $< 8$ \\
-\hline\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-As isolation variable, the mini-isolation is used which features a shrinking cone-size with increasing
-\pt of the lepton. Thus, the cone size in which the PF particles are summed to calculate the relative 
-isolation is no longer constant, but a function of the \pt of the lepton
-\begin{equation*}
-    R = \frac{10.}{min\left[ max \left( \pt, 50 \right), 200 \right]} \quad.
-\end{equation*}
-
-For \pt values below 50 GeV, this leads to a constant cone size of 0.2. For \pt values between 50 GeV and 200 GeV, the
-cone size shrinks from 0.2 to 0.05 at which it remains for higher \pt leptons.
-
-Corrections to the isolation are applied by subtracting the average energy density 
-$\rho$ from the effective geometrical area of the lepton's isolation cone. The variable cone size is taken into account for this correction.
-
-\subsection{Muons}
-\label{subsub:muons}
-
-Selection for the muons follow POG recommendations and are summarized in Table~\ref{tab:muons}. All the variables
-used are standard variables, and the isolation variable is also mini-isolation.
-
-\begin{table}[ht!]
-\def\arraystretch{1.2}
-    \caption{Muon selection criteria.}
-    \label{tab:muons}
-    \begin{center}
-        \begin{tabular}{ l r}
-        \hline \hline
-        cut         &  value                             \\ \hline
-        \multicolumn{2}{c}{\textbf{Kinematics}}                \\
-        \pt         &  $>$ 10 GeV                              \\
-        $|\eta|$    &  $<$ 2.4                                 \\
-        $|\eta|$    &  $\ni$ [1.4, 1.6]                       \\
-        \multicolumn{2}{c}{\textbf{Identification}}                \\
-        \multicolumn{2}{c}{medium Muon ID (POG)}                 \\
-        \multicolumn{2}{c}{\textbf{Isolation}}                \\
-             mini Isolation                 &  $<$ 0.2                         \\
-        \multicolumn{2}{c}{\textbf{Impact parameter}}                \\
-        $d_{xy}$ & 0.05 \\
-        $d_{z }$ & 0.10 \\
-        SIP3D    & $< 8$ \\
-\hline\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\subsection{Lepton pair selection}
-\label{subsub:pairsel}
-Since there are some events with multiple lepton pairs, it is important to define an unambiguous way of selecting the ``relevant''  opposite-sign, same-flavor lepton pair. The implemented algorithm
-selects the two highest \pt leptons which are fully identified and that have a distance between them of 0.1 in $\Delta$R. This is to say, there is no cross-cleaning or prioritization between 
-electrons and muons applied, and non-identified leptons (including the crack region) do not enter in the consideration of the lepton pair selection. This is motivated by the expected SUSY signal 
-in which real leptons stemming from the decay of heavy particles are expected to be ``clean'' (i.e. well identified) and have rather large \pt. 
-
-
-\subsection{Isotrack veto}
-\label{isotracks}
-Events with additional leptons are vetoed by using isolated tracks. These tracks are defined using charged PF candidates with different requirements depending on the flavor. PF electrons 
-and PF muons, are required to pass \pt $>$ 5 GeV, $|$dz$|$ $<$ 0.1 cm, as well as being associated to the primary vertex with the requirement of fromPV $>$ 1, and track isolation cuts of 
-iso/\pt $<$ 0.2 and iso $<$ 8 GeV. The track isolation sum is computed from all charged PF candidates within a cone of $\Delta$R $<$ 0.3, requiring them to pass $|$dz$|$ $<$ 0.1 cm with respect 
-to the primary vertex. Charged PF hadrons are required to pass \pt $>$ 10 GeV, $|$dz$|$ $<$ 0.1 cm, be associated to the PV with fromPV $>$ 1, and track isolation cuts of iso$/$pT $<$ 0.1 and 
-iso $<$ 8 GeV. The track  isolation is computed in the same way as for PF leptons above.
-
-
-\subsection{Jets and $p_{T}^{miss}$}
-\label{subsec:jets}
-PfCHSjets are considered and standard selections and corrections are followed. The \pt of the jets used for the control regions used for the flavor symmetric background prediction methods 
-is 35 GeV and the $|\eta|$ is required to be $<$ 2.4, in various multiplicity depending on the control region. 
-The jets are required to be seperated from selected leptons by 0.4 in $\Delta$R. Jet energy corrections are applied, namely the \texttt{Spring16\_23Sep2016V2} set for data and for MC, 
-which is the recommended recipe from the JERC group. In the signal region, a veto on jets of \pt greater than 25 GeV is applied, and the same $|\eta|$ requirement as for the jets used 
-in the background prediction methods.
-The \ptmiss used in this analysis is the Type 1 corrected, which corresponds to the negative of the vectorial sum of all Particle Flow (PF) candidates where the jets are corrected according to the 
-jet energy corrections. \ptmiss filters are applied that are designed to reject anomalous \ptmiss events due to misreconstruction, detector noise and non-collision backgrounds. These filters are: 
-primary vertex, CSC beam halo, HBHE noise, HBHEiso noise, eebadSC, Ecal TP, bad muon. The detailed
-description of these filters can be found in the official page of the MET POG\footnote{https://twiki.cern.ch/twiki/bin/viewauth/CMS/MissingETOptionalFiltersRun2}. 
-\subsubsection{\mttwo}
-\label{subsec:MT2}
-The leptonic \mttwo variable is used to define the signal region. It is a generalization of the transverse mass for pair-produced particles which decay into visible and invisible objects, as 
-described in references~\cite{MT2variable,MT2variable2}. The visible objects (in this analysis) are the two selected leptons and the invisible objects either the two LSPs from the slepton decay, 
-or neutrinos in the case of di-leptonic \ttbar of leptonic WW production. In events where a pair of particles is produced and where the decay products from each are one visible and one invisible 
-particle, the \mttwo has an endpoint at the mass of 
-the mother particle. Since the main background in this analysis is \ttbar and leptons from WW production, this variable is efficiently reducing this background with a cut at the W mass, and is 
-therefor used to define the signal regions in this analysis.
-\subsection{Event selection}
-\label{subsec:selectionSummary}
-To summarize, the following list gives all the details of the minimal event selection used for the analysis.
-\begin{itemize}
-    \item two selected leptons of opposite charge with \pt $>$ 25 GeV for the leading and \pt $>$ 20 GeV for the trailing lepton
-    \item \dr between the two leptons of $>$ 0.1
-    \item the two highest \pt leptons are selected for this pair
-    \item \mll $>$ 20 GeV and a wide Z veto where events with 76 $<$  \mll $<$ 106 GeV are rejected. 
-    \item \ptmiss $>$ 100 GeV
-\end{itemize}                                                                                                                                  
