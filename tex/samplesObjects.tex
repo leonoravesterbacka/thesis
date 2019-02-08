@@ -286,10 +286,70 @@ The Loose Jet ID working point is used in this work and its definition is summar
 \end{center}
 \end{table}                                                                             
 \subsection{Jet calibration}
-
+As jets are complex objects consisting of highly energetic quarks and gluons that built on input from several subdetector, the correct energy assignment to jets is a challenge. 
+Therefore, a set of jet energy corrections (JECs) are determined to account for various effects and applied to jets in data and simulation. 
+The different corrections are listed below and follow the description outlined in \cite{Khachatryan:2016kdb}. 
+\begin{itemize}
+\item Pileup corrections:
+The so-called pileup offset corrections or L1 corrections are determined to reduce the effect of pileup on the jet energy. 
+The corrections are determined in a simulated QCD dijet events, with and withoout pileup overlayed, before and after CHS applied. 
+The corrections are parametrized as a function of a set of jet related quantities such as the jet area $A_{i}$, jet pseudorapidity $\eta$, jet \pt and the energy density $\rho$ \footnote{The energy density $\rho$ is defined as the median of the transverse momentum of the jets over their area, $\rho=\mathrm{median}(p_{\mathrm{T,i}}/ A_{i})$ } 
+\item MC-truth corrections: 
+The MC-truth corrections, also known as L2L3 MC-truth corrections, is based on the comparison of a particle level jet and its corresponing reconstructed version. 
+The corrections are derived from a QCD dijet simulated sample as a function of jet \pt and $\eta$. 
+\item Residual corrections:
+The residual corrections, or L2L3 correction, are corrections to be applied on data only. 
+The relative, or $\eta$ dependent, correction is determined with QCD dijet events, where a tag jet in the barrel region is compared to a probe jet with no $\eta$ restriction of similar \pt. 
+The absolute correction is determined in $\gamma+$jets, Z($ee$/$\mu\mu$)+jets or multijet events, where a well-measured $\gamma$, \PZ boson or jet is compared to the recoiling jet 
+\end{itemize}  
 \subsection{$b$-jet tagging}
+Heavy flavor jet identification algorithms are heavily used in CMS as a means to select events containing top quark decays or SM bosons decaying through b quarks, and the following description of the algorithms follow that introduced in \cite{Sirunyan:2017ezt}. 
+As the lifetime of a hadron containing b-quarks is in the order of 1.5 ps, this results in a displacement of around a few millimeters up to a centimeter depending on the momentum available. 
+As a result, this displacement leads to the possibility to reconstruct an additional vertex where the b hadron decay takes place. 
+This secondary vertex (SV) is reconstructed from the displaced tracks that are characterized by their impact parameter (IP)\footnote{The impact parameter is defined as the distance between the primary vertex and the tracks at their closest point of approach.}
+The SV reconstruction algorithm used in CMS in the LHC Run 2 is the inclusive vertex finder (IVF) algorithm.
+This algorithm uses as inout all reconstructed tracks in the event with $\pt\geq0.8\GeV$ and with longitudinal IP $\leq0.3\cm$. 
+The IVF algorithm is seeded by tracks with a three dimensional IP greater thatn 50$\mum$ and the significance of the two dimensional IP (IP divided by its uncertainty) greater than 1.2. 
+After this, the track clustering is performed by associating the seed track to any other track by imposing requirements on the distance at the point of closest approach and the angle between the tracks. 
+The resulting track clusters are fitted using an adaptive vertex fitter. 
+To resolve the track ambiguity when a track can be both associated to the PV and a SV, a track is discarded from the SV is it is more compatible with the PV. 
+Following this track arbitration, the SV position is refitted. 
+After the IVF algorithm is performed, the vertices found are used as input to the combined secondary vertex tagger version 2 (CSVv2), where in addition to the IVF vertex, two tracks per jet is required separated from the jet axis by $\Delta$R less than 0.3. 
+The CSVv2 algorithm contains a step of training that is performed in the three independent vertex categories listed below.
+\begin{itemize}
+\item RecoVertex: a jet that contains more than one SV.
+\item PseudoVertex: no SV is found but at least two tracks with 2D IP significance larger than 2 and the combined invariant mass not compatible with a $K_{S}^{0}$. 
+\item NoVertex: when none of the above categories are filled. 
+\end{itemize}
+The variables combined in the algorithms are: 
+\begin{itemize}
+\item SV 2D flight distance significance: the significance of the 2D flight distance of the SV with least uncertainty on its flight distance for jets in the RecoVertex category.
+\item Number of SVs: the number of SVs for jets in the RecoVertex category.
+\item Track $\eta_{rel}$: the track $\eta$ relative to the jet axis for the track with the highest 2D IP significance for jets in the RecoVertex and PseudoVertex categories.
+\item Corrected SV mass: the corrected mass of the SV with the smallest uncertainty on its flight distance for jets in the RecoVertex category or the invariant mass obtained from the total summed four-momentum vector of the selected tracks for jets in the PseudoVertex category.
+\item Number of tracks from SV: the number of tracks associated with the SV for jets in the RecoVertex category or the number of selected tracks for jets in the PseudoVertex category.
+\item SV energy ratio: the energy of the SV with least uncertainty on its flight distance over the energy of the total summed four momentum vector of the selected tracks.
+\item $\Delta$R(SV, jet): defined as the distance between the flight direction of the SV with least uncertainty on its flight distance and the jet axis for jets in the RecoVertex category, or the distance between the total summed four-momentum vector of the selected tracks for jets in the PseudoVertex category.
+\item 3D IP significance of first four tracks: the 3D IP significances of the four tracks with the highest 2D IP significance.
+\item Track $p_{T,rel}$: the track \pt relative to the jet axis, i.e. the track momentum perpendicular to the jet axis, for the track with the highest 2D IP significance.
+\item $\Delta$R(track, jet): the distance between the track and the jet axis for the track with the highest 2D IP significance.
+\item Track $p_{T,rel}$ ratio: the track \pt relative to the jet axis divided by the magnitude of the track momentum vector for the track with the highest 2D IP significance.
+\item Track distance: the distance between the track and the jet axis at their point of closest approach for the track with the highest 2D IP significance.
+\item Track decay length: the distance between the PV and the track at the point of closest approach between the track and the jet axis for the track with the highest 2D IP significance.
+\item Summed tracks $E_T$ ratio: the $E_T$ of the total summed four-momentum vector of the selected tracks divided by the transverse energy of the jet.
+\item $\Delta$R(summed tracks, jet): the $\Delta$R between the total summed four momentum vector of the tracks and the jet axis.
+\item The number of selected tracks.
+\item The jet $\pt$ and $\eta$.
+\end{itemize}
+The above discriminating variables are combined in a neural network and the final disciminator is shown in Fig~\ref{fig:CSVv2}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/Figure_031-c.png}\\
+\caption{The CSVv2 discriminator variable\cite{Sirunyan:2017ezt}}
+\label{sig:feynmanEWK}
+\end{figure}
+
 \section{\ptmiss}
-\section{Isotracks}
 \section{Datasets}
 \label{sec:samplesObjects}
 As the searches presented in this thesis has the commonality that two same flavor opposite sign leptons are produced, naturally, the dielectron and dimuon streams of 13\TeV pp collision data are used.
