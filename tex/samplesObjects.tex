@@ -2,13 +2,13 @@
 Common to the searches for chargino, neutralino and slepton production is the final state containing two leptons and \ptmiss originating from the neutralino or gravitino LSP.
 The difference lies in the hadronic activity and whether the lepton pair is compatible with a \PZ boson or not. 
 This section presents the Particle Flow (algorithm) that combines subdetector information to form the physics objects that are used in these searches, and the quality criteria imposed on them to be considered a signal event or suitable to predict various SM background processes.  
-\section{The Particle Flow Algorithm}
+\section{The Particle Flow Algorithm}\label{sec:PF}
 General purpose high energy particle physics detectors are built on the principle of layers of sub-detectors around the beam axis. 
 The calorimeter layers and muon systems are designed for particles to get completely absorbed or produce hits in them. 
 Intuitively, one would think that each layer would lend it self useful for reconstructing a certain type of particle: electrons and photons could be reconstructed from electromagnetic showers in the ECAL, hadrons reconstructed from hadronic showers in the HCAL, jets from combined calorimeter signals, muons from hits in the muon system. 
 However, the idea behind the PF algorithm is to instead optimally combine the information from the different sub-detector layers.   
-The following is a simplified description of the PF algorithm that closely follow that described in \ref{Sirunyan:2017ulk}.
-The design of the CMS detector as described in Section~\ref{CMS} has proven to be well-suited for particle-flow (PF) reconstruction of the physics objects. 
+The following is a simplified description of the PF algorithm that closely follow that described in \cite{Sirunyan:2017ulk}.
+The design of the CMS detector as described in Section \ref{sec:CMS} has proven to be well-suited for particle-flow (PF) reconstruction of the physics objects. 
 Reasons behind this statement include the excellent muon detectors of CMS that provide efficient and pure identification of muons. 
 The combination of a fine-grained tracker and a strong magnetic field effectively measures charged particle tracks that make up ~65\% of the jet energy. 
 Additionally, the excellent resolution and the segmentation of the ECAL provides separation of energy deposits from particles in hadronic jets and accounts for ~25\% of the jet energy. 
@@ -18,7 +18,7 @@ The algorithm can be summarized as follows:
 \item Tracks from the pixel and strip tracker are extrapolated from the last measured hit in the tracker to the calorimeters. 
 The track is linked to a cluster in the calorimeters according to some boundary conditions, and if several clusters are linked to a track, the cluster with the smallest distance to the track is kept. 
 Tracks are also extrapolated to the muon detector. 
-\item In the second step of the algorithm muons are identified by a set of requirements on global/tracker muons, as described in Section~\ref{muons}. 
+\item In the second step of the algorithm muons are identified by a set of requirements on global/tracker muons, as described in Section \ref{sec:muons}. 
 The tracks and clusters associated to these muons are not considered in the rest of the algorithm. 
 \item After muons have been identified, the electron and isolated photon identification follow. 
 Electron candidates are seeded from a GSF track if there are no additional tracks linked to that ECAL cluster. 
@@ -41,7 +41,7 @@ These $PF$ $candidates$ are subsequently used to reconstruct jets, \ptmiss and $
 \section{Leptons}
 Two leptons are expected in all the studied signal processes, either from the decay of an on-shell \PZ boson or through the pair production of sleptons that decay to leptons and neutralinos. 
 There are several SM background processes that can result in opposite sign same flavor leptons, and common to these are that they include a decay of a \PZ boson, virtual photon or a \PW boson. 
-Although these bosons decay democratically to each lepton generation, as shown in Fig~\ref{fig:WZ}, only the first and second lepton generations are considered in this thesis. 
+Although these bosons decay democratically to each lepton generation, as shown in Figure \ref{fig:WZ}, only the first and second lepton generations are considered in this thesis. 
 In this work, dielectron ($ee$) and dimuon ($\mu\mu$) events are categorized as same flavor (SF) and events containing an electron and a muon ($e\mu$) are categorized as different flavor (DF). 
 The reason to exclude the third lepton generation, the $\tau^{\pm}$ leptons and their corresponding $\nu_{\tau}$'s, is due to the challenging final state. 
 The $\tau$ lepton, being the most massive of the leptons flavors, decay hadronically ~65\% of the time. 
@@ -50,7 +50,7 @@ However, the search for direct stau production in leptonic and hadronic final st
 \section{Electrons}
 \label{subsub:electrons}
 Electrons are reconstructed by associating ECAL clusters with a track reconstructed in the silicon detector. 
-The following contains a description of the clustering of the ECAL deposits, the electron track and the combination of the two, and is roughly based on \ref{Khachatryan:2015hwa}. 
+The following contains a description of the clustering of the ECAL deposits, the electron track and the combination of the two, and is roughly based on \cite{Khachatryan:2015hwa}. 
 Finally, the identification and isolation requirements imposed on the electrons to be categorized as signal events or used for background estimation techniques are presented. 
 \subsection{Electron reconstruction}
 Bremsstrahlung causes electrons to lose energy when interacting with detector material. 
@@ -154,9 +154,9 @@ Additionally, conversion rejection cuts are applied.
 \end{center}
 \end{table}                                                                                       
 
-\section{Muons}
+\section{Muons}\label{sec:muons}
 The calorimeters of CMS are efficiently stopping electrons, photons, charged and neutral hadrons, resulting in muons (and of course neutrinos) being the only particles reaching the muon systems.  
-The muon track reconstruction and identification described below is based on \ref{Sirunyan:2018fpa}. 
+The muon track reconstruction and identification described below is based on \cite{Sirunyan:2018fpa}. 
 Inner tracks and tracks in the muon systems are used as input for the muon-track reconstruction, that can be categorized in the following three ways:
 \begin{itemize}\addtolength{\itemsep}{0.5\baselineskip}
 \item Standalone-muon track:
@@ -226,7 +226,7 @@ The isolation variable used for electrons, the mini-isolation, is also used for 
 \end{table}                                                                                                      
 
 \section{Jets}
-The PF candidates found through the PF algorithm described in Section\ref{secPF} are used as input in a clustering algorithm for hadronic jets. 
+The PF candidates found through the PF algorithm described in Section \ref{sec:PF} are used as input in a clustering algorithm for hadronic jets. 
 A variety of clustering algorithms are on the market, with different optimizations for high or low \pt jets or different shapes, with different computation speeds. 
 In the following the ingredients needed for well-measured jets are described, starting with pileup mitigation, followed by the sequential jet clustering algorithms, and finally the identification and corrections needed. 
 \subsection{Charged hadron subtraction}
@@ -285,7 +285,7 @@ The Loose Jet ID working point is used in this work and its definition is summar
 \end{tabular}
 \end{center}
 \end{table}                                                                             
-\subsection{Jet calibration}
+\subsection{Jet calibration}\label{sec:JEC}
 As jets are complex objects consisting of highly energetic quarks and gluons that built on input from several subdetector, the correct energy assignment to jets is a challenge. 
 Therefore, a set of jet energy corrections (JECs) are determined to account for various effects and applied to jets in data and simulation. 
 The different corrections are listed below and follow the description outlined in \cite{Khachatryan:2016kdb}. 
@@ -341,15 +341,21 @@ The variables combined in the algorithms are:
 \item The number of selected tracks.
 \item The jet $\pt$ and $\eta$.
 \end{itemize}
-The above discriminating variables are combined in a neural network and the final disciminator is shown in Fig~\ref{fig:CSVv2}
+The above discriminating variables are combined in a neural network and the final disciminator is shown in Figure \ref{fig:CSVv2}
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.8\textwidth]{images/Figure_031-c.png}\\
+\includegraphics[width=0.8\textwidth]{images/detector/Figure_031-c.png}\\
 \caption{The CSVv2 discriminator variable\cite{Sirunyan:2017ezt}}
-\label{sig:feynmanEWK}
+\label{fig:CSVv2}
 \end{figure}
+\subsection{Isotracks}
+Isolated tracks are used in the analysis as a means to improve the third lepton veto efficiency. 
+These tracks are defined using charged PF candidates with different requirements depending on the flavor. 
+PF electrons and PF muons, are required to pass $\pt>5\GeV$, $|\mathrm{dz}|<0.1\cm$, as well as being well associated to the PV, and track isolation cuts of isolation/\pt $<$ 0.2 and iso $<$ 8 GeV. 
+The track isolation sum is computed from all charged PF candidates within a cone of $\Delta$R$<0.3$, requiring them to pass $|\mathrm{dz}|<0.1\cm$ with respect to the PV. 
+Charged PF hadrons are required to pass $\pt>10\GeV$, $|\mathrm{dz}|<0.1\cm$, be well associated to the PV, and track isolation cuts of isolation$/\pt<0.1$ and isolation$<8\GeV$. 
+The track isolation is computed in the same way as for PF leptons above.
 
-\section{\ptmiss}
 \section{Datasets}
 \label{sec:samplesObjects}
 As the searches presented in this thesis has the commonality that two same flavor opposite sign leptons are produced, naturally, the dielectron and dimuon streams of 13\TeV pp collision data are used.
@@ -460,8 +466,8 @@ All signal and supporting triggers are documented in Table~\ref{tab:triggers}.
 \end{center}
 \end{table}                                                                                                          
 
-Several MC event generators are used to simulate the background and signal processes in this analysis, with the different parts of the generators introduced in Section~\ref{MC}. 
+Several MC event generators are used to simulate the background and signal processes in this analysis, with the different parts of the generators introduced in Section \ref{sec:MC}. 
 The simulation is normalized to luminosity using cross sections from \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns}.
-The \texttt{PYTHIA8} \cite{Sjostrand:2006za} package is used for parton showering, hadronization and undelying event simulation with the tune \texttt{CUETP8M1}, as described in Section~\ref{eventReconstructionSimulation}.
+The \texttt{PYTHIA8} \cite{Sjostrand:2006za} package is used for parton showering, hadronization and undelying event simulation with the tune \texttt{CUETP8M1}, as described in Section \ref{sec:MC}.
 The various simulated samples used are presented in Appendix A.  
 

@@ -208,7 +208,6 @@
 \let\@afterindentfalse\@afterindenttrue%
 \@afterindenttrue%
 \newenvironment{RS@Cent}{\centering}{\par}%
-\newenvironment{RS@Cent2}{}{\par}%
 \renewcommand{\chapter}{%
     \clearpage%
     \thispagestyle{plain}%
@@ -222,27 +221,26 @@
       \typeout{***************************}%
       \typeout{\@chapapp\space\thechapter.}%
       \typeout{***************************}%
-      \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}}
+      \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}\uppercase{#1}}
     }{%
-      \addcontentsline{toc}{chapter}{}}%
+      \addcontentsline{toc}{chapter}{\uppercase{#1} }}%
     \setcounter{footnote}{0}%
-    \@makechapterhead{\uppercase{#2}}
-    \ifthenelse{\boolean{SetDSpace}}{\GoDouble}%
+    \@makechapterhead{\uppercase{#2}}%
+\ifthenelse{\boolean{SetDSpace}}{\GoDouble}{}%
 }%
 %\renewcommand{\@makechapterhead}[1]{%
-%    \begin{RS@Cent2}%
+%\ifthenelse{\boolean{SetDSpace}}{\GoDouble}{}%
+%    \begin{RS@Cent}%
 %    %\BigMargin%
 %    \ifthenelse{\value{secnumdepth} > -1}{%
-%    %\ifthenelse{\value{secnumdepth} > -1}{%
 %      \@chapapp\space\thechapter\\}{}%
-%    %  }{}%
 %    #1%
-%    \end{RS@Cent2}%
+%    \end{RS@Cent}%
 %    \@afterheading%
 %    \ifthenelse{\boolean{SetDSpace}}{\GoDouble}{}%
-%    }%
-%\renewcommand{\@schapter}[2][?]{%
-%    \@makeschapterhead{#2}}%
+%    }%                                                               
+\renewcommand{\@schapter}[2][?]{%
+    \@makeschapterhead{#2}}%
 %\renewcommand{\@makeschapterhead}[1]{%
 %    \begin{RS@Cent}%
 %    %\BigMargin%
@@ -290,11 +288,11 @@
 %    {-0\baselineskip}%
 %    {0.1ex}%
 %    {\SS@subsubsectfont}}
-%\renewcommand{\subparagraph}{%
-%    \@startsection{subparagraph}{5}{\z@}%
-%    {0.1ex}%
-%    {-1.0em}%
-%    {\SS@subparafont}}
+\renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{\z@}%
+    {0.1ex}%
+    {-1.0em}%
+    {\SS@subparafont}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Formatting Generated Lists -- TOC, LOF and LOT %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
