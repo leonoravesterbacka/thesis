@@ -1,24 +1,56 @@
-\chapter{Search for Charginos, Neutralinos and Sleptons} \label{strategySlepton}
+\chapter{Leptonic SUSY searches} \label{search}
 After having introduced the CMS detector, its abilities of reconstructing a wide variety of SM particles and the data processing, it is time to present what all this can be used for. 
-The theoretical framework presented in Chapter~\ref{sec:theory} lays the foundation for the search for electroweak production of SUSY particles that this thesis is presenting. 
-This thesis is relying on two papers, one in which a general search for strongly and electroweakly produced particles is performed, in final states containing two opposite sign same flavor leptons, large \ptmiss and more than two jets. 
+The theoretical framework presented in Chapter~\ref{sec:theory} lays the foundation for the search for strong and electroweak production of SUSY particles that this thesis is presenting. 
+Two opposite sign same flavor leptons provide a powerful search tool for stron and electroweak SUSY. 
+This particular final state can appear in many SUSY scenarios, either through the production of an on-shell \PZ-boson or through the direct or intermediate production of sleptons. 
+The strength of this final state does not only lie in the ability to target many SUSY scenarios, the SM backgrounds are relatively small and very well understood, which makes them ideal for various data-driven background estimation techniques. 
+To put this into perspective, there are inclusive searches for strong SUSY prodcution in all hadronic final states that are completely swamped by QCD and W+jets processes. 
+On the other side of the spectrum, there are searches trageting electroweak SUSY production in multilepton final states that instead are low in SM backgrounds, but the backgrounds from charge misidentification of leptons and the jets faking leptons poses a major challenge. 
+The searches in this thesis is the middle ground between these two extreme final state scenarios with the strength of targeting a whole range of SUSY production modes.   
+This thesis is based on two papers. 
+The first paper \cite{Sirunyan:2017qaj} is a general search for SUSY in strong and electroweak production modes. 
+The second paper \cite{Sirunyan:2018nwe} presents a search targeting one particular SUSY production mode, namely direct selectron and smuon production.  
 As all work performed in big collaborations such as the CMS experiment, no paper can be published independently. 
 Instead, the work of many people at different institutes is required, and all authors of the CMS experiment contribute to the collection of the data, validation fo reconstruction algorithms, derivation of corrections, developing of analysis methods, to name a few. 
 With this in mind, it is appropriate to mention that the first paper presented in this thesis relies on a collaboration of researchers at ETH Z\"{u}rich, RWTH Aachen, University of California at San Diego and University of Oviedo. 
-I will highlight my contributions to this paper, and cite the work of my collaborators when necessary. 
-Since my main contribution to the first paper was in the search for chargino-neutralino (\firstcharg-\secondchi) and neutralino-neutralino (\firstchi-\firstchi) production, I will dedicate a large fraction of this thesis to a description of this search. 
-The second paper that this thesis is based on, is a search for directly produced selectrons ($\seL$, $\seR$) and smuons ($\smuL$, $\smuR$). 
-This search has many similarities to the search for \firstcharg-\secondchi and \firstchi-\firstchi production, but has some main differences that needs other SM background prediction techniques. 
-This paper can be seen as a spin-off to the general analysis searching for SUSY in opposite sign dilepton pairs performed by ETH Z\"{u}rich, while still acknowledging the commonalities with the collaborative search. 
-This chapter will contain a brief overview of the different SUSY particle production modes. 
-Subsequent to this chapter is one that contains the description of the triggers, objects and background prediction techniques that are common to the two searches. 
-After the common elements of the searches have been presented, the two searches are presented separately. 
-Following the order dictated by the date of publication, the analysis strategy and results for the search for \firstcharg-\secondchi and \firstchi-\firstchi production are first presented. 
-The full result is published in \cite{edge2016}. 
-The search for selectrons and smuons is published in \cite{sleptons2016}.
-\section{Charginos, neutralinos and sleptons}
-The SUSY models considered in the first paper assume electroweak production (EW) and Gauge mediated SUSY breaking (GMSB), and are presented in Fig.~\ref{sig:feynmanEWK}. 
-The \firstcharg-\secondchi production is depicted in the upper part of Fig.~\ref{sig:feynmanEWK}. 
+I will highlight my contributions to the first paper, and cite the work of my collaborators when necessary. 
+Since my main contribution to the first paper was in the search for chargino-neutralino production (\firstcharg-\secondchi) and higgsino production, I will dedicate a large fraction of this thesis to a description of this search, and refer to it in the following as the "Electroweak search".
+\section{SUSY searches with opposite sign same flavor leptons}
+The strong SUSY search, targeting gluino (\gluino) or sbottom (\sbottom) production will also be presented in this thesis, refered to in the following as "Strong search".
+The second paper that this thesis is based on, is a search for directly produced selectrons ($\seL$, $\seR$) and smuons ($\smuL$, $\smuR$), refered to in the following as "Slepton search". 
+The slepton search has many similarities to the electroweak search, but has some main differences that needs other SM background prediction techniques. 
+This chapter will contain a brief overview of the different SUSY production modes in the first section, followed by a description of the SM background processes common for the three searches. 
+The order of the SUSY scenarios presented below is dictated by the cross section of the processes. 
+The strong SUSY searches is the oldest search presented in this thesis, as it has a higher production cross section associated to it that made it relevant already in the Run 1 of the LHC. 
+The Electroweak search has a lower cross section associated to it, and many of the scenarios probed are for the first time presented in this paper. 
+Lastly, the direct slepton search has the lowest cross section associated to it, making it the latest production mode covered by this final state. 
+\subsection{Strong SUSY search}
+The strong SUSY search using opposite sign same flavor leptons can target two production modes. 
+The first one is Gauge mediated SUSY breaking (GMSB)~\cite{Matchev:1999ft,Meade:2009qv,Ruderman}, a model that assume strong production of a pair of gluinos (\gluino) that each decays into a pair of quarks ($u$, $d$, $s$, $c$, or $b$) and the lightest neutralino, \PSGczDo, shown on the left of Figure \ref{fig:feynmanStrong}. 
+The leptons are a result of the decay of the on-shell \PZ-boson at the end of the decay chain, and the large \ptmiss is due to the gravitino (\gravitino). 
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=0.45\textwidth]{images/strong/gluino.pdf}
+\includegraphics[width=0.45\textwidth]{images/strong/sbottom.pdf}
+\caption{Diagrams for strong SUSY production.  
+with decays containing at least one dilepton pair stemming from a Z decay are shown. 
+The gluino GMSB model targeted by the strong on-Z search is shown on the left, that contains a one dilepton pair stemming from an on-shell \PZ boson decay. On the right is a diagram showing a model in which bottom squarks are pair produced with subsequent decays that contain at least one dilepton pair. This model features a characteristic edge shape in the \mll spectrum given approximately by the mass difference of the \PSGczDt and \PSGczDo.}
+\label{fig:feynmanStrong}
+\end{figure}                                                                                                                                          
+The second strong SUSY production model that can be targeted using opposite sign same flavor leptons is the direct pair production of \sbottom.
+In this model, the \sbottom quarks decay to a bottom quark and \PSGczDt. 
+Two assumptions are made for the decay of the \PSGczDt. 
+In the one case (upper half of the Feynman diagram in the right of Figure \ref{fig:feynmanStrong}), the \PSGczDt decay to a \slep and a lepton of the same flavor, where the \slep decays to a lepton of the same flavor but opposite charge, and the \PSGczDo LSP.   
+The sequential decay of the \slep (that in this work considered to be either a \se or \sm) results in the particular feature that the invariant mass of the two leptons has an edge shape with an endpoint dictated by the mass difference of the \PSGczDt and the \PSGczDo. 
+Further, the \sbottom and \PSGczDt masses are free parameters, the \PSGczDo is set to 100\GeV and the sleptons are assumed to be degenrate with the mass being average of the \PSGczDt and \PSGczDo masses. 
+The other decay mode of the \PSGczDt considered it visualized in the lower part of the Feynman diagram on the right of Figure \ref{fig:feynmanStrong}.
+In this model, the \PSGczDt decays to a \PZ boson and the \PSGczDo LSP. 
+The \PZ boson can be on-shell or off-shell depending on the mass difference between the neutralinos, and can decay to any fermion pair allowed by the SM but in this work only the decay to an electron or muon pair is considered. 
+The branching fractions of the two \PSGczDt decay modes is considered to be 50\% each, and the model is interpreted in context of the exclusion of \sbottom and \PSGczDt. 
+
+\subsection{Electroweak SUSY search}
+The SUSY models considered in the first paper assume electroweak production (EW) and Gauge mediated SUSY breaking (GMSB), and are presented in Figure \ref{sig:feynmanEWK}. 
+The \firstcharg-\secondchi production is depicted in the upper part of Figure \ref{sig:feynmanEWK}. 
 In this model, the \firstcharg is set to decay to a \PW boson and a \firstchi, which is the LSP, while the next-to-lightest neutralino, \secondchi, decays to a \PZ boson and \firstchi.
 The production cross sections for this model are computed in a limit of mass-degenerate wino \firstcharg\ and \secondchi, and light bino \firstchi.  
 All the other SUSY particles are assumed to be heavy and decoupled.
@@ -26,16 +58,16 @@ The remaining two models considered in the first paper assume the production of 
 For bino- or wino-like neutralinos, the neutralino pair production cross section is very small, and thus a specific GMSB model is considered, with mass-degenerate higgsinos \firstcharg, \secondchi, and \firstchi as the next-to-lightest SUSY particles and a massless gravitino as the LSP~\cite{Matchev:1999ft,Meade:2009qv,Ruderman}.
 In the production of any two of these, \firstcharg\ or \secondchi\ decays immediately to \firstchi\ and low-momentum particles that do not impact the analysis, effectively yielding pair production of $\firstchi\firstchi$.
 Intermediate production of either \firstcharg\ or \secondchi\ is therefore not explicitly shown in the lower two diagrams of Fig.~\ref{sig:feynmanEWK} representing these models.
-In the first model (lower left of Fig.~\ref{sig:feynmanEWK}), the only allowed decay of the lightest neutralino is to a \PZ boson and a massless gravitino.
-In the other model (lower two diagrams of Fig.~\ref{sig:feynmanEWK}), the lightest neutralino is allowed to decay to a gravitino and either a \PZ boson or an SM-like Higgs boson, with a 50\% branching fraction to each decay channel.
+In the first model (lower left of Figure \ref{sig:feynmanEWK}), the only allowed decay of the lightest neutralino is to a \PZ boson and a massless gravitino.
+In the other model (lower two diagrams of Figure \ref{sig:feynmanEWK}), the lightest neutralino is allowed to decay to a gravitino and either a \PZ boson or an SM-like Higgs boson, with a 50\% branching fraction to each decay channel.
 The cross sections for higgsino pair production are computed in a limit of mass-degenerate higgsino states \secondchi, \firstcharg, and \firstchi.
 Again, all the other SUSY particles are assumed to be heavy and decoupled.
-Following the convention of real mixing matrices and signed neutralino masses~\cite{Skands:2003cj}, the sign of the mass of \firstchi (\secondchi) are set to $+1$ ($-1$).
+Following the convention of real mixing matrices and signed neutralino masses \cite{Skands:2003cj}, the sign of the mass of \firstchi (\secondchi) are set to $+1$ ($-1$).
 The lightest two neutralino states are defined as symmetric (anti-symmetric) combinations of higgsino states by setting the product of the elements $N_{i3}$ and $N_{i4}$ of the neutralino mixing matrix $N$ to $+0.5$ ($-0.5$) for $i = 1$ ($2$).
 The elements $U_{12}$ and $V_{12}$ of the chargino mixing matrices $U$ and $V$ are set to 1.
 Common to these models is that they produce an on-shell \PZ boson giving the OCSF leptons, in association with a SM boson, and two LSPs resuting in large \ptmiss. 
 The SM boson is either a \PW, \PZ or a H, and their decay mode to jets (or b-tagged jets in the case of the H) is targeted in the search.   
-\begin{figure}[!h]
+\begin{figure}[!htp]
 \centering
 \includegraphics[width=0.45\textwidth]{images/ewk/Figure_001-b.pdf}\\
 \includegraphics[width=0.45\textwidth]{images/ewk/Figure_001-c.pdf}
@@ -44,15 +76,16 @@ The SM boson is either a \PW, \PZ or a H, and their decay mode to jets (or b-tag
 (Lower) Diagrams corresponding to the neutralino-neutralino model of where the neutralinos are allowed to decay to a gravitino and a \PZ boson (left) and where the neutralinos are allowed to decay to a gravitino and a \PZ boson or a Higgs boson, with a 50\% branching fraction to each decay channel (right).}
 \label{sig:feynmanEWK}
 \end{figure}                                                                                                                                 
-Furhter, SUSY models predict charged sleptons ($\seL$, $\smuL$, $\stauL$, $\seR$, $\smuR$, $\stauR$), the superpartners of the charged left-handed and right-handed SM leptons. 
+\subsection{Slepton search}
+SUSY models predict charged sleptons ($\seL$, $\smuL$, $\stauL$, $\seR$, $\smuR$, $\stauR$), the superpartners of the charged left-handed and right-handed SM leptons. 
 At sufficiently heavy slepton masses, the sleptons undergo a two-body decay into one of the heavier neutralinos or a chargino, while direct decays to a neutralino LSP are favored for light slepton masses.
 The second paper that this thesis is based on is on a search for directly produced selectrons and smuons, under the assumption of direct decays $\slep\to \ell\lsp$ with 100\% branching ratio, as sketched in Fig.~\ref{fig:feynmanSlepton}.
-\begin{figure}[!h]
+\begin{figure}[!htp]
 \centering
 \includegraphics[width=0.55\textwidth]{images/slepton/Figure_001.pdf}
 \caption{Diagram corresponding to the slepton model with two selectrons (smuons) directly produced and decay into electrons (muons) and a LSP} 
 \label{fig:feynmanSlepton}
-\end{figure}                                                                                                                                 
+\end{figure}                                                                                                                                           
 \section{Background processes}
 The final states resulting from directly produced selectrons (smuons) are a pair of electrons (muons) and large \ptmiss from the LSPs. 
 The main differences in the final state compared to the \firstcharg-\secondchi and \firstchi-\firstchi production, are that absence of jets and the fact that the lepton pair is not compatible to the \PZ boson mass. 
@@ -180,12 +213,12 @@ These backgrounds, referred to as Flavor Symmetric (FS) in this thesis, can be h
 \end{figure}                                                                                                                             
 
 \subsection{Drell-Yan}
-The large cross section Drell-Yan process, where a virtual photon or a Z boson decays to two leptons, is a major background in the search for Charginos and Neutralinos as a lepton pair compatible with a \PZ boson is required in the final state, and is shown in Fig.~\ref{fig:Feynmandy}. 
+The large cross section Drell-Yan process (DY), where a virtual photon or a Z boson decays to two leptons, is a major background in the search for Charginos and Neutralinos as a lepton pair compatible with a \PZ boson is required in the final state, and is shown in Fig.~\ref{fig:Feynmandy}. 
 This process contain no production of neutrinos, with the result that the \ptmiss is solely due to jet resolution and detector effects. 
-As will be thoroughly described in the chapter on the \ptmiss performance, the Drell-Yan process is very similar to the single photon production in the sense that it does not contain any real \ptmiss from neutrinos. 
-Therefore, the \ptmiss contribution from Drell-Yan can be estimated through the \ptmiss from single photon production.  
-The direct slepton production process does not result in a lepton pair compatible with a \PZ boson, and for this reason the Drell-Yan process is heavily suppressed by a \PZ boson veto.  
-
+As will be thoroughly described in the chapter on the \ptmiss performance, the DY is very similar to the single photon production in the sense that it does not contain any real \ptmiss from neutrinos. 
+Therefore, the \ptmiss contribution from DY can be estimated through the \ptmiss from single photon production. 
+This data-driven technique is referred to as "\ptmiss template method" and profits from the high statistical power of the single $\gamma$ process. 
+In the direct slepton production search, a \PZ boson veto is applied that heavily suppresses the DY, and the very minor contribution from DY is taken from simulation.   
 \begin{figure}[!htb]
 \begin{center}
 \begin{tabular}{cccccccccccccccc}
@@ -216,7 +249,7 @@ The \PWW process, where both \PW bosons decay leptonically, is flavor symmetric 
 The \PWW process and \PZZ process, when one \PZ boson decays to charged leptons and one \PZ boson decay to neutrinos, are dominant backgrounds in the direct slepton search as they fulfill the criteria of no hadronic activity and large \ptmiss from neutrinos. 
 If both bosons decay leptonically, the \PWZ process can result in opposite sign same flavor pairs and enter both searches as a background if one of the leptons is out of $\eta$ or \pt acceptance. 
 The \PZZ and \PWZ are referred to as "\PZ+$\,\nu$ backgrounds" in this thesis and are estimated through simulation with translation factors derived from dedicated control regions. 
-As the chargino and netralino search and the direct slepton search have different kinematic features, the translation factors for these processes are derived separatley for the two searches.
+As the strong, electroweak and slepton searches have different kinematic features, the translation factors for these processes are derived separatley for the three searches.
 \begin{figure}[!htb]
 \begin{center}
 \begin{tabular}{cccccccccccccccc}
@@ -280,8 +313,6 @@ As the chargino and netralino search and the direct slepton search have differen
 
 
 \subsection{Rare processes}
-
-
 \begin{figure}[!htb]
 \begin{center}
 \begin{tabular}{cccccccccccccccc}
@@ -354,9 +385,6 @@ As the chargino and netralino search and the direct slepton search have differen
 \caption{Leading order $\mathrm{t\bar{t}Z}$ (left), $\mathrm{t\bar{t}W}$ (middle) and $\mathrm{t\bar{t}H}$ (right) production.} 
 \label{fig:Feynmandiboson}                                                 
 \end{figure}                                                                                                     
-
-
-
 
 \begin{figure}[!htb]
 \begin{center}

@@ -1,7 +1,8 @@
-\chapter{PHYSICS OBJECTS}
-Common to the searches for chargino, neutralino and slepton production is the final state containing two leptons and \ptmiss originating from the neutralino or gravitino LSP.
+\chapter{PHYSICS OBJECTS}\label{sec:objects}
+Common to the strong, electroweak and slepton searches is the final state containing two leptons and \ptmiss originating from the \PSGczDo or \gravitino LSP.
 The difference lies in the hadronic activity and whether the lepton pair is compatible with a \PZ boson or not. 
-This section presents the Particle Flow (algorithm) that combines subdetector information to form the physics objects that are used in these searches, and the quality criteria imposed on them to be considered a signal event or suitable to predict various SM background processes.  
+This chapter starts by presenting the Particle Flow algorithm (PF) that combines subdetector information to form the physics objects that are used in these searches. 
+The rest of the chapter presents the reconstruction of the physics objects used in this search and the quality criteria imposed on them to be considered a signal event or suitable to predict various SM background processes.  
 \section{The Particle Flow Algorithm}\label{sec:PF}
 General purpose high energy particle physics detectors are built on the principle of layers of sub-detectors around the beam axis. 
 The calorimeter layers and muon systems are designed for particles to get completely absorbed or produce hits in them. 
@@ -46,7 +47,7 @@ In this work, dielectron ($ee$) and dimuon ($\mu\mu$) events are categorized as 
 The reason to exclude the third lepton generation, the $\tau^{\pm}$ leptons and their corresponding $\nu_{\tau}$'s, is due to the challenging final state. 
 The $\tau$ lepton, being the most massive of the leptons flavors, decay hadronically ~65\% of the time. 
 As an effect, including this decay mode in the various signal scenarios would result in the introduction of overwhelming backgrounds from multijet QCD processes, that in turn would decrease the sensitivity of the searches. 
-However, the search for direct stau production in leptonic and hadronic final states has been performed by CMS (add ref), where the challenging background due to $\tau$ leptons is taken into account.  
+However, the search for direct stau production in semi-leptonic and hadronic final states has been performed by CMS\cite{CMS-PAS-SUS-17-002,Sirunyan:2018vig}, where the challenging background due to $\tau$ leptons is taken into account.  
 \section{Electrons}
 \label{subsub:electrons}
 Electrons are reconstructed by associating ECAL clusters with a track reconstructed in the silicon detector. 
@@ -225,7 +226,7 @@ The isolation variable used for electrons, the mini-isolation, is also used for 
 \end{center}
 \end{table}                                                                                                      
 
-\section{Jets}
+\section{Jets}\label{sec:objectsJets}
 The PF candidates found through the PF algorithm described in Section \ref{sec:PF} are used as input in a clustering algorithm for hadronic jets. 
 A variety of clustering algorithms are on the market, with different optimizations for high or low \pt jets or different shapes, with different computation speeds. 
 In the following the ingredients needed for well-measured jets are described, starting with pileup mitigation, followed by the sequential jet clustering algorithms, and finally the identification and corrections needed. 
@@ -302,7 +303,7 @@ The residual corrections, or L2L3 correction, are corrections to be applied on d
 The relative, or $\eta$ dependent, correction is determined with QCD dijet events, where a tag jet in the barrel region is compared to a probe jet with no $\eta$ restriction of similar \pt. 
 The absolute correction is determined in $\gamma+$jets, Z($ee$/$\mu\mu$)+jets or multijet events, where a well-measured $\gamma$, \PZ boson or jet is compared to the recoiling jet 
 \end{itemize}  
-\subsection{$b$-jet tagging}
+\subsection{$b$-jet tagging}\label{sec:objectsBJets}
 Heavy flavor jet identification algorithms are heavily used in CMS as a means to select events containing top quark decays or SM bosons decaying through b quarks, and the following description of the algorithms follow that introduced in \cite{Sirunyan:2017ezt}. 
 As the lifetime of a hadron containing b-quarks is in the order of 1.5 ps, this results in a displacement of around a few millimeters up to a centimeter depending on the momentum available. 
 As a result, this displacement leads to the possibility to reconstruct an additional vertex where the b hadron decay takes place. 
@@ -363,12 +364,12 @@ Further, additional datasets are used to predict a main SM background, collected
 All datasamples are summarized in Table~\ref{tab:datasets}.  
 \begin{table}[ht!]
 \def\arraystretch{1.2}
-    \caption{Datasets used in the slepton/EWK searches and \ptmiss study}
+    \caption{Datasets used in the strong, electroweak and slepton searches and \ptmiss study}
     \label{tab:datasets}
     \begin{center}
         \begin{tabular}{ l}
         \hline\hline 
-        \multicolumn{1}{c}{\textbf{Signal events for slepton/EWK search}} \\
+        \multicolumn{1}{c}{\textbf{Signal events}} \\
         \hline
         \texttt{/DoubleEG/Run2016B-03Feb2017\_ver2-v2/MINIAOD}    \\
         \texttt{/DoubleEG/Run2016(C-G)-03Feb2017-v1/MINIAOD}     \\
@@ -400,7 +401,7 @@ All datasamples are summarized in Table~\ref{tab:datasets}.
 \end{table}                                                                                  
 
 \section{Triggers}
-The trigger selection for the slepton and EWK analyses is driven by the requirement of at least two leptons at the HLT.
+The trigger selection for the searches presented in this thesis is driven by the requirement of at least two leptons at the HLT.
 Due to the changes in instantaneous luminosity, different dilepton triggers were active at different times and with varying prescales. 
 This results in the need for a variety of triggers with slighlty different requirements.
 Non isolated double lepton paths are included to increase the efficiency in events with large dilepton system \pt. 
@@ -412,7 +413,7 @@ All signal and supporting triggers are documented in Table~\ref{tab:triggers}.
 
 \begin{table}[ht!]
 \def\arraystretch{1.2}
-    \caption{Triggers used in the searches for charginos, neutralinos and sleptons. The first section are the triggers used in most control and signal regions, while the supporting triggers are used for the calculation of the trigger efficiencies of the signal triggers.}
+    \caption{Triggers used in the strong, electroweak and slepton searches. The first section are the triggers used in most control and signal regions, while the supporting triggers are used for the calculation of the trigger efficiencies of the signal triggers.}
     \label{tab:triggers}
     \begin{center}
         \begin{tabular}{ l}

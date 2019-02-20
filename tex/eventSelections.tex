@@ -1,0 +1,146 @@
+\chapter{EVENT SELECTIONS}\label{sec:eventSelection}
+Common to the SUSY searches presented in this thesis is the final state containing two leptons and \ptmiss originating from the LSP.
+The difference lies in the hadronic activity and whether the lepton pair is compatible with a \PZ boson or not. 
+This chapter contains an overview event selections for the signal regions for the strong, electroweak and slepton searches. 
+Apart from the basic selections on leptons, jets and b-jets, more specific variables used to define the signal regions is also presented later in the chapter. 
+\section{Common signal region variables}
+\subsection{Lepton pair selection}
+The principle behind the main background prediction method, relies on the lepton flavor symmetry of the \PW decay, the identification and isolation requirements of the leptons are chosen so that they are as similar as possible between the flavors. 
+This principle is reflected in the selections of the trigger requirement of the leptons of \pt $>$ 23, 17, 12, and 8\GeV depending on the exact path. 
+Full efficiency for any of these values is reached at a \pt of 25(20) GeV for the leading (trailing) lepton, which is the requirement on the leptons for the control region. 
+One specific selection of this analysis is that not only the electrons are rejected if they appear in the transition region between the barrel and the endcap, but also the muons. 
+The reason for this is that the flavor symmetric background is taken from $e\mu$ events, thus the necessity of having symmetric cuts not only on the efficiency but also on the fiducial regions. 
+For this reason any lepton within the $|\eta|$ region of 1.4 to 1.6 is rejected, to keep the reconstruciton of electrons and muons as similar as possible. 
+Since there are some events with multiple lepton pairs, it is important to define an unambiguous way of selecting the ``relevant''  opposite-sign, same-flavor lepton pair. 
+The implemented algorithm selects the two highest \pt leptons which are fully identified and that have a distance between them of 0.1 in $\Delta$R. 
+This is to say, there is no cross-cleaning or prioritization between electrons and muons applied, and non-identified leptons (including the ECAL transition region) do not enter in the consideration of the lepton pair selection. 
+Further, the leptons can be used to define the signal regions for the different searches, by imposing requirements on the invariant mass of the leptons. 
+In the searches where an on-shell production of a \PZ boson is expected, naturally the signal region is defined to have the lepton pair compatible with the \PZ boson mass.  
+This is the case for the Electroweak search, and the gluino induced GMSB search. 
+On the other hand, the strong SUSY search with a sbottom induced process and an intermediate slepton decay result in a lepton pair that is not compatible with the \PZ boson mass. 
+This search instead utilizes bins in \mll outside of the \PZ mass window of 86-96\GeV. 
+Finally, the search for direct slepton production inlcudes two leptons that are not compatible with the \PZ mass. 
+To supress the DY SM background, a generous veto on the \PZ boson mass of 76-106\GeV is applied in the signal region. 
+All the signal and control region criteria on the leptons is summarized in Table \ref{tab:lepKin}  
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+    \caption{Lepton kinematic criteria.}
+    \label{tab:lepKin}
+    \begin{center}
+        \begin{tabular}{ l r}
+        \hline \hline
+        \multicolumn{2}{c}{\textbf{Strong GMSB and Electroweak SR lepton selection}}                \\
+        Flavor         &$e^{+}e^{-}$/$\mu^{+}\mu^{-}$                             \\
+        Leading \pt         &  $>$ 25\GeV                              \\
+        Subleading \pt         &  $>$ 20\GeV                              \\
+        $|\eta|$    &  $<$ 2.4 and $\ni$ [1.4, 1.6]                                 \\
+        \mll    &  $\in$ [86, 96] \GeV                       \\                                                  
+        \multicolumn{2}{c}{\textbf{Strong sbottom search lepton selection}}                \\              
+        Flavor         &$e^{+}e^{-}$/$\mu^{+}\mu^{-}$                             \\
+        Leading \pt         &  $>$ 25\GeV                              \\
+        Subleading \pt         &  $>$ 20\GeV                              \\
+        $|\eta|$    &  $<$ 2.4 and $\ni$ [1.4, 1.6]                                 \\
+        \mll    &  bins from 20 to 400+ \GeV                        \\                                                 
+
+        \multicolumn{2}{c}{\textbf{Slepton SR lepton selection}}                \\
+        Flavor         &$e^{+}e^{-}$/$\mu^{+}\mu^{-}$                             \\
+        Leading \pt         &  $>$ 50\GeV                              \\
+        Subleading \pt         &  $>$ 20\GeV                              \\
+        $|\eta|$    &  $<$ 2.4 and $\ni$ [1.4, 1.6]                                 \\
+        \mll    &  $\ni$ [76, 106] \GeV                       \\                                                  
+        \multicolumn{2}{c}{\textbf{CR lepton selection}}                \\
+        Flavor         &$e^{+}e^{-}$/$\mu^{+}\mu^{-}$/$e^{\pm}\mu^{\mp}$                             \\
+        Leading \pt         &  $>$ 25\GeV                              \\
+        Subleading \pt         &  $>$ 20\GeV                              \\
+        $|\eta|$    &  $<$ 2.4 and $\ni$ [1.4, 1.6]                                 \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                                                                          
+\subsection{Jet and b-jet selection}
+The jets used throughout this thesis are clustered from PF objects using anti-$k_{t}$ algorithm with a distance parameter of 0.4, after excluding charged hadrons originating from pileup, and corrected with JECs, as described in Section \ref{sec:objectsJets}. 
+Identification of jets originating from b quark decays is done using the CSVv2 algortihm, introduced in Section \ref{sec:objectsBJets}.
+Further, the scalar sum of all jet \pt is referred to as \HT and is used to design some of the signal regions. 
+The \pt of the jets used for the control regions used for the flavor symmetric background prediction methods is 35 GeV and the jets are required to be within $|\eta|<2.4$. 
+The jets are required to be seperated from selected leptons by 0.4 in $\Delta$R. 
+In the slepton search no hadronic activity is expected, therefore a veto on jets of \pt greater than 25\GeV and $|\eta|<2.4$ is imposed.
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+    \caption{Jet kinematic criteria.}
+    \label{tab:lepKin}
+    \begin{center}
+        \begin{tabular}{ l r}
+        \hline \hline
+        \multicolumn{2}{c}{\textbf{Strong and electroweak search jet selection}}                \\
+        \multicolumn{2}{c}{AK4 jets $\geq2$}                \\
+        \pt         &  $>$ 35\GeV                              \\
+        $|\eta|$    &  $<$ 2.4                                 \\
+        \multicolumn{2}{c}{b-tagged jets $\geq0$}                \\
+        CSVv2 discriminator          &  Medium WP                              \\
+        \pt         &  $>$ 25\GeV                              \\
+        $|\eta|$    &  $<$ 2.4                                 \\
+        \multicolumn{2}{c}{\textbf{Slepton search jet selection}}                \\
+        \multicolumn{2}{c}{AK4 jets $=0$}                \\
+        \pt         &  $>$ 25\GeV                              \\
+        $|\eta|$    &  $<$ 2.4                                 \\
+        \multicolumn{2}{c}{\textbf{CR jets}}                \\
+        \multicolumn{2}{c}{AK4 jets $\geq2$}                \\
+        \pt         &  $>$ 35\GeV                              \\
+        $|\eta|$    &  $<$ 2.4                                 \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                     
+\subsection{\ptmiss}
+Common to the various searches presented in this thesis is the existence of LSPs, as only R-parity conserving models are considered. 
+The LSPs are massive and escape detection, and would manifest themselves through the imbalance in the transverse plane as \ptmiss. 
+For this reason, all signal regions are exploit the \ptmiss either explicitly through a binning in the variable, or implicitly in the \mttwo variable that uses it as an input. 
+The "Type-1 corrected" \ptmiss is used, with all \ptmiss filters applied to remove anomalous \ptmiss events, see Chapter \ref{sec:met} for more details.  
+
+\subsection{\mttwo}\label{sec:MT2}
+The leptonic \mttwo variable is used to define all signal regions. 
+It is a generalization of the transverse mass for pair-produced particles which decay into visible and invisible objects, as described in \cite{Lester:1999tx,Barr_2003}. 
+The variable is efficient in differentiating SM \ttbar from the signal final state scenarios, as it has a clear endpoint at the \PW boson mass for SM \ttbar. 
+The idea behind this powerful variable is summarized below. 
+The a leptonic decay of a top quark, the process can be summarized as follows
+\begin{equation}
+t\rightarrow W^{+}b \rightarrow l^{+}\nu b 
+\end{equation}
+From a theoretical point of view, it is easy to construct the transverse mass (\mT) of the \PW boson using the kinematic variables of the lepton and the neutrino and energy and momentum conservation in the transverse plane,
+\begin{equation}
+M_{T}=\sqrt{m_{l}^{2}+m_{\nu}^{2}+2(E_{T}^{l}E_{T}^{\nu}-\vec{p_{T}^{l}}\vec{p}_{T}^{\nu})}
+\end{equation} 
+where the $\vec{p}_{T}^{l}$ and $\vec{p}_{T}^{\nu}$ are the transverse momenta of the lepton and the neutrino, and $E_{T}^{l}$ and $E_{T}^{\nu}$ the transverse energy of the same.
+In this case, the \mT gets a value very close to the \PW boson mass. 
+In the case of di-leptonic \ttbar, 
+\begin{equation}
+pp\rightarrow t\bar{t}\rightarrow W^{+}b + W^{-}\bar{b}\rightarrow l^{+}\nu b +l^{-}\bar{\nu}\bar{b}
+\end{equation}
+the situation gets complicated. 
+First of all, the pairing of the leptons and neutrinos that form the \PW bosons is not known. 
+Further, the neutrinos escape detection and the momenta they carry is just collectively summed up in the \ptmiss. 
+But let us disregard these experimental difficulties for a second. 
+If one instead assume that the correct pairing is known, then one could create an upper bound dictated by the \PW boson mass according to
+\begin{equation}
+M_{W}^{2}\geq \mathrm{max}\{M_{T}^{2}\left(\vec{p}_{T}^{l^{+}},\vec{p}_{T}^{\nu}\right), M_{T}^{2}\left(\vec{p}_{T}^{l^{-}},\vec{p}_{T}^{\bar{\nu}}\right)\}.
+\end{equation}
+Meaning that in the case of di-leptonic \ttbar, if the lepton pairing is right the both transverse masses found would be close to the \PW boson mass. 
+In order to cope with the problem of not knowing the \pt of the neutrinos, one can instead scan over all possible \ptmiss partitions: 
+\begin{equation}
+M_{W}\geq \mathrm{min}_{\vec{p}_{T}^{miss}=\vec{p}_{T1}^{miss}+\vec{p}_{T2}^{miss}}\left( \mathrm{max}\{M_{T}\left(\vec{p}_{T}^{l_{1}},\vec{p}_{T1}^{miss}\right), M_{T}\left(\vec{p}_{T}^{l_{2}},\vec{p}_{T2}^{miss}\right)\}\right).
+\end{equation}
+This is the formal definition of the \mttwo 
+\begin{equation}
+M_{T2}= \mathrm{min}_{\vec{p}_{T}^{miss}=\vec{p}_{T1}^{miss}+\vec{p}_{T2}^{miss}}\left( \mathrm{max}\{M_{T}\left(\vec{p}_{T}^{l_{1}},\vec{p}_{T1}^{miss}\right), M_{T}\left(\vec{p}_{T}^{l_{2}},\vec{p}_{T2}^{miss}\right)\}\right).
+\end{equation}
+For dileptonic \ttbar, the \mttwo will be very close to the \PW boson mass, whereas for signal scenarios, where the leptons are paired with the momentum of the LSPs, which will result in values much larger than the \PW boson mass. 
+The \mttwo variable is used to define all signal regions in all searches, as it effectively reduce contributions from SM \ttbar by imposing a cut around 80\GeV.
+\section{Strong search} 
+\subsection{\ttbar likelihood}
+\subsection{Strong SR definition}
+\section{Electroweak search}
+\subsection{Boosted bosons}
+\subsection{Electroweak SR definition}
+\section{Slepton search}
+\subsection{Slepton SR definition}
