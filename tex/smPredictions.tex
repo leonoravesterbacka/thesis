@@ -1,0 +1,873 @@
+\chapter{Standard Model Background Predictions}\label{sec:backgrounds}
+The SM backgrounds in this search are well known and allows for the use of data-driven background prediction methods. 
+Further, some backgrounds are estimated from simulation with with designated control region to validate the normalization. 
+The background composition differs depending on if the search has a \PZ boson selection (such as for the GMSB and electroweak WZ and ZH searches) or a \PZ boson veto (such as for the Edge and direct slepton search). 
+This results in, on the one hand, a significant contribution from DY, on the other hand, a suppression thereof. 
+In the SRs where DY makes up a significant fraction, a data-driven technique is used that predicts the \ptmiss spectrum in Z+jets events by the \ptmiss spectrum in $\gamma$+jets events. 
+In the slepton search, the DY is heavily suppressed by stringent cuts on \ptmiss, number of jets and \mttwo, so this very minor fraction is estimated from simulation.  
+What is common to all the searches is the contribution from processes containing one or more top quarks or \PW bosons that decay leptonically. 
+These processes are referred to in the following as flavor symmetric (FS), due to the flavor symmetry of the \PW boson decay. 
+This background is estimated using a data-driven technique. 
+Diboson processes are also present in most SRs if one or two of the leptons are out of acceptance or are not well reconstructed. 
+Together with the \ttZ process, these processes are referred to as "Z+$\nu$" backgrounds, as they all contain prompt leptons and \ptmiss from a neutrino.   
+\section{Flavor-symmetric Background}\label{sec:fsBG}
+Physical processes that feature decays into same flavor and opposite flavor lepton pairs with equal probability is comprised in this background estimation. 
+This is, mainly the \ttbar process, but also other processes such as \PWW, or \ttW production.
+The idea behind the background prediction technique is visualized in Figure \ref{fig:rsfofMC} where a selection of same flavor and opposite flavor leptons is applied in an Edge-like signal region in simulation, showing that the \ttbar sprectrum has the same shape and magnitude in both selections.    
+
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/FSSF.pdf}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/FSOF.pdf} 
+    \caption{The invariant dilepton mass distribution after requiring a baseline SR definition for the Edge search in addition to an opposite-sign, same-flavor (left) or opposite-sign opposite-flavor (right) lepton pair. The simulated background events are stacked on top of each other.}
+\label{fig:rsfofMC}
+\end{center}
+\end{figure}                                                                               
+
+Other processes such as \PWZ production or \ttZ and \ttH production have some flavor symmetric component and some component stemming from the decay of the \PZ boson.
+These processes are treated separately in Section \ref{sec:Znu} and are referred to as "Z+$\nu$" processes. 
+The FS background prediction in SF events utilizes the number of OF events as follows:
+\begin{align}
+\label{eq:masterformula}
+    N_{\Pe\Pe} & = R_{\Pe\Pe/OF} \times N_{OF}\notag \\
+    N_{\mu\mu} & = R_{\mu\mu/OF} \times N_{OF}\notag\\
+    N_{SF} \equiv N_{\Pe\Pe} + N_{\mu\mu} & = R_{SF/OF} \times N_{OF}
+\end{align}
+
+As dictated by physics, the ratios $R$ should simply be $R_{\Pe\Pe/OF}=R_{\mu\mu/OF}=0.5$ and $R_{SF/OF}=1$.
+But since it is impossible to have a perfect detector in such a large scale experiment, the ratios are slightly off from 0.5 and 1. 
+This is due to trigger, reconstruction and identification efficiencies that are not identical for detected electrons and muons. 
+So instead of just using the assumptions on the ratios to be 0.5 or 1, the ratios are instead measured to take into account these differences in efficiencies. 
+In the following is a derivation on how the number of SF events can be estimated, with the following naming scheme used: 
+An epsilon without an upper index includes all efficiencies (trigger, selection and reconstruction), an epsilon with "$R$" as a superscript indicates that reconstruction and selection efficiencies are applied, an epsilon with "$T$" as a superscript indicates that trigger efficiencies are applied while the superscript "hard" stands for the quantity on particle level.
+An assumption is made on the reconstruction and selection efficiencies for the two leptons in the event to be uncorrelated, i.e. $\epsilon_{\ell\ell}=\epsilon_{\ell} \cdot \epsilon_{\ell}$. 
+The ratio of efficiencies for muons to electrons is basically saying how well muons are measured with respect to electrons given certain trigger and reconstruction selection. 
+The quantity can be expressed in the following way:
+\begin{align}
+\label{eq:rMue}
+r_{\mu/e} & = \frac{\epsilon_{\mu}}{\epsilon_{e}} \approx \sqrt{ \frac{\epsilon^{R}_{\mu\mu}\epsilon^{T}_{\mu\mu}}{\epsilon^{R}_{ee}\epsilon^{T}_{ee}}} = \sqrt{ \frac{N_{\mu\mu}}{N_{ee}}} \notag \\
+r_{\mu/e} & \approx r^{R}_{\mu/e}\sqrt{ \frac{\epsilon^{T}_{\mu\mu}}{\epsilon^{T}_{ee}}}
+\end{align}
+From this, the number of ee and $\mu\mu$ events can be estimated in the following way:
+\begin{align}
+\label{eq:eemumuFormula}
+N_{ee} & = \epsilon^{T}_{ee} N^{R}_{ee} = \epsilon^{T}_{ee} \left(\epsilon^{R}_{e}\right)^{2} N^{hard}_{ee} = \frac{1}{2} \epsilon^{T}_{ee} \left(\epsilon^{R}_{e}\right)^{2} N^{hard}_{OF} 
+										= \frac{1}{2} \epsilon^{T}_{ee} \frac{\epsilon^{R}_{e}}{\epsilon^{R}_{\mu}} N^{R}_{OF} \notag \\
+       & =\frac{1}{2} \frac{1}{r^{R}_{\mu/e}} \frac{\epsilon^{T}_{ee}}{\epsilon^{T}_{e\mu}}N_{OF} 
+										= \frac{1}{2} \frac{1}{r_{\mu/e}} \frac{\sqrt{\epsilon^{T}_{ee}\epsilon^{T}_{\mu\mu}}}{\epsilon^{T}_{e\mu}} N_{OF}  \notag \\
+N_{\mu\mu} & = \epsilon^{T}_{\mu\mu} N^{R}_{\mu\mu} = \epsilon^{T}_{\mu\mu} (\epsilon^{R})^{2}_{\mu} N^{hard}_{\mu\mu} = \frac{1}{2} \epsilon^{T}_{\mu\mu} (\epsilon^{R})^{2}_{\mu} N^{hard}_{OF}
+										= \frac{1}{2} \epsilon^{T}_{\mu\mu} \frac{\epsilon^{R}_{\mu}}{\epsilon^{R}_{e}} N^{R}_{OF}  \notag \\
+	  & =\frac{1}{2} r^{R}_{\mu/e} \frac{\epsilon^{T}_{\mu\mu}}{\epsilon^{T}_{e\mu}}N_{OF} = \frac{1}{2} r_{\mu/e} \frac{\sqrt{\epsilon^{T}_{ee}\epsilon^{T}_{\mu\mu}}}{\epsilon^{T}_{e\mu}} N_{OF}
+\end{align}
+As the final destination for this derivation is the prediction of SF yields, the above equalities can be combined to give an estimate of the $N_{SF}$:
+\begin{align}
+\label{eq:masterformulaExp}
+    N_{SF} & = \frac{1}{2} \left( r_{\mu/e} + \frac{1}{r_{\mu/e}} \right) \frac{\sqrt{\epsilon^{T}_{ee}\epsilon^{T}_{\mu\mu}}}{\epsilon^{T}_{e\mu}} N_{OF}  \notag \\
+           & = \frac{1}{2} \left( r_{\mu/e} + \frac{1}{r_{\mu/e}} \right) R_{T} N_{OF} = R_{SF/OF} N_{OF}
+\end{align}                                                                                                                                                                  
+This parametrization underlines the advantage of using the combined SF sample compared to the separate $\ElEl$ and $\MuMu$ samples.
+While $R_{\ell\ell/OF}$ is directly affected by the differences in reconstruction and trigger efficiencies by the factors \rmue or \rmueinv, these differences partially cancel out in \Rsfof. 
+In order to get to a final value for \Rsfof, two approaches have been taken. 
+The first is a direct measurement of the ratio \Rsfof in data in a control region enriched in \ttbar, while the second consists of the separated estimation of the \rmue and $R_T$ factors.
+
+\subsection{Direct measurement method}\label{sec:rsfofDirect}
+The direct measurement of the \Rsfof is the ratio of SF to OF events in a \ttbar enriched control region. 
+This region is defined orthogonal to the signal regions in terms of jets and \ptmiss. 
+It lies just outside them in order to not be affected by a large extrapolation. 
+The exact selections for this \Rsfof-measurement control region are:
+\begin{itemize}
+    \item the same lepton selection
+    \item exactly two jets
+    \item \ptmiss between 100 and 150\GeV
+    \item $70\geq\mll\geq110\GeV$ excluded
+\end{itemize}                                 
+
+Even though all signal regions are defined with a \mttwo cut, the choice is made to not define the \ttbar CR with a \mttwo requirement. 
+The reason for this is the significant reduction of the \ttbar background and thus the available statistics that the \mttwo requirement would lead to.
+A large mass window around the \PZ boson mass is excluded to avoid the contamination with DY backgrounds. 
+The measurement consist of counting the number of ee, $\mu\mu$ and SF events in this control region, and taking the ratio of this number to the number of OF events in the same region, to construct the \Reeof, \Rmmof and \Rsfof separately. 
+The results are shown in Tab.~\ref{tab:rSFOF} and the data and the simulation agree within 2\% for the combination of both flavors. 
+If the flavors are treated seperately, the data MC agreement is between 1 and 3\%. 
+As a closure test, the ratio of \Rsfof in the control and signal region (transfer factor) on simulation is studied. 
+It is found to be compatible with unity within 2\%  for the combination of both flavors and for each flavor seperately.
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Observed event yields in the control region and the resulting values for $R_{SF/OF}$, $R_{ee/OF}$, and $R_{\mu\mu/OF}$ for both data and MC. 
+The transfer factor is defined as the ratio of $R_{SF/OF}$ in the signal region devided by $R_{SF/OF}$ in the control region.}
+  \label{tab:rSFOF}
+    \begin{center}
+        \begin{tabular}{ l c c c}
+        \hline \hline
+        & $N_{SF}$ & $N_{OF}$ & $ R_{SF/OF} \pm \sigma_{stat}$  \\    
+        \hline
+         Data & 13438 & 12138 & 1.107$\pm$0.014\\
+         MC   & 13290 & 12189 & 1.090$\pm$0.005\\ 
+        \hline
+         & $N_{ee}$ & $N_{OF}$ & $ R_{ee/OF} \pm \sigma_{stat}$ \\    
+        \hline
+         Data & 4976 & 12138 & 0.410$\pm$0.007 \\
+         MC   & 4852 & 12189 & 0.398$\pm$0.003 \\
+        \hline
+         & $N_{\mu\mu}$ & $N_{OF}$ & $ R_{\mu\mu/OF} \pm \sigma_{stat}$\\    
+        \hline
+         Data & 8462 & 12138 & 0.697$\pm$0.010 \\
+         MC   & 8438 & 12189 & 0.692$\pm$0.004 \\ \hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                                                    
+
+
+To evaluate possible dependencies when extrapolating from control to signal region and determine a systematic uncertainty, the ratio \Rsfof is studied by relaxing each of the control region variables and check the evolution of the \Rsfof as a function if the same variable, in data and simulation.  
+The data shows some fluctuations due to the limited statistics in the control region, but no clear trends are observed.
+These studies are used to assign a systematic uncertainty as the variation of the \Rsfof that would be sufficient to cover the differences between the data and the simulation. 
+It is found that a variation 4\% is enough cover any potential fluctuations and is assigned as a systematic uncertainties. 
+
+\subsection{Factorization method}\label{sec:factorizationMethod}
+The second method to predict the number of SF events in the SR is called the Factorization method and explicitly takes into account the trigger and recontruction efficiencies of the leptons.   
+In order to calculate \Rsfof according to Eq.~\ref{eq:masterformulaExp}, \rmue and \RT are measured in data.
+\subsubsection{Measurement of \rmue}
+
+The measurement of \rmue is performed in a high statistics DY enriched control region summarized below:
+\begin{itemize}
+    \item the same lepton selection
+    \item more than or exactly two jets
+    \item \ptmiss below 50\GeV
+    \item $60\geq\mll\geq120\GeV$
+\end{itemize}                                 
+ 
+A small dependency on \rmue is found as a function of the second lepton \pt is observed, especially at low \pt where the muons are reconstructed at a higher efficiency than electrons.  
+In order to correct for this trend, a paramterization of this dependency is performed. The following parameterization as a function of the \pt of the second lepton was chosen:
+
+\begin{equation}
+    r_{\mu/e}  = a +  \frac{b}{\pt}
+\label{eq:rMuEFormular}
+\end{equation}
+$a$ and $b$ are constants that are determined in a fit to data.
+The fit for this parameterization is shown in Figure \ref{fig:rMuEDependency}.
+
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/rMuE_ZPeakControl_Run2016_36fb_TrailingPt_None.pdf}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/rMuE_ZPeakControl_Run2016_36fb_TrailingPt_corrected.pdf}
+    \caption{The \rmue dependency on the \pt of the second lepton for data and MC. The plots show the values for \rmue before (left) and after (right) the parameterization on the second lepton \pt is propagated to the dielectron events. The central value in the left plot indicates the \rmue value that would be obtained without the parameterization. The fit values of the parameterization are shown in the left plot.}
+\label{fig:rMuEDependency}
+\end{center}
+\end{figure}                                                                                                                
+
+The determined parameters are stated in Tab.~\ref{tab:rMuEFitParameters}.
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Result of the fit of \rmue as a function of the \pt of the trailing lepton in the DY control region. 
+ The same quantaties derived from simulation are shown for comparison. Only statistical uncertainties are given.}
+   \label{tab:rMuEFitParameters}
+    \begin{center}
+        \begin{tabular}{ l c c }
+        \hline \hline
+    		& $a$ & $b$ \\\hline
+        Data     &  1.14$\pm$0.01  &  5.20$\pm$0.16    \\
+        MC       &  1.16$\pm$0.01  &  5.15$\pm$0.36    \\\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                                                   
+
+
+Since the effect is mainly at very low lepton \pt and less than 5\% of the events fall into this category, a flat systematic uncertainty of 10\% is chosen to cover this remaining trend 
+instead of doing a mutli-variable fit. 
+An uncertainty band indicates these 10\% in Figure \ref{fig:rMuEDependency} (right) that shows the corrected $r_{\mu/e}^{corr.}$ for the second lepton \pt. 
+Further dependencies of $r_{\mu/e}^{corr.}$ on important observables are studied and no significant trends are observed. 
+The chosen 10\% systematic uncertainty is sufficient to cover any remaining trends in these observables.
+In addition to the studies on the dependence of $r_{\mu/e}^{corr.}$ on different variables, the dependency on the 0.5($r_{\mu/e}^{corr.}+1/r_{\mu/e}^{corr.}$), which is the factor that actually go in to the prediction of the $N_{SF}$ as seen in Equation \ref{eq:masterformulaExp}, on some SR variables is also performed. 
+This is especially important as the control region where the \rmue is measured is far from the signal regions. 
+In Figure \ref{fig:RDependency} the results of some of these studies can be observed where the results on data are shown in black and simulation in green. 
+The central value observed on data is indicated by a dashed line. 
+To determine the systematic uncertainty the fit parameters $a$ and $b$ are varied by its statistical uncertainty and the full prediction is shifted up and down by the 10\% systematic uncertainty from the studies above.
+The relative change of the mean value is used as the systematic uncertainty of the method. 
+The quantity 0.5($r_{\mu/e}^{corr.}+1/r_{\mu/e}^{corr.}$) is especially stable with respect to \ptmiss and \mttwo, as can be seen in Figure \ref{fig:RDependency}, validating the extrapolation from the DY control region to the signal region.   
+
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/rSFOFFromRMuE_ZPeakControl_Run2016_36fb_MET_corrected.pdf}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/rSFOFFromRMuE_ZPeakControl_Run2016_36fb_MT2_corrected.pdf}
+    \caption{The 0.5($r_{\mu/e}^{corr.}+1/r_{\mu/e}^{corr.}$) dependency on \ptmiss (left) and \mttwo (right) for data and MC after the parameterization on the second lepton \pt is propagated to the dielectron events. The uncertainty introduced by shifting the fit parameters by its statistical uncertainty and the full prediction by 10\% is indicated by the orange band.}
+\label{fig:RDependency}
+\end{center}
+\end{figure}                                                                                                                                                                                                                                                                                                                                                                                     
+\subsubsection{Measurement of \RT}
+The second ingredient in the Factorization method for predicting the $N_{SF}$ in the signal region is the \RT, which is a measure of the trigger efficiencies. 
+The \RT is defined through the trigger efficiencies, $\epsilon_{ll}^{T}$,  according to:
+\begin{equation}
+\label{eq:masterformulaExp}
+    \RT = \frac{\sqrt{\epsilon^{T}_{ee}\epsilon^{T}_{\mu\mu}}}{\epsilon^{T}_{e\mu}}
+\end{equation}                                               
+
+The trigger efficiencies are measured using a data sample collected with Particle Flow \HT triggers, in which dilepton events are selected. 
+This way, the efficiencies of the lepton triggers can be studied by comparing how many of the dilepton events in the \HT triggered data sample was also picked up by the dilepton triggers. 
+The PF \HT triggers used have thresholds between 125\GeV and 900\GeV, and the dilepton triggers studied are listed in Table \ref{tab:triggers} in Section \ref{sec:trigger}. 
+The dilepton trigger efficiency is calculated as the fraction of events in the lepton unbiased sample that also passes the dilepton triggers for the given flavor combination: 
+
+\begin{equation}
+\epsilon_{ll}^{T} =\frac{ll\text{ selection }\cap \HT \text{ trigger } \cap ll\text{ trigger}  }{ ll\text{ selection }\cap \HT \text{ trigger }} .
+\label{eq:rt}
+\end{equation} 
+No particular requirement is applied to the data sample, except all events in the signal regions or in the \ttbar control region used for the direct measurement of \Rsfof are exluded. 
+In terms of number of jets and \ptmiss, this translated to $\nj\geq2$ and $\ptmiss\geq100\GeV$, and in order to be fully efficient in terms of the \HT triggers, a requirement on the offline $\HT\geq200\GeV$ is imposed.  
+The result of the trigger efficiencies measurement in data and simulation is shown in Table \ref{tab:TriggerEffValues}. 
+The number of events is much larger in simulation as no \HT cross triggers are required.
+The efficiencies in data are about 96\% for dielectron triggers, 95\% for dimuon triggers and 91\% for electron-muon triggers. 
+This leads to a value for \RT of 1.052, from the equality in Equation \ref{eq:rt}. 
+The efficiencies for dimuon and electron-muon on MC are 2-3\% higher, but $\RT=1.045$ is close to the value on data.
+A systematic uncertainty of 3\% is chosen and assinged to each trigger efficiency, which corresponds to the maximal deviation between the efficiencies in data and simulation.
+This results in a total uncertainty of about 4\% on \RT after error propagation of the individual uncertainties on the efficiencies.
+Similarly to the direct measurement of \Rsfof and \rmue, the dependence on some signal region variables is studied, and is shown in Fig.~\ref{fig:EffDependency}. 
+No significant dependency of \RT on any event property is observed and the chosen systematic uncertainty is sufficient to cover any fluctuation in data and MC. 
+
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\caption{Trigger efficiency values for data and MC with OS, $p_T>25(20)\,\GeV$ and $H_T>200\,\GeV$.} 
+\label{tab:TriggerEffValues}
+\begin{center}
+\begin{tabular}{l c c c |c c c}  
+        \hline \hline
+        &\multicolumn{3}{c|}{Data} &\multicolumn{3}{c}{MC} \\\hline
+ & nominator & denominator & $\epsilon_{trigger} \pm \sigma_{stat}$ & nominator & denominator & $\epsilon_{trigger} \pm \sigma_{stat}$ \\    
+\hline
+ee & 12070 & 12584 & 0.959$\pm$0.002 & 111787 & 116654 & 0.958$\pm$0.001 \\
+$\mu\mu$ & 8741 & 9230 & 0.947$\pm$0.002 & 190067 & 194687 & 0.976$\pm$0.001 \\
+e$\mu$ & 2437 & 2690 & 0.906$\pm$0.006 & 43069 & 46520 & 0.926$\pm$0.000 \\
+\hline
+$R_{T}$ & \multicolumn{3}{c|}{1.052$\pm$0.043}  & \multicolumn{3}{c}{1.045$\pm$0.041}  \\\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                           
+
+
+
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/Triggereff_SFvsOF_Syst_PFHT_HighHTExclusive_Run2016_36fb_MET_None_MC.pdf}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/Triggereff_SFvsOF_Syst_PFHT_HighHTExclusive_Run2016_36fb_MT2_None_MC.pdf}
+    \caption{Dependency of the \RT ratio on the \ptmiss (left) and \mttwo (right), for data and MC. The systematic uncertainty of about 4\% on \RT is indicated by the orange band.}
+\label{fig:EffDependency}
+\end{center}
+\end{figure}                                                                                                                                                                              
+
+\subsection{Combination of the two methods}\label{sec:rSFOFCombination}
+The results from the direct and factorization methods for the FS background prediction have comparable uncertainties and central values, and can thus be combined using the weighted average. 
+The \Rsfof values obtained by the direct measurement are given in Table \ref{tab:rSFOF}. 
+For the factorization method, no constant result for the \Rsfof can be given, due to the parameterization of \rmue that has to be applied on an event-to-event basis.
+Instead, the factorization method is applied in each SR where the obtained prediction is divided by the number of OF events to get an \Rsfof factor for the factorization method in this region. 
+This factor is combined with \Rsfof from the control region method by using the weighted average.
+
+The resulting background estimates for FS backgrounds in the signal region of the Edge search are summarized in Tab.~\ref{tab:FlavSymBackgrounds}.
+It can be observed that the event-by-event reweighting in the factorization method yields smaller \Rsfof values for higher mass bins (especially in the \ttbar like selection). 
+This makes sense since \mll is correlated to the \pt of the leptons and higher masses usually correspond to higher lepton \pt and thus smaller reweighting factors.
+Overall, the \Rsfof factors from the factorization method are a bit smaller than the factor from the control region method but still agree within their uncertainties.
+
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Resulting estimates for flavour-symmetric backgrounds in the Edge SR. Given is the observed event yield in OF events ($N_{OF}$), the estimate in the SF channel using the event-by-event reweighting of the factorization method ($N_{SF}^{factorization}$), \Rsfof for the factorization method ($\Rsfof^{factorization}$), \Rsfof obtained from teh direct measurement ($\Rsfof^{direct}$), \Rsfof when combining this results from direct measurement and factorization methods ($\Rsfof^{combined}$), and the combined final prediction ($N_{SF}^{final}$). Statistical and systematic uncertainties are given separately.}
+  \label{tab:FlavSymBackgrounds}
+\begin{center}
+  \begin{tabular}{ c  c  c  c  c  c c}
+        \hline \hline
+\mll [GeV] & $N_{OF}$ & $N_{SF}^{factorization}$ & $\Rsfof^{factorization}$ & $\Rsfof^{direct}$  & $\Rsfof^{combined}$ & $N_{SF}^{final}$ \\ \hline
+ \multicolumn{6}{c}{ttbar like} \\\hline
+ 20-60    & 264    & 289.1$^{+18.3}_{-17.3}\pm$14.2  &  1.10$\pm$0.05 & 1.11$\pm$0.01& 1.10$\pm$0.04 & 290.9$^{+18.5}_{-17.4}\pm$9.3 \\
+ 60-86    & 164    & 179.1$^{+14.5}_{-13.4}\pm$8.7   &  1.09$\pm$0.05 & 1.11$\pm$0.01& 1.10$\pm$0.03 & 180.5$^{+14.7}_{-13.6}\pm$5.7 \\
+ 96-150   & 160    & 173.5$^{+14.3}_{-13.2}\pm$8.2   &  1.08$\pm$0.05 & 1.11$\pm$0.01& 1.10$\pm$0.03 & 175.5$^{+14.4}_{-13.3}\pm$5.5 \\
+ 150-200  & 67     & 72.4$^{+10.0}_{-8.8}\pm$3.3     &  1.08$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 73.3$^{+10.1}_{-8.9}\pm$2.3 \\
+ 200-300  & 43     & 46.1$^{+8.2}_{-7.0}\pm$2.1      &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 46.9$^{+8.3}_{-7.1}\pm$1.4 \\
+ 300-400  & 17     & 18.2$^{+5.6}_{-4.4}\pm$0.8      &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 18.5$^{+5.7}_{-4.4}\pm$0.6 \\
+ $>$400   & 4      & 4.3$^{+3.4}_{-2.0}\pm$0.2       &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 4.3$^{+3.4}_{-2.1}\pm$0.1 \\\hline
+  \multicolumn{6}{c}{non ttbar like}  \\\hline
+ 20-60    & 3    & 3.2$^{+3.1}_{-1.8}\pm$0.1  &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 3.3$^{+3.2}_{-1.8}\pm$0.1 \\
+ 60-86    & 3    & 3.2$^{+3.1}_{-1.7}\pm$0.1  &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 3.3$^{+3.2}_{-1.8}\pm$0.1 \\
+ 96-150   & 6    & 6.5$^{+3.9}_{-2.6}\pm$0.3  &  1.08$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 6.6$^{+3.9}_{-2.6}\pm$0.2 \\
+ 150-200  & 5    & 5.4$^{+3.6}_{-2.3}\pm$0.2  &  1.08$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 5.5$^{+3.7}_{-2.4}\pm$0.2 \\
+ 200-300  & 3    & 3.2$^{+3.1}_{-1.7}\pm$0.1  &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 3.3$^{+3.2}_{-1.8}\pm$0.1 \\
+ 300-400  & 3    & 3.2$^{+3.1}_{-1.7}\pm$0.1  &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 3.3$^{+3.2}_{-1.8}\pm$0.1 \\
+ $>$400   & 1    & 1.1$^{+2.4}_{-0.9}\pm$0.0  &  1.06$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 1.1$^{+2.5}_{-0.9}\pm$0.0 \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                                          
+
+\subsection{FS background in electroweak search}
+\label{subsec:fsewino}
+
+The underlying methodology of the FS background prediction method is to measure the number of OF events in the SR and multiplying this yield by an factor \Rsfof and thereby obtaining an estimate for the number of SF events in the same region. 
+While this method is clearly simple and clean, its main drawback is the limited statistical power in the scarcely populated kinematic regions. 
+Since the guiding principle of the electroweak search regions is to suppres the \ttbar process to very low yields with a cut on \mttwo this necessitates a slightly adapted method of predicting this background. 
+The electroweak search regions have, however, a feature which can be exploited in the estimation of the \ttbar background, namely that the invariant mass of the SF dilepton pair is required to be compatible with the \PZ boson mass. 
+This gives a lever arm to extend the OF control region. 
+This consideration allows to extend the \mll (from 86 $<$ \mll $<$ 96 GeV to \mll $>$ 20 GeV) window from which the estimation is taken by a large fraction. 
+By implementing this approach in extending the OF control region, the simplified formula from before then becomes
+
+\begin{equation}
+\label{eq:estFSEwk}
+    N_{SF} = N_{OF}^{ext.mll} \cdot \Rsfof \cdot f_{mll},
+\end{equation}
+
+where \fmll is the ratio of OF events in the on-Z region over the number of events in the extended \mll region, 
+\begin{equation}
+\fmll=\frac{N_{OF}(86<\mll<96)}{N_{OF}(\mll>20)}
+\end{equation}
+
+While \Rsfof can be assumed to be the same number as for the strong search, the factor \fmll have to be measured. 
+The measured value is \fmll $=$ 0.065$\pm$0.02. The uncertainty is taken to cover the differences in central values observed in MC. 
+The statistical uncertainties on the data are larger but there is agreement within the assigned systematic uncertainty.
+
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[scale=0.3]{images/rsfof/fmll.png}
+    \caption{The \fmll evaluated in each SR.}
+\label{fig:fmll}
+\end{center}
+\end{figure}                                                 
+
+\subsection{FS background in slepton search}
+The main FS background in the slepton search is stemming from \PWW production. 
+This is in constrast to the general strong and electroweak search, where the main background is due to \ttbar. 
+The \ttbar is reduced in the slepton search as all jets are vetoed, making the \PWW the main FS contribution. 
+As the \ttbar enriched control region that is used to measure the \Rsfof in the direct meassurement method is very similar yet orthogonal to the Edge signal region, an extrapolation of this factor to the signal region is easily validated. 
+The problem arise in the slepton search, where the \ttbar control region is far from the slepton signal region that has a veto on jets. 
+For this reason, additional checks are performed to validate the various factors of the FS background prediction method as a function of number of jets. 
+As can be seen in Figure \ref{fig:rmueSlepton}, no trend is observed in the \rmue and the 0.5($r_{\mu/e}^{corr.}+1/r_{\mu/e}^{corr.}$) variables in the low jet multiplicities, indicating that there is no problem to extrapolate the results to the slepton SR. 
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/rMuE_ZPeakControl_Run2016_36fb_NJets_corrected.pdf}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/rSFOFFromRMuE_ZPeakControl_Run2016_36fb_NJets_corrected.pdf}
+    \caption{Dependency of the \rmue (left) and 0.5($r_{\mu/e}^{corr.}+1/r_{\mu/e}^{corr.}$) (right) on the number of jets for data and MC. No significant trend is observed in the lower jet multiplicities, indicating no problem when extrapolation the results to the slepton SR.}
+\label{fig:rmueSlepton}
+\end{center}
+\end{figure}
+                                                                                                                                                                              
+However, a trend is observed for the \Rsfof from the direct measurement in the 0 jet bin. This can be seen in Figure \ref{fig:rsfofSleptonOne}.
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/plot_rsfof_njetFSonly.png}
+    \caption{\Rsfof as a function of number of jets derived in a \ttbar enriched region after relaxing the 2 jet requirement. The MC simulation takes into account all FS processes. In order to not unblind the signal region, events with are excluded.}
+\label{fig:rsfofSleptonOne}
+\end{center}
+\end{figure}                                                                                                                                                                                                                                                                                                                                                               
+This trend in the first jet bin could indeed cause some worry. 
+This increase in the number of same flavor events in the 0 jet bin is due to the DY process, which is present in the \ttbar enriched control region after relaxing the jet requirement. 
+This statement is further motivated by the fact that the discrepancy show up in data and not in MC where only FS processes are included. 
+But since the signal region is designed with a cut of \mttwo$\geq90\GeV$, the \Rsfof can instead be validated in the jet veto case by requiring a \mttwo$\geq40\GeV$ which is reducing a large fraction of DY contribution while maintaining reasonable statistics. 
+Figure \ref{fig:rsfofSleptonTwo} shows the \Rsfof as a function of number of jets in the \ttbar control region, but with a requirement that the events that have 0 jets must have a \mttwo within $40-90\GeV$ (the upper requirement is added to avoid unblinding), and a good agreement between data and simulation is obtained, indicating that the extrapolation to the 0 jet SR is fine as long as the SR is defined with a \mttwo requirement. 
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/rsfof/plot_rsfof_njet.png}
+\caption{\Rsfof as a function of number of jets derived in a \ttbar enriched control region after relaxing the 2 jet requirement and requiring that in a 0 jet event, a requirement of the \mttwo to be within $40-90\GeV$ is imposed. The MC simulation takes into account all flavor symmetric and non-flavor symmetric processes such as DY.}
+\label{fig:rsfofSleptonTwo}
+\end{center}
+\end{figure}                                                                                                            
+Further, the slepton search is the only search presented in this thesis that has interpretations in the dielectron and dimuon channels separately. 
+The reason behind this is that there is no a priori reason why the selectrons and smuons should have the same masses, so grouping them together and only interpret in the terms of same-flavor sleptons is not enough\footnote{Of course, the interpretation in selectrons and smuons separately is also desirable as it gives separate entries in the PDG booklet. }
+But since the factorization method utilizes the measurement of \rmue and \RT, that uses a mixture of measurements for electrons and muons. 
+This means that the \rmue or \RT can not be used to predict the $N_{ee}$ or $N_{\mu\mu}$ separatley. 
+Instead only the \Reeof and \Rmmof ratios from the direct measurment listed in Table \ref{tab:rSFOF} can be used to predict the $N_{ee}$ or $N_{\mu\mu}$. 
+The price to pay by only using one of the methods instead of the combined one is that one can not profit from the reduced systematic uncertainty that on gets in the combination of the two metohds. 
+But, as might have already been noted, the drawback of the FS background prediction method is the large statistical errors associated to the poorly populated OF event bins in the SR. 
+So a reduction in the systematic uncertainty as a result of a combination of the two methods is still a small reduction compared to the large statistical error. 
+Table \ref{tab:FlavSymBackgroundsSlepton} summarizes the resulting background estimates for FS backgrounds in the slepton signal regions, split into the SF leptons, dielectron and dimuon signal regions. 
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\caption{Resulting estimates for flavor-symmetric backgrounds in the Slepton search.}
+  \label{tab:FlavSymBackgroundsSlepton}
+\begin{center}
+  \begin{tabular}{ c  c  c  c  c  c c}
+        \hline \hline
+\ptmiss [GeV] & $N_{OF}$ & $N_{SF}^{factorization}$ & $\Rsfof^{factorization}$ & $\Rsfof^{direct}$  & $\Rsfof^{combined}$ & $N_{SF}^{final}$ \\ \hline
+ \multicolumn{6}{c}{SF lepton SR} \\\hline
+ 100-150    & 88    & $97^{+12.5}_{-11.5}$  &  $1.08\pm0.07$  &  $1.11\pm0.01$  &  $1.09\pm0.01$  &  $96^{+13}_{-12}$ \\
+ 150-225    & 14    & $15.4^{+5.7}_{-4.5}$  &  $1.08\pm0.07$  &  $1.11\pm0.01$  &  $1.09\pm0.01$  &  $15.3^{+5.6}_{-4.5}$ \\
+ 225-300    & 4     & $4.4^{+3.4}_{-2.4}$   &  $1.08\pm0.07$  &  $1.11\pm0.01$  &  $1.09\pm0.01$  &  $4.4^{+3.6}_{-2.3}$ \\
+ $>$300     & 1     & $1.1^{+2.6}_{-1.1}$   &  $1.07\pm0.07$  &  $1.11\pm0.01$  &  $1.09\pm0.01$  &  $1.1^{+2.5}_{-1.0}$ \\ \hline  
+ \multicolumn{6}{c}{Dielectron SR} \\\hline
+ 100-150    & 88    & - &  -  &  $0.41\pm0.01$  &  $0.41\pm0.01$  &  $36.1^{+6.6}_{-6.3}    $ \\
+ 150-225    & 14    & - &  -  &  $0.41\pm0.01$  &  $0.41\pm0.01$  &  $5.7^{+2.5}_{-2.1}$ \\
+ 225-300    & 4     & - &  -  &  $0.41\pm0.01$  &  $0.41\pm0.01$  &  $1.6^{+1.5}_{-1.1}$ \\
+ $>$300     & 1     & - &  -  &  $0.41\pm0.01$  &  $0.41\pm0.01$  &  $0.41^{+1}_{-0.5}$ \\   \hline
+ \multicolumn{6}{c}{Dimuon SR} \\\hline
+ 100-150    & 88    & -  &  -  &  $0.70\pm0.01$  &  $0.70\pm0.01$  &  $61.3^{+9.1}_{-8.5}$ \\
+ 150-225    & 14    & -  &  -  &  $0.70\pm0.01$  &  $0.70\pm0.01$  &  $9.8^{+3.9}_{-3.2}$ \\
+ 225-300    & 4     & -  &  -  &  $0.70\pm0.01$  &  $0.70\pm0.01$  &  $2.8^{+2.4}_{-1.7}$ \\
+ $>$300     & 1     & -  &  -  &  $0.70\pm0.01$  &  $0.70\pm0.01$  &  $0.7^{+1.7}_{-0.8}$ \\   
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                                         
+
+
+
+\section{Z+$\nu$ backgrounds}\label{sec:Znu}
+
+
+
+%\subsection{Flavor-symmetric Background}
+%\label{sec:FSbackgrounds}
+%As mentioned in the previous section, the main backgrounds to this analysis stem from \ttbar and WW. While opposite-sign lepton pairs from \ttbar are produced flavor-symmetric, i.e, the theoretical
+%probability of an $e\mu$ pair (OF) is equal to the probability of $ee$ + $\mu\mu$ (SF). The estimation of the flavor symmetric backgrounds is described in detail in a seperate 
+%note ~\cite{CMS_AN_2016-482}. 
+%\subsubsection{Flavor-symmetric prediction method}
+%%In short, the contribution of same flavor lepton pairs in the signal region can be estimated using the fact that opposite flavor lepton pairs are produce with equal 
+%probability, and a transfer factor, 
+%$R_{SFOF}$, which can be measured directly as a ratio of the number of same flavor lepton events over the number of opposite flavor events in a region that is enriched in $t\bar{t}$ events.
+%\begin{equation}
+%N_{SF} = N_{ee} + N_{\mu\mu} = R_{SFOF}\times N_{OF}
+%\end{equation}
+%
+%
+%This transfer factor is combined with a factor derived to take into account trigger, reconstruction and identification efficiencies that differ between electrons and muons, as these differences
+%between the lepton flavors can result in a difference in the production of same flavor and opposite flavor lepton pairs. This method to predict the flavor symmetric backgrounds has been thouroughly
+%reviewed in the context of the OS 2L Edge/On-Z analysis~\cite{CMS-PAS-SUS-16-034}, but as the method is only validated in the signal regions requiring more than two jets in order for it to 
+%be able to be utilized in this analysis where the signal region requires no jets. The factor $R_{SFOF}$ is computed as the ratio of same flavor events over opposite flavor events, in a $t\bar{t}$ 
+%enriched control region, 100 $<$ \ptmiss $<$ 150 GeV, Z mass veto of 70-110 GeV and exactly 2 jets, in which the number of same flavor and opposite flavor events should be approximately the same. 
+%In Figure~\ref{fig:rsfofControl} the $R_{SFOF}$ evaluated in the control region, for $m_{ll}$ and \ptmiss after removing the control region requirement on that variable, to assure no trends in the 
+%variables used to define the signal region. The yellow band represents the systematic uncertainty of 4\% that is assigned to this method.   
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_rsfof_mll.png} &
+%\includegraphics[width=0.48\textwidth]{figures/plot_rsfof_met.png} \\
+%\end{tabular}
+%\caption{$R_{SFOF}$ as a function of $m_{ll}$ (left) and \ptmiss (right) derived in a $t\bar{t}$ enriched region, after relaxing the $m_{ll}$ and \ptmiss requirements respectively. }
+%\label{fig:rsfofControl}
+%\end{center}
+%\end{figure}                                                                                                                                                                                 
+%Since the analysis signal region has a jet veto, and the $t\bar{t}$ control region used to derive the $R_{SFOF}$ in the direct measurement has exactly 2 jets, it is important to check whether 
+%the assumption that the number of same flavor and opposite flavor events remain the same, even in the jet veto scenario. In Figure~\ref{fig:rsfofControlnjetFSonly} the $R_{SFOF}$ is shown as a 
+%function 
+%of number of jets (left) using for MC only flavor symmetric processes. As is clear is that there is no discrepancy between data and simulation for the cases with more than one jet, and the ratio
+%of same flavor to opposite flavor events is flat. But in the no jet case there is an abundance of same flavor events. This is because the 0 jet region is dominated by the Drell-Yan process, as can
+%be seen in Figure~\ref{fig:rsfofControlmt2} where the \mttwo for different MC simulated processes is shown, in same flavor (left) and opposite flavor (right) events, in the $R_{SFOF}$ control 
+%region, but requiring no jets. 
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_rsfof_njetFSonly.png} 
+%\end{tabular}
+%\caption{$R_{SFOF}$ as a function of number of jets derived in a $t\bar{t}$ enriched region after relaxing the 2 jet requirement. The MC simulation takes into account all flavor symmetric 
+%processes. }
+%\label{fig:rsfofControlnjetFSonly}
+%\end{center}
+%\end{figure}                                                              
+%But since the signal region in this analysis is designed with a \mttwo cut of 90 GeV, the $R_{SFOF}$ can instead be validated in the jet veto case by requiring a \mttwo $>$ 40 GeV which is reducing
+%a large fraction of Drell-Yan contribution while maintaining reasonable statistics. 
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_mt2_rsfof_SF_nj0.png} &
+%\includegraphics[width=0.48\textwidth]{figures/plot_mt2_rsfof_OF_nj0.png} \\
+%\end{tabular}
+%\caption{The \mttwo in the $t\bar{t}$ enriched region, but with a 0 jet requirement, in same flavor (left) and opposite flavor (right) events in simulation. The low \mttwo region in the SF case is
+%dominated by Drell-Yan process which is causing the increase in the $R_{SFOF}$ in Figure~\ref{fig:rsfofControlnjetFSonly}}
+%\label{fig:rsfofControlmt2}
+%\end{center}
+%\end{figure}                                                               
+%Figure~\ref{fig:rsfofControlnjet} shows the $R_{SFOF}$ as a function of number of jets in the $t\bar{t}$ control region, but with a requirement that the events that have 0 jets must have a \mttwo 
+%within 40-90 GeV (the upper requiremnt is added to avoid unblinding), and a good agreement between data and simulation is obtained and a flat value of $R_{SFOF}$ within the assigned 4\% systematic
+%uncertainty that is represented by the yellow band. 
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_rsfof_njet.png} 
+%\end{tabular}
+%\caption{$R_{SFOF}$ as a function of number of jets derived in a $t\bar{t}$ enriched region after relaxing the 2 jet requirement and requiring that in the 0 jet event, a \mttwo requirement of 
+%40 $<$ \mttwo $<$ 90 GeV. The MC simulation takes into account all flavor symmetric and non-flavor symmetric processes such as Drell-Yan.}
+%\label{fig:rsfofControlnjet}
+%\end{center}
+%\end{figure}                                                        
+%The other pieces that go into the flavor symmetric prediction described in~\cite{CMS-PAS-SUS-16-034} is the trigger efficiency of the leptonic trigger and the reconstruction and identification 
+%efficiency of the electrons and muons, that combined makes up the `factorization method`. For a full derivation see ~\cite{CMS-PAS-SUS-16-034} but the principle is:
+%\begin{linenomath}
+%\begin{equation}
+%    N_{SF} = \frac{1}{2}\left(r_{\mu/e}+\frac{1}{r_{\mu/e}}\right)\frac{\sqrt{\epsilon_{ee}^{T}\epsilon_{\mu\mu}^{T}}}{\epsilon_{e\mu}^{T}}N_{OF}= \frac{1}{2}\left(r_{\mu/e}+\frac{1}{r_{\mu/e}}\right) R_{T}N_{OF} = R_{SFOF}N_{OF}
+%\end{equation}
+%\end{linenomath}
+%The trigger efficiency of the leptonic triggers is measured in a lepton unbiased control sample of dilepton events collected with Particle Flow HT triggers. The efficiency is calculated as the 
+%fraction of events in this sample that also passes the dilepton triggers. To this method, a systematic uncertainty of 3\% is assigned to each trigger efficiency, $\epsilon_{ee}$, 
+%$\epsilon_{\mu\mu}$ and $\epsilon_{e\mu}$, and a final uncertainty on the $R_{T}$ of 4\% is assessed. The last piece of the factorization method consists of the reconstruction and identification
+%efficiency differences between electrons and muons, $r_{\mu/e}$. This quantity is measured in data in a Drell-Yan enriched sample with a large number of ee and $\mu\mu$ pairs being produced. To 
+%this method a 10\% systematic flat uncertainty is assigned to cover some trends. 
+%\subsubsection{Closure test of FS prediction method}
+%A closure test is performed to check how well the same flavor events are predicted by the opposite flavor events scaled to the $R_{SFOF}$, in the signal region in Figure~\ref{fig:fsClosure}. 
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_closure_met_mcPredmcObs_ht0_log.png}
+%\end{tabular}
+%\caption{Closure test of the flavor symmetric background prediction method in the signal region.}
+%\label{fig:fsClosure}
+%\end{center}
+%\end{figure}                                                                                                                                                                                       
+%
+%There is a slight disagreement observed in the third \ptmiss bin, where less same flavor events are predicted than opposite flavor ones. But as statistics are limited in this high \ptmiss, high 
+%\mttwo region, this is most likely just a statistical fluctuation and not driven by some real physics process. In Figure~\ref{fig:fsClosureDebug} the same closure test is shown as in 
+%Figure~\ref{fig:fsClosure}, but with a finer binning and with the flavor composition of the events specified and for each of the four distributions, the \mtttwo selection of $>$ 90 GeV is relaxed 
+%to 80, 70, 60 and 50 respectively, and a distribution showing the selection \mttwo between 60 and 90 GeV. With the relaxed \mttwo selection and increased statistics, the underprediction of 
+%di-electron events in the 225-300 \ptmiss bin disappears and a good agreement between same flavor and opposite flavor events is obtained. 
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{ccc}
+%\includegraphics[width=0.32\textwidth]{figures/plot_closure_met_mcPredmcObs_mt290_log.png}&
+%\includegraphics[width=0.32\textwidth]{figures/plot_closure_met_mcPredmcObs_mt280_log.png}&
+%\includegraphics[width=0.32\textwidth]{figures/plot_closure_met_mcPredmcObs_mt270_log.png}\\
+%\end{tabular}
+%\begin{tabular}{ccc}
+%\includegraphics[width=0.32\textwidth]{figures/plot_closure_met_mcPredmcObs_mt260_log.png}&
+%\includegraphics[width=0.32\textwidth]{figures/plot_closure_met_mcPredmcObs_mt250_log.png}&
+%\includegraphics[width=0.32\textwidth]{figures/plot_closure_met_mcPredmcObs_mt260-90_log.png}\\
+%\end{tabular}
+%\caption{Closure test of the flavor symmetric background prediction method in the signal region.}
+%\label{fig:fsClosureDebug}
+%\end{center}
+%\end{figure}                                                                                                                                                                                      
+%
+%\subsection{$ZZ\rightarrow 2l2\nu$ Background}
+%\label{4l}
+%The second largest background in this search is stemming from the production of two Z bosons decaying to two leptons and two neutrinos. Although there is a Z veto applied that would reduce this 
+%contribution, there is still a large fraction of events where the lepton pair has an invariant mass far from the Z mass, and thus escapes the veto. One way for the leptons to make an invariant mass
+%different from the Z mass is if one of the bosons is actually a $\mathrm{Z^{*}}$. 
+%%Instead of taking this major background straight from MC a data driven method performed where this off-Z background
+%%can be estimated by using a Z$\mathrm{Z^{*}}\rightarrow$4l sample, where the lepton
+%%pair from the $\mathrm{Z^{*}}$ makes this off-Z background while the other pair forms a good Z candidate, and where the \pt of this good Z boson can be added to the \ptmiss to mimic the 
+%%$ZZ\rightarrow 2l2\nu$ process. 
+%In the following subsections are the four lepton control region that is used described, along with a description of the procedure to mimic the $ZZ\rightarrow 2l2\nu$ 
+%process with a Z$\mathrm{Z^{*}}\rightarrow$4l and the closure test of the method.
+%\subsubsection{qq$\rightarrow$ZZ k-factors}
+%A NNLO k-factor is applied to the ZZTo2L2Nu and ZZTo4L MC, which is provided as a function of the generator level \pt, mass and \dphi 
+%of the diboson system. More information is detailed in \ref{appA}. The diboson \pt dependent k-factor is eventually applied to the ZZTo2L2Nu prediction in the signal region, and an uncertainty on 
+%the shape is derived as the difference between the distributions after applying the \pt dependent k-factor and no k-factor, after both distributions are normalized to their areas.
+%\subsubsection{Four lepton control region}
+%A four lepton control region is constructed, which will be used to estimate the $ZZ\rightarrow 2l2\nu$ background. The four lepton signature is very pure and provides a good data/MC agreement. 
+%In order to stay close to the analysis signal region definition, the control region is defined as below:
+%\begin{itemize}
+%    \item four tight ID leptons of any flavor or charge with \pt $>$ 25 GeV for the leading and \pt $>$ 20 GeV for the subsequent leptons
+%    \item the leptons that form the best Z candidate is required to have \mll within 76 to 106 GeV. 
+%    \item the leptons that form the other Z candidate is required to have \mll within 50 to 130 GeV. 
+%    \item Jet veto (\pt $>$ 25 GeV) 
+%\end{itemize}                                                                                                                                         
+%Figure~\ref{fig:4lmll} shows the invariant mass of the best Z candidate and the other Z candidate, in data and MC.  
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_bestMll_4l.png} &
+%\includegraphics[width=0.48\textwidth]{figures/plot_otherMll_4l.png} \\
+%\end{tabular}
+%\caption{The invariant mass of the two lepton pairs in the four lepton control region, in data and MC. The invariant mass of the other Z candidate has a dip at 91 GeV just as an effect of the 
+%selection of the leptons, where leptons forming an invariant mass closest to the Z are prefered to be the best candidate and therefore the other Z candidate is less likely to have an invariant 
+%mass at 91 GeV. Backgrounds like Drell-Yan and $t\bar{t}$ do not make it into this control region and is thus not represented in the legend.}
+%\label{fig:4lmll}
+%\end{center}
+%\end{figure}                                                                                                                                                                                         
+%Figure~\ref{fig:4lleps} shows the \pt distributions of the leading and subleading leptons in the four lepton control regions.  
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_Lep1_pt_4l.png} &
+%\includegraphics[width=0.48\textwidth]{figures/plot_Lep2_pt_4l.png} \\
+%\end{tabular}
+%\caption{The lepton \pt spectrum of the leading and subleading leptons in the four lepton control region. }
+%\label{fig:4lleps}
+%\end{center}
+%\end{figure}                                                                                                                                                                                        
+%In Table~\ref{tab:tab4lcontrol} the scale factor of the four lepton control region is summarized, where the signal MC are the ZZ $\rightarrow$4l processes summarized in Table~\ref{tab:4lMCsamples} 
+%of Section~\ref{sec:samplesObjects}. A scale factor of 0.94 is obtained with a statistical uncertainty of 7\%, and this 7\% is used as a systematic uncertainty on the method. 
+%The scale factor in Table~\ref{tab:tab4lcontrol} is applied to the ZZ$\rightarrow$4l MC summarized in Table~\ref{tab:4lMCsamples} of Section~\ref{sec:samplesObjects}. As the signal region is defined
+%with a selection of leading leptons of \pt greater than 50 \GeV, this differs from the control region definition of \pt greater than 25 \GeV to maintian the statistical power. The scale factor 
+%is also provided derived on a selection of leading lepton \pT greater than 50 \GeV, and is presented in Table~\ref{tab:tab4lcontrol50}. 
+%\begin{table}[hbtp] 
+%    \begin{center} 
+%        \bgroup 
+%        \def\arraystretch{1.2} 
+%        \caption{Scale factor derived in a 4 lepton control region.} 
+%        \label{tab:tab4lcontrol} 
+%        \begin{tabular}{l| c } 
+%                          & 4-lepton region \\ \hline \hline
+%            signal MC        & 184.68     $\pm$  1.22 \\ \hline
+%            bkg. MC          & 5.57  $\pm$  1.69\\ \hline \hline
+%            \textbf{data}       & \textbf{179}  \\ \hline
+%            data-bkg.        &  173.43   $\pm$  13.49  \\ \hline \hline
+%            (data-bkg.)/sig. & 0.94   $\pm$  0.07    \\ \hline
+%
+%        \end{tabular} 
+%        \egroup 
+%    \end{center} 
+%\end{table} 
+%
+%
+%\begin{table}[hbtp]
+%\begin{center}
+%\bgroup
+%\def\arraystretch{1.2}
+%\caption{Scale factor derived in a 4 lepton control region, using leading lepton of \pt $>$ 50\GeV}
+%\label{tab:tab4lcontrol50}
+%\begin{tabular}{l| c }
+%              & 4-lepton region \\ \hline \hline
+%signal MC        & 151.26     $\pm$  1.11 \\ \hline
+%bkg. MC          & 3.37  $\pm$  1.18\\ \hline \hline
+%\textbf{data}       & \textbf{133}  \\ \hline
+%data-bkg.        &  129.63   $\pm$  11.59  \\ \hline \hline
+%(data-bkg.)/sig. & 0.86   $\pm$  0.08    \\ \hline
+%
+%\end{tabular}
+%\egroup
+%\end{center}
+%\end{table}
+%A check has also been performed on the jet multiplicity of the ZZ control region. The motivation behind this check is the sensitivity of the jet veto in the 4 lepton CR. 
+%The jet veto efficiency in the signal region doesn't change dramatically with \ptmiss.  Since the ZZ scale factor is measured in 4L events with 0 jets, the veto efficiency is
+%already contained in that factor, and we do not assess an additional uncertainty.
+%In Figure\ref{fig:4llepsNjets}, the number of jets of \pt $>$25\GeV in the 4 lepton CR is shown, after inverting jet veto, and here most of the events have 0 jets. 
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_njets_4l_log.png} 
+%\end{tabular}
+%\caption{The number of jets in the four lepton control region, after removing the 0 jet requirement. }
+%\label{fig:4llepsNjets}
+%\end{center}
+%\end{figure}                                                                                                        
+%The jet veto efficiency is further studied in $ZZ\rightarrow 2l2\nu$ MC as a function of \ptmiss. Ideally the check would have be done as a function of the emulated \ptmiss in $ZZ\rightarrow 4l$ 
+%MC but as this sample is statistically limited, the  $ZZ\rightarrow 2l2\nu$ MC is used instead. In Figure~\ref{fig:jetVetoEff} the jet veto efficiency is shown for events in the signal region as 
+%a function of \ptmiss. No significant trend is observed, leading to the conclusion that the high \ptmiss in $ZZ\rightarrow 2l2\nu$ is not originating from the existence of an ISR jet, and the jet 
+%veto can be applied in all parts of the analysis.
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/nJetEfficiency.png} 
+%\end{tabular}
+%\caption{The jet veto efficiency in the signal region as a function of \ptmiss. }
+%\label{fig:jetVetoEff}
+%\end{center}
+%\end{figure}                                                                                                  
+%
+%\subsubsection{$ZZ\rightarrow 2l2\nu$ from four lepton control region}
+%One can mimic the $ZZ\rightarrow 2l2\nu$ contribution in this $ZZ\rightarrow 4l$ sample by treating the leptons from the Z boson decay in both preocesses as the same, and estimate the contribution
+%from the Z boson decaying to neutrinos in the $ZZ\rightarrow 2l2\nu$ by treating the Z \pt of the other leptonically deacying Z in the  $ZZ\rightarrow 4l$ sample as \ptmiss, by adding
+%the \pt of that Z to the \ptmiss. In Figure~\ref{fig:zz2l4lclosure} this recomputed \ptmiss in the $ZZ\rightarrow 4l$ is compared to the \ptmiss originating from neutrinos escaping detection in 
+%the $ZZ\rightarrow 2l2\nu$ process, and normalized to the area of both distributions for a comparison of the shapes. Similarly, the \mttwo recomputed using this new \ptmiss 
+%and the remaining leptons in $ZZ\rightarrow 4l$ sample, is compared to the \mttwo constructed with the two leptons in the $ZZ\rightarrow 2l2\nu$ process. The MC simulation used for these comparisons
+%are listed in Table~\ref{tab:4lMCsamples} of Section~\ref{sec:samplesObjects}. These distributions show a good comparison of the method of adding the Z \pt to the \ptmiss to mimic the \ptmiss 
+%distribution of a Z decaying to neutrinos. 
+%
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_met_closure_log.png} &
+%\includegraphics[width=0.48\textwidth]{figures/plot_mt2_closure_log.png} \\
+%\end{tabular}
+%\caption{The recomputed \ptmiss (left) with statistical and systematic errors as presented in Section~\ref{sec:systematics} and \mttwo (right) with only statistical errors in $ZZ\rightarrow 4l$ MC 
+%compared to $ZZ\rightarrow 2l2\nu$, each distribution normalized to its area.}
+%\label{fig:zz2l4lclosure}
+%\end{center}
+%\end{figure}                                                                                                     
+%Similarly, the procedure of adding the Z \pt to the \ptmiss in a 4 lepton sample can be verified in data. In Figure~\ref{fig:zz2l4ldata} the recomputed, "new", \ptmiss and the recomputed \mttwo is 
+%shown in data and MC, with the scale factor derived in Table~\ref{tab:tab4lcontrol} applied to the $ZZ\rightarrow 4l$ samples.  
+%
+%
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_newMET_4l.png} &
+%\includegraphics[width=0.48\textwidth]{figures/plot_newMT2_4l.png} \\
+%\end{tabular}
+%\caption{The recomputed \ptmiss (left) and \mttwo (right) in data and $ZZ\rightarrow 4l$ MC. }
+%\label{fig:zz2l4ldata}
+%\end{center}
+%\end{figure}                                                                                                                                                                                             
+%Although these distributions show a good agreement in the bulk, it is obvious that the data statistics is limited in the tails. Ideally, the data in this 4 lepton sample could be used to predict 
+%the $ZZ\rightarrow 2l2\nu$  process, but due to lack of statistics, the $ZZ\rightarrow 2l2\nu$ will be taken straight from MC with the scale factor presented in Table~\ref{tab:tab4lcontrol} 
+%, of 0.94, applied, with a systematic uncertainty of 7\% propagated. As described in Appendix~\ref{appA}, there is a difference observed in both shape and normalization when applying 
+%the diboson generator level mass and \pt dependent k-factors. This difference in shape in the signal region is propagated as an additional uncertainty on the method. The total systematic 
+%uncertainties assigned to this method is summarized in Section~\ref{vvsyst}.  
+%
+%At the moment, there is no GluGluHToZZTo2L2Nu MC generated. But as this contribution is negligible in the signal region this is not a problem. This can be seen in Figure~\ref{fig:glugluH} where the 
+%GluGluHToZZTo4L sample is used to estimate the GluGluHToZZTo2L2Nu contribution in the signal region, by adding the \pt of the best Z candidate to the \ptmiss and recomputing the \mttwo with the 
+%remaining leptons, and scaling the contribution by 3 to take into account the three neutrino flavors and by the branching fractions. As can be seen, there are no events in the signal region which 
+%starts at \mttwo $>$ 90 GeV.
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{c}
+%\includegraphics[width=0.48\textwidth]{figures/plot_newMT2_GGHZZ4l.png} \\
+%\end{tabular}
+%\caption{The recomputed \mttwo in GluGluHToZZTo4L MC in the SR and scaled taking into account the 3 neutrino flavors and the branching ratios. }
+%\label{fig:glugluH}
+%\end{center}
+%\end{figure}                                                                                      
+%
+%
+%
+%
+%
+%\subsection{$WZ\rightarrow 3l\nu$ Background}
+%\subsubsection{Lost-lepton background}
+%Since the signal model considered should only contain a final state with two leptons, a veto is applied on events containing more than two leptons, more precisely in the form of additional isotracks
+% detailed in Section~\ref{isotracks}. But since these additional isotracks are required to have a \pt $>$ 5 GeV and be within $|\eta|$ $<$ 2.4, there is still a possibility for these leptons 
+%to not be reconstructed if they fall out of acceptance, and thus the event is never vetoed. This kind of "lost lepton" background is dominated by contribution from the $WZ\rightarrow 3l\nu$ process.
+%In Figure~\ref{fig:lostLep} the \pt and $\eta$ of the generator level lepton that failed the third lepton veto, and here it is clear that a majority of these events suffer from low \pt leptons that 
+%fail the \pt requirement of 5 GeV. What is also worth noting is that the larger fraction of these events have a third lepton originating from a Z boson. In the cases where the lost lepton is from
+%a Z boson, the resulting lepton pair contribution is flavor-symmetric, whereas if the lost lepton is originating from a W boson the leptons from this background process is just same flavor. 
+%In order to treat these backgrounds in a correct way and avoid double counting contributions the leptons from the WZ process is 
+%taken from MC only if both leptons are coming from a Z boson decay. The other possible case, where one lepton in the event is from a W decay and the other from a Z boson decay, are as described 
+%above flavor-symmetric and is taken care of by the flavor-symmetric background prediction method described in Subsection~\ref{sec:FSbackgrounds}.                                                
+%
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_genLep_pt_0jet.png} &
+%\includegraphics[width=0.48\textwidth]{figures/plot_genLep_eta_0jet.png} \\
+%\end{tabular}
+%\caption{\pt and $\eta$ distributions of the lepton that fails the third lepton veto, generator matched to be originating from a Z or a W boson decay. }
+%\label{fig:lostLep}
+%\end{center}
+%\end{figure}                                                                                                                                                       
+%%\begin{table}[ht!]
+%%\bgroup
+%%\def\arraystretch{1.2}
+%%    \caption{Flavor symmetric backgrounds stemming from a lost lepton from $WZ\rightarrow 3l\nu$}
+%%    \label{tab:lostLepTab}
+%%    \begin{center}
+%%        \begin{tabular}{ c | c c c c c}
+%%        \hline \hline
+%%        \multirow{2}{*}{Possible flavor combinations in WZ} & Z: &  ee  &  ee  &   $\mu\mu$  &  $\mu\mu$        \\
+%%                                                            & W: &  e   &  $\mu$ & e & $\mu$       \\   \hline             
+%%
+%%        \multirow{2}{*}{Combinations after lost lepton} & from Z: &  OF  &  OF  &   SF  &  SF        \\
+%%                                                    & from W: &  SF   &  SF & SF & SF       \\                
+%%        \hline\hline
+%%\end{tabular}
+%%\end{center}
+%%\egroup
+%%\end{table}                                                                                                                                                                       
+%
+%
+%\subsubsection{Three lepton control region}
+%The $WZ\rightarrow 3l\nu$ background is taken directly from MC if both leptons are from a Z boson decay. To check that the MC is properly modelled and thus can be used in this phase space
+%a three lepton control region is constructed. By requiring 3 tight ID leptons, the region is orthogonal to the signal region. The rest of the requirements are summarized below, where the idea is to 
+%obtain a region pure in WZ contribution while keeping the definition close to the signal region definition. 
+%\begin{itemize}
+%    \item three tight ID leptons of any flavor or charge with \pt $>$ 25 GeV for the leading and \pt $>$ 20 GeV for the subsequent leptons
+%    \item \ptmiss $>$ 70 GeV
+%    \item the leptons that form the best Z candidate is required to have \mll within 76 to 106 GeV. 
+%    \item $\mathrm{M_{T}}\,>$ 50 GeV, where the $\mathrm{M_{T}}$ is constructed with the lepton that does not form the best Z candidate, and is thus assumed to be originating from the W decay.     
+%    \item Jet veto (\pt $>$ 25 GeV) 
+%\end{itemize}                                                                                                                                        
+%In Figure~\ref{fig:WZmllleps}, the invariant mass of the best Z candidate and the \ptmiss of the event is presented in the three lepton control region. In this control region, the three leptons can 
+%either be originating from the decays of a Z or a W boson. In Figure~\ref{fig:WZmTleps} the lepton from the W boson decay, chosen as the lepton that is not one of the two leptons that forms the 
+%best Z candidate invariant mass, i.e \mll closest to 91 GeV, is used together with the \ptmiss to construct the transverse mass $\mathrm{M_{T}}$. The \mttwo in Figure~\ref{fig:WZmTleps} (right) is 
+%constructed with the lepton from the W boson decay and the other lepton from the Z boson decay that carries the highest \pt, and show a good data/MC agreement in the three lepton control region, 
+%giving confidence that the \mttwo, is well modelled in the cases where the lost lepton background is a low \pt lepton from a Z boson decay, although this background contribution is completely 
+%flavor symmetric and predicted by the method presented in Subsection~\ref{sec:FSbackgrounds}. 
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_mll_3l.png} &
+%\includegraphics[width=0.48\textwidth]{figures/plot_met_3l_Zmass.png} \\
+%\end{tabular}
+%\caption{The invariant mass of the best Z candidate lepton pair (left) and the \ptmiss (right) in the three lepton control region in data and MC. }
+%\label{fig:WZmllleps}
+%\end{center}
+%\end{figure}                                                                                                                                                                                                                                                                
+%
+%\begin{figure}[!h]
+%\begin{center}
+%\begin{tabular}{cc}
+%\includegraphics[width=0.48\textwidth]{figures/plot_WmT_3l_Zmass.png} &
+%\includegraphics[width=0.48\textwidth]{figures/plot_ZMT2_3l_Zmass.png} \\
+%\end{tabular}                                                                 
+%\caption{The transverse mass (left) constructed with the lepton from the decay of the W boson and the \ptmiss in the three lepton control region. The \mttwo (right) constructed with the leptons 
+%from the Z boson decay. }
+%\label{fig:WZmTleps}
+%\end{center}
+%\end{figure}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+%The distributions shown in Figures~\ref{fig:WZmllleps} and~\ref{fig:WZmTleps} show a good data to simulation agreement and a scale factor is derived that is applied to the WZ MC, to take into 
+%account any remaining difference in the normlization. An additional systematic uncertainty is assigned to this method, by letting the jet energy scale corrections vary up and down in the 
+%computation of the \ptmiss, and the difference in the yield in the background and signal MC is propagated to the error on the final scale factor. The result is a scale factor of 
+%$1.06\pm0.06$, where the 6\% is the statistical uncertainty on the data in the control region which is taken as a systematic uncertainty on the method. The scale factor is presented in 
+%Table~\ref{tab:tab3lcontrol}, using the MC samples summarized in Table~\ref{tab:3lMCsamples} of Section~\ref{sec:samplesObjects}. The total 
+%uncertainties assigned to this method are summarized in Section~\ref{vvsyst}
+%\begin{table}[hbtp] 
+%    \begin{center} 
+%        \bgroup 
+%        \def\arraystretch{1.2} 
+%        \caption{Scale factor derived in the three lepton control region.} 
+%        \label{tab:tab3lcontrol} 
+%        \begin{tabular}{l| c } 
+%                          & 3-lepton region \\ \hline \hline
+%            signal MC        & 368.46     $\pm$  6.01    \\ \hline
+%            bkg. MC          & 52.93  $\pm$  4.90\\ \hline \hline
+%            \textbf{data}       & \textbf{445}  \\ \hline
+%            data-bkg.        &  392.07   $\pm$  21.66 \\ \hline \hline
+%            (data-bkg.)/sig. & 1.06   $\pm$  0.06\\ \hline
+%
+%        \end{tabular} 
+%        \egroup 
+%    \end{center} 
+%\end{table} 
+%
+%
+%\subsection{Other backgrounds}
+%There backgrounds stemming from either rare SM processes or those that rarely produce no jet events, and are not flavor symmetric are taken directly from MC. These processes include triboson 
+%production and other processes summarized in Table~\ref{tab:MCsamplesNonFS}, and are assigned an uncertainty of 50\%.  
+%%\subsection{Flavor-symmetric Background}
+%%\label{subsec:fsBG}
+%%Any physical process which features decays into same flavor and opposite flavor lepton pairs with equal
+%%probability is comprised in this background estimation. This is, first and foremost,
+%%the \ttbar process, but also other processes such as $WW$, or $ttW$ production.
+%%Other processes such as $WZ$ production or $ttZ$ and $ttH$ production have some flavor
+%%symmetric component and some component stemming from the decay of the $Z$ boson.
+%%Their contribution will be discussed separately later on.
+%%
+%%Our flavor-symmetric background prediction in SF events utilizes the number of OF events as follows:
+%%
+%%\begin{align}
+%%\label{eq:masterformula}
+%%    N_{\Pe\Pe} & = R(\Pe\Pe/OF) \times N_{OF}\notag \\
+%%    N_{\mu\mu} & = R(\mu\mu/OF) \times N_{OF}\notag\\
+%%    N_{SF} \equiv N_{\Pe\Pe} + N_{\mu\mu} & = R_{SF/OF} \times N_{OF}
+%%\end{align}                                                              
+%%
+%%At particle level (and before any FSR), the mapping ratios $R$ are simply $R_{\Pe\Pe/OF}=R_{\mu\mu/OF}=0.5$ and $R_{SF/OF}=1$.
+%%(Note that the OF sample size is two times that of the $\Pe\Pe$ or $\mu\mu$ samples). Since trigger, reconstruction and
+%%identification efficiencies are not identical for detected electrons and muons, the factor $R_{SF/OF}$ is not longer 
+%%one, but a quantity that depends on the efficiencies in a slightly more complicated form.
+%%
+%%The following naming scheme is used here: A quantity without an upper index includes all efficiencies (trigger, selection and reconstruction), 
+%%a "$^{*}$" indicates that only reconstruction and selection efficiencies are applied, while "$^{hard}$" stands for the quantity on particle level.
+%%Furthermore, the assumption is made that the reconstruction and selection efficiencies for the two leptons in the event have a negligible
+%%correlation, i.e. $\epsilon_{\ell\ell}=\epsilon_{\ell} \cdot \epsilon_{\ell}$. 
+%%
+%%An important quantity is the ratio of efficiencies for muons to electrons: 
+%%\begin{align}
+%%\label{eq:rMue}
+%%    r_{\mu/e} & = \frac{\epsilon_{\mu}}{\epsilon_{e}} \approx \sqrt{ \frac{\epsilon^{*}_{\mu\mu}\epsilon^{T}_{\mu\mu}}{\epsilon^{*}_{ee}\epsilon^{T}_{ee}}} = \sqrt{ \frac{N_{\mu\mu}}{N_{ee}}} \notag \\
+%%    r_{\mu/e} & \approx r^{*}_{\mu/e}\sqrt{ \frac{\epsilon^{T}_{\mu\mu}}{\epsilon^{T}_{ee}}}
+%%\end{align}
+%%
+%%Using this quantity one can estimate the number of ee and $\mu\mu$ events in the following way:
+%%
+%%\begin{align}
+%%\label{eq:eemumuFormula}
+%%    N_{ee} & = \epsilon^{T}_{ee} N^{*}_{ee} = \epsilon^{T}_{ee} \left(\epsilon^{*}_{e}\right)^{2} N^{hard}_{ee} = \frac{1}{2} \epsilon^{T}_{ee} \left(\epsilon^{*}_{e}\right)^{2} N^{hard}_{OF} 
+%%											= \frac{1}{2} \epsilon^{T}_{ee} \frac{\epsilon^{*}_{e}}{\epsilon^{*}_{\mu}} N^{*}_{OF} \notag \\
+%%           & =\frac{1}{2} \frac{1}{r^{*}_{\mu/e}} \frac{\epsilon^{T}_{ee}}{\epsilon^{T}_{e\mu}}N_{OF} 
+%%												= \frac{1}{2} \frac{1}{r_{\mu/e}} \frac{\sqrt{\epsilon^{T}_{ee}\epsilon^{T}_{\mu\mu}}}{\epsilon^{T}_{e\mu}} N_{OF}  \notag \\
+%%    N_{\mu\mu} & = \epsilon^{T}_{\mu\mu} N^{*}_{\mu\mu} = \epsilon^{T}_{\mu\mu} \epsilon^{*}^{2}_{\mu} N^{hard}_{\mu\mu} = \frac{1}{2} \epsilon^{T}_{\mu\mu} \epsilon^{*}^{2}_{\mu} N^{hard}_{OF}
+%%											= \frac{1}{2} \epsilon^{T}_{\mu\mu} \frac{\epsilon^{*}_{\mu}}{\epsilon^{*}_{e}} N^{*}_{OF}  \notag \\
+%%			   & =\frac{1}{2} r^{*}_{\mu/e} \frac{\epsilon^{T}_{\mu\mu}}{\epsilon^{T}_{e\mu}}N_{OF} = \frac{1}{2} r_{\mu/e} \frac{\sqrt{\epsilon^{T}_{ee}\epsilon^{T}_{\mu\mu}}}{\epsilon^{T}_{e\mu}} N_{OF}
+%%\end{align}
+%%
+%%The combined prediction for the SF yield is therefore
+%%
+%%\begin{align}
+%%\label{eq:masterformulaExp}
+%%    N_{SF} & = \frac{1}{2} \left( r_{\mu/e} + \frac{1}{r_{\mu/e}} \right) \frac{\sqrt{\epsilon^{T}_{ee}\epsilon^{T}_{\mu\mu}}}{\epsilon^{T}_{e\mu}} N_{OF}  \notag \\
+%%           & = \frac{1}{2} \left( r_{\mu/e} + \frac{1}{r_{\mu/e}} \right) R_{T} N_{OF} = R_{SF/OF} N_{OF}
+%%\end{align}
+%%

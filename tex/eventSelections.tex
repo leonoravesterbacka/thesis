@@ -29,26 +29,25 @@ All the signal and control region criteria on the leptons is summarized in Table
     \begin{center}
         \begin{tabular}{ l r}
         \hline \hline
-        \multicolumn{2}{c}{\textbf{Strong GMSB and Electroweak SR lepton selection}}                \\
+        \multicolumn{2}{c}{\textbf{GMSB and Electroweak SR lepton selection}} \\\hline
         Flavor         &$e^{+}e^{-}$/$\mu^{+}\mu^{-}$                             \\
         Leading \pt         &  $>$ 25\GeV                              \\
         Subleading \pt         &  $>$ 20\GeV                              \\
         $|\eta|$    &  $<$ 2.4 and $\ni$ [1.4, 1.6]                                 \\
-        \mll    &  $\in$ [86, 96] \GeV                       \\                                                  
-        \multicolumn{2}{c}{\textbf{Strong sbottom search lepton selection}}                \\              
+        \mll    &  $\in$ [86, 96] \GeV                       \\\hline                                                  
+        \multicolumn{2}{c}{\textbf{Edge search lepton selection}}                \\ \hline             
         Flavor         &$e^{+}e^{-}$/$\mu^{+}\mu^{-}$                             \\
         Leading \pt         &  $>$ 25\GeV                              \\
         Subleading \pt         &  $>$ 20\GeV                              \\
         $|\eta|$    &  $<$ 2.4 and $\ni$ [1.4, 1.6]                                 \\
-        \mll    &  bins from 20 to 400+ \GeV                        \\                                                 
-
-        \multicolumn{2}{c}{\textbf{Slepton SR lepton selection}}                \\
+        \mll    &  bins from 20 to 400+ \GeV                        \\\hline                             
+        \multicolumn{2}{c}{\textbf{Slepton SR lepton selection}}                \\\hline
         Flavor         &$e^{+}e^{-}$/$\mu^{+}\mu^{-}$                             \\
         Leading \pt         &  $>$ 50\GeV                              \\
         Subleading \pt         &  $>$ 20\GeV                              \\
         $|\eta|$    &  $<$ 2.4 and $\ni$ [1.4, 1.6]                                 \\
-        \mll    &  $\ni$ [76, 106] \GeV                       \\                                                  
-        \multicolumn{2}{c}{\textbf{CR lepton selection}}                \\
+        \mll    &  $\ni$ [76, 106] \GeV                       \\\hline                                                  
+        \multicolumn{2}{c}{\textbf{CR lepton selection}}                \\\hline
         Flavor         &$e^{+}e^{-}$/$\mu^{+}\mu^{-}$/$e^{\pm}\mu^{\mp}$                             \\
         Leading \pt         &  $>$ 25\GeV                              \\
         Subleading \pt         &  $>$ 20\GeV                              \\
@@ -60,7 +59,8 @@ All the signal and control region criteria on the leptons is summarized in Table
 \subsection{Jet and b-jet selection}
 The jets used throughout this thesis are clustered from PF objects using anti-$k_{t}$ algorithm with a distance parameter of 0.4, after excluding charged hadrons originating from pileup, and corrected with JECs, as described in Section \ref{sec:objectsJets}. 
 Identification of jets originating from b quark decays is done using the CSVv2 algortihm, introduced in Section \ref{sec:objectsBJets}.
-Further, the scalar sum of all jet \pt is referred to as \HT and is used to design some of the signal regions. 
+Further, the scalar sum of all jet \pt is referred to as \HT and is used to design some of the signal regions.
+The strong and electroweak searches have DY reducing requirement on the $|\Delta\phi|$ between the leading jets and the \ptmiss to be larger than 0.4 to reduce contamination from fake \ptmiss eventsthat can be aligned with the jets.   
 The \pt of the jets used for the control regions used for the flavor symmetric background prediction methods is 35 GeV and the jets are required to be within $|\eta|<2.4$. 
 The jets are required to be seperated from selected leptons by 0.4 in $\Delta$R. 
 In the slepton search no hadronic activity is expected, therefore a veto on jets of \pt greater than 25\GeV and $|\eta|<2.4$ is imposed.
@@ -72,22 +72,23 @@ In the slepton search no hadronic activity is expected, therefore a veto on jets
     \begin{center}
         \begin{tabular}{ l r}
         \hline \hline
-        \multicolumn{2}{c}{\textbf{Strong and electroweak search jet selection}}                \\
+        \multicolumn{2}{c}{\textbf{Strong and electroweak search jet selection}}                \\\hline
         \multicolumn{2}{c}{AK4 jets $\geq2$}                \\
-        \pt         &  $>$ 35\GeV                              \\
-        $|\eta|$    &  $<$ 2.4                                 \\
+        \pt         &  $>35\GeV$                              \\
+        $|\eta|$    &  $<2.4$                                 \\
+        $|\Delta\phi(\mathrm{jet}_{1,2},\ptmiss)|$    &  $>0.4$                                 \\
         \multicolumn{2}{c}{b-tagged jets $\geq0$}                \\
         CSVv2 discriminator          &  Medium WP                              \\
-        \pt         &  $>$ 25\GeV                              \\
-        $|\eta|$    &  $<$ 2.4                                 \\
-        \multicolumn{2}{c}{\textbf{Slepton search jet selection}}                \\
+        \pt         &  $>25\GeV$                              \\
+        $|\eta|$    &  $<2.4$                                \\\hline
+        \multicolumn{2}{c}{\textbf{Slepton search jet selection}}                \\\hline
         \multicolumn{2}{c}{AK4 jets $=0$}                \\
-        \pt         &  $>$ 25\GeV                              \\
-        $|\eta|$    &  $<$ 2.4                                 \\
-        \multicolumn{2}{c}{\textbf{CR jets}}                \\
+        \pt         &  $>25\GeV$                              \\
+        $|\eta|$    &  $<2.4$                                 \\\hline
+        \multicolumn{2}{c}{\textbf{CR jets}}                \\\hline
         \multicolumn{2}{c}{AK4 jets $\geq2$}                \\
-        \pt         &  $>$ 35\GeV                              \\
-        $|\eta|$    &  $<$ 2.4                                 \\
+        \pt         &  $>35\GeV$                              \\
+        $|\eta|$    &  $<2.4$                                \\
 \hline\hline
 \end{tabular}
 \end{center}
@@ -137,10 +138,189 @@ M_{T2}= \mathrm{min}_{\vec{p}_{T}^{miss}=\vec{p}_{T1}^{miss}+\vec{p}_{T2}^{miss}
 For dileptonic \ttbar, the \mttwo will be very close to the \PW boson mass, whereas for signal scenarios, where the leptons are paired with the momentum of the LSPs, which will result in values much larger than the \PW boson mass. 
 The \mttwo variable is used to define all signal regions in all searches, as it effectively reduce contributions from SM \ttbar by imposing a cut around 80\GeV.
 \section{Strong search} 
-\subsection{\ttbar likelihood}
-\subsection{Strong SR definition}
+The strong searches, targeting either GMSB with a gluino induced process or strong production of sbottoms with an intermediate slepton decay, have the commonality of large hadronic activity. 
+As summarized in Section \ref{sec:searchStrong}, the GMSB gluino induced process includes an on-shell \PZ boson, whereas the sbottom production produces leptons not compatible with the \PZ boson. 
+\subsection{GMSB SR definition}
+The defining feature of the GMSB gluino induced SUSY is the production of an on-shell \PZ boson. 
+For this reason, SR events are selected to be compatible with a \PZ boson, i.e. having $\mll\in[86,96]\GeV$. 
+Next, selections are made on the level of hadronic activity, by definig three SRs, "SRA" requiring 2-3 jets, "SRB" requiring 4-5 jets and "SRC" requiring more than 6 jets. 
+Further, these three SRs are split into two categories by requiring either one or more b-tagged jets, or veto b-tagged jets. 
+The two categories have requirements on the \mttwo of $\geq80\GeV$ for the b-veto region and $\geq100\GeV$ for the b-tagged region to suppress contribution from \ttbar.
+For the lower jet multiplicity SRs (SRA and SRB) requirements on the \HT are imposed, $\geq500\GeV$ for b-veto region and $\geq200\GeV$ for b-tagged region. 
+Finally, the 6 SRs are binned in \ptmiss. There are fewer \ptmiss bins in the highest jet multiplicity bins as they are already low in statistics. 
+The final SRs targeting the GMSB gluino induced process are summarized in Table \ref{tab:GMSBSR}. 
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Summary of the GMSB SR.}
+    \label{tab:GMSBSR}
+    \begin{center}
+        \begin{tabular}{ l l l l l l}
+        \hline \hline
+        \multicolumn{6}{c}{GMSB gluino SR, $86\geq\mll\geq96$}                \\
+        Region      & $N_{\mathrm{jets}}$ & $N_{\mathrm{b-jets}}$  & \HT [GeV] & \mttwo [GeV] & \ptmiss [GeV]                    \\\hline
+        SRA (b-veto)&  2-3                & $=0$                   & $\geq500$ & $\geq80$     & 100-150, 150-250, $\geq250$      \\
+        SRB (b-veto)&  4-5                & $=0$                   & $\geq500$ & $\geq80$     & 100-150, 150-250, $\geq250$      \\
+        SRB (b-veto)&  $\geq6$            & $=0$                   & $-$       & $\geq80$     & 100-150, $\geq150$      \\
+        SRA (b-tag) &  2-3                & $\geq1$                & $\geq200$ & $\geq100$    & 100-150, 150-250, $\geq250$      \\
+        SRA (b-tag) &  4-5                & $\geq1$                & $\geq200$ & $\geq100$    & 100-150, 150-250, $\geq250$      \\
+        SRA (b-tag) &  $\geq6$            & $\geq1$                & $-$       & $\geq100$    & 100-150, $\geq150$      \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                              
+
+\subsection{Edge SR definition}
+The strong production of sbottoms with an intermediate slepton decay giving an edge shape in the invariant mass is called the "Edge" search. 
+This search has an explicit \PZ boson veto, making the dominant SM background that of \ttbar. 
+In order to deal with this background, first a requirement on the \mttwo of $\geq80\GeV$ is applied. 
+Then a likelihood discriminant is developed that categorizes how \ttbar-like an event is, and divide the events in \ttbar-like and non-\ttbar-like.  
+The \ttbar likelihood is constructed by picking four variables that are characteristic of \ttbar in opposite flavor events in data and MC.
+To calculate this likelihood the probability density functions of the four observables are determined by maximum likelihood fits in the opposite flavor control sample in the same kinematic region as the same-flavor SR. 
+The four variables are:
+\begin{itemize}
+\item \ptmiss
+\item dilepton \pt
+\item $|\Delta\phi|$ between the leptons
+\item $\Sigma\mlb$
+\end{itemize}
+The $\Sigma\mlb$ is the sum of the invariant masses of the two lepton and b-tagged jet systems, and should have an endpoint at $2\sqrt{m_{t}^{2}-m_{W}^{2}}$ for events resulting from top quarks. 
+The \mlb is found by calculating all possible invariant mass combinations between the leptons and the jets in the event. 
+The combination that gives the smallest value of \mlb is kept and the procedure is repeated for the remaining leptons and jets until the smallest value is found for that combination.
+The $\Sigma\mlb$ is the summation of the minimized \mlb's. 
+A priority in the calculation is given to the jets that are b-tagged, as these more accurately reflect the \ttbar environment that is targeted.    
+This means that if one or more b-tagged jets are present in the event, the \mlb between the leptons and the b-tagged jets is minimized first, and then the remaining jets are considered for the minimization of the second lepton’s \mlb.
+
+The fit function for the \ptmiss spectrum is a sum of two exponentials. The $|\Delta\phi|$ is fitted with a second-order polynomial. 
+A Crystal-Ball function is used to fit the dilepton \pt and $\Sigma\mlb$ spectra. 
+The four variables in OF data and the fits are shown in Figure \ref{fig:pdfsNLL}.  
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/nll/met_frame_nice.pdf}
+    \includegraphics[width=0.45\textwidth]{images/nll/zpt_frame_nice.pdf} \\
+    \includegraphics[width=0.45\textwidth]{images/nll/ldp_frame_nice.pdf}
+    \includegraphics[width=0.45\textwidth]{images/nll/mlb_frame_nice.pdf}
+    \caption{PDFs for the four input variables to the likelihood discriminant: \ptmiss (top left), dilepton \pt (top right),
+    $|$\dphi$|$ between the leptons (bottom left), and \mlb (bottom right).}
+\label{fig:pdfsNLL}
+\end{center}
+\end{figure}
+
+For each SF event passing in the SR requirements, a likelihood function is constructed by multiplying the evaluation of each of the pdfs. 
+The negative logarithm is then defined as the likelihood discriminant and denoted by NLL. 
+The working point of \ttbar-like and non-\ttbar-like is chosen at an efficiency corresponding to roughly 95\%, which translates to a value of NLL of 21.
+The Edge SR is defined with a \ttbar-like category corresponding to a discriminator value of less than 21, and non-\ttbar-like with values larger than 21. 
+Further, a baseline requirement on at least 2 jets and $\ptmiss\geq150\GeV$ is imposed in the Edge SR. 
+As any potential excess would show up as an edge shape in the invariant mass spectrum, the signal region is binned in the \mll to catch any excess in events. 
+The Edge SR definitions is summarized in Table \ref{tab:edgeSR}. 
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Summary of the Edge SR.}
+    \label{tab:edgeSR}
+    \begin{center}
+        \begin{tabular}{ l l l l l l}
+        \hline \hline
+        \multicolumn{6}{c}{Edge SR}                \\
+        Region          & $N_{\mathrm{jets}}$ & \ptmiss [GeV]  & \mttwo [GeV]  &NLL& \mll [GeV] (excluding 86-96)\\\hline
+        \ttbar-like     & $\geq2$             & $\geq150$      & $\geq80$      & $\leq21$         & [20, 60, 86, 96, 150, 200, 300, 400+]\\
+        non-\ttbar -like& $\geq2$             & $\geq150$      & $\geq80$      & $>21$            & [20, 60, 86, 96, 150, 200, 300, 400+]\\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                              
+
 \section{Electroweak search}
-\subsection{Boosted bosons}
-\subsection{Electroweak SR definition}
+The electroweak SUSY searches presented in Section \ref{sec:searchEWK} have to defining features. The first one is the production of an on-shell \PZ boson. 
+The second is the production of a vector boson (\PW or \PZ) or a Higgs boson that decay hadronically, to first order to two jets. 
+The production of \firstcharg and \PSGczDt is targeted by a signal region called "WZ" SR. 
+The production of mass degenerate higgsinos, that decay immediately to two \PSGczDo's, is targeted by two different SRs depending on the branching fraction assumed for the decay of the \PSGczDo. 
+On the one hand, a branching fraction of 100\% is assumed for the decay $\PSGczDo\rightarrow\PZ\gravitino$ ("ZZ"). 
+In this case the \PZ boson decay hadronically to light jets or b-tagged jets. The WZ SR is designed to pick up the cases where the \PZ boson decays to light jets. 
+The other assumption on the branching fraction is 50\% of $\PSGczDo\rightarrow\PZ\gravitino$ and 50\% of $\PSGczDo\rightarrow\PH\gravitino$. 
+The so called "ZH" SR is designed by exploiting the most frequent \PH boson decay mode, $\PH\rightarrow b\bar{b}$\footnote{58\% \cite{deFlorian:2016spz}}, while still being sensitive to the less frequent decay mode of the $\PZ\rightarrow b\bar{b}$\footnote{\PZ decay to down-type quarks is only 15.2\% \cite{PhysRevD.98.030001}}.   
+\subsection{WZ SR definition}
+The idea behind the design of the WZ SR is to target the hadronically decaying \PW boson. 
+The \PZ boson that is the decay product of the \PSGczDt is easily tagged by requiring two leptons of opposite sign and same flavor compatible with the \PZ boson.
+A naive first step to design this SR is to try to reconstruct the invariant mass of two jets and require it to be close to the \PW boson mass.
+But the existence of more than two jets in the event makes the signal region definition more difficult. 
+It was shown that the largest discrimination between the signal and SM processes was to impose a cut on the invariant mass of two jets to be less than 110\GeV. 
+The choice of 110\GeV was chosen after an optimization, and is large enough to not only target the \PW boson mass (80.4\GeV), but also the slightly larger \PZ boson mass (91.2\GeV) \cite{PhysRevD.98.030001}. 
+As many SM processes result in more jets than two, a choice on what jets to reconstruct the invariant mass with must be made. 
+The reasoning behind the choice of jets is as follows. 
+A \PW boson with enough \pt\footnote{Enough \pt for a boson $V$ to be considered "boosted" is dictated by $\pt^{V}\geq\frac{2m_{V}}{R}$ where R is the radius parameter of the jet clustering algorithm.} will result in the decay products to propagate in the direction of the mother particle. 
+This results in the decay products of the \PW boson to be more collimated, and is commonly known as boost. 
+This can happen in the case of large \PSGczDt and \firstcharg masses, where there is enough available momentum to give the \PZ and \PW bosons a boost. 
+In the absence of hints of SUSY, we want to set as stringent limits as possible on the different SUSY particle masses. 
+Targeting exclusion of the more massive \PSGczDt and \firstcharg, the final state is pushed to this more boosted scenarios. 
+For this reason, if there are more jets than two in the event, the boosted signal feature is targeted by constructing the invariant mass using the jets that are $closest$ $in$ $\Delta\phi$. 
+Further, a veto on b-tagged jets is applied motivated by on the one hand the favored \PW boson decay mode to light quarks, and on the other hand the suppression of \ttbar. 
+Finally, as any electroweak SUSY would show up in the \ptmiss tails, the WZ SR is binned in \ptmiss. 
+The final WZ SR that targets electroweak production of \PSGczDt and \firstcharg (WZ) or higgsino production (ZZ) is summarized in Table \ref{tab:WZ}.    
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Summary of the Electroweak WZ SR.}
+    \label{tab:WZ}
+    \begin{center}
+        \begin{tabular}{ l l l l l l}
+        \hline \hline
+        \multicolumn{6}{c}{Electroweak WZ SR}                \\
+        Region          & $N_{\mathrm{jets}}$ & $N_{\mathrm{b-jets}}$ & \mttwo [GeV]  & \mjj (closest $\Delta\phi$) [GeV]& \ptmiss [GeV]\\\hline
+        WZ              & $\geq2$             & $=0$                  & $\geq80$        & $\leq110$         & [100, 150, 250, 350+]\\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                          
+
+\subsection{ZH SR definition}
+The electroweak higgsino production has many similarities to the \PSGczDt and \firstcharg targeted by the WZ SR. 
+The similarities lies in the production of an on-shell \PZ boson, providing the opposite sign same flavor leptons and large \ptmiss from the LSPs.
+Under the assumption that the \PSGczDo can decay with a 50\% probabililty to a \PZ boson or a \PH boson and a \gravitino LSP, the SR is designed to target the \PH boson decaying to a pair of bottom quarks.   
+For this, the events in the signal region are required to have exactly two b-tagged jets, that form an invariant mass of less than 150\GeV. 
+As requiring two b-tagged jets increases the existence of SM \ttbar to enter the SR, this contribution is reduced by a requirement on a \mttwo variable. 
+This variable is different than the pure leptonic variable used in the previous SR definitions. 
+Instead this \mttwolb is defined by pairing each lepton with a b-tagged jet, and all combinations of \mttwo is calculated and the smallest value is used. 
+This variable has an endpoint at the top quark mass, and to reduce the contribution from \ttbar a SR requirement on $>200\GeV$ is imposed.  
+The ZH SR definition is summarized in Table \ref{tab:ZH}. 
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Summary of the Electroweak ZH SR.}
+    \label{tab:ZH}
+    \begin{center}
+    \begin{tabular}{l l l l l l}
+    \hline \hline
+    \multicolumn{6}{c}{Electroweak ZH SR}                \\
+    Region          & $N_{\mathrm{jets}}$ & $N_{\mathrm{b-jets}}$ & \mbb [GeV]       & \mttwolb [GeV]& \ptmiss [GeV]\\\hline
+    ZH              & $\geq2$             & $=2$                  & $\leq150$        & $\geq200$         & [100, 150, 250+]\\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                          
+
+
 \section{Slepton search}
+The searches presented so far have the commonality of requiring at least two jets in the final state. 
+The search for direct slepton production differs in the fact that no hadronic activity is expected. 
+This results in different sources of SM backgrounds than for the signal regions presented above. 
 \subsection{Slepton SR definition}
+The slepton SR is designed using the leptonic \mttwo variable. 
+Further, jets within $|\eta|=2.4$ and of $\pt>25\GeV$ are vetoed. 
+The strong and electroweak searches target leptons of opposite sign and same flavor, but no particular specification of the flavor of the leptons is required. 
+The SUSY signal would simple appear as an excess of both dielectron and dimuon events. 
+In the search for sleptons, limits are set on the selectrons and smuon production in dielectron and dimuon final states separately, as a priori the mass of the selectrons and smuons have no reason to be the same. For this reason, the SR is defined for dielectron and dimuon events separately, and combined. 
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Summary of the direct slepton prodcution SR.}
+    \label{tab:ZH}
+    \begin{center}
+    \begin{tabular}{l l l l l }
+    \hline \hline
+    \multicolumn{5}{c}{Slepton SR}                \\
+    Region          & Flavor & $N_{\mathrm{jets}}$  & \mttwo [GeV]& \ptmiss [GeV]\\\hline
+    Slepton         & $\MuMu$+$\ElEl$& $=0$         & $\geq90$         & [100, 150, 225, 300+]\\
+    Selectron       & $\ElEl$& $=0$                 & $\geq90$         & [100, 150, 225, 300+]\\
+    Smuon           & $\MuMu$& $=0$                 & $\geq90$         & [100, 150, 225, 300+]\\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                             
