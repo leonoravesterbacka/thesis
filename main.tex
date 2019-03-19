@@ -103,7 +103,7 @@
 \newcommand{\mTii}{\ensuremath{m_{\mathrm{T2}}}\xspace}
 \newcommand{\et}{\ensuremath{E_{\mathrm{T}}}\xspace}
 \newcommand{\Em}{\ensuremath{E\hspace{-0.6em}/}\xspace}
-\newcommand{\Pm}{\ensuremath{p\hspace{-0.5em}/}\xspace}
+%\newcommand{\Pm}{\ensuremath{p\hspace{-0.5em}/}\xspace}
 \newcommand{\PTm}{\ensuremath{{p}_\mathrm{T}\hspace{-1.02em}/\kern 0.5em}\xspace}
 \newcommand{\PTslash}{\PTm}
 \newcommand{\ETm}{\ensuremath{E_{\mathrm{T}}^{\text{miss}}}\xspace}
@@ -116,7 +116,9 @@
 \newcommand{\ptvecmiss}{\ensuremath{{\vec p}_{\mathrm{T}}^{\kern1pt\text{miss}}}\xspace}
 \newcommand{\tauh}{\ensuremath{\PGt_\mathrm{h}}\xspace}
 \newcommand{\sqrtsNN}{\ensuremath{\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}}\xspace}
+\newcommand{\nj}{\ensuremath{N_{\mathrm{jets}}}\xspace}
 \newcommand{\mht}{\ensuremath{H_{\mathrm{T}}^{\text{miss}}}\xspace}
+\newcommand{\PH}{\ensuremath{\mathrm{H}}\xspace}
 \newcommand{\PW}{\ensuremath{\mathrm{W}}\xspace}
 \newcommand{\PZ}{\ensuremath{\mathrm{Z}}\xspace}
 \newcommand{\PZZ}{\ensuremath{\mathrm{ZZ}}\xspace}
@@ -127,11 +129,16 @@
 \newcommand{\CLs}{\ensuremath{\text{CL}_\text{s}}\xspace}
 \newcommand{\CLsb}{\ensuremath{\text{CL}_\text{s+b}}\xspace}
 \newcommand{\ttbar}{\ensuremath{\mathrm{{t\overline{t}}}}\xspace} % t-tbar
+\newcommand{\ttZ}{\ensuremath{\mathrm{{t\overline{t}}\PZ}}\xspace} % t-tbarZ
+\newcommand{\ttW}{\ensuremath{\mathrm{{t\overline{t}}\PW}}\xspace} % t-tbarZ
+\newcommand{\ttH}{\ensuremath{\mathrm{{t\overline{t}}\PH}}\xspace} % t-tbarZ
 \newcommand{\secondchi}{\PSGczDt}
 \newcommand{\firstchi}{\PSGczDo}
 \newcommand{\firstcharg}{\PSGcpmDo}
-\newcommand{\gravitino}{\sGra}
-\newcommand{\gluino}{\PSg}
+%\newcommand{\gravitino}{\sGra}
+\newcommand{\sbottom}{\ensuremath{\widetilde{b}}\xspace}
+\newcommand{\gluino}{\ensuremath{\widetilde{g}}\xspace}
+\newcommand{\gravitino}{\ensuremath{\widetilde{G}}\xspace}
 \providecommand{\PSGczDo}{\ensuremath{\widetilde{\chi}^{0}_{1}}\xspace} % neutralino
 \providecommand{\PSGcmDo}{\ensuremath{\widetilde{\chi}^{-}_{1}}\xspace} % neutralino
 \providecommand{\PSGczDt}{\ensuremath{\widetilde{\chi}^{0}_{2}}\xspace} % neutralino
@@ -140,26 +147,34 @@
 \providecommand{\PSGcpDo}{\ensuremath{\widetilde{\chi}^{+}_{1}}\xspace} % neutralino
 %old
 
+\newcommand{\mbb}{\ensuremath{m_{bb}}\xspace}
 \newcommand{\mll}{\ensuremath{m_{\ell\ell}}\xspace}
+\newcommand{\mjj}{\ensuremath{m_{jj}}\xspace}
+\newcommand{\mlb}{\ensuremath{m_{\ell b}}\xspace}
 \newcommand{\mlsp}{\ensuremath{m_{\PSGczDo}}\xspace}
 \newcommand{\mslep}{\ensuremath{m_{\slep}}\xspace}
 \newcommand{\lsp}{\PSGczDo}
 \newcommand{\mcha}{\ensuremath{\PSGcpmDo}\xspace}
 \newcommand{\mneu}{\ensuremath{\PSGczDt}\xspace}
-\newcommand{\MuMu}{\ensuremath{\Pgm^\pm\Pgm^\mp}\xspace}
-\newcommand{\ElEl}{\ensuremath{\Pe^\pm\Pe^\mp}\xspace}
+\newcommand{\MuMu}{\ensuremath{\mu^{\pm}\mu^{\mp}}\xspace}
+\newcommand{\ElEl}{\ensuremath{e^{\pm}e^{\mp}}\xspace}
 \newcommand{\TauTau}{\ensuremath{\tau^\pm\tau^\mp}\xspace}
 \newcommand{\Tau}{\ensuremath{\tau}\xspace}
 \newcommand{\EM}{\ensuremath{\Pe^\pm\Pgm^\mp}\xspace}
-\newcommand{\rmue}{\ensuremath{r_{\Pgm/\Pe}}\xspace}
+\newcommand{\rmue}{\ensuremath{r_{\mu/e}}\xspace}
+\newcommand{\rmueinv}{\ensuremath{r_{\mu/e}^{-1}}\xspace}
 \newcommand{\rmuec}{\ensuremath{r_{\Pgm/\Pe,\text{c}}}\xspace}
-\newcommand{\Rsfof}{\ensuremath{R_{\text{SF/DF}}}\xspace}
-\newcommand{\Reeof}{\ensuremath{R_{\Pe\Pe\text{/DF}}}\xspace}
-\newcommand{\Rmmof}{\ensuremath{R_{\Pgm\Pgm\text{/DF}}}\xspace}
+\newcommand{\fmll}{\ensuremath{f_{\text{mll}}}\xspace}
+\newcommand{\Rsfof}{\ensuremath{R_{\text{SF/OF}}}\xspace}
+\newcommand{\Reeof}{\ensuremath{R_{ee\text{/OF}}}\xspace}
+\newcommand{\Rmmof}{\ensuremath{R_{\mu\mu\text{/OF}}}\xspace}
+\newcommand{\Routin}{\ensuremath{R_{\text{out/in}}}\xspace}
 \newcommand{\RT}{\ensuremath{R_{\text{T}}}\xspace}
 \newcommand{\mttwol}{\ensuremath{M_{\text{T2}}(\ell\ell)}\xspace}
-\newcommand{\mttwolb}{\ensuremath{M_{\text{T2}}(\ell \PQb \ell \PQb)}\xspace}
+\newcommand{\mttwolb}{\ensuremath{M_{\text{T2}}(\ell b \ell b)}\xspace}
 \newcommand{\slep}{\ensuremath{\widetilde{\ell}}\xspace}
+\newcommand{\se}{\ensuremath{\widetilde{e}}\xspace}
+\newcommand{\sm}{\ensuremath{\widetilde{\mu}}\xspace}
 \newcommand{\seL}{\ensuremath{\widetilde{e}_{L}}\xspace}
 \newcommand{\seR}{\ensuremath{\widetilde{e}_{R}}\xspace}
 \newcommand{\smuL}{\ensuremath{\widetilde{\mu}_{L}}\xspace}
@@ -183,6 +198,8 @@
 \newcommand{\upar}{\ensuremath{u_\Vert}}
 \newcommand{\uperp}{\ensuremath{u_\perp}}
 \newcommand{\redupara}{\ensuremath{u_\Vert+\qt}\xspace}
+\newcommand{\Pe}{\ensuremath{e}}
+\newcommand{\Pm}{\ensuremath{\mu}}
 \newcommand{\PGt}{\ensuremath{\tau}}
 \newcommand{\PGg}{\ensuremath{\gamma}}
 \newcommand{\mttwo}{$M_{T2}$\xspace}
@@ -217,7 +234,7 @@
 \SetDepartment{Physics}%
 \SetChair{Professor Rainer Wallny}%
 % Type your title here in all CAPS %
-\SetTitle{Search for Charginos, Neutralinos and Sleptons in opposite-sign di-lepton final states at center-of-mass energy of 13 TeV with the CMS detector.}
+\SetTitle{Search for SUSY in opposite-sign dilepton final states with the CMS detector.}
 % user defined commands in order to geC:\Program Files\MiKTeX 2.5\miktexnerate new commands, macros, and redefine default commands %
 \include{usersetcommands}
 
@@ -293,6 +310,9 @@
 \include{tex/search}
 \include{tex/samplesObjects}
 \include{tex/eventSelections}
+\include{tex/smPredictions}
+\include{tex/results}
+\include{tex/interpretation}
 \include{tex/met}
 \include{tex/TwoOrMoreAppendices}
 

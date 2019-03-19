@@ -29,7 +29,7 @@ All the signal and control region criteria on the leptons is summarized in Table
     \begin{center}
         \begin{tabular}{ l r}
         \hline \hline
-        \multicolumn{2}{c}{\textbf{GMSB and Electroweak SR lepton selection}} \\\hline
+        \multicolumn{2}{c}{\textbf{Strong and Electroweak On-Z SR lepton selection}} \\\hline
         Flavor         &$e^{+}e^{-}$/$\mu^{+}\mu^{-}$                             \\
         Leading \pt         &  $>$ 25\GeV                              \\
         Subleading \pt         &  $>$ 20\GeV                              \\
@@ -140,7 +140,7 @@ The \mttwo variable is used to define all signal regions in all searches, as it 
 \section{Strong search} 
 The strong searches, targeting either GMSB with a gluino induced process or strong production of sbottoms with an intermediate slepton decay, have the commonality of large hadronic activity. 
 As summarized in Section \ref{sec:searchStrong}, the GMSB gluino induced process includes an on-shell \PZ boson, whereas the sbottom production produces leptons not compatible with the \PZ boson. 
-\subsection{GMSB SR definition}
+\subsection{Strong On-Z SR definition}
 The defining feature of the GMSB gluino induced SUSY is the production of an on-shell \PZ boson. 
 For this reason, SR events are selected to be compatible with a \PZ boson, i.e. having $\mll\in[86,96]\GeV$. 
 Next, selections are made on the level of hadronic activity, by definig three SRs, "SRA" requiring 2-3 jets, "SRB" requiring 4-5 jets and "SRC" requiring more than 6 jets. 
@@ -148,16 +148,17 @@ Further, these three SRs are split into two categories by requiring either one o
 The two categories have requirements on the \mttwo of $\geq80\GeV$ for the b-veto region and $\geq100\GeV$ for the b-tagged region to suppress contribution from \ttbar.
 For the lower jet multiplicity SRs (SRA and SRB) requirements on the \HT are imposed, $\geq500\GeV$ for b-veto region and $\geq200\GeV$ for b-tagged region. 
 Finally, the 6 SRs are binned in \ptmiss. There are fewer \ptmiss bins in the highest jet multiplicity bins as they are already low in statistics. 
+In order to reduce contribution from DY, the two jets with the highest \pt to have a separation in $\phi$ from the \ptmiss of at least 0.4
 The final SRs targeting the GMSB gluino induced process are summarized in Table \ref{tab:GMSBSR}. 
 
 \begin{table}[ht!]
 \def\arraystretch{1.2}
- \caption{Summary of the GMSB SR.}
+ \caption{Summary of the strong on-Z SR.}
     \label{tab:GMSBSR}
     \begin{center}
         \begin{tabular}{ l l l l l l}
         \hline \hline
-        \multicolumn{6}{c}{GMSB gluino SR, $86\geq\mll\geq96$}                \\
+        \multicolumn{6}{c}{Strong on-Z SR, $86\geq\mll\geq96$}                \\
         Region      & $N_{\mathrm{jets}}$ & $N_{\mathrm{b-jets}}$  & \HT [GeV] & \mttwo [GeV] & \ptmiss [GeV]                    \\\hline
         SRA (b-veto)&  2-3                & $=0$                   & $\geq500$ & $\geq80$     & 100-150, 150-250, $\geq250$      \\
         SRB (b-veto)&  4-5                & $=0$                   & $\geq500$ & $\geq80$     & 100-150, 150-250, $\geq250$      \\
@@ -196,10 +197,10 @@ A Crystal-Ball function is used to fit the dilepton \pt and $\Sigma\mlb$ spectra
 The four variables in OF data and the fits are shown in Figure \ref{fig:pdfsNLL}.  
 \begin{figure}[htbp!]
 \begin{center}
-    \includegraphics[width=0.45\textwidth]{images/nll/met_frame_nice.pdf}
-    \includegraphics[width=0.45\textwidth]{images/nll/zpt_frame_nice.pdf} \\
-    \includegraphics[width=0.45\textwidth]{images/nll/ldp_frame_nice.pdf}
-    \includegraphics[width=0.45\textwidth]{images/nll/mlb_frame_nice.pdf}
+    \includegraphics[width=0.45\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-a.pdf}
+    \includegraphics[width=0.45\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-b.pdf} \\
+    \includegraphics[width=0.45\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-c.pdf}
+    \includegraphics[width=0.45\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-d.pdf}
     \caption{PDFs for the four input variables to the likelihood discriminant: \ptmiss (top left), dilepton \pt (top right),
     $|$\dphi$|$ between the leptons (bottom left), and \mlb (bottom right).}
 \label{fig:pdfsNLL}
@@ -209,10 +210,12 @@ The four variables in OF data and the fits are shown in Figure \ref{fig:pdfsNLL}
 For each SF event passing in the SR requirements, a likelihood function is constructed by multiplying the evaluation of each of the pdfs. 
 The negative logarithm is then defined as the likelihood discriminant and denoted by NLL. 
 The working point of \ttbar-like and non-\ttbar-like is chosen at an efficiency corresponding to roughly 95\%, which translates to a value of NLL of 21.
-The Edge SR is defined with a \ttbar-like category corresponding to a discriminator value of less than 21, and non-\ttbar-like with values larger than 21. 
-Further, a baseline requirement on at least 2 jets and $\ptmiss\geq150\GeV$ is imposed in the Edge SR. 
+The edge SR is defined with a \ttbar-like category corresponding to a discriminator value of less than 21, and non-\ttbar-like with values larger than 21. 
+Further, a baseline requirement on at least 2 jets and $\ptmiss\geq150\GeV$ is imposed in the edge SR. 
+Similarly to the strong on-Z signal region, a requirement is imposed that the two jets with the highest \pt have a separation in $\phi$ from the \ptmiss of at least 0.4.
 As any potential excess would show up as an edge shape in the invariant mass spectrum, the signal region is binned in the \mll to catch any excess in events. 
-The Edge SR definitions is summarized in Table \ref{tab:edgeSR}. 
+In addition to the counting experiment, a fit is performed in this baseline region to search for a kinematic edge in the \mll spectrum
+The edge SR definitions is summarized in Table \ref{tab:edgeSR}. 
 \begin{table}[ht!]
 \def\arraystretch{1.2}
  \caption{Summary of the Edge SR.}
@@ -224,6 +227,7 @@ The Edge SR definitions is summarized in Table \ref{tab:edgeSR}.
         Region          & $N_{\mathrm{jets}}$ & \ptmiss [GeV]  & \mttwo [GeV]  &NLL& \mll [GeV] (excluding 86-96)\\\hline
         \ttbar-like     & $\geq2$             & $\geq150$      & $\geq80$      & $\leq21$         & [20, 60, 86, 96, 150, 200, 300, 400+]\\
         non-\ttbar -like& $\geq2$             & $\geq150$      & $\geq80$      & $>21$            & [20, 60, 86, 96, 150, 200, 300, 400+]\\
+        edge fit        & $\geq2$             & $\geq150$      & $\geq80$      & -             & $>20$\\
 \hline\hline
 \end{tabular}
 \end{center}
@@ -255,6 +259,7 @@ Targeting exclusion of the more massive \PSGczDt and \firstcharg, the final stat
 For this reason, if there are more jets than two in the event, the boosted signal feature is targeted by constructing the invariant mass using the jets that are $closest$ $in$ $\Delta\phi$. 
 Further, a veto on b-tagged jets is applied motivated by on the one hand the favored \PW boson decay mode to light quarks, and on the other hand the suppression of \ttbar. 
 Finally, as any electroweak SUSY would show up in the \ptmiss tails, the WZ SR is binned in \ptmiss. 
+Similarly to the strong signal regions, the two jets with the highest \pt are required to be separated in $\phi$ from the \ptmiss of at least 0.4.
 The final WZ SR that targets electroweak production of \PSGczDt and \firstcharg (WZ) or higgsino production (ZZ) is summarized in Table \ref{tab:WZ}.    
 
 \begin{table}[ht!]
