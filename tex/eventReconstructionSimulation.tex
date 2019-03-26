@@ -1,20 +1,26 @@
 \chapter{Event Reconstruction and Simulation}
+\noindent
+\justify
 The basis of any LHC data analysis relies on the concept of an 'event'. 
 An event refers to a succesful collision of two protons that results in the full readout of the CMS detector, and subsequently the combination of subdetector information that forms physics objects. 
 The LHC delivers proton bunches at a rate of 40\MHz but only a small fraction of the protons in the bunches result in collisions of interest to the CMS physics program.
 Additionally, if all collisions would lead to a full readout of the detector, there would not be enough bandwidth to readout the information, nor space to store it for offline analysis. 
 With these limitations in mind, the CMS has developed a two-tier system to select events of physics interest, the first level (L1) trigger and the high level trigger (HLT). 
 The trigger system is presented in the following section. 
-Furthermore, the way in which the subdetector information is combined to form physics objects, namely the Particle Flow technique, is presented in this section. 
+Furthermore, the way in which the subdetector information is combined to form physics objects, namely the Particle Flow technique, is presented in this chapter. 
 Apart from only analyzing the recorded events that pass the two-tier trigger system, simulated events of the CMS detector are used to validate the performance of the physics object reconstruction, for the estimation of SM background processes and for visualizing how a potential BSM signal could be found. 
-The last part of this section is presenting how the physics processes are generated and how their interaction with the detector material is simulated. 
-\section{Trigger}
-\label{trigger}
+The last part of this chapter is presenting how the physics processes are generated and how their interaction with the detector material is simulated. 
+\newpage
+\section{The trigger system}\label{trigger}
+\noindent
+\justify
 During 2016 proton-proton run of the LHC, the LHC delivered proton bunches with a time separation of 25\ns, and a peak luminosity reaching the unprecedented value of $10^{-34}\mathrm{cm}^{-2}\mathrm{s}^{-1}$. 
 At this peak luminosity, the pp interaction rate exceeds 1\GHz, as the mean of the number of interaction per bunch is 25, which is a rate impossible to readout with the technology to date.   
 A two tier triggering system helps differentiate which of the 1\GHz contain interesting events, while discarding the rest. 
 This enables a reduction of the rate down to 400\Hz, which is feasible for offline storage.   
-\subsection{L1 trigger}
+\subsection*{L1 trigger}
+\noindent
+\justify
 The L1 trigger is a hardware system that uses input from the calorimeters and the muon detectors to make a decision to keep the event or not \cite{Khachatryan:2016bia}. 
 Tracking information is not included at this step, as it is too time consuming. 
 \begin{figure}[!htp]
@@ -40,7 +46,9 @@ Some processes with large cross sections, such as QCD, produces single photon ev
 For this reason, the single photon triggers are $prescaled$, meaning only a fraction of the events are recorded, and the fraction is evolving with the luminosity during data-taking. 
 At analysis level, the events recorded with the prescaled triggers are scaled up according to whatever value they were prescaled with. 
 In this thesis, these kinds of prescaled triggers are used when collecting the single photon sample used for the \ptmiss performance studies.  
-\subsection{The HLT}
+\subsection*{The high level trigger}
+\noindent
+\justify
 While the L1 is completely hardware based and process the information from the detector underground in the experimental cavern, the HLT is both software and hardware based and located in computer farms on the ground level, running on 13,000 CPU cores. 
 At this level, a more thorough object reconstruction is performed with the L1 information. The so called HLT path is a set of algorithms executed in a sequence of steps. 
 As the tracking is more computing expensive, the first steps is to make a requirement on information from the calorimeters and the muon detectors, before performing the track reconstruction. 
@@ -66,6 +74,8 @@ The HLT reduces the rate from the L1 output of 100\kHz to ~1\kHz. The data that 
 As the following reconstruction of the data is very computing intense and time consuming, there is the possibility to only use the cores to process some of the data immediately, while some is left for later reconstruction. 
 This concept of data-parking has been used during both Run 1 and 2 of the LHC, and is at the time of writing used to park some of the $b$-physics data collected during the end of the Run 2. 
 \section{Data reconstruction}
+\noindent
+\justify
 The computing of the LHC experiments is in large parts made in a four tiered computing system, with decending order of importance. 
 The Tier-0 is the CERN Data center, located onsite in Geneva, and is the first line of tiers that the data collected by the detectors at the LHC experiment is processed at. 
 The Tier-1 consists of 13 computing centers connected to the Grid located all over the world, and share the data reconstruction with the Tier-0, along with providing storage.
@@ -73,6 +83,8 @@ The next computing tiers are the Tier-2 and Tier-3, which consists of computing 
 Once the CMS HLT has decided what events to keep, they are sent to the Tier-0 at CERN, where the reconstruction of the event is initialized. 
 The CMS software, CMSSW, is a centrally maintained code base that reconstructs objects out of calorimeter deposits, hits in the muon chambers and tracks in the pixel and silicon trackers, and stores them in $Event$ $Data$ $Model$ format (EDM).    
 \section{Simulated events}\label{sec:MC}
+\noindent
+\justify
 Any search or measurement at the LHC are relying on simulated events, so called Monte Carlo (MC) generated events. 
 Physical processes are simulated in a chain, starting from the foundations dictated by the theoretical framework as described in Chapter\ref{sec:theory}, followed by the decay, radiation and hadronization of the particles produced, and finally, the simulation of the interaction of the generated process with the detector material. 
 Events are generated from both known SM processes to predict some backgrounds in the searches, and in order to validate the data-driven backgrounds. 
@@ -80,14 +92,18 @@ As the SUSY signals analyzed in this thesis are mulitple, and include numerous a
 For this reason, a faster simulation package is used for the SUSY signals on the level of the detector simulation step, that greatly reduced the computational time by paramtrizing the interactions. 
 The gain in the reduction of the computational time is traded off with a slight decrease in precision, but is taken into account in the statistical analysis. 
 The subsequent chapters contain the description of the three levels of simulation, and the software packages used. 
-\subsection{Hard parton scattering}
+\subsection*{Hard parton scattering}
+\noindent
+\justify
 This section relies on the theoretical framework presented in Chapter~\ref{sec:theory}. 
 At hadron colliders, as opposed to lepton colliders, the energy available in the collisions is distributed over the three valence quarks of the hadrons, the sea quarks and the gluons. 
 In order to properly model the possible interactions, parton distribution functions (PDFs) are used, that dictates the probability of finding a parton within a proton, with a certain energy fraction $x$ of the proton. 
 Further, there are several ways of calculating the matrix element (ME). The square of the MEs are the transition probabilities of the gluons or (anti-)quarks in to the physical process of interest.
 The different packages utilizes different order of the strong coupling constant $\alpha_{s}$, and are choice of package depends on the requested precision.
 These packages are known as Monte Carlo (MC) generators, which utilizes the MC random sampling technique.  
-\subsubsection{Parton distribution functions}
+\subsubsection*{Parton distribution functions}
+\noindent
+\justify
 Parton distribution functions explain the probability to find a parton in a proton with some given energy fraction. 
 Due to the non-perturbative nature of partons, i.e. that partons can not be freely observed, the parton distribution functions can not be computed from first principles, however, they can determined by fitting observables to experimental data. 
 One way of determining the PDFs is through the so-called NNPDF3.0, that uses Neural Networks (NN) to model datasets collected by the ATLAS, CMS, HERA-II and LHCb experiments\cite{Ball:2014uwa}. 
@@ -103,7 +119,9 @@ This feature is explaining the necessity of the very high collision rate of 40\M
    \caption{The NNPDF3.1 NNLO PDFs, evaluated at two resolution scales; $\mu^{2}=10\GeV^{2}$ (left) and  $\mu^{2}=10^{4}\GeV^{2}$ (right)\cite{Ball:2017nwa}.}
    \label{fig:NNPDF31}
 \end{figure}
-\subsubsection{Hard scattering processes}
+\subsubsection*{Hard scattering processes}
+\noindent
+\justify
 The generation of a physics process relies on the calculation of the matrix elements, which states the transition probabilites of the partons involved in the interaction to particles. 
 The MEs can be calculated in many different ways, and each calculation corresponds to a MC generator, with the most significant difference being the order of $\alpha_{s}$ used. 
 Leading order (LO) corresponds to the first order in $\alpha_{s}$. 
@@ -112,7 +130,9 @@ Higher order calculations, such as next-to LO (NLO) and next-to-next-to LO (NNLO
 Madgraph can also be combined with a NLO generator, MC@NLO, into \MGvATNLO, and is used when generating e.g. the $\PW\PZ\rightarrow 3l1\nu$ process.
 A full NLO generator is \POWHEG~\cite{Oleari:2010nx,Alioli:2009je}, that is used to simulate e.g. the \ttbar$\rightarrow2l2\nu$ process. 
 The complete list of samples used in this thesis will be presented in the analysis section.
-\subsubsection{Multiparton interactions and parton showers}
+\subsubsection*{Multiparton interactions and parton showers}
+\noindent
+\justify
 Multiparton interactions (MPI) are a result of the hadron collisions busy nature, where partons other than those involved in the hard scatter event interact. 
 Initial state radiation (ISR) and final state radiation (FSR) are, as the names suggest, an emission of a $\gamma$, either before or after the main interaction in the event.
 Apart from both types of radiation are adding a photon to the event, ISR and FSR result in slight differences. To illustrate this, we assume a Drell-Yan production, \Zee, with ISR and FSR. 
@@ -121,25 +141,35 @@ Conversely, in FSR, the photon is radiated off of the electron or positron decay
 So if one would reconstruct the invariant mass of the leptons, it would not completely form the Z boson mass of 91\GeV. 
 Instead, one would have to construct the invariant mass of the leptons and the photon in order to recover the Z boson mass. 
 The simulation of both the MPI and ISR anf FSR is done with {\sc pythia}~\cite{Sjostrand:2014zea}. 
-\subsubsection{Hadronization}
+\subsubsection*{Hadronization}
+\noindent
+\justify
 Colored quarks and gluons produced in the hard scatter process can not exist freely due to color confinement. 
 The mechanism of transforming the colored partons to colorless particles is known as hadronization. 
 The hadronization step is challenging, as is all QCD calculations, and a phenomenological approach is taken in generators such as {\sc pythia} 8.2~\cite{Sjostrand:2014zea}.
 The Lund string model~\cite{Andersson:1983ia} is the basis of the phenomenological approach, where the QCD field lines can be interpreted as being compressed into a tube like structure, a string. 
 The fragmentation in this model can be viewed as starting in a middle and spreading outwards by repeated breaks of these strings, forming new quark anti-quark pairs. 
-\subsubsection{Decay}
+\subsubsection*{Decay}
+\noindent
+\justify
 Finally, {\sc pythia} is also taking care of the production of resonances and the decay of these unstable particles into stable particles or partons.  
 All resonances are decayed sequentially as part of the hard process, and so the total cross-section as calculated by {\sc pythia} is dependent upon the available decay channels of the resonance, with the effect that not including a decay channel will decrease the cross-section accordingly. 
 Conversely, particle decays are performed after hadronisation, and changing the decay channels of a particle will not affect the total cross-section.  
-\subsection{Detector simulation}
+\subsection*{Detector simulation}
+\noindent
+\justify
 Now that the simulation of the physics processes in hadron collisions have been described, one final step remains in order to be able to compare the data to the simulation, namely how the produced particles interact with the matter in the detector. 
 \GEANTfour is a simulation toolkit used to describe the interaction of particles with matter and can simulate everything from tracking of particles bending in a magnetic field to the response of detector components. 
 In \GEANTfour, a detailed model of CMS is implemented that is taking care of the ionization, multiple scattering, and nuclear interactions and outputs a data format that is similar to that of the collision data. 
 It is this step of the MC simulation that is most computationally heavy, and for this reason, a faster, simpler package is used to simulate the many SUSY scenarios, with the trade off of less precision. 
 Worth noting is that if there would be any hints of SUSY in a particlular scenario, a full simulation would be performed.
 \section{Datasets}
+\noindent
+\justify
 Once the collision data and the simulated data has been introduced, the datasets analyzed in this thesis is presented, along with a short introduction of the data formats and weighting of the MC samples. 
-\subsection{Dataformats}
+\subsection*{Dataformats}
+\noindent
+\justify
 The reconstruction of the collision data is processed at the Tier-0 and is stored in RECO format, a format containing much of the detector information and is thus associated with very large event sizes of ~1.2\MB. 
 In order to make the storage and analysis as easy as possible, a set of data tiers are processed that keeps the event sizes to a minimum.
 The first step in the data tier format processing is the Analysis Object Data (AOD) which has discarded much of the RAW detector information not needed for analysis, and decreased the event size greatly to around 300\kB. 
@@ -150,7 +180,9 @@ In order to cope with the huge amounts of data collected during Run II, and the 
 The MINIAOD data and MC samples are stored on the Tier-0 and Tier-1, and analysis specific frameworks are used to create subsets of samples containing the particlular datasets needed. 
 As the analyses presented in this thesis are based on different dileptonic datasets, the analysis specific framework used is aimed at picking data collected with dileptonic triggers and the various SM processes containing leptons, and store this in a format called Trees. 
 These trees are used on analysis level for plotting, counting, fitting and statistical analysis.      
-\subsection{Event weights}
+\subsection*{Event weights}
+\noindent
+\justify
 In order to be able to compare the simulted data to the real collision data, each MC sample need to be reweighted according to a so called event weight. The weight takes the form of
 \begin{equation}
 w=\frac{\sigma\cdot\cal{L}}{N}
@@ -159,7 +191,9 @@ where $\sigma$ is the cross section of that process, $\cal{L}$ is the integrated
 This weight is then multiplied to each event. From the above equation, one can see that for a process with large cross section, the more simulated events are needed to keep the weight to a desirable small value. 
 The motivation to keep the weight as small as possible, is the statistical error on the MC sample, which goes as the square root of the sum of squared event weights. 
 So the larger the $N$, the smaller the $w$ and thus the smaller the statistical error. 
-\subsection{Pileup}
+\subsection*{Pileup}
+\noindent
+\justify
 As described in Chapter \ref{sec:LHC}, the LHC delivers more than one pp interaction per bunch crossing in order to increase chances for successful interactions. 
 The motivation for this originates from the PDFs discussed previously in this chapter, and the fact that most pp collisions at the LHC produced not so interesting low mass QCD interactions with little physical interest.  
 The number of interactions per bunch crossing is described by a Poissonian distribution, and has a mean of 27 interactions during the 2016 datataking, and is depicted in Figure \ref{fig:pileup}\cite{lumi}.
@@ -177,4 +211,3 @@ For this reason, it is difficult to properly model the pileup in simulation, whi
 This is known as ''pileup reweighting`` and is used for all simulated samples.  
 The two searches presented in this thesis use a pileup reweighting technique that reweights the total number of true interaction in the event, whereas the \ptmiss performance study reweights using the number of reconstructed vertices. 
 The slight mismodelling of the pileup in the simulated signal samples is taken into account as a systematic uncertainty in the signal interpretation, which will be further discussed later. 
-

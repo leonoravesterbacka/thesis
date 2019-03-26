@@ -1,0 +1,636 @@
+\part{ANALYSIS RESULTS}
+\chapter{Search for colored superpartner production}\label{sec:strong}
+\noindent
+\justify
+Using all the theoretical foundation, the experimental apparatus and the physics ingredients introduced in the previous parts of this thesis, the actual searches for SUSY, that is the foundation of this thesis, can be presented. 
+The searches are divided in to three categories; the search for colored superpartners, the search for electroweak superpartners, and finally the search for direct slepton production. 
+The first chapter covers the strategy, background estimation techniques, and the results for the search for colored superpartners in final states with two same flavor opposite sign leptons.
+\newpage
+\section{Analysis strategy}
+\noindent
+\justify
+Pairs of electrons or pairs of muons are selected using the lepton selection criteria outlined in Section \ref{sec:lepSelection}.  
+The offline \pt threshold for jets identified according to the requirements listed in Section \ref{sec:jetSelections} is set to 35\GeV, and is kept at 25\GeV for b-tagged jets.
+A baseline selection of more than two jets and \ptmiss greater than 100\GeV is imposed. 
+For all signal regions introduced below, a requirement is imposed that the two jets with the highest \pt have a separation in $\phi$ from the \ptmiss of at least 0.4, in order to reduce the Drell--Yan contribution.
+The search for colored superpartners are split in to the on-Z signal region, targeting gluino production, and the Edge signal region, targeting sbottom production.
+\subsection*{On-Z signal region}
+\noindent
+\justify
+The defining feature of the search for gluinos in the context of two opposite sign, same flavor leptons is the production of an on-shell \PZ boson.
+For this reason, SR events are selected to be compatible with a \PZ boson, i.e. having $\mll\in[86,96]\GeV$.
+Next, selections are made on the level of hadronic activity, by definig three SRs, "SRA" requiring 2-3 jets, "SRB" requiring 4-5 jets and "SRC" requiring more than 6 jets.
+Further, these three SRs are split into two categories by requiring either one or more b-tagged jets, or veto b-tagged jets.
+The two categories have requirements on the \mttwo of $\geq80\GeV$ for the b-veto region and $\geq100\GeV$ for the b-tagged region to suppress contribution from \ttbar.
+For the lower jet multiplicity SRs (SRA and SRB) requirements on the \HT are imposed, $\geq500\GeV$ for b-veto region and $\geq200\GeV$ for b-tagged region.
+Finally, the 6 SRs are binned in \ptmiss. There are fewer \ptmiss bins in the highest jet multiplicity bins as they are already low in statistics.
+The final SRs targeting the GMSB gluino induced process are summarized in Table \ref{tab:GMSBSR}.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Summary of the colored SUSY on-Z SR.}
+    \label{tab:GMSBSR}
+    \begin{center}
+        \begin{tabular}{ l l l l l l}
+        \hline \hline
+        \multicolumn{6}{c}{Colored SUSY on-Z SR, $86\geq\mll\geq96$}                \\
+        Region      & $N_{\mathrm{jets}}$ & $N_{\mathrm{b-jets}}$  & \HT [GeV] & \mttwo [GeV] & \ptmiss [GeV]                    \\\hline
+        SRA (b-veto)&  2-3                & $=0$                   & $\geq500$ & $\geq80$     & 100-150, 150-250, $\geq250$      \\
+        SRB (b-veto)&  4-5                & $=0$                   & $\geq500$ & $\geq80$     & 100-150, 150-250, $\geq250$      \\
+        SRC (b-veto)&  $\geq6$            & $=0$                   & $-$       & $\geq80$     & 100-150, $\geq150$      \\
+        SRA (b-tag) &  2-3                & $\geq1$                & $\geq200$ & $\geq100$    & 100-150, 150-250, $\geq250$      \\
+        SRB (b-tag) &  4-5                & $\geq1$                & $\geq200$ & $\geq100$    & 100-150, 150-250, $\geq250$      \\
+        SRC (b-tag) &  $\geq6$            & $\geq1$                & $-$       & $\geq100$    & 100-150, $\geq150$      \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection*{Edge signal region}
+\noindent
+\justify
+The production of sbottoms with an intermediate slepton decay giving an edge shape in the invariant mass is called the "Edge" search.
+This search has an explicit \PZ boson veto, making the dominant SM background that of \ttbar.
+In order to deal with this background, first a requirement on the \mttwo of $\geq80\GeV$ is applied.
+The \ttbar likelihood introduced in Section \ref{sec:ttbarlikelihood} is then used to further categorize how \ttbar-like an event is, and divide the events in \ttbar-like and non-\ttbar-like.
+The edge SR is defined with a \ttbar-like category corresponding to a discriminator value of less than 21, and non-\ttbar-like with values larger than 21.
+As any potential excess would show up as an edge shape in the invariant mass spectrum, the signal region is binned in the \mll to catch any excess in events.
+In addition to the counting experiment, a fit is performed in this baseline region to search for a kinematic edge in the \mll spectrum
+The edge SR definitions is summarized in Table \ref{tab:edgeSR}.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Summary of the Edge SR.}
+    \label{tab:edgeSR}
+    \begin{center}
+        \begin{tabular}{ l l l l l l}
+        \hline \hline
+        \multicolumn{6}{c}{Edge SR}                \\
+        Region          & $N_{\mathrm{jets}}$ & \ptmiss [GeV]  & \mttwo [GeV]  &NLL& \mll [GeV] (excluding 86-96)\\\hline
+        \ttbar-like     & $\geq2$             & $\geq150$      & $\geq80$      & $\leq21$         & [20, 60, 86, 96, 150, 200, 300, 400+]\\
+        non-\ttbar -like& $\geq2$             & $\geq150$      & $\geq80$      & $>21$            & [20, 60, 86, 96, 150, 200, 300, 400+]\\
+        edge fit        & $\geq2$             & $\geq150$      & $\geq80$      & -             & $>20$\\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Background estimation}
+\noindent
+\justify
+Opposite sign same flavor lepton pairs can arise from many sources, as explained in Chapter \ref{sec:backgrounds}. 
+Dominant backgrounds in the on-Z search for gluinos is contributions from Drell--Yan, whereas flavor symmetric processes such as dileptonic \ttbar is dominant in the edge search for sbottoms. 
+The specific treatment of the various background prediction techniques introduced in Chapter \ref{sec:backgrounds} is summarized in the following Sections. 
+\subsection*{Flavor symmetric background}\label{sec:fsstrong}
+\noindent
+\justify
+The FS background is dominant in the Edge search.
+The resulting background estimates for FS backgrounds in the signal region of the Edge search are summarized in Tab.~\ref{tab:FlavSymBackgrounds}.
+It can be observed that the event-by-event reweighting in the factorization method yields smaller \Rsfof values for higher mass bins (especially in the \ttbar like selection).
+This makes sense since \mll is correlated to the \pt of the leptons and higher masses usually correspond to higher lepton \pt and thus smaller reweighting factors.
+Overall, the \Rsfof factors from the factorization method are a bit smaller than the factor from the control region method but still agree within their uncertainties.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering
+\caption{Resulting estimates for flavour-symmetric backgrounds in the Edge SR. Given is the observed event yield in OF events ($N_{OF}$), the estimate in the SF channel using the event-by-event reweighting of the factorization method ($N_{SF}^{factorization}$), \Rsfof for the factorization method ($\Rsfof^{factorization}$), \Rsfof obtained from teh direct measurement ($\Rsfof^{direct}$), \Rsfof when combining this results from direct measurement and factorization methods ($\Rsfof^{combined}$), and the combined final prediction ($N_{SF}^{final}$). Statistical and systematic uncertainties are given separately.}
+\label{tab:FlavSymBackgrounds}
+\begin{tabular}{ c  c  c  c  c  c c}
+\hline \hline
+\mll [GeV] & $N_{OF}$ & $N_{SF}^{factorization}$ & $\Rsfof^{factorization}$ & $\Rsfof^{direct}$  & $\Rsfof^{combined}$ & $N_{SF}^{final}$ \\ \hline
+\multicolumn{6}{c}{ttbar like} \\\hline
+20-60    & 264    & 289.1$^{+18.3}_{-17.3}\pm$14.2  &  1.10$\pm$0.05 & 1.11$\pm$0.01& 1.10$\pm$0.04 & 290.9$^{+18.5}_{-17.4}\pm$9.3 \\
+60-86    & 164    & 179.1$^{+14.5}_{-13.4}\pm$8.7   &  1.09$\pm$0.05 & 1.11$\pm$0.01& 1.10$\pm$0.03 & 180.5$^{+14.7}_{-13.6}\pm$5.7 \\
+96-150   & 160    & 173.5$^{+14.3}_{-13.2}\pm$8.2   &  1.08$\pm$0.05 & 1.11$\pm$0.01& 1.10$\pm$0.03 & 175.5$^{+14.4}_{-13.3}\pm$5.5 \\
+150-200  & 67     & 72.4$^{+10.0}_{-8.8}\pm$3.3     &  1.08$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 73.3$^{+10.1}_{-8.9}\pm$2.3 \\
+200-300  & 43     & 46.1$^{+8.2}_{-7.0}\pm$2.1      &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 46.9$^{+8.3}_{-7.1}\pm$1.4 \\
+300-400  & 17     & 18.2$^{+5.6}_{-4.4}\pm$0.8      &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 18.5$^{+5.7}_{-4.4}\pm$0.6 \\
+$>$400   & 4      & 4.3$^{+3.4}_{-2.0}\pm$0.2       &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 4.3$^{+3.4}_{-2.1}\pm$0.1 \\\hline
+ \multicolumn{6}{c}{non ttbar like}  \\\hline
+20-60    & 3    & 3.2$^{+3.1}_{-1.8}\pm$0.1  &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 3.3$^{+3.2}_{-1.8}\pm$0.1 \\
+60-86    & 3    & 3.2$^{+3.1}_{-1.7}\pm$0.1  &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 3.3$^{+3.2}_{-1.8}\pm$0.1 \\
+96-150   & 6    & 6.5$^{+3.9}_{-2.6}\pm$0.3  &  1.08$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 6.6$^{+3.9}_{-2.6}\pm$0.2 \\
+150-200  & 5    & 5.4$^{+3.6}_{-2.3}\pm$0.2  &  1.08$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 5.5$^{+3.7}_{-2.4}\pm$0.2 \\
+200-300  & 3    & 3.2$^{+3.1}_{-1.7}\pm$0.1  &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 3.3$^{+3.2}_{-1.8}\pm$0.1 \\
+300-400  & 3    & 3.2$^{+3.1}_{-1.7}\pm$0.1  &  1.07$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 3.3$^{+3.2}_{-1.8}\pm$0.1 \\
+$>$400   & 1    & 1.1$^{+2.4}_{-0.9}\pm$0.0  &  1.06$\pm$0.05 & 1.11$\pm$0.01& 1.09$\pm$0.03 & 1.1$^{+2.5}_{-0.9}\pm$0.0 \\
+\hline\hline
+\end{tabular}
+\end{table}
+While FS background prediction method described above is clearly simple and clean, its main drawback is the limited statistical power in the scarcely populated kinematic regions.
+The search for colored superpartners in the on-Z search regions suppres the \ttbar process by selecting events with a dilepton pair compatible with a \PZ boson.
+Further, very low yields of the FS backgrounds is obtained with a cut on \mttwo.
+Of course, reducing the SM backgrounds to a minimal is desirable, but one still wants to make sure that the backgrounds are properly predicted and do not suffer from too larger errors.
+In order to cope with the reduced OF statisitcs in the SR of the on-Z search, a slightly adapted method of predicting the FS background is proposed.
+The idea is to exploit that the on-Z searches only have signal regions where the leptons are compatible with a \PZ boson, and the rest of the invariant mass spectrum is free to use to measure the OF events in the signal region.
+This lever arm to extend the OF control region can be used together with \fmll, which is the ratio of OF events in the on-Z region over the number of events in the extended \mll region,
+\begin{equation}
+\fmll=\frac{N_{OF}(86<\mll<96)}{N_{OF}(\mll>20)}
+\end{equation}
+This consideration allows to extend the \mll (from 86 $<$ \mll $<$ 96 GeV to \mll $>$ 20 GeV) window from which the estimation is taken by a large fraction.
+By implementing this approach in extending the OF control region, the simplified formula from before then becomes
+\begin{equation}
+\label{eq:estFSEwk}
+    N_{SF} = N_{OF}^{ext.mll} \cdot \Rsfof \cdot f_{mll},
+\end{equation}
+While \Rsfof can be assumed to be the same number as for the strong search, the factor \fmll have to be measured.
+The \fmll is measured in all on-Z signal regions and the results are shown in Figure \ref{fig:fmll}. A central value of $\fmll=0.065\pm0.02$ is chosen as it is compatible over all signal regions.
+The uncertainty is taken to cover the differences in central values observed in MC.
+The statistical uncertainties on the data are larger but there is agreement within the assigned systematic uncertainty.
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[scale=0.3]{images/rsfof/fmll.png}
+    \caption{The \fmll evaluated in each SR.}
+\label{fig:fmll}
+\end{center}
+\end{figure}
+
+\subsection*{Drell-Yan}
+\noindent
+\justify
+In the edge search, the signal regions are binned in \mll to increase the sensitivity to a large range of sbottom masses.
+Drell-Yan is a dominant process in the searches where no \PZ boson veto is imposed, but it can also contribute in the \mll bins around the \PZ boson mass.
+For this reason, the Drell-Yan contribution at the \PZ boson mass is estimated from a single $\gamma$ sample, and the contribution outside of the \PZ peak is estimated though a translation factor.
+The translation factor is called \Routin and is the ratio of SF lepton events in a \mll signal region bin (20-60, 60-86, 96-150, 150-200, 200-300, 300-400 and $>400$\GeV) over the SF lepton events with a \mll in 86-96\GeV.
+This factor is measured in a Drell-Yan enriched control region constructed with at least two jets and $\ptmiss<50\GeV$.
+A requirement of \mttwo$>80\GeV$ is imposed to keep maintain the kinematic features of the signal regions.
+In order to further purify the Drell-Yan contribution in this region, the number OF lepton events are removed from the number of SF lepton events, thereby reducing the contribution from \ttbar.
+The measured values of \Routin in the edge signal regions is shown in Table \ref{tab:rinout}.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering
+ \caption{ Measured values for \Routin for data and MC in the different signal regions of the edge search.}
+\label{tab:rinout}
+\begin{tabular}{c c c c c}
+\hline \hline
+& \multicolumn{2}{c}{Data} & \multicolumn{2}{c}{MC}    \\
+& \multicolumn{2}{c}{ $N_{\mathrm{in}}$: 4295 $\pm$ 65} & \multicolumn{2}{c}{ $N_{\mathrm{in}}$: 3954 $\pm$ 62}    \\
+\mll [GeV] & $N_{\mathrm{out}}$ & \Routin & $N_{\mathrm{out}}$ & \Routin \\
+\hline
+  20-60 & 229 $\pm$ 15 & 0.053 $\pm$ 0.027 & 138 $\pm$ 12 & 0.035 $\pm$ 0.018 \\
+
+  60-86 & 551 $\pm$ 23 & 0.128 $\pm$ 0.064 & 453 $\pm$ 21 & 0.115 $\pm$ 0.058 \\
+
+  96-150 & 671 $\pm$ 26 & 0.156 $\pm$ 0.078 & 644 $\pm$ 25 & 0.163 $\pm$ 0.082 \\
+
+  150-200 & 74 $\pm$ 9 & 0.017 $\pm$ 0.017 & 55 $\pm$ 8 & 0.014 $\pm$ 0.014 \\
+
+  200-300 & 52 $\pm$ 9 & 0.012 $\pm$ 0.012 & 51 $\pm$ 8 & 0.013 $\pm$ 0.013 \\
+
+  300-400 & 22 $\pm$ 5 & 0.005 $\pm$ 0.005 & 19 $\pm$ 5 & 0.005 $\pm$ 0.005 \\
+
+  $>$400 & 23 $\pm$ 5 & 0.006 $\pm$ 0.006 & 27 $\pm$ 5 & 0.007 $\pm$ 0.007 \\\hline\hline
+\end{tabular}
+\end{table}
+The prediction from the \ptmiss template method is summarized in Table \ref{tab:metTemplateStrongOnZ}.
+The predicted number of events in the on-Z signal regions are given with a decomposition of the magnitude of the systematic uncertainties from the four sources considered.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering
+\caption{Summary of template predictions with systematic uncertainties added in quadrature in the strong on-Z signal regions together with the individual systematic uncertainties from     each source. }
+\label{tab:metTemplateStrongOnZ}
+\begin{tabular}{l l c c c c c}
+\hline \hline
+SR & \ptmiss [GeV] & Prediction & Closure & Normalization & Statistical & EWK sub.\\
+\hline
+\multirow{ 4}{*}{SRA (b-veto)}& 50-100   & 208.5 $\pm$ 16.1 & 0.0& 15.3 & 5.0 & 0.0 \\
+                     & 100-150  & 13.6  $\pm$ 3.1  & 2.7& 1.0  & 1.1 & 0.3 \\
+                     & 150-250  & 2.5   $\pm$ 0.9  & 0.6& 0.2  & 0.4 & 0.4 \\
+                     & 250+     & 3.3   $\pm$ 2.4  & 0.9& 0.2 & 2.2 & 0.4 \\ \hline
+\multirow{ 4}{*}{SRA (b-tag)}& 50-100   & 92.2 $\pm$ 10.4 & 0.0& 10.0 & 2.8 & 0.0 \\
+                      & 100-150  & 8.2  $\pm$ 2.1  & 1.6& 0.9  & 0.9 & 0.3 \\
+                      & 150-250  & 1.2  $\pm$ 0.5  & 0.3& 0.1  & 0.2 & 0.4 \\
+                      & 250+     & 0.5  $\pm$ 0.3  & 0.1& 0.1  & 0.2 & 0.2 \\    \hline
+\multirow{ 4}{*}{SRB (b-veto)}& 50-100   & 130.1 $\pm$ 12.8 & 0.0& 12.1 & 4.1 & 0.0 \\
+                     & 100-150  & 12.8  $\pm$ 2.4  & 1.5& 1.2  & 1.3 & 0.2 \\
+                     & 150-250  & 0.9   $\pm$ 0.4  & 0.1& 0.1  & 0.2 & 0.3 \\
+                     & 250+     & 0.4   $\pm$ 0.2  & 0.1& 0.1  & 0.1 & 0.2 \\   \hline
+\multirow{ 4}{*}{SRB (b-tag)}& 50-100   & 37.9 $\pm$ 6.7  & 0.0& 6.5  & 1.9 & 0.0 \\
+                      & 100-150  & 7.7  $\pm$ 3.1  & 0.9& 1.3  & 2.7 & 0.2 \\
+                      & 150-250  & 4.0  $\pm$ 3.3  & 0.7& 0.7  & 3.2 & 0.3 \\
+                      & 250+     & 0.1  $\pm$ 0.1  & 0.1& 0.1  & 0.1 & 0.2 \\ \hline
+\multirow{ 3}{*}{SRC (b-veto)}& 50-100   & 23.8  $\pm$ 5.5  & 0.0& 5.2  & 1.9 & 0.0 \\
+                     & 100-150  & 1.2   $\pm$ 0.4  & 0.2& 0.3  & 0.3 & 0.1 \\
+                     & 150+     & 0.1   $\pm$ 0.1  & 0.1& 0.1  & 0.1 & 0.1 \\\hline
+\multirow{ 3}{*}{SRC (b-tag)}& 50-100   & 9.9  $\pm$ 3.7  & 0.0& 3.5  & 1.4 & 0.0 \\
+                      & 100-150  & 0.1  $\pm$ 0.5  & 0.1& 0.1  & 0.1 & 0.5 \\
+                      & 150+     & 0.0  $\pm$ 0.3  & 0.0& 0.0  & 0.0 & 0.3 \\\hline\hline
+\end{tabular}
+\end{table}
+
+\subsection*{\PWZ$\rightarrow3l\nu$ background}\ref{sec:Znustrong}
+\noindent
+\justify
+The \PWZ$\rightarrow3l\nu$ background is large in the on-Z search for gluinos, when one of the prompt leptons is lost due to acceptance, as described in Section \ref{sec:Znu}. 
+The contribution is estimated from simulation, with a transfer factor derived in a \PWZ control region. 
+The \PWZ control region designed for the on-Z searches is defined as
+\begin{itemize}
+    \item three tight ID leptons of any flavor or charge with $\pt>25\GeV$ for the leading and $\pt>20\GeV$ for the subsequent leptons
+    \item $\ptmiss<60\GeV$
+    \item veto b-tagged jets of $\pt>25\GeV$
+    \item more than two jets of $\pt>35\GeV$
+    \item $|\Delta\phi(\mathrm{jet_{1,2}}, \ptmiss)|>0.4$
+\end{itemize}
+The result is presented in Table\ref{tab:WZonZ}, where the \PWZ signal simulation is compared to the simulated backgrounds and the observed yields that enter this control region.
+A transfer factor of 1.06 is derived as the data with simulated backgrounds subtracted over the signal process simulation.
+As the statistical uncertainty is dominant in this control region, due to the low number of data yields, a flat systematic uncertatinty of 30\% is chosen.
+This is chosen instead of evaluating the effect of varying jet energy scale and resolution, and varying the pdf and scale, as these uncertainties are subdominant to the statistical uncertainty.
+The transfer factor is presented in Table \ref{tab:WZslepton}, using the MC samples summarized in Appendix A.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering
+\caption{Transfer factor derived in the three lepton control region for the on-Z search.}
+\label{tab:WZonZ}
+\begin{tabular}{l c }
+\hline \hline
+\multicolumn{2}{c}{On-Z 3 lepton CR}  \\\hline
+signal MC        & 116.0     $\pm$  3.23    \\
+bkg. MC          & 50.6  $\pm$  2.9\\ \hline
+\textbf{data}       & \textbf{164}  \\
+data-bkg.        &  123.4   $\pm$  13.1 \\ \hline
+(data-bkg.)/sig. & 1.06   $\pm$  0.12\\ \hline\hline
+\end{tabular}
+\end{table}
+As can be seen in Figure\ref{fig:WZmetOnZ}, the \ptmiss tails are well modelled in this control region.
+\begin{figure}[htbp!]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{images/Znu/plot_met_3lregion_Zmass.pdf}
+\caption{The \ptmiss (left) and the \mttwo in the three lepton control region in data and MC. }
+\label{fig:WZmetOnZ}
+\end{center}
+\end{figure}
+\subsection*{\PZZ$\rightarrow2l2\nu$ background}
+\noindent
+The \PZZ$\rightarrow 2l2\nu$ process, introduced in Section \ref{sec:Znu} is a sub-dominant background in the on-Z search, as this signal region requires more than 2 jets.
+This sub-dominant contribution is estimated from simulation, and a tranfer factor is derived in a four lepton control region that targets the \PZZ$\rightarrow4l$ process. 
+The four lepton control region is defined as
+\begin{itemize}
+    \item four tight ID leptons of any flavor or charge with \pt $>$ 25 GeV for the leading and \pt $>$ 20 GeV for the subsequent leptons
+    \item the leptons that form the best Z candidate is required to have \mll within 86 to 96\GeV.
+    \item the leptons that form the other Z candidate is required to have \mll greater than 20\GeV.
+    \item $|\Delta\phi(\mathrm{jet_{1,2}}, \ptmiss)|>0.4$.
+\end{itemize}
+At the time of publication, not all the \PZZ processes were generated.
+\noindent
+\justify
+Only the \texttt{/ZZTo4L\_13TeV\_powheg\_pythia8} was available (as opposed to in the slepton search where all production modes of the \PZZ processes was available), making the derivation of the translation factor particularly important as some proceeses are missing.
+The effect of the missing samples in simulation is reflected in Figure~\ref{fig:ZZonZ}, where the observed data obviously contain all physical processes resulting in four leptons.
+\begin{figure}[htbp!]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{images/Znu/plot_mll_4lregion.pdf}
+\caption{The invariant mass of the two lepton pair forming the best \PZ candidate in the four lepton control region in data and simulation.}
+\label{fig:ZZonZ}
+\end{center}
+\end{figure}
+The translation factor that is used to correct for the missing simulation is presented in Table\ref{tab:ZZonZ}.
+As the 4 lepton sample in this control region is very small, the large statistical uncertainty is taken as the total uncertainty on the method.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering
+\caption{Transfer factor derived in the four lepton control region for on-Z searches.}
+\label{tab:ZZonZ}
+\begin{tabular}{l c }
+\hline \hline
+\multicolumn{2}{c}{On-Z 4 lepton CR}  \\\hline
+signal MC        & 7.7     $\pm$  0.2   \\
+bkg. MC          & 1.9  $\pm$  0.2\\ \hline
+\textbf{data}       & \textbf{15}  \\
+data-bkg.        &  13.1   $\pm$  3.9 \\ \hline
+(data-bkg.)/sig. & 1.71   $\pm$  0.5\\\hline\hline
+\end{tabular}
+\end{table}
+
+\subsection*{\ttZ background}
+\noindent
+\justify
+The \ttZ process contains two leptons from the \PZ boson decay, and more leptons and neutrinos depending on the decays of the top and anti-top quarks.
+If some of these leptons are lost due to \pt or $\eta$ acceptance, the process can enter the on-Z signal regions.
+If the top and anti-top quarks decay hadronically, there is no \ptmiss due to neutrinos in the decays, and thus would the process not be present in the signal regions.
+The \ttZ control region is designed by inverting the third lepton veto and using the following requirements
+\begin{itemize}
+    \item three tight ID leptons of any flavor or charge with \pt $>$ 25 GeV for the leading and \pt $>$ 20 GeV for the subsequent leptons
+    \item the leptons that form the best Z candidate is required to have \mll within 86 to 96\GeV.
+    \item excatly two b-tagged jets of $\pt>25\GeV$.
+    \item $\ptmiss>30\GeV$
+    \item $|\Delta\phi(\mathrm{jet_{1,2}}, \ptmiss)|>0.4$.
+\end{itemize}
+The invariant mass constructed with the leptons most compatible with the \PZ boson mass is shown in Figure\ref{fig:ttZ}.
+\begin{figure}[htbp!]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{images/Znu/plot_mll_ttZregion.pdf}
+\caption{The invariant mass of the two lepton pair forming the best \PZ candidate in the \ttZ control region in data and simulation.}
+\label{fig:ttZ}
+\end{center}
+\end{figure}
+There is a slight disgreement between the simulation and the data, and to account for this a translation factor is derived that is summarized in Table\ref{tab:ttZ}.
+The final translation factor is $1.4$ with a conservative systematic uncertainty that is chosen from the statistical uncertainty on the data sample.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering
+\caption{Transfer factor derived in the \ttZ control region}
+\label{tab:tab4lcontrol}
+\begin{tabular}{l c }
+\hline \hline
+\multicolumn{2}{c}{\ttZ lCR}  \\\hline
+signal MC        & 20.2     $\pm$  0.4    \\
+bkg. MC          & 8.5  $\pm$  1.1\\ \hline
+\textbf{data}       & \textbf{36}  \\
+data-bkg.        &  27.5  $\pm$  6.1 \\ \hline
+(data-bkg.)/sig. & 1.4   $\pm$  0.3\\\hline\hline
+\end{tabular}
+\end{table}
+
+
+
+\section{Systematic uncertainties}
+\noindent
+\justify
+The sources of the systematic uncertainties for the signal simulation used in the search for colored superpartners is summarized in Table \ref{tab:systematicsEdge}.
+The uncertainties affect the overall normalization of the process, and the nuisance parameters obey a log-normal distribution. 
+The statistical errors on the predicted number of signal events is uncorrelated across the bins, while all other uncertainties are considered correlated across the search regions.  
+\begin{table}[!hbtp]
+\renewcommand{\arraystretch}{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering
+\caption{\label{tab:systematicsEdge}
+Systematic uncertainties taken into account for the signal yields and their typical values.}
+\begin{tabular}{l c}
+\hline\hline
+Source of uncertainty                & Uncertainty (\%)     \\
+\hline
+Integrated luminosity                & 2.5                  \\
+Lepton reconstruction and isolation  & 5                    \\
+Fast simulation lepton efficiency    & 4                    \\
+b-tag modeling                       & 0--5                  \\
+Trigger modeling                     & 3                    \\
+Jet energy scale                     & 0--5                  \\
+ISR modeling                         & 0--2.5                 \\
+Pileup                               & 1--2                 \\
+Fast simulation \ptmiss modeling        & 0--4                 \\
+Renormalization//factorization scales   & 1--3                   \\
+MC statistical uncertainty              & 1--15                  \\
+\hline\hline
+\end{tabular}
+\end{table}
+
+
+\section{Results}
+\noindent
+\justify
+Once all the background prediction techniques are in place, it is time to compare the predictions to the observed yield in the signal region kinematic variables. 
+The \ptmiss is the detector observable whcih provide the strongest discriminator the various SUSY signals considered and the SM backgrounds. 
+To visualize the results, the \ptmiss of the stacked predicted SM backgrounds are overlayed with the observed data and the final uncertainties, including statistical and systematic components, are represented as shaded band. 
+In addition to the main observable, the \ptmiss, multiple other observables are scrutinized as a means to ascertain that significant discrepancies between the data and the simulation are not present in the signal region.
+As can be seen, there is a good agreement between the predicted backgrounds and the observed data, indicating the absence of a significant excess. 
+In absence of an excess in data, the subsequent section will contain the interpretation of the results in terms of models of new physics.                                              
+
+
+\subsection*{On-Z search}
+\noindent
+\justify
+The results of the on-Z search for gluinos is presented in Table \ref{tab:resultsOnZAB} and Table \ref{tab:resultsOnZC}, and visualized in Figure \ref{fig:results_SR_str}. 
+The largest background is stemming from Drell-Yan process in all signal regions and \ptmiss regions. 
+The data is generally consistent with the SM prediction and no significant excess is observed, well within the systematic uncertatinties.  
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small                             
+\centering
+\caption{Standard model background predictions compared to observed yield in the on-Z signal regions (SRA-SRB). }
+\label{tab:resultsOnZAB}
+\begin{tabular}{l c c c }
+\hline \hline
+ \multicolumn{4}{c}{SRA (b-veto)} \\
+ \ptmiss [GeV] & 100--150              & 150--250                       & $>250$ \\ \hline
+ DY+jets        & 13.6$\pm$3.1         & 2.5$\pm$0.9                    & 3.3$\pm$2.4 \\
+ FS bkg.           & $0.4^{+0.3}_{-0.2}$  & $0.2^{+0.2}_{-0.1}$            & $0.2^{+0.2}_{-0.1}$  \\
+ $\PZ+\nu$          & 0.8$\pm$0.3          & 1.4$\pm$0.4                    & 2.4$\pm$0.8 \\
+ Total background           & 14.8$\pm$3.2 & 4.0$\pm$1.0            & 5.9$\pm$2.5 \\
+ Data          & 23                   & 5                              & 4 \\ \hline
+\hline \multicolumn{4}{c}{SRA (b-tag)} \\
+\ptmiss [GeV] & 100--150              & 150--250                       & $>250$ \\ \hline
+DY+jets        & 8.2$\pm$2.1          & 1.2$\pm$0.5                    & 0.5$\pm$0.3 \\
+FS bkg.           & 2.3$\pm$0.8  & $1.7^{+0.7}_{-0.6}$            & $0.1^{+0.2}_{-0.1}$  \\
+$\PZ+\nu$          & 1.9$\pm$0.4          & 2.0$\pm$0.5                    & 1.8$\pm$0.6 \\
+Total background           & 12.4$\pm$2.3 & 4.9$\pm$1.0            & 2.5$\pm$0.7 \\
+Data          & 14                   & 7                              & 1 \\ \hline
+\hline \multicolumn{4}{c}{SRB (b-veto)} \\
+\ptmiss [GeV] & 100--150              & 150--250                       & $>250$ \\ \hline
+DY+jets        & 12.8$\pm$2.3         & 0.9$\pm$0.3                    & 0.4$\pm$0.2 \\
+FS bkg           & $0.4^{+0.3}_{-0.2}$  & $0.4^{+0.3}_{-0.2}$            & $0.1^{+0.2}_{-0.1}$  \\
+$\PZ+\nu$          & 0.3$\pm$0.1          & 0.7$\pm$0.2                    & 1.2$\pm$0.4 \\
+Total background           & 13.6$\pm$2.4 & 2.0$\pm$0.5            & 1.6$\pm$0.4 \\
+Data          & 10                   & 4                              & 0 \\ \hline
+\hline \multicolumn{4}{c}{SRB (b-tag)} \\
+\ptmiss [GeV] & 100--150              & 150--250                       & $>250$ \\ \hline
+DY+jets        & 7.7$\pm$3.2          & 4.0$\pm$3.4                    & 0.1$\pm$0.1 \\
+FS bkg.           & $1.4^{+0.6}_{-0.5}$  & $1.1^{+0.5}_{-0.4}$            & $0.2^{+0.2}_{-0.1}$  \\
+$\PZ+\nu$          & 2.0$\pm$0.5          & 2.3$\pm$0.6                    & 1.0$\pm$0.3 \\
+Total background           & 11.1$\pm$3.3 & $7.4^{+3.5}_{-3.4}$            & $1.3^{+0.4}_{-0.3}$ \\
+Data          & 10                   & 5                              & 0 \\ \hline\hline
+\end{tabular}
+\end{table}    
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small                             
+\centering
+\caption{Standard model background predictions compared to observed yield in the strong on-Z signal regions (SRC). }
+\label{tab:resultsOnZC}
+\begin{tabular}{l c c }
+\hline \hline
+ \multicolumn{3}{c}{SRC (b-veto)} \\
+\ptmiss [GeV] & 100--150              & $>150$ \\ \hline
+DY+jets        & 1.2$\pm$0.4          &  0.1$\pm$0.1  \\
+FS bkg.           & $0.4^{+0.3}_{-0.2}$  &  $0.1^{+0.2}_{-0.1}$   \\
+$\PZ+\nu$          & 0.1$\pm$0.1          & 0.5$\pm$0.2  \\
+Total background           & 1.7$\pm$0.5  &  $0.7^{+0.3}_{-0.2}$  \\
+Data          & 4                    &  0  \\ \hline
+\hline \multicolumn{3}{c}{SRC (b-tag)} \\
+\ptmiss [GeV] & 100--150              &  $>150$ \\ \hline
+DY+jets        & 0.1$\pm$0.4          & 0.0$\pm$0.3 \\
+FS bkg.           & $0.0^{+0.1}_{-0.0}$  &0.3$\pm$0.2  \\
+$\PZ+\nu$          & 0.6$\pm$0.2          & 0.6$\pm$0.2 \\
+Total background           & 0.8$\pm$0.5  & $0.9^{+0.5}_{-0.4}$  \\
+Data          & 2                    &  2  \\ \hline\hline
+\end{tabular}
+\end{table} 
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.42\linewidth]{images/interpretation/strong/Figure_003-a.pdf}
+\includegraphics[width=0.42\linewidth]{images/interpretation/strong/Figure_003-b.pdf}
+\includegraphics[width=0.42\linewidth]{images/interpretation/strong/Figure_003-c.pdf}
+\includegraphics[width=0.42\linewidth]{images/interpretation/strong/Figure_003-d.pdf}
+\includegraphics[width=0.42\linewidth]{images/interpretation/strong/Figure_003-e.pdf}
+\includegraphics[width=0.42\linewidth]{images/interpretation/strong/Figure_003-f.pdf}
+\caption{\label{fig:results_SR_str}
+The \ptmiss\ distribution is shown for data compared to the background prediction in the on-\PZ SRs  with no b-tagged jets (left) and at least 1 b-tagged jet (right).
+The rows show SRA (upper), SRB (middle), and SRC (lower).
+The \ptmiss template prediction for each SR is normalized to the first bin of each distribution,
+and therefore the prediction agrees with the data by construction.}
+\end{figure}
+
+
+\subsection*{Edge search}
+\noindent
+\justify
+The edge search is binned in the invariant mass of the SF leptons, instead of in \ptmiss. 
+Seven \mll bins are further split into two categories according to the \ttbar likelihood discriminant, resulting in a total of 14 signal region bins. 
+The predicted SM backgrounds are compared to the observed data in Table \ref{tab:edgeResults} and in Figure \ref{fig:resultsEdge} as a graphical representation. 
+
+\begin{table}[!hbtp]
+\renewcommand{\arraystretch}{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering                             
+\caption{Predicted and observed yields in each bin of the edge search counting experiment. The uncertainties shown include both statistical and systematic sources.}
+\label{tab:edgeResults}
+\begin{tabular}{ c  c  c  c  c  c}
+\hline
+\hline
+\mll range [GeV] & FS bkg.& DY+jets & $\PZ+\nu$  & Total background & Data\\
+\hline
+\multicolumn{6}{c}{\ttbar-like}  \\
+\hline
+20--60    &  291$^{+21}_{-20}$    & 0.4$\pm$0.3   & 1.4$\pm$0.5  &  293$^{+21}_{-20}$ & 273 \\
+60--86    &  181$^{+16}_{-15}$    & 0.9$\pm$0.7   & 8.8$\pm$3.4  &  190$^{+16}_{-15}$ & 190 \\
+96--150   &  176$^{+15}_{-14}$    & 1.1$\pm$0.9   & 6.0$\pm$2.4  &  182$^{+16}_{-15}$ & 192 \\
+150--200  &  73$^{+10}_{-9}$      & 0.1$\pm$0.1   & 0.4$\pm$0.2  &  74$^{+10}_{-9}$ & 66 \\
+200--300  &  46.9$^{+8.4}_{-7.3}$ & $< 0.1$       & 0.3$\pm$0.1  &  47.3$^{+8.4}_{-7.3}$ & 42 \\
+300--400  &  18.5$^{+5.7}_{-4.5}$ & $< 0.1$       & $< 0.1$      &  18.6$^{+5.7}_{-4.5}$ & 11 \\
+$> 400$   &  4.3$^{+3.4}_{-2.1}$  & $< 0.1$       & $< 0.1$      &  4.5$^{+3.4}_{-2.1}$ & 4 \\
+\hline
+\multicolumn{6}{c}{Not-\ttbar-like}   \\
+\hline
+20--60    &  3.3$^{+3.2}_{-1.8}$    & 0.7$\pm$0.5   & 1.4$\pm$0.5  &  5.3$^{+3.3}_{-1.9}$ & 6 \\
+60--86    &  3.3$^{+3.2}_{-1.8}$    & 1.6$\pm$1.3   & 6.9$\pm$2.7  &  11.8$^{+4.4}_{-3.5}$ & 19 \\
+96--150   &  6.6$^{+3.9}_{-2.6}$    & 1.9$\pm$1.5   & 6.8$\pm$2.7  &  15.3$^{+5.0}_{-4.1}$ & 28 \\
+150--200  &  5.5$^{+3.7}_{-2.4}$    & 0.2$\pm$0.3   & 0.7$\pm$0.3  &  6.4$^{+3.7}_{-2.4}$ & 7 \\
+200--300  &  3.3$^{+3.2}_{-1.8}$    & 0.2$\pm$0.2   & 0.5$\pm$0.2  &  3.9$^{+3.2}_{-1.8}$ & 4 \\
+300--400  &  3.3$^{+3.2}_{-1.8}$    & $< 0.1$       & 0.2$\pm$0.1  &  3.5$^{+3.2}_{-1.8}$ & 0 \\
+$> 400$   &  1.1$^{+2.5}_{-0.9}$    & $< 0.1$       & 0.4$\pm$0.2  &  1.6$^{+2.5}_{-0.9}$ & 5 \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+\begin{figure}[htbp!]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{images/results/Figure_005.pdf}
+\caption{Results of the counting experiment of the edge search. For each SR, the number of observed events, shown as black data points, is compared to the total background estimate.  The hashed band shows the total uncertainty in the background prediction, including statistical and systematic sources.}
+\label{fig:edgeResults}
+\end{center}
+\end{figure}                                                                                                                                                               
+The main SM background in the edge search is due to the flavor symmetric processes. 
+As the uncertainty on the flavor symmetric background prediction technique is driven by the statistical uncertatinty in the number of events in the OF control sample, this becomes the dominant uncertainty in the high-mass and non-\ttbar-like regions where the event counts are low. 
+There is good agreement between prediction and observation for all SRs. 
+There is a small deviation observed in the non-\ttbar-like region for masses between 96 and 150\GeV, with an excess corresponding to a local significance of 2.0 standard deviations.
+The invariant mass of the leptons and the results of the kinematic fit are shown in Fig.~\ref{fig:Fit_data_H1}, with the fit results presented in Table~\ref{tab:fitResults}.
+When evaluating the signal hypothesis in the baseline signal region, a signal yield of $61\pm28$ events is obtained, with a fitted edge position of $144.2^{+3.3}_{-2.2}\GeV$. 
+This is in agreement with the upwards fluctuations in the signal region in \mll 96-150\GeV and corresponds to a local significance of 2.3 standard deviations.
+To estimate the global $p$-value~\cite{Gross:2010qma} of this result, the test statistic,
+\begin{equation}
+q(\mu)=-2\ln\frac{\mathcal{L}(data|\mu, \hat{\hat{\theta}}(\mu))}{\mathcal{L}(data|\hat{\mu}, \hat{\theta}(\mu))}
+\end{equation}
+introduced in Chapter \ref{sec:stats} is used. 
+The test statistics is evaluated on data and compared to the respective quantity on a large sample of background-only pseudo-experiments where the edge position can have any value. 
+The resulting $p$-value is interpreted as the one-sided tail probability of a Gaussian distribution and corresponds to an excess in the observed number of events compared to the SM background prediction with a global significance of 1.5 standard deviations.
+\begin{table}[!hbtp]
+\renewcommand{\arraystretch}{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering
+\caption{Results of the unbinned maximum likelihood fit for event yields in the edge fit SR, including the Drell--Yan and FS background components, along with the fitted signal contribution and edge position. The fitted value for \Rsfof and the local and global signal significances in terms of standard deviations are also given. The uncertainties account for both statistical and systematic components.}
+\label{tab:fitResults}
+\begin{tabular}{l c}
+\hline\hline
+  Drell--Yan yield           & $191 \pm 19$        \\
+  FS yield                & $768 \pm 24$         \\
+  \Rsfof                  & $1.07 \pm 0.03$              \\
+  Signal yield            & $61 \pm 28$       \\
+  $\mll^\text{edge} $      & $144.2^{+3.3}_{-2.2}\GeV$  \\
+  \hline
+  Local significance                   & 2.3 s.d.          \\
+  Global significance                  & 1.5 s.d.          \\
+\hline\hline
+\end{tabular}
+\end{table}
+\begin{figure}[!hbtp]
+\centering
+\includegraphics[width=0.42\textwidth]{images/results/Figure_006-a.pdf}
+\includegraphics[width=0.42\textwidth]{images/results/Figure_006-b.pdf}
+\caption{Fit of the dilepton invariant mass distributions to the signal-plus-background hypothesis in the ``Edge fit'' SR from Table~\ref{tab:edgeSR}, projected on the same flavor (left) and opposite flavor (right) event samples. The fit shape is shown as a solid blue line. The individual fit components are indicated by dashed and dotted lines. The FS background is shown with a black dashed line. The Drell-Yan background is displayed with a red dotted line. The extracted signal component is displayed with a purple dash-dotted line. The lower panel in each plot shows the difference between the observation and the fit, divided by the square root of the number of fitted events.}
+\label{fig:Fit_data_H1}
+\end{figure}
+\section{Interpretation}
+\noindent
+\justify
+The search for colored superpartners is interpreted in terms of exclusion of gluino and sbottom masses. 
+The gluino GMSB model leads to a signature containing at least six jets in the final state when one of the \PZ bosons decays leptonically and the other decays hadronically.  
+Therefore, most of the sensitivity of the on-Z search is provided by the high jet multiplicity SRs.
+All of the on-Z strong-production SRs are considered, however, to set limits in this model, as signal jets can be lost due to \pt or $\eta$ acceptance, or not be well reconstructed.
+The expected and observed limits are presented in Fig.~\ref{fig:Limits1} as a function of the \gluino  and \firstchi masses.
+Gluino masses up to 1500--1770\GeV depending on the mass of \firstchi are excluded.
+This represents an improvement of around 500\GeV compared to the previously published CMS result~\cite{CMS:Zedge2015}.
+\begin{figure}[!hb]
+ \centering
+   \includegraphics[width=0.60\textwidth]{images/interpretation/strong/Figure_007.pdf}
+   \caption{\label{fig:Limits1}
+     Cross section upper limit and exclusion contours at 95\% CL for the gluino GMSB model as a function of the \gluino~and \firstchi masses,
+     obtained from the results of the strong production on-\PZ search.
+     The region to the left of the thick red dotted (black solid) line is excluded by the expected (observed) limit.
+     The thin red dotted curves indicate the regions containing 68 and 95\% of the distribution of limits
+     expected under the background-only hypothesis.
+     The thin solid black curves show the change in the observed limit due to
+     variation of the signal cross sections within their theoretical uncertainties.
+   }
+\end{figure}
+The edge search is interpreted using the slepton edge model that targets the direct sbottom production, combining the seven \mll bins and the two \ttbar likelihood regions.
+In Figure~\ref{fig:Limits2} is the exclusion contour shown as a function of the \sbottom and \secondchi masses. 
+Sbottom masses are exluded up to around 980--1200\GeV, depending on the mass of \secondchi, extending previous exclusion limits in the same model by 400--600\GeV.
+A decrease of the sensitivity is observed for those models where the \secondchi mass is in the range 200--300\GeV.
+The \mll distribution for these models has an edge in the range 100--200\GeV, and most of the signal events fall either into the SRs with the highest background prediction or in the range $86 < \mll < 96\GeV$, which is excluded in this search to reduce Drell--Yan contributions.
+The observed limit in this regime is weaker than the expected one due to the deviation in the not-\ttbar-like, 96--150\GeV mass bin.
+For high \secondchi masses, the majority of signal events fall into the highest mass bins, which are nearly background free. 
+This results in increased sensitivity for these mass points. 
+A weaker observed limit is observed in the highest \mll, non-\ttbar likelihood bin, where 5 events are observed and 1.6 expected.   
+The not-\ttbar-like \mll bin of 300--400\GeV contains 0 observed events compared to an expectation of 3.5 events, yielding the stronger observed limit for the \secondchi masses of about 500\GeV.
+\begin{figure}
+  \centering
+    \includegraphics[width=0.6\textwidth]{images/interpretation/strong/Figure_010.pdf}
+    \caption{Cross section upper limit and exclusion contours at 95\% CL for the slepton edge model
+      as a function of the \sbottom and \secondchi masses,
+      obtained from the results of the edge search.
+      The region to the left of the thick red dotted (black solid) line is excluded by the expected (observed) limit.
+     The thin red dotted curves indicate the regions containing 68 and 95\% of the distribution of limits
+     expected under the background-only hypothesis.
+     The thin solid black curves show the change in the observed limit due to
+     variation of the signal cross sections within their theoretical uncertainties.
+    }
+    \label{fig:Limits2}
+\end{figure}
+\section{Summary}
+\noindent
+\justify
+A search for colored superpartners in events with opposite-sign, same-flavor leptons, jets, and missing transverse momentum has been presented. 
+The data used corresponds to a sample of pp collisions collected with the CMS detector in 2016 at a center-of-mass energy of 13\TeV, corresponding to an integrated luminosity of \lint.
+Searches are performed for signals with a dilepton invariant mass (\mll) compatible with the \PZ boson or producing a kinematic edge in the distribution of \mll.
+By comparing the observation to estimates for SM backgrounds obtained from data control samples, no statistically significant evidence for a signal has been observed.
+Two searches for colored superpartners has been presented, one targeting gluino production and the other targeting sbottom production. 
+The search for gluinos, the superpartner of the gluon, using an on-shell \PZ boson is interpreted in a model of gauge-mediated supersymmetry breaking (GMSB), where the \PZ bosons are produced in decay chains initiated through gluino pair production.
+Gluino masses below 1500--1770\GeV have been excluded, depending on the neutralino mass, extending the exclusion limits derived from the previous CMS publication by almost 500\GeV.
+The search sbottom production exploits a kinematic edge shape in the \mll\ distribution, and is interpreted in a simplified model based on bottom squark pair production.
+Decay chains containing the two lightest neutralinos and a slepton are assumed, leading to edge-like signatures in the distribution of \mll.
+Bottom squark masses below 980--1200\GeV have been excluded, depending on the mass of the second neutralino.
+These extend the previous CMS exclusion limits in the same model by 400--600\GeV.

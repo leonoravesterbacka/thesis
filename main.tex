@@ -3,10 +3,12 @@
 \include{packages}
 \usepackage{braket}
 \usepackage{etex}
+\usepackage{fancyhdr}
 \usepackage{xspace}
 \usepackage{cancel}
 \usepackage{feynmf}
 \usepackage{enumitem}
+\usepackage{ragged2e}
 \usepackage{wasysym}
 \newenvironment{packed_item}{
 \begin{itemize}
@@ -89,6 +91,7 @@
 \newcommand{\TeVcc}{\ensuremath{{\,\text{Te\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c^\text{2}}}\xspace}
 \newcommand{\pbinv} {\mbox{\ensuremath{\,\text{pb}^\text{$-$1}}}\xspace}
 \newcommand{\fbinv} {\mbox{\ensuremath{\,\text{fb}^\text{$-$1}}}\xspace}
+\newcommand{\mb} {\mbox{\ensuremath{\,\text{mb}}}\xspace}
 \newcommand{\nbinv} {\mbox{\ensuremath{\,\text{nb}^\text{$-$1}}}\xspace}
 \newcommand{\mubinv} {\ensuremath{\,\mu\mathrm{b}^{-1}}\xspace}
 \newcommand{\mbinv} {\ensuremath{\,\mathrm{mb}^{-1}}\xspace}
@@ -129,6 +132,7 @@
 \newcommand{\CLs}{\ensuremath{\text{CL}_\text{s}}\xspace}
 \newcommand{\CLsb}{\ensuremath{\text{CL}_\text{s+b}}\xspace}
 \newcommand{\ttbar}{\ensuremath{\mathrm{{t\overline{t}}}}\xspace} % t-tbar
+\newcommand{\bbbar}{\ensuremath{\mathrm{{b\overline{b}}}}\xspace} % t-tbar
 \newcommand{\ttZ}{\ensuremath{\mathrm{{t\overline{t}}\PZ}}\xspace} % t-tbarZ
 \newcommand{\ttW}{\ensuremath{\mathrm{{t\overline{t}}\PW}}\xspace} % t-tbarZ
 \newcommand{\ttH}{\ensuremath{\mathrm{{t\overline{t}}\PH}}\xspace} % t-tbarZ
@@ -173,6 +177,8 @@
 \newcommand{\mttwol}{\ensuremath{M_{\text{T2}}(\ell\ell)}\xspace}
 \newcommand{\mttwolb}{\ensuremath{M_{\text{T2}}(\ell b \ell b)}\xspace}
 \newcommand{\slep}{\ensuremath{\widetilde{\ell}}\xspace}
+\newcommand{\slepL}{\ensuremath{\widetilde{\ell}_{L}}\xspace}
+\newcommand{\slepR}{\ensuremath{\widetilde{\ell}_{R}}\xspace}
 \newcommand{\se}{\ensuremath{\widetilde{e}}\xspace}
 \newcommand{\sm}{\ensuremath{\widetilde{\mu}}\xspace}
 \newcommand{\seL}{\ensuremath{\widetilde{e}_{L}}\xspace}
@@ -234,10 +240,10 @@
 \SetDepartment{Physics}%
 \SetChair{Professor Rainer Wallny}%
 % Type your title here in all CAPS %
-\SetTitle{Search for SUSY in opposite-sign dilepton final states with the CMS detector.}
+\SetTitle{Search for SUSY in opposite sign same flavor lepton final states with the CMS detector.}
 % user defined commands in order to geC:\Program Files\MiKTeX 2.5\miktexnerate new commands, macros, and redefine default commands %
 \include{usersetcommands}
-
+\pagestyle{fancy}
 \begin{document}
 \frenchspacing
 \raggedbottom%
@@ -300,19 +306,22 @@
 \include{tex/TOC} %This file creates the Table of Contents, List of Figures, and List of Objects (if any)
 % % % % % % % %delete or comment the file you want to remove
 % This line adds the word CHAPTER to the TOC just before the listing of the chapter and subsections begins
-\addtocontents{toc}{\protect\addvspace{10pt}\noindent{CHAPTER}\protect\hfill\par}{}% This extra line adds the word CHAPTER to the table of contents %
+%\addtocontents{toc}{\protect\addvspace{10pt}\noindent{CHAPTER}\protect\hfill\par}{}% This extra line adds the word CHAPTER to the table of contents %
 \phantomsection
 \include{tex/abstract} %The abstract is created using this file and userinfo.tex
 \include{tex/standardModel}
 \include{tex/supersymmetry}
 \include{tex/experimentalApparatus}
 \include{tex/eventReconstructionSimulation}
-\include{tex/search}
 \include{tex/samplesObjects}
+\include{tex/search}
 \include{tex/eventSelections}
 \include{tex/smPredictions}
-\include{tex/results}
-\include{tex/interpretation}
+\include{tex/stats}
+\include{tex/systs}
+\include{tex/strong}
+\include{tex/ewk}
+\include{tex/slepton}
 \include{tex/met}
 \include{tex/TwoOrMoreAppendices}
 

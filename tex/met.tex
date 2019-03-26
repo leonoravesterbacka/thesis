@@ -1,4 +1,6 @@
-\chapter{Performance of missing transverse momentum}\label{sec:met}
+\part{MISSING TRANSVERSE MOMENTUM}
+\noindent
+\justify
 At the forefront of SUSY physics program are searches where R-parity is conserved, resulting in one or more lightest SUSY particles that have no SM particles to decay into. 
 The result is LSPs that are unable to interact with the detector material and thus escape detection.
 The existence of such particles can be inferred by the momentum imbalance in the transverse plane, \ptvecmiss, with its magnitude denoted \ptmiss. 
@@ -8,8 +10,9 @@ Additionally, as jets are complex objects to measure, and their energy are corre
 In order to perform a SUSY search where R-parity is conserved, a deep understanding of the \ptmiss object is needed to distinguish the \ptmiss originating from LSPs from SM neutrinos and jet mismeasurements and detector inefficiencies. 
 A challenge for reconstructing physics objects is differentiating tracks from the primary vertex with tracks from overlapping bunch crossings in multiple pp collisions (pileup). 
 A detailed study of the performance of two commonly used \ptmiss reconstruction algorithms is presented in this chapter, along with a specific study analyzing the performance of the algorithms under extreme pileup conditions, as is expected in the High Luminosity phase of the LHC.    
-\section{Missing transverse momentum algorithms in CMS}
-\label{sec:introduction}
+\chapter{Performance of missing transverse momentum}\label{sec:met}
+\noindent
+\justify
 In collision events, the transverse momentum of the partons is small compared to the energy available in the center of mass, and does not depend on their longitudinal energy. 
 Thus, an assumption that the initial transversal momentum of the system formed by the partons is zero can be made. 
 As an effect of this assumption, if particles escape detection, a transverse energy inequilibrium is created. 
@@ -22,16 +25,22 @@ The \ptmiss is defined as the negative vectorial sum of the particles in the eve
 \end{equation}                                                                      
 and its magnitude is denoted \ptmiss. 
 In CMS, two algorithms for the \ptmiss reconstruction are used, PF \ptmiss and PUPPI \ptmiss, and both will be introduced in the following sections. 
-\subsection{Particle Flow \ptmiss reconstruction}
+\subsection*{Particle Flow \ptmiss reconstruction}
+\noindent
+\justify
 The first reconstruction algorithm is PF \ptmiss, which is the magnitude of the negative of the vectorial sum of all PF candidates in an event:
 \begin{equation}
 \ptvecmiss =- \sum_{i\in PF} \vec{p}_{\mathrm{T, i}}
 \label{eq:MET}
 \end{equation}                                                                      
 As will be shown in the following, the PF \ptmiss algorithm is highly performant and is therefore used in the majority of CMS analyses.
-\subsection{PUPPI \ptmiss reconstruction}
+\subsection*{PUPPI \ptmiss reconstruction}
+\noindent
+\justify
 The PUPPI \ptmiss algorithm uses the 'pileup per particle identification' method~\cite{Bertolini:2014bba}. This method has been developed to reduce the dependence of pileup on physics objects. 
-\subsubsection{PUPPI algorithm}
+\subsubsection*{PUPPI algorithm}
+\noindent
+\justify
 In this section, the PUPPI algorithm is summarized, for further clarification please refer to ~\cite{Bertolini:2014bba}. 
 The idea is to estimate how likely the PF candidates are to be originating from pileup, and reweight the particle four-momentum accordingly, with a weight, $w_{i}$, close to 1 if the candidate is from the hard scatter and close to 0 for particles from pileup. 
 The procedure to calculate the $w_{i}$ starts with defining a shape $\alpha_{i}$ for each particle, 
@@ -82,7 +91,9 @@ w_{i} = F_{\chi^{2}, \mathrm{NDF}=1}(\chi_{i}^{2})
 \end{equation} 
 with $ F_{\chi^{2}, \mathrm{NDF}=1}$ being the cumulative distribution function of the  $\chi^{2}$ distribution. 
 As a result, whenever the $\chi_{i}^{2}$ is 0, the final $w_i$ is 0, whenever the $\chi_{i}^{2}$ is large, the final $w_i$ is 1, and all values of $\chi_{i}^{2}$ in between results in a fractional weight between 0 and 1. 
-\subsubsection{PUPPI \ptmiss reconstruction}
+\subsubsection*{PUPPI \ptmiss reconstruction}
+\noindent
+\justify
 Now that the particle weights, that are the foundations of the PUPPI algorithms, have been defined the actual rescaling of the particles and how they enter the \ptmiss calculation will be covered. 
 For each event, the value of $\alpha_{i}^{\eta}$ are computed for all charged pileup, and the corresponding median and RMS distributions $\bar{\alpha}_{\text{PU}}^{\eta}$ and $\bar{\sigma}_{\text{PU}}^{\eta}$. 
 When using PF algorithm, the particles available are neutral particles, charged hadrons from the primary vertex, and charged hadrons from pileup. 
@@ -93,6 +104,8 @@ The charged hadrons from the primary vertex and the rescaled remaining particles
 \mathrm{PUPPI}\,\, \ptvecmiss =- \sum_{i\in PF} w_i \times \vec{p}_{\mathrm{T, i}}             
 \end{equation}   
 \section{Calibration of \ptmiss} 
+\noindent
+\justify
 \label{sec:metcorrections}
 As the \ptmiss reconstruction is depending on the accurate measurement of all the reconstructed physics objects, any inefficiency in the reconstruction or minimum energy or \pt thresholds will bias the energy scale of the \ptmiss. 
 As described in Section \ref{sec:JEC}, the energy of the jets are corrected with JECs. 
@@ -138,9 +151,13 @@ The ECAL resolution dominates the PF photon \pt measurement, whereas HF intrinsi
 %\caption{\label{tab:unclust_unc} Functional forms of the resolutions in the \pt measurement for each PF candidate class contributing to the UE.}
 %\end{table}
 \section{Event selection}\label{sec:simulation_selection}
+\noindent
+\justify
 Dilepton and single-photon samples are used to study the \ptmiss response and resolution. 
 These samples are chosen as they contain events where no genuine \ptmiss from neutrinos is expected, and serves as a good tool to measure the performance of the \ptmiss originating from detector inefficiencies or jet mismeasurements.  
-\subsection{Dilepton event samples}
+\subsection*{Dilepton event samples}
+\noindent
+\justify
 \label{sec:zselection}
 The dilepton samples are subdivided into two categories based on the flavor of the lepton, namely \Zmm\ and \Zee\ samples. The dileptonic datasets are presented in Table~\ref{tab:METdileptondatasets} 
 
@@ -221,7 +238,9 @@ The spectrum of the $Z$ boson transverse momentum, \qt, is shown in Fig.~\ref{fi
   \caption{Upper panels: $Z$ boson \qt in \Zmm\ (left) and \Zee\ (right) samples. The Diboson contribution corresponds to processes with two electroweak bosons produced in the final state. The Top quark contribution corresponds to the top anti-top pair and single top production processes. Lower panel: Data to simulation ratio. The band corresponds to the statistical uncertainty in simulated samples. }
   \label{fig:zbosonpt}
 \end{figure}
-\subsection{Single-photon event sample}
+\subsection*{Single-photon event sample}
+\noindent
+\justify
 \label{sec:photonselection}
 The events in the single-photon sample are presented in Table~\ref{tab:METphotondatasets}, and are selected using a set of prescaled isolated single-photon triggers with varying thresholds, presented in Table~\ref{tab:METphotontriggers}. The simulated samples used are presented in Appendix B. 
 
@@ -242,8 +261,6 @@ The events in the single-photon sample are presented in Table~\ref{tab:METphoton
 \end{tabular}
 \end{center}
 \end{table}                                                                                  
-
-
 \begin{table}[ht!]
 \def\arraystretch{1.2}
     \caption{Triggers used for the \ptmiss performance study.}
@@ -265,8 +282,6 @@ The events in the single-photon sample are presented in Table~\ref{tab:METphoton
 \end{table}                                                                                                        
 The \pt thresholds of the triggers are 30, 50, 75, 90, 120, and 165\GeV, and the first five triggers had different L1 accept rate (prescale) during the data taking periods, following the luminosity. 
 Candidate events are weighted based on the prescale values of the triggers.
-
-
 One tight ID photon with $\pt > 50$\GeV is required and events are vetoed that contain leptons of $\pt > 20$\GeV. 
 In order to isolate the events needed for this study, a requirement to have at least one jet with \pt greater than 40\GeV that recoils off of the photon. 
 To match the trigger conditions, the leading photon is further required to have the ratio of the energy deposited in a $3\times3$ crystal region of the ECAL, centered around the crystal containing an energy deposit greater than all of its immediate neighbors, to the energy of the entire deposit of the photon greater than 0.9.
@@ -279,17 +294,23 @@ Similarly to Fig.~\ref{fig:zbosonpt} only the statistical uncertainty in the sim
   \label{fig:gbosonpt}
 \end{figure}                                                                                                                                                                 
 \section{\ptmiss filters}                                                                                                                                     
+\noindent
+\justify
 \label{sec:filters}
 Non-physical, anomalous high-\ptmiss events can arise because of a variety of reconstruction failures or malfunctioning detectors.  
 In the \ptmiss study presented below, and in the two analyses covered in this thesis, these anomalous \ptmiss events are filtered away on an event basis. 
 In the following, the various filters are presented and the underlying source of the anomalous \ptmiss. 
-\subsection{HCAL filters}
+\subsection*{HCAL filters}
+\noindent
+\justify
 The geometrical patterns of HPD or RBX channels as well as the pulse shape and timing information are utilized by various HCAL barrel and endcap (HBHE) algorithms to identify and eliminate noise. 
 These filter algorithms operate both in ``noise filtering'' and ``event filtering'' modes.
 In the noise filtering mode, the anomalous energy deposits are removed from the event reconstruction; in the event filtering mode, the bunch crossing is removed from the data set. 
 In addition, there is an isolation-based noise filter that utilizes a topological algorithm, where energy deposits in HCAL and ECAL are combined
 and compared with measurements from the tracker to identify isolated anomalous activity in HBHE. 
-\subsection{ECAL filters}
+\subsection*{ECAL filters}
+\noindent
+\justify
 One large source of anomalous \ptmiss signals can be created if a hadron hits the front-end electronics of the ECAL super crystals, creating a large false signal.  
 Additionally, anomalously high energetic deposits in the supercrystals, and the lack of information for channels that have nonfunctioning readout electronics, are removed through dedicated noise filters.
 During the datataking relevant for this thesis, five ECAL endcap supercrystals produced large, anomalous pulses, leading to spurious \ptmiss. 
@@ -297,7 +318,9 @@ These crystals were removed from the readout, and their energies were not consid
 Furthermore, in about 0.7\% of ECAL towers, the crystal-by-crystal information is not available. 
 The trigger primitive (TP) information, however, is still available, and is used to estimate the energy. 
 The TP information saturates above 127.5\GeV. Events with a TP close to saturation in one of these crystals are removed.
-\subsection{Beam halo filter}
+\subsection*{Beam halo filter}
+\noindent
+\justify
 A final large source of anomalous large \ptmiss is due to so called machine-induced backgrounds or beam halo, meaning the production of muons when beam protons undergo collisions upstream of the detector. 
 The characterisitcs of beam halo particles is that they travel parallel to the collision axis. 
 If they leave energy deposits in the calorimeters, those will be along a line with constant $\phi$. 
@@ -321,6 +344,8 @@ on jet identification requirements (filled markers), without the event filtering
 \label{fig:dijet}
 \end{figure}                                                                                                                                                                                    
 \section{\ptmiss performance}
+\noindent
+\justify
 After having covered the \ptmiss reconstruction algorithms, their calibration and the filtering of anomalous \ptmiss events, the main part of the study will be presented. 
 As has already been conveyed, the \ptmiss is a very sensitive observable, and is relying on accurate object reconstruction and efficient sub-detectors. 
 Therefore it is a great tool for monitoring the detector and reonstruction performance during data-taking. 
@@ -329,7 +354,9 @@ By monitoring the data and simulation of the \ptmiss in events with no genuine \
 The \ptmiss response is crucial for validating the JECs or any issues related to the muon, electron or photon energy scale. 
 The \ptmiss resolution is valuable for monitoring how the performance degrades as a function of some variable, such as the number of vertices. 
 Initially, the studies presented in this thesis were performed during the 2016 data-taking, and was crucial in uncovering various reconstruction inefficiencies, and was later refined and summarized in a publication.  
-\subsection{\ptmiss performance using hadronic recoil}                                                                                                                                 
+\subsection*{\ptmiss performance using hadronic recoil}                                                                                                                                 
+\noindent
+\justify
 A well-measured \PZ/$\gamma$ boson provides a unique event axis and a precise momentum scale. 
 Such events should have little or no genuine \ptmiss, and the hadronic recoil is projected onto the axis of this well measured boson, as illustrated in Fig.~\ref{fig:recoilDef}.  
 Formally, the hadronic recoil ($u$) is defined as the vector \pt sum of all PF candidates except for the vector boson (or its decay products in the case of the \PZ boson decay). 
@@ -346,7 +373,9 @@ The vector \vut denotes the vectorial sum of all particles reconstructed in the 
 The hadronic recoil can be split into its parallel and perpendicular components with respect to the boson axis, and these quantities, \upar and \uperp, are used to study the \ptmiss response and resolution. 
 The \ptmiss response is defined as $-\langle \upar \rangle /\langle \qt \rangle$ where $\langle\, \rangle$ indicates the mean, and reflects how well balanced the boson is to the hadronic recoil. 
 The \ptmiss resolution is estimated through the $\rm{RMS}$ of the \redupara\ and \uperp\ distributions, and are denoted by $\sigma(\upar)$ and $\sigma(\uperp)$, respectively. 
-\subsection{Performance of PF \ptmiss algorithm}
+\subsection*{Performance of PF \ptmiss algorithm}
+\noindent
+\justify
 The \ptmiss in selections with no genuine \ptmiss from neutrinos are shown in Fig.~\ref{fig:met}, and show a good agreement between the data and the simulation. 
 The lower pads of Fig.~\ref{fig:met} show the magnitude of the uncertainties in these events, where the \ptmiss resolution is dominated by the resolution of the hadronic activity, ranging up to 10--15\% for the jet momentum resolution~\cite{Khachatryan:2016kdb}. 
 Since the momentum resolution for leptons (photons) is $\sigma_{\pt}/\pt$ of 1--4\% (1--3\%)~\cite{Khachatryan:2015iwa,Sirunyan:2018fpa} is sub-dominant to the resolution of the hadronic actitvity, these uncertainties are not taken into account in the ratios, and the final uncertainty shown in the figures include uncertainties in the JES, the JER, and the UE, added in quadrature. 
@@ -429,7 +458,6 @@ Results of the parametrization for the \upar\ and \uperp\ components are given i
   \caption{Resolution of the \upar\ and \uperp\ components of the hadronic recoil as a function of, \qt (upper row), the reconstructed vertices (middle row), and the scalar \pt sum of all PF candidates (lower row), in \Zmm\, \Zee\, and $\PGg+$jets events. In each plot, the upper panel shows the resolution in data, whereas the lower panel shows the ratio of data to simulation. The band corresponds to the systematic uncertainties due to the JES, the JER, and variations in the UE added in quadrature, estimated from the \Zee\ sample. }
   \label{fig:resolution_sumet}
 \end{figure}
-
 \begin{table}[h!t] 
 \centering
 \bgroup 
@@ -453,7 +481,6 @@ $\PGg+$jets       & 9.04 $\pm$ 0.11 & 6.93 $\pm$ 2.70 & 3.94 $\pm$ 0.01 & 0.97 $
 \end{tabular}
 \egroup
 \end{table}
-
 \begin{table}[h!b] 
 \centering
 \bgroup 
@@ -478,14 +505,14 @@ $\PGg+$jets           & -1.16 $\pm$ 0.08 & -1.31 $\pm$ 2.53 & 0.68 $\pm$ 0.01 & 
 \egroup
 \end{table}
 
-\subsection{Performance of PUPPI \ptmiss algorithm}
-
+\subsection*{Performance of PUPPI \ptmiss algorithm}
+\noindent
+\justify
 The PUPPI \ptmiss distributions in the dilepton samples are shown in Fig.~\ref{fig:puppimet}. 
 The data distributions are modeled well by the simulation, in both the muon and the electron channels. 
 Similar to the case of PF \ptmiss, the \ptmiss resolution in these events is dominated by the resolution of the hadronic activity, 
 but the PUPPI-weighted PF candidates yield a much improved resolution for jets compared to the PF case. 
 This is also reflected in the uncertainty shown in the figures, which includes the uncertainties due to jet energy scale and resolution, and the energy scale of the unclustered particles. 
-
 \begin{figure}[!htp]
   \centering
   \includegraphics[width=0.42\textwidth]{images/met/Figure_012-a.pdf}
@@ -494,11 +521,9 @@ This is also reflected in the uncertainty shown in the figures, which includes t
 Lower panels: Data-to-simulation ratio. The band corresponds to the systematic uncertainties due to the JES, the JER, and variations in the UE added in quadrature, estimated from the \Zee\ sample.}
   \label{fig:puppimet}
 \end{figure}
-
 The distributions in \Zmm\ and \Zee\ events of the vectorial sum \upar + \qt and of \uperp\, using PUPPI \ptmiss,  are shown in Fig.~\ref{fig:uparuperp_puppi}. 
 Following the same arguments as in the PF \ptmiss case, in events with no genuine \ptmiss, the vectorial sum of \upar\ and \qt is symmetric around zero, whereas for processes with genuine \ptmiss an asymmetric behavior is observed. 
 The distribution of \uperp\ is symmetric around zero. Simulation describes data well for all distributions.
-
 \begin{figure}[!htp]
   \centering
   \includegraphics[width=0.42\textwidth]{images/met/Figure_013-a.pdf}
@@ -509,13 +534,11 @@ The distribution of \uperp\ is symmetric around zero. Simulation describes data 
 Lower panel: Data-to-simulation ratio. The band corresponds to the systematic uncertainties due to the JES, the JER, and variations in the UE added in quadrature, estimated from the \Zee\ sample.}
   \label{fig:uparuperp_puppi}
 \end{figure}
-
 Figure \ref{fig:response_puppi} shows the PUPPI \ptmiss response as a function of \qt, extracted from data and simulation in \Zmm\ and \Zee\ events. 
 The response reaches unity for \Zmm\ events at a boson \pt of 150\GeV; while for PF~\ptmiss the response is close to unity at 100\GeV. 
 The slower rise of the response to unity is due to the removal of PF candidates that are wrongly associated with pileup interactions by the PUPPI algorithm. 
 Similarly to PF~\ptmiss, there is no response correction for the UE for PUPPI~\ptmiss, which results in an underestimated response for low \qt. 
 The response of \ptmiss is found to agree between the different samples  within 2\%. 
-
 \begin{figure}[!htp]
   \centering
    \includegraphics[width=0.42\textwidth]{images/met/Figure_014.pdf}
@@ -533,7 +556,6 @@ Compared to the case of PF~\ptmiss, the resolutions show a much reduced dependen
 \end{figure}
 The resolution in different samples is parametrized using Eq.~(\ref{eq:npv}), and the result of the parameterization are given in Table~\ref{tab:tab4lcontrol_par_puppi}. 
 Each additional pileup interaction is found to degrade the resolution of each component by up to 2\GeV. This resolution degradation corresponds to half of what is observed in the case of PF \ptmiss.
-
 \begin{table}[hbtp] 
 \centering
 \bgroup 
@@ -555,8 +577,9 @@ $\Zee$        & 14.3 $\pm$ 0.05 & 13.6 $\pm$ 0.59 & 1.80 $\pm$ 0.02 & 0.96 $\pm$
 \end{tabular}
 \egroup
 \end{table}
-
-\subsection{High pileup studies}
+\subsection*{High pileup studies}
+\noindent
+\justify
 \begin{figure}[!htp]
   \centering
    \includegraphics[width=0.42\textwidth]{images/met/met_uPara__vs_nVertType1_PFvsPuppiMM.pdf}
@@ -577,5 +600,4 @@ The \ptmiss resolution of the \upar and \uperp components of the hadronic recoil
 vertices is shown in Fig.~\ref{fig:Res_vs_PileUpVeryHighPU}. 
 The results obtained from the high pileup data is overlayed with the ones obtained from the nominal data and found to be in agreement within the statistical uncertainties. 
 Furthermore, the Puppi \ptmiss is found to have more stable resolution across the full range.
-
 \clearpage

@@ -1,0 +1,284 @@
+\chapter{Search for electroweak superpartner production}\label{sec:ewk}
+\noindent
+\justify
+This chapter is devoted to the search for \firstcharg\PSGczDt and \PSGczDo\PSGczDo that give rise to a final state of two opposite sign same flavor leptons. 
+Models of electroweak superpartner production are attractive avenues for discovery of new physics under the assumption that other new physics particles are heavy and decoupled and therefore not possible to produce at the LHC.  
+The success of the many colored SUSY searches performed by the CMS and ATLAS experiments, one of which is just presented in Chapter \ref{sec:strong}, has been pushing the limits on colored superpartners. 
+This success is shifting the attention of the community towards the electroweak SUSY scenarios, that are still not fully excluded. 
+The search for electroweak superpartners using opposite sign same flavor final states has many similarities to the search for colored superpartners. 
+This is reflected in the estimations of the SM background predictions, that are alomst identical. 
+Instead, emphasis is put on the design of the search and the final results for the search for electroweak superpartners.
+\newpage
+\section{Analysis strategy}      
+\noindent
+\justify
+Pairs of electrons or pairs of muons are selected using the lepton selection criteria outlined in Section \ref{sec:lepSelection}.
+The offline \pt threshold for jets identified according to the requirements listed in Section \ref{sec:jetSelections} is set to 35\GeV, and is kept at 25\GeV for b-tagged jets.
+The electroweak superpartner searches presented in Section \ref{sec:searchEWK} have two defining features. 
+The first one is the production of an on-shell \PZ boson.
+The second is the production of a vector boson (\PW or \PZ) or a Higgs boson that decay hadronically, to first order to two jets. 
+The production of \firstcharg and \PSGczDt is targeted by a signal region called "VZ" SR. 
+The production of mass degenerate higgsinos, that decay immediately to two \PSGczDo's, is targeted by two different SRs depending on the branching fraction assumed for the decay of the \PSGczDo.
+On the one hand, a branching fraction of 100\% is assumed for the decay $\PSGczDo\rightarrow\PZ\gravitino$ ("\PZZ").  
+In this case the \PZ boson decay hadronically to light jets or b-tagged jets. The VZ SR is designed to pick up the cases where the \PZ boson decays to light jets.
+The other assumption on the branching fraction is 50\% of $\PSGczDo\rightarrow\PZ\gravitino$ and 50\% of $\PSGczDo\rightarrow\PH\gravitino$. 
+The so called "ZH" SR is designed by exploiting the most frequent \PH boson decay mode, $\PH\rightarrow b\bar{b}$\footnote{58\% \cite{deFlorian:2016spz}}, while still being sensitive to the less frequent decay mode of the $\PZ\rightarrow b\bar{b}$\footnote{\PZ decay to down-type quarks is only 15.2\% \cite{PhysRevD.98.030001}}.   
+For all signal regions introduced below, a requirement is imposed that the two jets with the highest \pt have a separation in $\phi$ from the \ptmiss of at least 0.4, in order to reduce the Drell--Yancontribution.
+\subsection*{VZ signal region}
+\noindent
+\justify
+The idea behind the design of the VZ SR is to target the hadronically decaying \PW boson.
+The \PZ boson that is the decay product of the \PSGczDt is easily selected by requiring two leptons of opposite sign and same flavor compatible with the \PZ boson.
+A naive first step to design this signal region is to try to reconstruct the invariant mass of two jets and require it to be close to the \PW boson mass.
+But the existence of more than two jets in the event makes the signal region definition more difficult.  
+It was shown that the largest discrimination between the signal and SM processes was to impose a cut on the invariant mass of two jets to be less than 110\GeV.
+The choice of 110\GeV was chosen after an optimization, and is large enough to not only target the \PW boson mass (80.4\GeV), but also the slightly larger \PZ boson mass (91.2\GeV) \cite{PhysRevD.98.030001}. 
+As many SM processes result in more jets than two, a choice on what jets to reconstruct the invariant mass with must be made.
+The reasoning behind the choice of jets is as follows. 
+A \PW boson with enough \pt\footnote{Enough \pt for a boson $V$ to be considered "boosted" is dictated by $\pt^{V}\geq\frac{2m_{V}}{R}$ where R is the radius parameter of the jet clustering algorithm.} will result in the decay products to propagate in the direction of the mother particle.  
+This results in the decay products of the \PW boson to be more collimated, and is commonly known as boost.
+This can happen in the case of large \PSGczDt and \firstcharg masses, where there is enough available momentum to give the \PZ and \PW bosons a boost.
+In the absence of hints of SUSY, we want to set as stringent limits as possible on the different SUSY particle masses. 
+Targeting exclusion of the more massive \PSGczDt and \firstcharg, the final state is pushed to this more boosted scenarios.
+For this reason, if there are more jets than two in the event, the boosted signal feature is targeted by constructing the invariant mass using the jets that are $closest$ $in$ $\Delta\phi$.
+Further, a veto on b-tagged jets is applied motivated by on the one hand the favored \PW boson decay mode to light quarks, and on the other hand the suppression of \ttbar. 
+Finally, as any electroweak SUSY would show up in the \ptmiss tails, the VZ SR is binned in \ptmiss. 
+Similarly to the signal regions targeting the on-Z colored superpartner production, the two jets with the highest \pt are required to be separated in $\phi$ from the \ptmiss of at least 0.4.
+The final VZ SR that targets electroweak production of \PSGczDt and \firstcharg (WZ) or higgsino production (ZZ) is summarized in Table \ref{tab:WZ}.    
+
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Summary of the electroweak WZ SR.}
+    \label{tab:WZ}
+    \begin{center}
+        \begin{tabular}{ l l l l l l}
+        \hline \hline
+        \multicolumn{6}{c}{Electroweak VZ SR}                \\
+        Region          & $N_{\mathrm{jets}}$ & $N_{\mathrm{b-jets}}$ & \mttwo [GeV]  & \mjj (closest $\Delta\phi$) [GeV]& \ptmiss [GeV]\\\hline
+        VZ              & $\geq2$             & $=0$                  & $\geq80$        & $\leq110$         & [100, 150, 250, 350+]\\
+\hline\hline            
+\end{tabular}           
+\end{center}
+\end{table}
+
+
+\subsection*{ZH signal region}
+\noindent
+\justify
+The electroweak higgsino production has many similarities to the \PSGczDt and \firstcharg targeted by the VZ SR.
+The similarities lies in the production of an on-shell \PZ boson, providing the opposite sign same flavor leptons and large \ptmiss from the LSPs.
+Under the assumption that the \PSGczDo can decay with a 50\% probabililty to a \PZ boson or a \PH boson and a \gravitino LSP, the SR is designed to target the \PH boson decaying to a pair of bottom quarks.
+For this, the events in the signal region are required to have exactly two b-tagged jets, that form an invariant mass of less than 150\GeV.
+As requiring two b-tagged jets increases the existence of SM \ttbar to enter the SR, this contribution is reduced by a requirement on a \mttwo variable.
+This variable is different than the pure leptonic variable used in the previous SR definitions.
+Instead this \mttwolb is defined by pairing each lepton with a b-tagged jet, and all combinations of \mttwo is calculated and the smallest value is used.
+This variable has an endpoint at the top quark mass, and to reduce the contribution from \ttbar a SR requirement on $>200\GeV$ is imposed.
+The ZH SR definition is summarized in Table \ref{tab:ZH}.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+ \caption{Summary of the Electroweak ZH SR.}
+    \label{tab:ZH}
+    \begin{center}
+    \begin{tabular}{l l l l l l}
+    \hline \hline
+    \multicolumn{6}{c}{Electroweak ZH SR}                \\
+    Region          & $N_{\mathrm{jets}}$ & $N_{\mathrm{b-jets}}$ & \mbb [GeV]       & \mttwolb [GeV]& \ptmiss [GeV]\\\hline
+    ZH              & $\geq2$             & $=2$                  & $\leq150$        & $\geq200$         & [100, 150, 250+]\\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Backgrounds}
+\noindent
+\justify
+The SM background processes present in the search for electroweak superpartners is very similar to those in the on-Z search for colored superpartners presented in Chapter \ref{sec:strong}, and are predicted in the same way. 
+\subsection*{Flavor symmetric background}
+\noindent
+\justify
+The flavor symmetric prediction is identical to that presented in Section \ref{sec:fsstrong}. 
+\subsection*{Z$+\nu$ background}
+\noindent
+\justify
+The \PWZ$\rightarrow3l\nu$, \PZZ$\rightarrow2l2\nu$ and \ttZ backgrounds are predicted in the same way as presented in Section \ref{sec:Znustrong}. 
+\subsection*{Drell--Yan}
+\noindent
+\justify
+The \ptmiss template method, presented in Section \ref{sec:mettemplates}, is used to predict the \ptmiss spectrum due to instrumental effects in the electroweak signal regions. 
+The prediction from the \ptmiss template method is summarized in Table \ref{tab:metTemplateEWKOnZ}.
+The predicted number of events in the electroweak signal region are given with a decomposition of the magnitude of the systematic uncertainties from the four sources considered.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering
+\caption{Summary of template predictions with systematic uncertainties added in quadrature in the strong and electroweak on-Z signal regions together with the individual systematic uncertainties from         each source. }
+\label{tab:metTemplateEWKOnZ}
+\begin{tabular}{l l c c c c c}
+\hline \hline
+SR & \ptmiss [GeV] & Prediction & Closure & Normalization & Statistical & EWK sub.\\
+\hline
+\multirow{ 5}{*}{VZ}  & 50-100   & 773.2 $\pm$ 31.9  & 0.0& 29.9  & 11.1 & 0.0 \\
+                      & 100-150  & 29.3  $\pm$ 4.4   & 3.2& 1.1   & 2.2  & 1.8 \\
+                      & 150-250  & 2.9   $\pm$ 2.1   & 0.7& 0.1   & 0.4  & 1.9 \\
+                      & 250-350  & 1.0   $\pm$ 0.7   & 0.2& 0.1   & 0.2  & 0.6 \\
+                      & 350+     & 0.3   $\pm$ 0.3   & 0.1& 0.1   & 0.1  & 0.3 \\ \hline
+\multirow{ 4}{*}{ZH}  & 50-100   & 76.7  $\pm$ 9.4   & 0.0& 9.1   & 2.4  & 0.0 \\
+                      & 100-150  & 2.9   $\pm$ 2.4   & 2.3& 0.3   & 0.4  & 0.2 \\
+                      & 150-250  & 0.3   $\pm$ 0.2   & 0.1& 0.1   & 0.1  & 0.2 \\
+                      & 250+     & 0.1   $\pm$ 0.1   & 0.1& 0.1   & 0.1  & 0.1 \\ \hline\hline
+\end{tabular}
+\end{table}  
+
+\section{Systematic uncertainties}      
+\noindent
+\justify
+The sources of the systematic uncertainties for the signal simulation used in the search for electroweak superpartners is summarized in Table \ref{tab:systematicsEWK}.
+The uncertainties affect the overall normalization of the process, and the nuisance parameters obey a log-normal distribution.
+The statistical errors on the predicted number of signal events is uncorrelated across the bins, while all other uncertainties are considered correlated across the search regions.
+\begin{table}[!hbtp]
+\renewcommand{\arraystretch}{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering
+\caption{\label{tab:systematicsEWK}
+Systematic uncertainties taken into account for the signal yields and their typical values.}
+\begin{tabular}{l c}
+\hline\hline
+Source of uncertainty                & Uncertainty (\%)     \\
+\hline
+Integrated luminosity                & 2.5                  \\
+Lepton reconstruction and isolation  & 5                    \\
+Fast simulation lepton efficiency    & 4                    \\
+b-tag modeling                       & 0--5                  \\
+Trigger modeling                     & 3                    \\
+Jet energy scale                     & 0--5                  \\
+ISR modeling                         & 0--2.5                 \\
+Pileup                               & 1--2                 \\
+Fast simulation \ptmiss modeling        & 0--4                 \\
+Renormalization//factorization scales   & 1--3                   \\
+MC statistical uncertainty              & 1--15                  \\
+\hline\hline
+\end{tabular}
+\end{table}
+
+
+\section{Results}      
+\noindent
+\justify
+The search for elecctroweak superpartners is done with two search regions. 
+The VZ signal region is targeting the \firstcharg-\secondchi production decaying to a \PW boson, a \PZ boson and LSP \firstchi. 
+This signal region is also sensitive to the production of higgsinos that decay directly to a \firstchi-\firstchi pair, that decay to two \PZ bosons and a gravitino LSP. 
+The same production mode is targeted with the ZH signal region, but in this case a the \firstchi is assumed to decay democratically to a \PZ boson and a Higgs boson. 
+Good agreement is observed in all signal regions, presented in Table \ref{tab:vzResults} and Table \ref{tab:zhResults} and visualized in Figure \ref{fig:ewkResults}. 
+\begin{table}[!hbtp]
+\renewcommand{\arraystretch}{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering                             
+\caption{\label{tab:vzResults} Predicted and observed event yields are shown for the electroweak on-\PZ SR (VZ), for each \ptmiss bin defined in Table~\ref{tab:WZ}.
+The uncertainties shown include both statistical and systematic sources.}
+\begin{tabular} {l  c c c c }
+\hline\hline
+\multicolumn{5}{c}{VZ}\\
+\ptmiss [GeV]& 100--150              & 150--250             & 250--350                                      & $>$350 \\ \hline
+DY+jets        & 29.3$\pm$4.4         & 2.9$\pm$2.0          & 1.0$\pm$0.7                                   & 0.3$\pm$0.3 \\
+FS            & 11.1$\pm$3.6 & 3.2$\pm$1.1  & $0.1^{+0.2}_{-0.1}$                           & $0.1^{+0.2}_{-0.1}$  \\
+$\PZ+\nu$         & 14.5$\pm$4.0         & 15.5$\pm$5.1         & 5.0$\pm$1.8                                   & 2.2$\pm$0.9 \\
+Total background           & 54.9$\pm$7.0 & 21.6$\pm$5.6 & 6.0$\pm$1.9                           & 2.5$\pm$0.9 \\
+Data          & 57                   & 29                   & 2                                             & 0 \\
+\hline\hline
+\end{tabular}
+\end{table}                                                                                                                                                                                     
+
+\begin{table}[!hbtp]
+\renewcommand{\arraystretch}{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering                             
+\caption{\label{tab:zhResults} Predicted and observed event yields are shown for the electroweak on-\PZ SR (ZH), for each \ptmiss bin defined in Table~\ref{tab:ZH}.
+The uncertainties shown include both statistical and systematic sources.}
+\begin{tabular} {l  c c c }
+\hline\hline
+\multicolumn{4}{c}{ZH}\\
+\ptmiss [GeV]     & 100--150     & 150--250     & { $>$250 } \\ \hline
+DY+jets           & 2.9$\pm$2.4  & 0.3$\pm$0.2  & { 0.1$\pm$0.1 } \\
+FS                & 4.0$\pm$1.4  & 4.7$\pm$1.6  & { 0.9$\pm$0.4  } \\
+$\PZ+\nu$         & 0.7$\pm$0.2  & 0.6$\pm$0.2  & { 0.3$\pm$0.1 } \\
+Total background  & 7.6$\pm$2.8  & 5.6$\pm$1.6  & { 1.3$\pm$0.4 } \\
+Data              & 9            & 5            & { 1 } \\ \hline\hline
+\end{tabular}
+\end{table}                                                                                                                                                                                     
+
+
+\begin{figure}[htbp!]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{images/results/Figure_004-a.pdf}
+\includegraphics[width=0.45\textwidth]{images/results/Figure_004-b.pdf}
+\caption{The \ptmiss distribution is shown for data compared to the background prediction in the on-\PZ VZ (left) and ZH (right) SRs.
+The \ptmiss template prediction for each SR is normalized to the first bin of each distribution, and therefore the prediction agrees with the data by construction.}
+\label{fig:ewkResults}
+\end{center}
+\end{figure}      
+
+\section{Interpretation}
+\noindent
+\justify
+The search for electroweak superpartners is interpreted using the models described in Section \ref{search}.
+For the model of \firstcharg\secondchi production with decays to a \PZ boson and a \PW boson, the VZ SR provides almost all of the sensitivity.
+Figure~\ref{fig:LimitTChiWZ} shows the cross section upper limits and the exclusion lines at 95\% CL, as a function of the \firstcharg (or \secondchi) and \firstchi masses.
+The \firstcharg masses are probed between approximately 160 and 610\GeV, depending on the mass of \firstchi.
+The observed yields being smaller than predicted in the two highest \ptmiss bins of the VZ SR results in the observed limit being stronger than expected.
+This result extends the observed exclusion using 8\TeV data by around 300\GeV in the mass of \firstcharg~\cite{2012ewk}.
+\begin{figure}[hb]
+ \centering
+   \includegraphics[width=0.6\textwidth]{images/interpretation/ewk/Figure_008.pdf}
+   \caption{\label{fig:LimitTChiWZ}
+     Cross section upper limit and exclusion contours at 95\% CL for the EW $\PW\PZ$ model
+     as a function of the \firstcharg (equal to \secondchi) and \firstchi masses,
+     obtained using the on-\PZ search for EW production results.
+     The region under the thick red dotted (black solid) line is excluded by the expected (observed) limit.
+     The thin red dotted curves indicate the regions containing 68 and 95\% of the distribution of limits
+     expected under the background-only hypothesis.
+     The thin solid black curves show the change in the observed limit due to
+     variation of the signal cross sections within their theoretical uncertainties.
+   }
+\end{figure}
+For the model of \firstchi\firstchi production with decays to $\PZ\PZ$, the VZ region contains most of the signal, but the $\PH\PZ$ SR accepts the events where the \PZ boson decays to \bbbar.
+The limit is shown in Fig.~\ref{fig:LimitTChiZZHZ} as a function of the \firstchi mass.  
+\firstchi masses are probed up to around 650\GeV.
+The observed limit is stronger than the expected due to the deficit of observed events in the high-\ptmiss bins of the VZ SR.
+This result extends the observed limit by around 300\GeV compared to the result using 8\TeV data~\cite{2012ewkhiggs}.
+For the model of \firstchi\firstchi production with decays to $\PH\PZ$, the $\PH\PZ$ SR dominates the expected limit.
+The maximal branching fraction to the $\PH\PZ$ final state is 50\%, achieved when \firstchi decays with 50\% probability to either the \PZ or Higgs boson.
+This scenario includes a 25\% branching fraction to the $\PZ\PZ$ topology, targeted by the VZ signal region.
+Limits are set on the 50\% branching fraction model in Fig.~\ref{fig:LimitTChiZZHZ} using these assumptions and considering the signal contributions from both the $\PZ\PZ$ and $\PH\PZ$ topologies, targeted by both the VZ and ZH signal regions.
+In this mixed decay model, \firstchi masses are probed up to around 500\GeV.
+The observed limit at high masses is dominated by the same effect as in the pure $\PZ\PZ$ topology.
+For masses below 200\GeV, the events from the $\PH\PZ$ topology alone give an expected exclusion that is 2--5 times more stringent than those from the $\PZ\PZ$ topology alone, while for higher masses, the two topologies yield expected limits that are similar to within 30\%.
+The previous exclusion limit using 8\TeV data is extended by around 200\GeV.
+\begin{figure}
+\centering
+\includegraphics[width=0.45\textwidth]{images/interpretation/ewk/Figure_009-a.pdf}
+\includegraphics[width=0.45\textwidth]{images/interpretation/ewk/Figure_009-b.pdf}
+\caption{Cross section upper limit and exclusion lines at 95\% CL, as a function of the \firstchi mass, for the search for electroweak production in the $\PZ\PZ$ topology (left)
+  and with a 50\% branching fraction to each of the \PZ and Higgs bosons (right).
+The red band shows the theoretical cross section, with the thickness of band representing the theoretical uncertainty in the signal cross section.
+Regions where the black dotted line reaches below the theoretical cross section are expected to be excluded.
+The green (yellow) band indicates the region containing 68 (95)\% of the distribution of limits expected under the background-only hypothesis.
+The observed upper limit on the cross section is shown with a solid black line.
+}
+\label{fig:LimitTChiZZHZ}
+\end{figure}
+\section{Summary}
+\noindent
+\justify
+A search for electroweak superpartners in events with opposite sign, same flavor leptons, jets, and missing transverse momentum has been presented. 
+The data used corresponds to a sample of pp collisions collected with the CMS detector in 2016 at a center-of-mass energy of 13\TeV, corresponding to an integrated luminosity of \lint.
+Searches are performed for signals with a dilepton invariant mass (\mll) compatible with the \PZ boson.
+By comparing the observation to estimates for SM backgrounds obtained from data control samples, no statistically significant evidence for a signal has been observed.
+The search for electroweak superpartners with an on-shell \PZ boson has been interpreted in multiple simplified models.
+For chargino-neutralino production, where the neutralino decays to a \PZ boson and the lightest supersymmetric particle (LSP) and the chargino decays to a \PW\ boson and the LSP, chargino masses are probed in the range 160--610\GeV.
+In a GMSB model of neutralino-neutralino production decaying to $\PZ\PZ$ and LSPs, neutralino masses are probed up to around 650\GeV.
+Assuming GMSB production where the neutralino has a branching fraction of 50\% to the \PZ boson and 50\% to the Higgs boson, neutralino masses are probed up to around 500\GeV.
+Compared to published CMS results using 8\TeV data, these extend the exclusion limits by around 200--300\GeV depending on the model.
