@@ -1,17 +1,18 @@
-\chapter{Standard Model Background Predictions}\label{sec:backgrounds}
+\chapter{Background Estimations}\label{sec:backgrounds}
 \noindent
 \justify
-The SM backgrounds in this search are well known and allows for the use of data-driven background prediction methods. 
+The SM backgrounds in this search are well known and allows for the use of data-driven background estimation techniques. 
 Further, some backgrounds are estimated from simulation with designated control region to validate the normalization. 
-The background composition differs depending on if the search has a \PZ boson selection (such as for the colorec and electroweak superpartner searches) or a \PZ boson veto (such as for the Edge and direct slepton search). 
-This results in, on the one hand, a significant contribution from DY, on the other hand, a suppression thereof. 
-In the SRs where DY makes up a significant fraction, a data-driven technique is used that predicts the \ptmiss spectrum in Z+jets events by the \ptmiss spectrum in $\gamma$+jets events. 
-In the slepton search, the DY is heavily suppressed by stringent cuts on \ptmiss, number of jets and \mttwo, so this very minor fraction is estimated from simulation.  
+The background composition differs depending on if the search has a \PZ boson selection (such as for the colored and electroweak superpartner searches) or a \PZ boson veto (such as for the Edge and direct slepton search). 
+This results in, on the one hand, a significant contribution from Drell-Yan, on the other hand, a suppression thereof. 
+In the signal region where Drell-Yan makes up a significant fraction, a data-driven technique is used that predicts the \ptmiss spectrum in \PZ+jets events by the \ptmiss spectrum in $\gamma$+jets events. 
+In the slepton search, the Drell-Yan is heavily suppressed by stringent cuts on \ptmiss, number of jets and \mttwo, so this very minor fraction is estimated from simulation.  
 What is common to all the searches is the contribution from processes containing one or more top quarks or \PW bosons that decay leptonically. 
 These processes are referred to in the following as flavor symmetric (FS), due to the flavor symmetry of the \PW boson decay. 
 This background is estimated using a data-driven technique. 
 Diboson processes are also present in most SRs if one or two of the leptons are out of acceptance or are not well reconstructed. 
 Together with the \ttZ process, these processes are referred to as "Z+$\nu$" backgrounds, as they all contain prompt leptons and \ptmiss from a neutrino.   
+\newpage
 \section{Flavor-symmetric background}\label{sec:fsBG}
 \noindent
 \justify
@@ -292,8 +293,7 @@ But since the slepton signal region is designed with a veto on leptons compatibl
 The simulation is validated for both scenarios separately, and transfer factors are derived for the on-Z and slepton searches separately. 
 Similarly as to the \PWZ$\rightarrow3l\nu$ background, the control regions and the final transfer factors are introduced for the various analysis strategies presented in Chapters \ref{sec:strong}, \ref{sec:ewk} and \ref{sec:slepton}. 
 \section{Drell-Yan background}\label{sec:mettemplates}
-\noindent
-\justify
+\noindent\justify
 The Drell-Yan process, i.e. $\PZ+$jets process, enter all signal regions in the searches presented in this thesis. 
 The \ptmiss in the $\PZ+$jets process is solely due to the hadronic recoil and more precisely due to mismeasured jets. 
 A more detailed treatment of the \ptmiss in these events is presented in the chapter on \ptmiss performance in Chapter~\ref{sec:met}. 
@@ -323,3 +323,19 @@ The statistical uncertainty from the normalization of the template prediction in
 This uncertainty ranges from 7–30\% depending on the signal region.
 The uncertainty on the electroweak subtraction procedure is chosen to be 30\% as described previously in this section. 
 The different treatment of the Drell-Yan background needed for each analysis strategy will be described in Chapters \ref{sec:strong}, \ref{sec:ewk} and \ref{sec:slepton}.   
+\section{Rare processes}
+\noindent\justify
+A final category of Standard Model backgrounds are rare processes, such as  \ttW, \ttH, \tWZ\ and \tZq\ as introduced in Section \ref{search}. 
+These processes are neither flavor symmetric nor have all their \ptmiss from instrumental effects. 
+Instead they can all result in final states with more two or more leptons, jets and neutrinos, and thus fall in to the various signal regions that require two or more jets. 
+Triboson processes, such as \PWWZ, \PWZZ and \PZZZ contribute in the signal regions of the direct slepton search. 
+What is common to all these processes is that they have very low cross sections. 
+The contribution is taken from simulation and a conservative systematic uncertainty of 50\% is assigned.
+The simulated samples and the cross sections of these processes are summarized in Appendix A.  
+\section{Fakes}
+The attentive reader could now point out that a class of backgrounds is missing, namely that due to so called fakes. 
+Due to inefficiencies in reconstruction procedures, or due to faulty detector signals, lepton candidates can be reconstructed that in fact does not correspond to a genuine lepton. 
+Additionally, other real particles, such as light-flavor quarks or gluon jets may fake the presence of a light lepton. 
+In order for events with one fake lepton to enter the signal region, they have to be reconstructed along with a real lepton \footnote{The probability for two fake leptons in one event is just too small to be considered a sizeable background.}
+The standard model background of $\PW+$jets, with the \PW decaying leptonically and one of the jets faking a lepton could potentially lead to a signal like event. 
+However, as this process involves the flavor democratic leptonic decay of the \PW boson, this contribution will in the end be flavor symmetric, and thus taken into account by the flavor symmetric background prediction method.  

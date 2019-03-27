@@ -1,0 +1,121 @@
+\chapter{Simulation}
+\noindent\justify
+The data from proton proton collisions recorded by the CMS experiment is what is used to measure properties of Standard Model particles and search for new physics. 
+But in order to properly study detector effects and design searches for unknown physics, simulated events are used.  
+Monte Carlo generated events are used, with inputs from the theoretical framework presented in Chapter~\ref{sec:theory}.
+The interaction of particles with matter can also be simulated, which is crucial for validation of the performance of the detectors and the reconstruction algorithms.
+This chapter describes how the physics processes are generated and how their interaction with the detector material is simulated. 
+\newpage
+\section{Simulated events}\label{sec:MC}
+\noindent
+\justify
+Any search or measurement at the LHC are relying on simulated events, so called Monte Carlo (MC) generated events. 
+Physical processes are simulated in a chain, starting from the foundations dictated by the theoretical framework as described in Chapter\ref{sec:theory}, followed by the decay, radiation and hadronization of the particles produced, and finally, the simulation of the interaction of the generated process with the detector material. 
+Events are generated from both known SM processes to predict some backgrounds in the searches, and in order to validate the data-driven background prediction methods. 
+As the SUSY signals analyzed in this thesis are mulitple, and include numerous assumptions on the masses of the SUSY particles, the full chain of generation for all signal scenarios would be too computationally heavy to be feasible for an experiment performing hundreds of measurement and searches simultaneously. 
+For this reason, a faster simulation package is used for the SUSY signals on the level of the detector simulation step, that greatly reduces the computational time by parametrizing the interactions. 
+The gain in the reduction of the computational time is traded off with a slight decrease in precision, but is taken into account in the statistical analysis. 
+The subsequent chapters contain the description of the three levels of simulation, and the software packages used. 
+\subsection*{Hard parton scattering}
+\noindent
+\justify
+This section relies on the theoretical framework presented in Chapter~\ref{sec:theory}. 
+At hadron colliders, as opposed to lepton colliders, the energy available in the collisions is distributed over the three valence quarks of the hadrons, the sea quarks and the gluons. 
+In order to properly model the possible interactions, parton distribution functions (PDFs) are used, that dictates the probability of finding a parton within a proton, with a certain energy fraction $x$ of the proton. 
+Further, there are several ways of calculating the matrix element (ME). The square of the MEs are the transition probabilities of the gluons or (anti-)quarks in to the physical process of interest.
+The different packages utilizes different order of the strong coupling constant $\alpha_{s}$, and are choice of package depends on the requested precision.
+These packages are known as Monte Carlo (MC) generators, which utilizes the MC random sampling technique.  
+\subsubsection*{Parton distribution functions}
+\noindent
+\justify
+Parton distribution functions explain the probability to find a parton in a proton with some given energy fraction. 
+Due to the non-perturbative nature of partons, i.e. that partons can not be freely observed, the parton distribution functions can not be computed from first principles, however, they can determined by fitting observables to experimental data. 
+One way of determining the PDFs is through the so-called NNPDF3.0, that uses Neural Networks (NN) to model datasets collected by the ATLAS, CMS, HERA-II and LHCb experiments \cite{Ball:2014uwa}. 
+The NNPDP3.0 tool is developed to be used for searches and measurements during the LHC Run 2, and is used for all generated samples used in this thesis. 
+To demonstrate the behaviour of the parton distributions, the NNPDF3.1 NNLO are displayed in Figure \ref{fig:NNPDF31}. 
+N.B that the NNPDF3.1 is a successor of NNPDF3.0, and not used for the MC in this thesis, but lends itself well for a demonstration. 
+As can be seen in Figure \ref{fig:NNPDF31}, the red curve, corresponding to the gluon PDF scaled down by a factor of 10, is dominating at the low energies, for both resolution scales. 
+The corresponding interpretation is that the LHC pp collisions are dominated by low energy gluon induced processes, with a sub-dominant contribution of valence quarks at higher energy fractions. 
+This feature is explaining the necessity of the very high collision rate of $40\MHz$, as most of the interactions are between low-energy carrying gluons, which do not have enough energy to creat ``interesting'' physics events.  
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.8\textwidth]{images/detector/NNPDF31.png}
+   \caption{The NNPDF3.1 NNLO PDFs, evaluated at two resolution scales; $\mu^{2}=10\GeV^{2}$ (left) and  $\mu^{2}=10^{4}\GeV^{2}$ (right)\cite{Ball:2017nwa}.}
+   \label{fig:NNPDF31}
+\end{figure}
+\subsubsection*{Hard scattering processes}
+\noindent
+\justify
+The generation of a physics process relies on the calculation of the matrix elements, which states the transition probabilites of the partons involved in the interaction to particles. 
+The MEs can be calculated in many different ways, and each calculation corresponds to a MC generator, with the most significant difference being the order of $\alpha_{s}$ used. 
+Leading order (LO) corresponds to the first order in $\alpha_{s}$. 
+In this thesis, a generator that uses LO ME calculation is Madgraph~\cite{Alwall:2014hca}, which includes contributions with higher jet multiplicities via MLM~\cite{Mangano:2006rw} multileg matching and is used to simulate e.g. single $\gamma$ events.
+Higher order calculations, such as next-to LO (NLO) and next-to-next-to LO (NNLO) include higher orders in $\alpha_{s}$ and are therefore more accurately describing the physical process. 
+Madgraph can also be combined with a NLO generator, MC@NLO, into \MGvATNLO, and is used when generating e.g. the $\PW\PZ\rightarrow 3l1\nu$ process.
+A full NLO generator is \POWHEG~\cite{Oleari:2010nx,Alioli:2009je}, that is used to simulate e.g. the \ttbar$\rightarrow2l2\nu$ process. 
+The complete list of samples used in this thesis is presented in Appendix A.
+\subsubsection*{Multiparton interactions and parton showers}
+\noindent
+\justify
+Multiparton interactions (MPI) are a result of the hadron collisions busy nature, where partons other than those involved in the hard scatter event interact. 
+Initial state radiation (ISR) and final state radiation (FSR) are, as the names suggest, an emission of a $\gamma$, either before or after the main interaction in the event.
+Apart from both types of radiation are adding a photon to the event, ISR and FSR result in slight kinematical differences. 
+To illustrate this, we assume a Drell-Yan production, \Zee, with ISR and FSR. 
+In the case of the ISR, the photon is radiated by the partons before the production of the \PZ boson, with a result of carrying off some of the available energy in the collision. 
+Conversely, in FSR, the photon is radiated off of the electron or positron decayed from the \PZ boson, carrying off some of the energy of that lepton. 
+So if one would reconstruct the invariant mass of the leptons, it would not completely form the \PZ boson mass of 91\GeV. 
+Instead, one would have to construct the invariant mass of the leptons and the photon in order to recover the \PZ boson mass. 
+The simulation of both the MPI and ISR anf FSR is done with {\sc pythia}~\cite{Sjostrand:2014zea}. 
+\subsubsection*{Hadronization}
+\noindent
+\justify
+Colored quarks and gluons produced in the hard scatter event can not exist freely due to color confinement. 
+The mechanism of transforming the colored partons to colorless particles is known as hadronization. 
+The hadronization step is challenging, as is all QCD calculations, and a phenomenological approach is taken in generators such as {\sc pythia} 8.2~\cite{Sjostrand:2014zea}.
+The Lund string model~\cite{Andersson:1983ia} is the basis of the phenomenological approach, where the QCD field lines can be interpreted as being compressed into a tube like structure, a string. 
+The fragmentation in this model can be viewed as starting in a middle and spreading outwards by repeated breaks of these strings, forming new quark anti-quark pairs. 
+\subsubsection*{Decay}
+\noindent
+\justify
+Finally, {\sc pythia} is also taking care of the production of resonances and the decay of these unstable particles into stable particles or partons.  
+All resonances are decayed sequentially as part of the hard process, and so the total cross-section as calculated by {\sc pythia} is dependent upon the available decay channels of the resonance, with the effect that not including a decay channel will decrease the cross-section accordingly. 
+Conversely, particle decays are performed after hadronization, and changing the decay channels of a particle will not affect the total cross-section.  
+\subsection*{Detector simulation}
+\noindent
+\justify
+Now that the simulation of the physics processes in hadron collisions have been described, one final step remains in order to be able to compare the data to the simulation, namely how the produced particles interact with the matter in the detector. 
+\GEANTfour is a simulation toolkit used to describe the interaction of particles with matter and can simulate everything from tracking of particles bending in a magnetic field to the response of detector components. 
+In \GEANTfour, a detailed model of CMS is implemented that is taking care of the ionization, multiple scattering, and nuclear interactions and outputs a data format that is similar to that of the collision data. 
+It is this step of the MC simulation that is most computationally heavy, and for this reason, a faster, simpler package is used to simulate the many SUSY scenarios, with the trade off of less precision. 
+Worth noting is that if there would be any hints of SUSY in a particlular scenario, a full simulation would be performed.
+\subsection*{Event weights}
+\noindent
+\justify
+In order to be able to compare the simulted data to the real collision data, each MC sample need to be reweighted according to a so called event weight. The weight takes the form of
+\begin{equation}
+w=\frac{\sigma\cdot\cal{L}}{N}
+\end{equation}
+where $\sigma$ is the cross section of that process, $\cal{L}$ is the integrated luminosity of the collision data the simulation is compared to, and $N$ is the number of generated events. 
+This weight is then multiplied to each event. From the above equation, one can see that for a process with large cross section, the more simulated events are needed to keep the weight to a desirable small value. 
+The motivation to keep the weight as small as possible, is the statistical error on the MC sample, which goes as the square root of the sum of squared event weights. 
+So the larger the $N$, the smaller the $w$ and thus the smaller the statistical error. 
+\subsection*{Pileup}
+\noindent
+\justify
+As described in Chapter \ref{sec:LHC}, the LHC delivers more than one pp interaction per bunch crossing in order to increase chances for successful interactions. 
+The motivation for this originates from the PDFs discussed previously in this chapter, and the fact that most pp collisions at the LHC produced not so interesting low mass QCD interactions with little physical interest.  
+The number of interactions per bunch crossing is described by a Poissonian distribution, and has a mean of 27 interactions during the 2016 datataking, and is depicted in Figure \ref{fig:pileup}\cite{lumi}.
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.7\textwidth]{images/detector/pileup_pp_2016.pdf}
+   \caption{Mean number of interactions per bunch crossing for the 2016 pp run at 13\TeV. The cross section is taken to be 80 mb.}
+   \label{fig:pileup}
+\end{figure}
+This multiple pp interactions per bunch crossing, known as pileup, will be greatly discussed in the chapter on the performance of the \ptmiss algorithms. 
+The reason for this is the challenges that pileup poses on the experiment in efficiently distinguishing the primary vertex from pileup vertices, and results in inefficiencies in the energy assignment of various physics objects.    
+Specifically, the pileup has a significant effect on the reconstruction on the \ptmiss, which will be greatly discussed in the chapter on the performance of the \ptmiss algorithms. 
+As the multiple pp collisions per bunch crossing depends on the beam conditions, and can vary over time between LHC fills, the pileup distribution varies significantly over time. 
+For this reason, it is difficult to properly model the pileup in simulation, which results in the necessity of a correction of the modelled number of vertices in simulation to match the distribution in data. 
+This is known as ''pileup reweighting`` and is used for all simulated samples.  
+The two searches presented in this thesis use a pileup reweighting technique that reweights the total number of true interaction in the event, whereas the \ptmiss performance study reweights using the number of reconstructed vertices. 
+The slight mismodelling of the pileup in the simulated signal samples is taken into account as a systematic uncertainty in the signal interpretation, which will be further discussed later. 
