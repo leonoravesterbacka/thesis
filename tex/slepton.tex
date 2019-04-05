@@ -1,10 +1,11 @@
-\chapter{Search for direct slepton production}\label{sec:slepton}
-\noindent
-\justify
+\chapter{Search for direct slepton\\ production}\label{sec:slepton}
+\noindent\justify
 Finally, the production mode with the lowest cross section associated to it is treated. 
 Direct production of selectrons and smuons provide a very clean final state that makes for a simple but effective search design. 
 To first order, no hadronic activity is expected, giving a great handle to reducing SM background processes by imposing a jet veto. 
 A 100\% branching ratio of sleptons to leptons and the \firstchi LSP is assumed, that allows for a search with large \ptmiss requirements. 
+\newpara
+\noindent\justify
 This chapter summarizes the analysis strategy, the various background prediction techniques and concludes by setting limits on a selectrons and smuons. 
 \newpage
 \section{Analysis strategy}   
@@ -35,9 +36,7 @@ For this reason, the SR is defined for dielectron and dimuon events separately, 
 \end{center}        
 \end{table}  
 
-\section{Backgrounds}
-\noindent
-\justify
+\section{Background estimation}
 \subsection*{Flavor symmetric background}
 \noindent
 \justify
@@ -76,8 +75,10 @@ Figure \ref{fig:rsfofSleptonTwo} shows the \Rsfof as a function of number of jet
 \label{fig:rsfofSleptonTwo}
 \end{center}
 \end{figure}
+\newpara
+\noindent\justify
 Further, the slepton search is the only search presented in this thesis that has interpretations in the dielectron and dimuon channels separately.
-The reason behind this is that there is no a priori reason why the selectrons and smuons should have the same masses, so grouping them together and only interpret in the terms of same-flavor sleptons     is not enough\footnote{Of course, the interpretation in selectrons and smuons separately is also desirable as it gives separate entries in the PDG booklet. }
+The reason behind this is that there is no a priori reason why the selectrons and smuons should have the same masses, so grouping them together and only interpret in the terms of same-flavor sleptons is not enough.\footnote{Of course, the interpretation in selectrons and smuons separately is also desirable as it gives separate entries in the PDG booklet. }
 But since the factorization method utilizes the measurement of \rmue and \RT, that uses a mixture of measurements for electrons and muons.
 This means that the \rmue or \RT can not be used to predict the $N_{ee}$ or $N_{\mu\mu}$ separatley.
 Instead only the \Reeof and \Rmmof ratios from the direct measurment listed in Table \ref{tab:rSFOF} can be used to predict the $N_{ee}$ or $N_{\mu\mu}$.
@@ -92,7 +93,7 @@ Table \ref{tab:FlavSymBackgroundsSlepton} summarizes the resulting background es
 \centering
 \caption{Resulting estimates for flavor-symmetric backgrounds in the Slepton search.}
 \label{tab:FlavSymBackgroundsSlepton}
-\begin{tabular}{ c  c  c  c  c  c c}
+\begin{tabular}{ c  c  l  l  c  c c}
 \hline \hline
 \ptmiss [GeV] & $N_{OF}$ & $N_{SF}^{factorization}$ & $\Rsfof^{factorization}$ & $\Rsfof^{direct}$  & $\Rsfof^{combined}$ & $N_{SF}^{final}$ \\ \hline
 \multicolumn{6}{c}{SF lepton SR} \\\hline
@@ -137,7 +138,7 @@ The agreement in these signal region variables gives confidence that the \PWZ pr
 From this region, a transfer factor is derived that is applied in the slepton signal region to account for the slight difference in normalization observed in the three lepton control region.
 An additional systematic uncertainty is assigned to this method, by letting the jet energy scale corrections vary up and down in the computation of the \ptmiss, and the difference in the yield in the     background and \PWZ MC is propagated to the error on the final scale factor.
 The resulting transfer factor is $1.06\pm0.06$, where the 6\% is the statistical uncertainty on the data in the control region which is taken as a systematic uncertainty on the method.
-Further, systmeatic uncertainties such as the variations of the jet energy scale and resolution, as well as pdf anc scale variations is evaluated for this method, which will be further explained in Se    ction\ref{sec:interpretations}.
+Further, systematic uncertainties such as the variations of the jet energy scale and resolution, as well as pdf anc scale variations is evaluated for this method, which will be further explained in Section\ref{sec:systs}.
 The transfer factor is presented in Table \ref{tab:WZslepton}, using the MC samples summarized in Table\ref{tab:3lMCsamples} in Appendix A.
 \begin{table}[ht!]
 \def\arraystretch{1.2}
@@ -195,7 +196,7 @@ Figure~\ref{fig:ZZslepton} shows the invariant mass of the best Z candidate and 
 \label{fig:ZZslepton}
 \end{center}
 \end{figure}
-In Table \ref{tab:tab4lcontrol} the transfer factor of the four lepton control region is summarized, where the signal simulation is the ZZ $\rightarrow$4l process summarized in Table \ref{tab:4lMCsamp    les} of Appendix A (here all production modes are included as opposed to in the on-Z search where many of the samples were not generated at the time of the publication).
+In Table \ref{tab:tab4lcontrol} the transfer factor of the four lepton control region is summarized, where the signal simulation is the ZZ $\rightarrow$4l process summarized in Appendix A (here all production modes are included as opposed to in the on-Z search where many of the samples were not generated at the time of the publication).
 A transfer factor of 0.94 is obtained with a statistical uncertainty of 7\%, and this 7\% is used as a systematic uncertainty on the method. 
 As the slepton signal region is defined with a selection of leading leptons of \pt greater than 50 \GeV, this differs from the control region definition of \pt greater than 25 \GeV to maintain the sta    tistical power of the sample. 
 \begin{table}[ht!]
@@ -239,12 +240,10 @@ As the slepton signal region is not binned in the invariant mass like the edge s
 \end{tabular}
 \end{table}
 \section{Systematic uncertainties}
-\noindent
-\justify
 \subsection*{Systematic uncertainties for diboson backgrounds}
 \noindent
 \justify
-The SM contribution from \PWZ and \PZZ processes is taken directly from MC, corrected with a transfer factor and with additional systematic uncertainties propagated, as described in Sections \ref{sec:ZZ} and \ref{sec:WZ}.
+The SM contribution from \PWZ and \PZZ processes is taken directly from MC, corrected with a transfer factor and with additional systematic uncertainties propagated.
 A summary of the sources and the magnitude of the uncertainties considered for \PZZ and \PWZ processes is shown in Table \ref{tab:systematicsZZ} and Table \ref{tab:systematicsWZ}.
 For the \PZZ an additional uncertainty, steming from the application of the k-factor, is propagated as the difference in shape observed between applying the generator diboson \pt k-factor and not applying the k-factor.
 \begin{table}[!hbtp]
@@ -327,8 +326,8 @@ MC statistical uncertainty              &      0.5--20  \\ \hline\hline
 \justify
 Finally, the predicted background compared to the observed yields in the signal regions designed to target direct slepton production is presented. 
 As opposed to the results previously presented, the signal regions is not only categorized by SF lepton pairs, but is further categorized in dielectron and dimuon pairs. 
-The observed number of events in data in the SR are compared with the stacked SM background estimates as shown in Figure \ref{fig:sleptonResults} (SF events), and summarized in Table \ref{tab:sleptonResults} for SF events and in Table \ref{tab:resultseemm} for dielectron and dimuon events, separately.
-The \mttwo shape of the stacked SM background estimates, the observed data and three signal scenarios are also shown in Figure \ref{fig:sleptonResults}, for SF events, with all SR selection applied except the \mttwo requirement.
+The observed number of events in data in the SR are compared with the stacked SM background estimates as shown in Figure \ref{fig:results} (SF events), and summarized in Table \ref{tab:results} for SF events and in Table \ref{tab:resultseemm} for dielectron and dimuon events, separately.
+The \mttwo shape of the stacked SM background estimates, the observed data and three signal scenarios are also shown in Figure \ref{fig:results}, for SF events, with all SR selection applied except the \mttwo requirement.
 \begin{table}[!hbtp]
 \renewcommand{\arraystretch}{1.2}
 \setlength{\belowcaptionskip}{6pt}
@@ -404,7 +403,7 @@ The analysis probes slepton masses up to approximately 450, 400, or 290\GeV, ass
 For models with high slepton masses and light LSPs the sensitivity is driven by the highest \ptmiss bin. The sensitivity is reduced at higher LSP masses due to the effect of the lepton acceptance.
 In the case of selectrons (smuons), the limits corresponding to these 3 scenarios are 350, 310 and 250\GeV (310, 280, and 210\GeV).
 Since the dimuon data yield in the highest \ptmiss\ bin is somewhat higher than predicted, the observed limits in this channel are weaker than expected in the absence of signal.
-These results improve the previous 8\TeV exclusion limits by 100--150\GeV in the slepton mass~\cite{2012ewk}.
+These results improve the previous 8\TeV exclusion limits by 100--150\GeV in the slepton mass \cite{Khachatryan:2014qwa}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.48\textwidth]{images/interpretation/slepton/Figure_005-a.pdf} \\

@@ -1,10 +1,14 @@
 \part{ANALYSIS RESULTS}
-\chapter{Search for colored superpartner production}\label{sec:strong}
-\noindent
-\justify
-Using all the theoretical foundation, the experimental apparatus and the physics ingredients introduced in the previous parts of this thesis, the actual searches for SUSY, that is the foundation of this thesis, can be presented. 
+\chapter{Search for colored SUSY\\ production}\label{sec:strong}
+\noindent\justify
+Equiped with the theoretical foundation, the experimental apparatus and the physics objects, the actual searches for SUSY can be performed.
 The searches are divided in to three categories; the search for colored superpartners, the search for electroweak superpartners, and finally the search for direct slepton production. 
-The first chapter covers the strategy, background estimation techniques, and the results for the search for colored superpartners in final states with two same flavor opposite sign leptons.
+The first two searches are published in \cite{Sirunyan:2017qaj} and the third search is published in \cite{Sirunyan:2018nwe}.  
+\newpara
+\noindent\justify
+The first chapter summarizes the for the search for colored superpartners in final states with two same flavor opposite sign leptons. 
+The specific search regions desgined to target $\sbottom$ and $\gluino$ production modes are presented, together with the SM background estimation techniques employed. 
+The results and the statistical interpretation of the results conclude the chapter. 
 \newpage
 \section{Analysis strategy}
 \noindent
@@ -87,6 +91,7 @@ The resulting background estimates for FS backgrounds in the signal region of th
 It can be observed that the event-by-event reweighting in the factorization method yields smaller \Rsfof values for higher mass bins (especially in the \ttbar like selection).
 This makes sense since \mll is correlated to the \pt of the leptons and higher masses usually correspond to higher lepton \pt and thus smaller reweighting factors.
 Overall, the \Rsfof factors from the factorization method are a bit smaller than the factor from the control region method but still agree within their uncertainties.
+While FS background prediction method described above is clearly simple and clean, its main drawback is the limited statistical power in the scarcely populated kinematic regions.
 \begin{table}[ht!]
 \def\arraystretch{1.2}
 \setlength{\belowcaptionskip}{6pt}
@@ -116,7 +121,8 @@ $>$400   & 1    & 1.1$^{+2.4}_{-0.9}\pm$0.0  &  1.06$\pm$0.05 & 1.11$\pm$0.01& 1
 \hline\hline
 \end{tabular}
 \end{table}
-While FS background prediction method described above is clearly simple and clean, its main drawback is the limited statistical power in the scarcely populated kinematic regions.
+\newpara
+\noindent\justify
 The search for colored superpartners in the on-Z search regions suppres the \ttbar process by selecting events with a dilepton pair compatible with a \PZ boson.
 Further, very low yields of the FS backgrounds is obtained with a cut on \mttwo.
 Of course, reducing the SM backgrounds to a minimal is desirable, but one still wants to make sure that the backgrounds are properly predicted and do not suffer from too larger errors.
@@ -221,9 +227,8 @@ SR & \ptmiss [GeV] & Prediction & Closure & Normalization & Statistical & EWK su
 \end{tabular}
 \end{table}
 
-\subsection*{\PWZ$\rightarrow3l\nu$ background}\ref{sec:Znustrong}
-\noindent
-\justify
+\subsection*{\PWZ$\rightarrow3l\nu$ background}\label{sec:Znustrong}
+\noindent\justify
 The \PWZ$\rightarrow3l\nu$ background is large in the on-Z search for gluinos, when one of the prompt leptons is lost due to acceptance, as described in Section \ref{sec:Znu}. 
 The contribution is estimated from simulation, with a transfer factor derived in a \PWZ control region. 
 The \PWZ control region designed for the on-Z searches is defined as
@@ -234,7 +239,7 @@ The \PWZ control region designed for the on-Z searches is defined as
     \item more than two jets of $\pt>35\GeV$
     \item $|\Delta\phi(\mathrm{jet_{1,2}}, \ptmiss)|>0.4$
 \end{itemize}
-The result is presented in Table\ref{tab:WZonZ}, where the \PWZ signal simulation is compared to the simulated backgrounds and the observed yields that enter this control region.
+The result is presented in Table \ref{tab:WZonZ}, where the \PWZ signal simulation is compared to the simulated backgrounds and the observed yields that enter this control region.
 A transfer factor of 1.06 is derived as the data with simulated backgrounds subtracted over the signal process simulation.
 As the statistical uncertainty is dominant in this control region, due to the low number of data yields, a flat systematic uncertatinty of 30\% is chosen.
 This is chosen instead of evaluating the effect of varying jet energy scale and resolution, and varying the pdf and scale, as these uncertainties are subdominant to the statistical uncertainty.
@@ -278,7 +283,7 @@ The four lepton control region is defined as
 At the time of publication, not all the \PZZ processes were generated.
 \noindent
 \justify
-Only the \texttt{/ZZTo4L\_13TeV\_powheg\_pythia8} was available (as opposed to in the slepton search where all production modes of the \PZZ processes was available), making the derivation of the translation factor particularly important as some proceeses are missing.
+Only the \texttt{/ZZTo4L\_13TeV\_powheg\_pythia8} was available (as opposed to in the slepton search where all production modes of the \PZZ processes listed in Appendix A was available), making the derivation of the translation factor particularly important as some proceeses are missing.
 The effect of the missing samples in simulation is reflected in Figure~\ref{fig:ZZonZ}, where the observed data obviously contain all physical processes resulting in four leptons.
 \begin{figure}[htbp!]
 \begin{center}
@@ -337,7 +342,7 @@ The final translation factor is $1.4$ with a conservative systematic uncertainty
 \small
 \centering
 \caption{Transfer factor derived in the \ttZ control region}
-\label{tab:tab4lcontrol}
+\label{tab:ttZ}
 \begin{tabular}{l c }
 \hline \hline
 \multicolumn{2}{c}{\ttZ lCR}  \\\hline
@@ -489,7 +494,6 @@ and therefore the prediction agrees with the data by construction.}
 The edge search is binned in the invariant mass of the SF leptons, instead of in \ptmiss. 
 Seven \mll bins are further split into two categories according to the \ttbar likelihood discriminant, resulting in a total of 14 signal region bins. 
 The predicted SM backgrounds are compared to the observed data in Table \ref{tab:edgeResults} and in Figure \ref{fig:resultsEdge} as a graphical representation. 
-
 \begin{table}[!hbtp]
 \renewcommand{\arraystretch}{1.2}
 \setlength{\belowcaptionskip}{6pt}
@@ -529,17 +533,17 @@ $> 400$   &  1.1$^{+2.5}_{-0.9}$    & $< 0.1$       & 0.4$\pm$0.2  &  1.6$^{+2.5
 \begin{center}
 \includegraphics[width=0.8\textwidth]{images/results/Figure_005.pdf}
 \caption{Results of the counting experiment of the edge search. For each SR, the number of observed events, shown as black data points, is compared to the total background estimate.  The hashed band shows the total uncertainty in the background prediction, including statistical and systematic sources.}
-\label{fig:edgeResults}
+\label{fig:resultsEdge}
 \end{center}
 \end{figure}                                                                                                                                                               
 The main SM background in the edge search is due to the flavor symmetric processes. 
 As the uncertainty on the flavor symmetric background prediction technique is driven by the statistical uncertatinty in the number of events in the OF control sample, this becomes the dominant uncertainty in the high-mass and non-\ttbar-like regions where the event counts are low. 
 There is good agreement between prediction and observation for all SRs. 
 There is a small deviation observed in the non-\ttbar-like region for masses between 96 and 150\GeV, with an excess corresponding to a local significance of 2.0 standard deviations.
-The invariant mass of the leptons and the results of the kinematic fit are shown in Fig.~\ref{fig:Fit_data_H1}, with the fit results presented in Table~\ref{tab:fitResults}.
+The invariant mass of the leptons and the results of the kinematic fit are shown in Figure \ref{fig:Fit_data_H1}, with the fit results presented in Table \ref{tab:fitResults}.
 When evaluating the signal hypothesis in the baseline signal region, a signal yield of $61\pm28$ events is obtained, with a fitted edge position of $144.2^{+3.3}_{-2.2}\GeV$. 
 This is in agreement with the upwards fluctuations in the signal region in \mll 96-150\GeV and corresponds to a local significance of 2.3 standard deviations.
-To estimate the global $p$-value~\cite{Gross:2010qma} of this result, the test statistic,
+To estimate the global $p$-value \cite{Gross:2010qma} of this result, the test statistic,
 \begin{equation}
 q(\mu)=-2\ln\frac{\mathcal{L}(data|\mu, \hat{\hat{\theta}}(\mu))}{\mathcal{L}(data|\hat{\mu}, \hat{\theta}(\mu))}
 \end{equation}
@@ -582,7 +586,7 @@ Therefore, most of the sensitivity of the on-Z search is provided by the high je
 All of the on-Z strong-production SRs are considered, however, to set limits in this model, as signal jets can be lost due to \pt or $\eta$ acceptance, or not be well reconstructed.
 The expected and observed limits are presented in Fig.~\ref{fig:Limits1} as a function of the \gluino  and \firstchi masses.
 Gluino masses up to 1500--1770\GeV depending on the mass of \firstchi are excluded.
-This represents an improvement of around 500\GeV compared to the previously published CMS result~\cite{CMS:Zedge2015}.
+This represents an improvement of around 500\GeV compared to the previously published CMS result \cite{Khachatryan:2015lwa}.
 \begin{figure}[!hb]
  \centering
    \includegraphics[width=0.60\textwidth]{images/interpretation/strong/Figure_007.pdf}
@@ -596,6 +600,8 @@ This represents an improvement of around 500\GeV compared to the previously publ
      variation of the signal cross sections within their theoretical uncertainties.
    }
 \end{figure}
+\newpara
+\noindent\justify
 The edge search is interpreted using the slepton edge model that targets the direct sbottom production, combining the seven \mll bins and the two \ttbar likelihood regions.
 In Figure~\ref{fig:Limits2} is the exclusion contour shown as a function of the \sbottom and \secondchi masses. 
 Sbottom masses are exluded up to around 980--1200\GeV, depending on the mass of \secondchi, extending previous exclusion limits in the same model by 400--600\GeV.
@@ -627,6 +633,8 @@ A search for colored superpartners in events with opposite-sign, same-flavor lep
 The data used corresponds to a sample of pp collisions collected with the CMS detector in 2016 at a center-of-mass energy of 13\TeV, corresponding to an integrated luminosity of \lint.
 Searches are performed for signals with a dilepton invariant mass (\mll) compatible with the \PZ boson or producing a kinematic edge in the distribution of \mll.
 By comparing the observation to estimates for SM backgrounds obtained from data control samples, no statistically significant evidence for a signal has been observed.
+\newpara
+\noindent\justify
 Two searches for colored superpartners has been presented, one targeting gluino production and the other targeting sbottom production. 
 The search for gluinos, the superpartner of the gluon, using an on-shell \PZ boson is interpreted in a model of gauge-mediated supersymmetry breaking (GMSB), where the \PZ bosons are produced in decay chains initiated through gluino pair production.
 Gluino masses below 1500--1770\GeV have been excluded, depending on the neutralino mass, extending the exclusion limits derived from the previous CMS publication by almost 500\GeV.

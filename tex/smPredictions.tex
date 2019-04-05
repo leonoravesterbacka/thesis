@@ -3,17 +3,381 @@
 \justify
 The SM backgrounds in this search are well known and allows for the use of data-driven background estimation techniques. 
 Further, some backgrounds are estimated from simulation with designated control region to validate the normalization. 
-The background composition differs depending on if the search has a \PZ boson selection (such as for the colored and electroweak superpartner searches) or a \PZ boson veto (such as for the Edge and direct slepton search). 
+The background composition differs depending on if the search involves the production of an on-shell \PZ boson selection (such as for the colored and electroweak superpartner searches) or not (such as for the Edge and direct slepton search). 
 This results in, on the one hand, a significant contribution from Drell-Yan, on the other hand, a suppression thereof. 
-In the signal region where Drell-Yan makes up a significant fraction, a data-driven technique is used that predicts the \ptmiss spectrum in \PZ+jets events by the \ptmiss spectrum in $\gamma$+jets events. 
-In the slepton search, the Drell-Yan is heavily suppressed by stringent cuts on \ptmiss, number of jets and \mttwo, so this very minor fraction is estimated from simulation.  
+In the signal region where Drell-Yan is the dominant background, a data-driven technique is used that predicts the \ptmiss spectrum in \PZ+jets events by the \ptmiss spectrum in $\gamma$+jets events.
+In the slepton search the Drell-Yan is heavily suppressed by stringent cuts on \ptmiss, number of jets and \mttwo, and is thus estimated using simulation.  
 What is common to all the searches is the contribution from processes containing one or more top quarks or \PW bosons that decay leptonically. 
-These processes are referred to in the following as flavor symmetric (FS), due to the flavor symmetry of the \PW boson decay. 
+These processes are referred to in the following as flavor symmetric, due to the flavor symmetry of the \PW boson decay. 
 This background is estimated using a data-driven technique. 
-Diboson processes are also present in most SRs if one or two of the leptons are out of acceptance or are not well reconstructed. 
+Diboson processes, such as $\PWZ$ and $\PZZ$ contribute in most SRs if one or two of the leptons are out of acceptance or are not well reconstructed. 
 Together with the \ttZ process, these processes are referred to as "Z+$\nu$" backgrounds, as they all contain prompt leptons and \ptmiss from a neutrino.   
+This chapter contains an overview of the SM background processes present in the searches, and is followed by a description on the background estimation techniques used to estimate them. 
 \newpage
-\section{Flavor-symmetric background}\label{sec:fsBG}
+\section{Standard model processes}
+\noindent\justify
+The final states resulting from directly produced selectrons (smuons) are a pair of electrons (muons) and large \ptmiss from the LSPs. 
+The main differences in the final state compared to the \firstcharg-\secondchi and \firstchi-\firstchi production, are that absence of jets and the fact that the lepton pair is not compatible to the \PZ boson mass. 
+These two distinctions make for a different search strategy, where no jets are required, and the contribution from Drell--Yan can be greatly suppressed through a veto. 
+Below are all the background processes listed for the searches. 
+\subsection*{Top related processes}
+\noindent\justify
+Leptonically decaying top anti-top pair production provides a major background in this search, as the leptons are of opposite charge. 
+Additionally, single top production, can also result in this signature, if one of the jets is misidentified as a lepton. 
+Both processes are depicted in Figure \ref{fig:Feynmanttbar} and involve a leptonically decaying \PW boson, and these backgrounds are predicted using the flavor symmetry of the \PW decay, described in the subsequent chapter. 
+These backgrounds, referred to as Flavor Symmetric (FS) in this thesis, can be heavily suppressed by a cut at the end point of the \mttwo distribution. 
+\begin{figure}[!htb]
+\begin{center}
+\begin{tabular}{cccccccccccccccc}
+\begin{fmffile}{ttbar1}
+\begin{fmfgraph*}(110,62)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$g$}{i1}
+\fmflabel{$g$}{i2}
+\fmflabel{$t$}{o1}
+\fmflabel{$\bar{t}$}{o2}
+\fmf{gluon}{i1,v1}
+\fmf{gluon}{i2,v1}
+\fmf{fermion}{o2,v2}
+\fmf{fermion}{v2,o1}
+\fmf{gluon}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}
+\hspace{1cm}                                                      
+%\
+\begin{fmffile}{ttbar2}
+\begin{fmfgraph*}(110,62)
+\fmfbottom{i1,d1,o1}
+\fmftop{i2,d2,o2}
+\fmflabel{$g$}{i1}
+\fmflabel{$g$}{i2}
+\fmflabel{$\bar{t}$}{o2}
+\fmflabel{$t$}{o1}
+\fmf{gluon}{i1,v1}
+\fmf{gluon}{i2,v2}
+\fmf{fermion}{v1,o1}
+\fmf{fermion}{o2,v2}
+\fmf{fermion,tension=0}{v2,v1}
+\end{fmfgraph*}
+\end{fmffile}
+\hspace{1cm}
+%\
+\begin{fmffile}{ttbar3}
+\begin{fmfgraph*}(110,62)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$q$}{i1}
+\fmflabel{$\bar{q}$}{i2}
+\fmflabel{$t$}{o1}
+\fmflabel{$\bar{t}$}{o2}
+\fmf{fermion}{v1,i2}
+\fmf{fermion}{i1,v1}
+\fmf{fermion}{o2,v2}
+\fmf{fermion}{v2,o1}
+\fmf{gluon}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}                          
+\end{tabular}
+\end{center}    
+\caption{The leading order diagrams of \ttbar production, through gluon fusion (left and middle) and quark-antiquark annihilation (right).}
+\label{fig:Feynmanttbar}                                                                                                
+\end{figure}                                                                                                                             
+%\
+\begin{figure}[!htb]
+\begin{center}
+\begin{tabular}{cccccccccccccccc}
+\begin{fmffile}{singleTop1}
+\begin{fmfgraph*}(110,62)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$u$}{i1}
+\fmflabel{$\bar{d}$}{i2}
+\fmflabel{$\bar{b}$}{o1}
+\fmflabel{$t$}{o2}
+\fmf{fermion}{v1,i2}
+\fmf{fermion}{i1,v1}
+\fmf{fermion}{o1,v2}
+\fmf{fermion}{v2,o2}
+\fmf{photon,label=$W^{+}$}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}
+\hspace{1cm}                          
+%\
+\begin{fmffile}{singleTop2}
+\begin{fmfgraph*}(110,62)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$u$}{i2}
+\fmflabel{$b$}{i1}
+\fmflabel{$d$}{o2}
+\fmflabel{$t$}{o1}
+\fmf{fermion}{i1,v1,o1}
+\fmf{fermion}{i2,v2,o2}
+\fmf{photon,label=$W^{+}$}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}
+\hspace{1cm}
+%\
+\begin{fmffile}{singleTop3}
+\begin{fmfgraph*}(110,62)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$b$}{i1}
+\fmflabel{$g$}{i2}
+\fmflabel{$W^{-}$}{o1}
+\fmflabel{$t$}{o2}
+\fmf{fermion}{i1,v1}
+\fmf{gluon}{i2,v1}
+\fmf{photon}{v2,o1}
+\fmf{fermion}{v2,o2}
+\fmf{fermion,label=$b$}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}                          
+\end{tabular}
+\end{center}    
+\caption{Single top quark production through s-channel (left), t-channel (middle) and in association with a W boson (right).} 
+\label{fig:Feynmansingletop}                                                                                                
+\end{figure}                                                                                                                             
+
+\subsection*{Drell-Yan}
+\noindent
+\justify
+The large cross section Drell-Yan process, where a \PZ boson decays to two leptons, is a major background in the search for electroweak SUSY, as a lepton pair compatible with a \PZ boson is required in the final state, and is shown in Figure \ref{fig:Feynmandy}. 
+This process contain no production of neutrinos, with the result that the \ptmiss is solely due to jet resolution and detector effects. 
+This process will in the following be referred to as DY, DY+jets, Drell-Yan or $\PZ+$jets.
+As was thoroughly described in the chapter on the \ptmiss performance, Chapter \ref{sec:met}, the DY is very similar to the single photon production in the sense that it does not contain any real \ptmiss from neutrinos. 
+Therefore, the \ptmiss contribution from DY can be estimated through the \ptmiss from single photon production. 
+This data-driven technique is referred to as "\ptmiss template method" and profits from the high statistical power of the single $\gamma$ process. 
+In the direct slepton production search, a \PZ boson veto is applied that heavily suppresses the DY, and the very minor contribution from DY is taken from simulation.   
+\begin{figure}[!htb]
+\begin{center}
+\begin{tabular}{cccccccccccccccc}
+\begin{fmffile}{dy}
+\begin{fmfgraph*}(110,62)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$q$}{i1}
+\fmflabel{$\bar{q}$}{i2}
+\fmflabel{$l^{-}$}{o1}
+\fmflabel{$l^{+}$}{o2}
+\fmf{fermion}{v1,i2}
+\fmf{fermion}{i1,v1}
+\fmf{fermion}{o1,v2}
+\fmf{fermion}{v2,o2}
+\fmf{photon,label=$\gamma^{*}/Z$}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}                          
+\end{tabular}
+\end{center}    
+\caption{Leading order DY production.} 
+\label{fig:Feynmandy}                                                                                                
+\end{figure}                                                          
+
+\subsection*{Diboson production}
+\noindent
+\justify
+Diagrams for diboson production are shown in Fig.~\ref{fig:Feynmandiboson}, where $V_1$ and $V_2$ are either \PW and \PW, \PZ and \PZ, or \PW and \PZ. 
+The \PWW process, where both \PW bosons decay leptonically, is flavor symmetric and is estimated using the flavor symmetric background prediction method described in the subsequent chapters. 
+The \PZZ process and \PWZ process, when one \PZ boson decays to charged leptons and one \PZ boson decay to neutrinos, are dominant backgrounds in the direct slepton search as they fulfill the criteria of no hadronic activity and large \ptmiss from neutrinos. 
+If both bosons decay leptonically, the \PWZ process can result in opposite sign same flavor pairs and enter both searches as a background if one of the leptons is out of $\eta$ or \pt acceptance. 
+The \PZZ and \PWZ are referred to as "\PZ+$\,\nu$ backgrounds" in this thesis and are estimated through simulation with translation factors derived from dedicated control regions. 
+As the strong, electroweak and slepton searches have different kinematic features, the translation factors for these processes are derived separatley for the three searches.
+\begin{figure}[!htb]
+\begin{center}
+\begin{tabular}{cccccccccccccccc}
+\begin{fmffile}{VVs}
+\begin{fmfgraph*}(110,62)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$q$}{i1}
+\fmflabel{$q$}{i2}
+\fmflabel{$V_{1}$}{o1}
+\fmflabel{$V_{2}$}{o2}
+\fmf{plain}{v1,i2}
+\fmf{plain}{i1,v1}
+\fmf{photon}{o1,v2}
+\fmf{photon}{v2,o2}
+\fmf{photon,label=$V$}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile} 
+%\
+\hspace{1cm}
+\begin{fmffile}{VVt}
+\begin{fmfgraph*}(110,62)
+\fmfbottom{i1,d1,o1}
+\fmftop{i2,d2,o2}
+\fmflabel{$q$}{i1}
+\fmflabel{$q$}{i2}
+\fmflabel{$V_{1}$}{o2}
+\fmflabel{$V_{2}$}{o1}
+\fmf{plain}{i1,v1}
+\fmf{plain}{i2,v2}
+\fmf{photon}{v1,o1}
+\fmf{photon}{o2,v2}
+\fmf{plain,tension=0}{v2,v1}
+\end{fmfgraph*}
+\end{fmffile}                      
+%\
+\hspace{1cm}
+\begin{fmffile}{VVu}
+\begin{fmfgraph*}(110,62)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$q$}{i1}
+\fmflabel{$q$}{i2}
+\fmflabel{$V_{1}$}{o1}
+\fmflabel{$V_{2}$}{o2}
+\fmf{plain}{i1,v1}
+\fmf{phantom}{v1,o1} 
+\fmf{plain}{i2,v2}
+\fmf{phantom}{v2,o2}
+\fmf{photon}{v1,v2}
+\fmf{photon,tension=0.001}{v1,o2}
+\fmf{photon,tension=0.001}{v2,o1}
+\fmfdot{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}                          
+\end{tabular}
+\end{center}    
+\caption{Leading order diboson production through $s$-channel (left), $t$-channel (middle) or $u$-channel (right).} 
+\label{fig:Feynmandiboson}                                                 
+\end{figure}                                                                                                                  
+
+\subsection*{Rare backgrounds}
+\noindent\justify
+The processes categorized as rare are named according to their defining feature of having a low cross section. 
+These processes are \ttZ, \ttW, \ttH, \tWZ\ and \tZq\ and have the commonality that they all can produce at least two leptons, jets and some \ptmiss from neutrinos, making them end up in the various signal regions, although with a very low rate. 
+\begin{figure}[!htb]
+\begin{center}
+\begin{tabular}{cccccccccccccccc}
+\begin{fmffile}{ttZ}
+\begin{fmfgraph*}(110,62)
+\fmfleft{i1,i2}
+\fmfright{o1,t1,o2}
+\fmflabel{$g$}{i1}
+\fmflabel{$g$}{i2}
+\fmflabel{$t$}{o2}
+\fmflabel{$Z$}{t1}
+\fmflabel{$\bar{t}$}{o1}
+\fmf{gluon}{v1,i2}
+\fmf{gluon}{i1,v1}
+\fmf{fermion,tension=2}{o1,s2,v2}
+\fmf{fermion}{v2,o2}
+\fmf{photon}{s2,t1}
+\fmf{gluon}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile} 
+%\
+\hspace{1cm}
+\begin{fmffile}{ttW}
+\begin{fmfgraph*}(110,62)
+\fmfstraight
+\fmfleft{i2,i1}
+\fmfright{o1,l2,l1}
+\fmf{phantom,tension=1.8}{i1,v1}
+\fmf{phantom,tension=1.0}{v1,l1}
+\fmf{phantom,tension=1.8}{v1,v2}
+\fmf{phantom,tension=1.8}{i2,v2}
+\fmf{phantom,tension=1.0}{v2,o1}
+\fmffreeze
+\fmfshift{5 right}{l1,l2}
+\fmfshift{20 left}{o1}
+\fmflabel{$\bar{d}$}{i1}
+\fmflabel{$u$}{i2}
+\fmflabel{$W^{+}$}{o1}
+\fmf{fermion}{i2,v2,v1,i1}
+\fmf{gluon,tension=1.2,label=$g$,label.side=left}{v1,z}
+\fmf{photon}{v2,o1}
+\fmflabel{$\bar{t}$}{l1}
+\fmflabel{$t$}{l2}
+\fmf{fermion}{l1,z,l2}
+\end{fmfgraph*}
+\end{fmffile}                                                         
+%\
+\hspace{1cm}
+\begin{fmffile}{ttH}
+\begin{fmfgraph*}(110,62)
+\fmfleft{d,i1,d,d,i3,d}
+\fmfright{o1,d,o2,d,o3}
+\fmf{gluon,tension=1.2}{i1,v1}
+\fmf{gluon,tension=1.2}{v3,i3}
+\fmf{fermion}{o1,v1}
+\fmf{fermion}{v3,o3}
+\fmf{phantom,tension=0.3}{v1,v3}
+\fmffreeze
+\fmf{fermion}{v1,v2,v3}
+\fmf{dashes,tension=1.3}{v2,o2}
+\fmflabel{$g$}{i3}
+\fmflabel{$g$}{i1}
+\fmflabel{$t$}{o3}
+\fmflabel{$\bar{t}$}{o1}
+\fmflabel{H}{o2}
+\end{fmfgraph*}
+\end{fmffile}
+\end{tabular}
+\end{center}    
+\caption{Leading order $\mathrm{t\bar{t}Z}$ (left), $\mathrm{t\bar{t}W}$ (middle) and $\mathrm{t\bar{t}H}$ (right) production.} 
+\label{fig:Feynmandiboson}                                                 
+\end{figure}                                                                                                     
+%\
+\begin{figure}[!htb]
+\begin{center}
+\begin{tabular}{cccccccccccccccc}
+\begin{fmffile}{tWZ}
+\begin{fmfgraph*}(110,62)
+\fmfleft{i1,i2}
+\fmfright{o1,t1,o2}
+\fmflabel{$b$}{i1}
+\fmflabel{$g$}{i2}
+\fmflabel{$t$}{o2}
+\fmflabel{$Z$}{t1}
+\fmflabel{$W^{-}$}{o1}
+\fmf{gluon}{v1,i2}
+\fmf{fermion}{i1,v1}
+%\fmf{fermion,tension=2}{o1,s2,v2}
+\fmf{photon,tension=0.5}{o1,v2}
+\fmf{fermion}{s2,o2}
+\fmf{plain}{v2,s2}
+\fmf{photon}{s2,t1}
+\fmf{fermion,label=$b$}{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}                                              
+%\                                  
+\hspace{1cm}
+\begin{fmffile}{tZq}
+\begin{fmfgraph*}(110,62)
+\fmfstraight
+\fmfleft{i2,i1}
+\fmfright{o1,l2,l1}
+\fmf{phantom,tension=1.8}{i1,v1}
+\fmf{phantom,tension=1.0}{v1,l1}
+\fmf{phantom,tension=1.8}{v1,v2}
+\fmf{phantom,tension=1.8}{i2,v2}
+\fmf{phantom,tension=1.0}{v2,o1}
+\fmffreeze
+\fmfshift{5 right}{l1,l2}
+\fmfshift{20 left}{o1}
+\fmflabel{$b$}{i1}
+\fmflabel{$q$}{i2}
+\fmflabel{$q'$}{o1}
+\fmf{fermion}{i2,v2}
+\fmf{photon,label=$W^{+}$}{v1,v2}
+\fmf{fermion}{i1,v1}
+\fmf{plain}{v1,z}
+\fmf{fermion}{v2,o1}
+\fmflabel{$t$}{l1}
+\fmflabel{$Z$}{l2}
+\fmf{fermion}{z,l1}
+\fmf{photon}{z,l2}
+\end{fmfgraph*}
+\end{fmffile}                                                         
+\end{tabular}
+\end{center}    
+\caption{Leading order $\mathrm{tWZ}$ (left) and $\mathrm{tZq}$ (right) production.} 
+\label{fig:Feynmandiboson}                                                 
+\end{figure}                                                                                                     
+\section{Flavor-symmetric background estimation}\label{sec:fsBG}
 \noindent
 \justify
 Physical processes that feature decays into same flavor and opposite flavor lepton pairs with equal probability is comprised in this background estimation. 
@@ -27,7 +391,7 @@ The idea behind the background prediction technique is visualized in Figure \ref
 \label{fig:rsfofMC}
 \end{center}
 \end{figure}                                                                               
-Other processes such as \PWZ production or \ttZ and \ttH production have some flavor symmetric component and some component stemming from the decay of the \PZ boson.
+Other processes such as \PWZ, \PZZ and \ttZ have some flavor symmetric component and some component stemming from the decay of the \PZ boson.
 These processes are treated separately in Section \ref{sec:Znu} and are referred to as "Z+$\nu$" processes. 
 The FS background prediction in SF events utilizes the number of OF events as follows:
 \begin{align}
@@ -88,9 +452,9 @@ The exact selections for this \Rsfof-measurement control region are:
 \end{itemize}                                 
 Even though all signal regions are defined with a \mttwo cut, the choice is made to not define the \ttbar CR with a \mttwo requirement. 
 The reason for this is the significant reduction of the \ttbar background and thus the available statistics that the \mttwo requirement would lead to.
-A large mass window around the \PZ boson mass is excluded to avoid the contamination with DY backgrounds. 
+A large mass window around the \PZ boson mass is excluded to avoid the contamination with Drell-Yan backgrounds. 
 The measurement consist of counting the number of ee, $\mu\mu$ and SF events in this control region, and taking the ratio of this number to the number of OF events in the same region, to construct the \Reeof, \Rmmof and \Rsfof separately. 
-The results are shown in Tab.~\ref{tab:rSFOF} and the data and the simulation agree within 2\% for the combination of both flavors. 
+The results are shown in Table \ref{tab:rSFOF} and the data and the simulation agree within 2\% for the combination of both flavors. 
 If the flavors are treated seperately, the data MC agreement is between 1 and 3\%. 
 As a closure test, the ratio of \Rsfof in the control and signal region (transfer factor) on simulation is studied. 
 It is found to be compatible with unity within 2\%  for the combination of both flavors and for each flavor seperately.
@@ -128,7 +492,7 @@ It is found that a variation 4\% is enough cover any potential fluctuations and 
 \noindent
 \justify
 The second method to predict the number of SF events in the SR is called the Factorization method and explicitly takes into account the trigger and recontruction efficiencies of the leptons.   
-In order to calculate \Rsfof according to Eq.~\ref{eq:masterformulaExp}, \rmue and \RT are measured in data.
+In order to calculate \Rsfof according to Equation\ref{eq:masterformulaExp}, \rmue and \RT are measured in data.
 \subsubsection*{Measurement of \rmue}
 \noindent
 \justify
@@ -249,9 +613,45 @@ For the factorization method, no constant result for the \Rsfof can be given, du
 Instead, the factorization method is applied in each SR where the obtained prediction is divided by the number of OF events to get an \Rsfof factor for the factorization method in this region. 
 This factor is combined with \Rsfof from the direct measurement method by using the weighted average.
 The \Rsfof values obtained by the direct measurement are the same for all signal regions as they are derived in one control region, and are given in Table \ref{tab:rSFOF}. 
-\section{Z+$\nu$ background}\label{sec:Znu}
-\noindent
-\justify
+\section{Drell-Yan background estimation}\label{sec:mettemplates}
+\noindent\justify
+The Drell-Yan process, i.e. $\PZ+$jets process, enter all signal regions in the searches presented in this thesis. 
+The \ptmiss in the $\PZ+$jets process is solely due to the hadronic recoil and more precisely due to mismeasured jets. 
+A more detailed treatment of the \ptmiss in these events is presented in the chapter on \ptmiss performance in Chapter~\ref{sec:met}. 
+What can be seen there is that the shape of the \ptmiss spectrum in $\PZ+$jets is the same as in $\gamma+$jets events, with a difference in the normalization due to the higher cross section associated with the $\gamma+$jets process. 
+This similarity in the shape of the \ptmiss spectrum is exploited in this thesis, by estimating the $\PZ+$jets in the signal region from a data sample of $\gamma+$jets in the signal region. 
+\newpara
+\noindent\justify
+A single photon data sample is collected using single photon triggers with \pt thresholds of 22-165\GeV. 
+The data collected with the prescaled triggers is corrected by the associated prescale values for each data taking period and run. 
+As there are differences between the mass of the two bosons, the $\gamma$ \pt spectrum is reweighted to match the $\PZ$ spectrum in each signal region to account for this difference. 
+An orthogonal control region with \ptmiss 50-100\GeV is used to normalize the $\gamma+$jets sample to match the $\PZ+$jets sample.
+Although suppressed by the lower cross sections and a lepton veto, electroweak processes with real \ptmiss such as $\PW\gamma$ can contribute significantly to the \ptmiss tails in the single $\gamma$ sample.
+The contributions from electroweak processes are subtracted from the photon \ptmiss spectrum using simulation. 
+The modelling of the simulated electroweak processes is validated in an orthogonal control region containing one muon and one photon. 
+There is good agreement observed in this control region and a conservative 30\% systematic uncertainty is assigned to the electroweak subtraction procedure.   
+\newpara
+\noindent\justify
+As the \mttwo variable is used to define all signal regions, the \mttwo has to be constructed in the $\gamma+$jets data sample. 
+But since two visible objects are needed when calculating the \mttwo, a special treatment is needed since there is only one photon in the events. 
+The \mttwol can be emulated in the $\gamma+$jets sample by a simulated decay of the photon to two leptons, and where the \mttwol is calculated with the two decayed leptons as the visible objects.
+This decay is done by assuming the mother particle has the mass of a \PZ boson and the \pt of the photon reconstructed from data. 
+The angular distribution of the leptons is accounted for by assuming a scenario where the direction of the spin of the mother particle is sampled from a distribution that is uniformly distributed in $1+\cos^{2}(\theta)$, where $\theta$ is the polar angle in the reference frame in which the mother particle is at rest. 
+After the photon is decayed, the same \pt and $\eta$ requirements that are applied to the $\PZ+$jets events are applied to the decay products from the photon. 
+\mttwol is constructed using these leptons, and the same cut is applied as in each signal region. 
+Finally, the \pt distribution is reweighted as described previously.
+\newpara
+\noindent\justify
+The final systematic uncertainty assigned to this method is stemming from four sources. 
+These sources are the statistical uncertainty of the $\gamma+$jets data sample, a closure method performed in simulation, the normalization performed in the low \ptmiss bin and the electroweak subtraction procedure. 
+The closure test in simulation is evaluated separately in each of the signal regions. 
+The systematic uncertainty is taken as the larger of the MC statistical uncertainty or non-closure and varies between 10–80\% for the various signal regions.
+The statistical uncertainty from the normalization of the template prediction in data in each signal region (using \ptmiss between $50–100\GeV$) as a systematic uncertainty on the prediction. 
+This uncertainty ranges from 7–30\% depending on the signal region.
+The uncertainty on the electroweak subtraction procedure is chosen to be 30\% as described previously in this section. 
+The different treatment of the Drell-Yan background needed for each analysis strategy will be described in Chapters \ref{sec:strong}, \ref{sec:ewk} and \ref{sec:slepton}.          
+\section{Z+$\nu$ background estimation}\label{sec:Znu}
+\noindent\justify
 The group of SM backgrounds called Z+$\nu$ processes have in common that they all produce a dilepton pair compatible with the \PZ boson and one or more neutrinos from a \PZ or \PW decay. 
 These processes are not strictly flavor symmetric, as more SF lepton pairs are produced than OF lepton pairs, and they are not DY processes where the \ptmiss is stemming from instrumental effects. 
 There are many SM processes like this, and the highest cross section ones that contribute significantly to the various signal regions are \PWZ, \PZZ and \ttZ. 
@@ -273,9 +673,11 @@ This kind of background is dominated by the \PWZ$\rightarrow3l\nu$ process.
 The reason why the events fail the third lepton veto is due to the low \pt leptons that fail the \pt requirement of 5 GeV. 
 What is also worth noting is that the larger fraction of these events have a third lepton originating from a \PZ boson. 
 In the cases where the lost lepton is from the \PZ boson, the resulting lepton pair contribution is FS, meaning SF lepton pairs are produced at the same rate as OF lepton pairs. 
-This contribution is covered by the data-driven FS background prediction technique presented in Section\ref{sec:fsBG}.
+This contribution is covered by the data-driven FS background prediction technique presented in Section \ref{sec:fsBG}.
 On the other hand, if the lost lepton is originating from the decay of the \PW boson, the leptons from this background process is dominantly same flavor. 
 In order to treat these backgrounds in a correct way and avoid double counting contributions, the leptons from the \PWZ process is estimated from simulation only if both leptons are originating from a \PZ boson decay. 
+\newpara
+\noindent\justify
 To validate that the simulation is properly modelling the \ptmiss tails where the signal regions are defined, an orthogonal control region is constructed by inverting the third lepton veto. 
 By requiring 3 well identified leptons, the region is orthogonal to the signal region. 
 The rest of the requirements are summarized below, where the idea is to obtain a region pure in \PWZ contribution while keeping the definition close to the signal region definition. 
@@ -292,38 +694,7 @@ In the slepton search, on the other hand, the contribution is enhanced as to fir
 But since the slepton signal region is designed with a veto on leptons compatible with a \PZ boson, this process can only enter the signal region if the \PZ boson is off-shell and produce leptons with an invariant mass far away from the on-shell \PZ boson mass. 
 The simulation is validated for both scenarios separately, and transfer factors are derived for the on-Z and slepton searches separately. 
 Similarly as to the \PWZ$\rightarrow3l\nu$ background, the control regions and the final transfer factors are introduced for the various analysis strategies presented in Chapters \ref{sec:strong}, \ref{sec:ewk} and \ref{sec:slepton}. 
-\section{Drell-Yan background}\label{sec:mettemplates}
-\noindent\justify
-The Drell-Yan process, i.e. $\PZ+$jets process, enter all signal regions in the searches presented in this thesis. 
-The \ptmiss in the $\PZ+$jets process is solely due to the hadronic recoil and more precisely due to mismeasured jets. 
-A more detailed treatment of the \ptmiss in these events is presented in the chapter on \ptmiss performance in Chapter~\ref{sec:met}. 
-What can be seen there is that the shape of the \ptmiss spectrum in $\PZ+$jets is the same as in $\gamma+$jets events, with a difference in the normalization due to the higher cross section associated with the $\gamma+$jets process. 
-This similarity in the shape of the \ptmiss spectrum is exploited in this thesis, by estimating the $\PZ+$jets in the signal region from a data sample of $\gamma+$jets in the signal region. 
-A single photon data sample is collected using single photon triggers with \pt thresholds of 22-165\GeV. 
-The data collected with the prescaled triggers is corrected by the associated prescale values for each data taking period and run. 
-As there are differences between the mass of the two bosons, the $\gamma$ \pt spectrum is reweighted to match the $\PZ$ spectrum in each signal region to account for this difference. 
-An orthogonal control region with \ptmiss 50-100\GeV is used to normalize the $\gamma+$jets sample to match the $\PZ+$jets sample.
-Although suppressed by the lower cross sections and a lepton veto, electroweak processes with real \ptmiss such as $\PW\gamma$ can contribute significantly to the \ptmiss tails in the single $\gamma$ sample.
-The contributions from electroweak processes are subtracted from the photon \ptmiss spectrum using simulation. 
-The modelling of the simulated electroweak processes is validated in an orthogonal control region containing one muon and one photon. 
-There is good agreement observed in this control region and a conservative 30\% systematic uncertainty is assigned to the electroweak subtraction procedure.   
-As the \mttwo variable is used to define all signal regions, the \mttwo has to be constructed in the $\gamma+$jets data sample. 
-But since two visible objects are needed when calculating the \mttwo, a special treatment is needed since there is only one photon in the events. 
-The \mttwol can be emulated in the $\gamma+$jets sample by a simulated decay of the photon to two leptons, and where the \mttwol is calculated with the two decayed leptons as the visible objects.
-This decay is done by assuming the mother particle has the mass of a \PZ boson and the \pt of the photon reconstructed from data. 
-The angular distribution of the leptons is accounted for by assuming a scenario where the direction of the spin of the mother particle is sampled from a distribution that is uniformly distributed in $1+\cos^{2}(\theta)$, where $\theta$ is the polar angle in the reference frame in which the mother particle is at rest. 
-After the photon is decayed, the same \pt and $\eta$ requirements that are applied to the $\PZ+$jets events are applied to the decay products from the photon. 
-\mttwol is constructed using these leptons, and the same cut is applied as in each signal region. 
-Finally, the \pt distribution is reweighted as described previously.
-The final systematic uncertainty assigned to this method is stemming from four sources. 
-These sources are the statistical uncertainty of the $\gamma+$jets data sample, a closure method performed in simulation, the normalization performed in the low \ptmiss bin and the electroweak subtraction procedure. 
-The closure test in simulation is evaluated separately in each of the signal regions. 
-The systematic uncertainty is taken as the larger of the MC statistical uncertainty or non-closure and varies between 10–80\% for the various signal regions.
-The statistical uncertainty from the normalization of the template prediction in data in each signal region (using \ptmiss between $50–100\GeV$) as a systematic uncertainty on the prediction. 
-This uncertainty ranges from 7–30\% depending on the signal region.
-The uncertainty on the electroweak subtraction procedure is chosen to be 30\% as described previously in this section. 
-The different treatment of the Drell-Yan background needed for each analysis strategy will be described in Chapters \ref{sec:strong}, \ref{sec:ewk} and \ref{sec:slepton}.   
-\section{Rare processes}
+\section{Rare background estimation}
 \noindent\justify
 A final category of Standard Model backgrounds are rare processes, such as  \ttW, \ttH, \tWZ\ and \tZq\ as introduced in Section \ref{search}. 
 These processes are neither flavor symmetric nor have all their \ptmiss from instrumental effects. 
@@ -332,10 +703,11 @@ Triboson processes, such as \PWWZ, \PWZZ and \PZZZ contribute in the signal regi
 What is common to all these processes is that they have very low cross sections. 
 The contribution is taken from simulation and a conservative systematic uncertainty of 50\% is assigned.
 The simulated samples and the cross sections of these processes are summarized in Appendix A.  
-\section{Fakes}
+\section{Fake lepton background estimation}
+\noindent\justify
 The attentive reader could now point out that a class of backgrounds is missing, namely that due to so called fakes. 
 Due to inefficiencies in reconstruction procedures, or due to faulty detector signals, lepton candidates can be reconstructed that in fact does not correspond to a genuine lepton. 
 Additionally, other real particles, such as light-flavor quarks or gluon jets may fake the presence of a light lepton. 
-In order for events with one fake lepton to enter the signal region, they have to be reconstructed along with a real lepton \footnote{The probability for two fake leptons in one event is just too small to be considered a sizeable background.}
+In order for events with one fake lepton to enter the signal region, they have to be reconstructed along with a real lepton.\footnote{The probability for two fake leptons in one event is just too small to be considered a sizeable background.}
 The standard model background of $\PW+$jets, with the \PW decaying leptonically and one of the jets faking a lepton could potentially lead to a signal like event. 
 However, as this process involves the flavor democratic leptonic decay of the \PW boson, this contribution will in the end be flavor symmetric, and thus taken into account by the flavor symmetric background prediction method.  

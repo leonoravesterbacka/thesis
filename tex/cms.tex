@@ -1,2 +1,161 @@
-\chapter{THE LARGE HADRON COLLIDER AND THE CMS EXPERIMENT} \label{lhc-cms}
-
+\chapter{The CMS experiment}\label{sec:CMS}
+\noindent\justify
+The CMS experiment is a multipurpose apparatus designed to detect particles from collisions or protons or ions. 
+It is located 100\m under ground at the fifth interaction point along the LHC ring ("Point 5") in Cessy, France. 
+The CMS experiment was designed to observe and study the properties of the Higgs boson, and other known Standard Model particles, as well as search for new physics. 
+Apart from detecting particles from proton-proton collisions, the CMS detector can also detect particles from heavy ion collisions.  
+\newpara
+\noindent\justify
+This chapter provides a description of the main hardware components of the CMS experiment. 
+A brief overview of the structure of the CMS detector and the coordinate system is given.  
+The main features of the detector are introduced in Sections\ref{sec:tracker} -\ref{sec:muonsystem}, that include the silicon tracking device closest to the beamline, the surrounding calorimeters and the 3.8\T superconducting solenoid, followed by the outermost layer consisting of a muon detector.  
+The data used in this thesis was collected during the 2016 running of the LHC, and this chapter will reflect the layout of CMS detector during this year.\footnote{Silicon tracker was upgraded after the 2016 running of the LHC, and received an additional layer} 
+\newpage
+\section{The CMS detector}
+\noindent\justify
+A full description of the CMS experiment can be found in \cite{Chatrchyan:2008aa} and a sketch is shown in Figure \ref{fig:CMS}.
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.7\textwidth]{images/detector/cms_complete_labelled.png}
+   \caption{General view of the CMS detector. The major detector components are indicated, together with the acronyms for the various CMS construction modules.\cite{Chatrchyan:2009hb}}
+   \label{fig:CMS}
+\end{figure}                                                                                                                                                                                    
+This multi-purpose apparatus is built around the LHC beam line with circular layers of subdetectors with increasing radii, resulting in a cylindrical shape with a diameter of 16\m and length of 22\m.
+The $z-$axis is defined to be the direction along the LHC beamline inside CMS, with the positive direction pointing towards the Jura mountains from Point 5.  
+In 2016, the CMS experiment recorded data from pp collisions at $\sqrt{s}=13\TeV$ corresponding to 37.8\fbinv of integrated luminosity, as seen in Figure \ref{fig:lumi}, of which 35.9\fbinv was declared to be good for analysis and used throughout this thesis. 
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.7\textwidth]{images/detector/int_lumi_per_day_cumulative_pp_2016.pdf}
+   \caption{Cumulative measured luminosity versus day delivered. This measurement uses the best available offline measurement and calibrations. \cite{lumi}}
+   \label{fig:lumi}
+\end{figure}                                                                               
+In the following sections, the magnet and the various subdetectors are introduced. 
+\section{The Magnet}
+\noindent\justify
+The word "Solenoid" in Compact Muon Solenoid refers to the superconducting solenoid magnet that the experiment is built around. 
+A strong magnetic field is a key feature at an experiment of this magnitude as it is essential for momentum resolution of charged particles in the tracker. 
+The solenoid measures a length of 12.9\m and six meters in inner diameter. 
+The large inner radius allows for the tracker and calorimeters to be fully contained within the solenoid. 
+This design reduces the material between the calorimeters and the IP which is desireable for precise momentum measurements. 
+The solenoid is composed of a conducting material, a NbTi alloy, subjected to a current of 19\kA that results in a magnetic field of 3.8\T. 
+The magnet system includes a return yoke to keep the magnetic field lines homogenous with the distance from the IP, and total weight including the solenoid is 11 000 tons.  
+\cite{CERN-LHCC-97-010}
+\section{The Tracker}\label{sec:tracker}
+\noindent\justify
+The CMS inner tracker measures a length of $5.8\m$ and a diameter of $2.5\m$, and the overview that will be presented in the following is visualized in Figure \ref{fig:tracker} and follows the description in \cite{Chatrchyan:2014fea}. 
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.9\textwidth]{images/detector/figs_2011_cmsTracker_TrackerLayout.png}
+   \caption{Schematic cross section through the CMS tracker in the $r$-$z$ plane. Each line-element represents a detector module. Closely spaced double line-elements indicate back-to-back silicon strip modules, in which one module is rotated through a `stereo' angle, so as to permit reconstruction of the hit positions in 3-D. Within a given layer, each module is shifted slightly in $r$ or $z$ with respect to its neighbouring modules, which allows them to overlap, thereby avoiding gaps in the acceptance \cite{Chatrchyan:2014fea}.}
+   \label{fig:tracker}
+\end{figure}                                                                                            
+In order to achieve a high efficiency in tagging b-jets, it is crucial that the tracker layers are as close to the LHC beamline as possible. 
+Closest to the beamline is the smallest subdetector of the tracker, the silicon pixel tracker, consisting of a barrel (BPix) of three layers of radii 4.4, 7.3, $10.2\cm$, and two pairs of endcap disks (FPix) at a distance of $|z|=34.5\cm$ and $|z|=46.5\cm$ away from the interaction point. 
+These layers provide a three dimensional position measurement with a transverse coordinate position cresolution of $10\mum$ and a longitudinal coordinate position resolution of $20-40\mum$.
+The total number of pixels in the BPix and FPix amounts to 66 million and cover in total an area of $1\m^{2}$. 
+Outside of the pixel tracker are four subsystems of 9.3 million silicon micro strips. 
+The tracker inner barrel (TIB) is composed of four layers and cover a region of radius $20\cm$ to $55\cm$. 
+The pitch\footnote{The pitch is the distance between the p+ implants in the n type $\mathrm{Si0_{2}}$ bulk.} is $80\mum$ for the first two layers of the TIB and $120\mum$ for the next two layers, and they are all oriented parallel to the beamline\cite{DAlfonso:2009vko}.
+The tracker inner disks (TID) complements the TIB with three disks on each side that extends to coverage in the $|z|$ direction to $\pm118\cm$. 
+The TID modules are built using radially placed sensors forming a wedge shape with pitch ranging from $81$ to $158\mum$. 
+Outside of the TIB, the tracker outer barrel (TOB) consisting of six barrel layers cover the region beyond $55\cm$ in radius and the same $|z|$ coverage as the TID along the beamline.
+The TOB has thicker strip sensors of $500\mum$ and the first four layers use strips with a pitch of $183\mum$ and the last two layers use strips with a pitch of $122\mum$.   
+Finally, the last tracker subsystem is the tracker endcap (TEC) that consist of nine disks on each side of the TIDs and TOB, with a total coverage of the region $124<|z|<282\cm$. 
+The TOB and TEC have a resolution of the position measurement ranging from $18-47\mum$. 
+Putting all of this together, the inner tracker fully covers the region $|\eta|<2.4$ and guarantees in total 9 hit measurements. 
+The performance is quantified in terms of the resolution of the \pt for single muons, which results in 0.65 to 1.5\% at $\eta=0$ and 1 to $2\%$ at $|\eta|=1.6$ for muons of 10 and $100\GeV$. 
+\section{The ECAL}
+\noindent\justify
+The choice of a high resolution CMS electromagnetic calorimter (ECAL) is motivated by the physics potential that was forseen for the discovery of the Higgs boson in 2012, as photons and electrons are key ingredients in at least three decay channels \cite{Cockerill:2008td}
+This motivation lead to the choice of the design of a hermetic, homogeneous, fine grained scintillating calorimeter consisting of 75,848 lead tungstate ($\mathrm{PbWO_{4}}$) crystals. 
+The crystals are arranged in a central barrel region ($|\eta|\leq1.48$) have a crystal length of $23\cm$ and a front face of $2.2\times2.2\cm^{2}$. 
+The crystals arranged in the two ECAL endcap regions (up to $|\eta|=3.0$) measure $22\cm$ in length and a front face of $2.86\times2.86\cm^{2}$. 
+In the barrel, the crystals are organized into 36 supermodules, each containing 1,700 crystals. 
+In the endcaps, the crystals are organized into dees each containing 3662 crystals. 
+The layout of the supermodules and dees is presented in Figure \ref{fig:ECAL}. 
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.9\textwidth]{images/detector/ECAL.png}
+   \caption{Layout of the CMS ECAL, showing the barrel supermodules, the two endcaps and the preshower detectors. The ECAL barrel coverage is up to $|\eta|=1.48$, the endcaps extend the coverage to $|\eta|=3.0$ and the preshower detector fiducial area is approximately $1.65\leq|\eta|\leq2.6$.\cite{Chatrchyan:2013dga}.}
+   \label{fig:ECAL}
+\end{figure}                                                                                            
+In addition to the barrel and endcaps, the ECAL also consists of a preshower detector which is based on lead absorber and silicon strip sensors. 
+The preshower covers a region of $1.65\leq|\eta|\leq2.6$ and is motivated by the ability to improve the differentiation of the $\pi^{0}\rightarrow\gamma\gamma$ process from $h\rightarrow\gamma\gamma$. 
+The lead tungstate scintillating crystals are of high density ($\rho=8.28g/\cm^{3}$) and have the nice feature of short radiation length ($X_{0}$) and small Moli\`ere radius ($R_{M}$), where these quantities are related according to
+\begin{equation}
+R_{M} = 0.0265 X_{0}(Z+1.2)
+\end{equation}
+where $Z$ is the atomic number.
+The energy absorbed in the crystals by the incoming electrons and photons is emitted as light, 80\% of the timw within 25\ns. 
+The energy resolution obtained with this design has been quantified at beam tests and results in 
+\begin{equation}
+\frac{\sigma_{E}}{E}=\frac{2.8\%}{\sqrt{E}}\oplus\frac{12\%}{E}\oplus0.3\%
+\end{equation}
+where the order of the terms are stochastic, noise and constant term respectively \cite{Chatrchyan:2013dga}. 
+The light produced in the scintillating crystals is collected by avalanche photodiodes (APDs) in the barrel and by vacuum phototriodes (VPTs) in the endcaps. 
+The APDs are sensitive to changes in temperature according to $-2.3\%^{\circ}\mathrm{C}$. 
+In the very front end (VFE) cards the signals from the APDs are pre-amplified and shaped by an ASIC multi-gain pre-amplifier chip. 
+Trigger towers are formed by $5\times5$ crystals, and the trigger primitives are generated from the summed amplitudes of these 25 crystals in the front end (FE) cards. 
+\section{The HCAL}
+\noindent\justify
+The hadronic calorimeter is located outside of the ECAL while still being, mostly, contained within the solenoid.
+In contrast to the ECAL, the HCAL has the purpose to identify a variety of particles, mainly hadronic jets but also help in identifying electrons, photons and muons with information from the ECAL and muon systems. 
+The ECAL is designed to fully contain the electromagnetic shower induced by electrons or photons, and the HCAL, being the next layer, is designed to contain hadronic showers and fully absorb hadrons before the solenoid. 
+As much larger depth of detector material is required compared to that of the ECAL, hadronic calorimetry is considered much more challenging. 
+Additionally, the HCAL energy resolution is also worse compared to that of the ECAL due to intrinsic fluctuations.\footnote{Intrinsic fluctuations are a result of the significant incoming energy fraction being invisible, since it is employed in processes like nuclear break-up.}
+The HCAL layout consist of fours sections as shown in Figure \ref{fig:HCAL}. 
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.8\textwidth]{images/detector/HCAL.png}
+   \caption{The HCAL tower segmentation for one-fourth of the HB, HO, and HE detectors. The numbers on top and on the left refer to the tower numbers. The numbers on the right and on the bottom (0-16) indicate the scintillator layers numbers inserted into slots in the absorber. The shading represents independent longitudinal readouts in the HB/HE overlap and the small angle regions.\cite{Baiatian:2007xva}.}
+   \label{fig:HCAL}
+\end{figure}                                                                                            
+The barrel (HB) covers the $0\leq|\eta|\leq1.4$ range and the endcaps (HE) cover the $1.4\leq|\eta|\leq3$ range, and both are sampling calorimeters made by layers of brass absorber alternated with plastic scintillator. 
+As the depth of the HB is limited to what can be contained within the solenoid, the thickness at $\eta=0$ only covers 5.8 nuclear interaction lengths ($\lambda_{I}$) which is increased to ~$10\lambda_{I}$ at $|\eta|=1.2$\footnote{The nuclear interaction length is the mean-free path that an incident hadron can travel in a medium before it is fully absorbed due to nuclear interaction. It is defined as $\frac{1}{\lambda_{I}}=\sigma_{inel}\frac{N_{A}\cdot\rho}{A}$, where $\sigma_{inel}$ is the inelastic cross-section, $\rho$ the density and A the atomic mass.}. 
+Only about 95\% of hadrons above $\pt\geq100\GeV$ are fully contained in the HCAL, leading to a small fraction of hadrons making it through the solenoid. 
+For this reason, an Outer HCAL (HO) is located outside of the solenoid to recover these hadrons, and uses the same plastic scintillator as HB and HE but the magnet material as the absorber. 
+The HB, HE and HO sections all use wave-length shifting fibers to extract the scintillating light that is guided to hybrid photodiodes (HPDs).  
+The forward part of the HCAL (HF) covers the range $3\leq|\eta|\leq5$ and is located $11.1\,$m from the interaction point. 
+The purpose of the HF is to improve the measurement of \ptmiss and to identify very forward jets, as those produced in vector boson fusion (VBF). 
+The region covered by the HF is subject to the largest particle flux with radiation doses reaching 100$\,$Mrad/year. 
+For this reason, a different construction choice is made for this region, exploiting Cherenkov calorimetry technique. 
+The HF is composed of steel absorber interspersed with quartz core and acrylic clad fibers in the longitudinal direction \cite{CERN-LHCC-97-031}.
+The fibers collect the Cherenkov light produced be the showers in the absorbers, and the light is sent to a photomultiplier tube (PMT).    
+\section{The muon system}\label{sec:muonsystem}
+\noindent\justify
+The final layer of the CMS detector is dedicated to the measurement of muons, and is the motivation behind the word "Muon" in Compact Muon Solenoid. 
+The objective of this subsystem is to identify muons, trigger on muons and measure the momentum and charge of muons. 
+A sketch of the experimental setup is shown in Figure \ref{fig:Muon} and the following descriptions follow closely that in \cite{Chatrchyan:2012xi}. 
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.7\textwidth]{images/detector/muonsystem.png}
+   \caption{Cross section of a quadrant of the CMS detector with the axis parallel to the beam (\textit{z}) running horizontally and the radius (\textit{R}) increasing upward. The interaction point is at the lower left corner. The locations of the various muon stations and the steel flux-return disks (dark areas) are shown. The DTs are labeled MB (``Muon Barrel'') and the CSCs are labeled ME (``Muon Endcap''). RPCs are mounted in both the barrel and endcaps of CMS, where they are labeled RB and RE, respectively.\cite{Chatrchyan:2012xi}.}
+   \label{fig:Muon}
+\end{figure}                                                                                            
+A combination of three detector techniques is employed that are motivated by the various expected experimental implications. 
+Similarly to the subdetector systems described in the previous sections, the muon systems consists of a barrel and two endcaps, where the barrel is interleaved with layers of the steel flux-return yoke. 
+\newpara
+\noindent\justify
+The detector technique employed in both the barrel and endcaps is gas ionization particle detectors and each of the modules are commonly referred to as chambers. 
+As the muon system is located outside of the solenoid, the effective magnetic field is diminished to below 0.4$\,$T between the yoke segments in the barrel. 
+This results in non-uniform magnetic field strengths and a reversion of the muon trajectory. 
+In addition to the relatively low magnetic field in the barrel, the expected rate of muons is low, thus making the use of drift tubes (DT) a suitable choice. 
+The barrel DT chambers cover a region of $|\eta|\leq1.2$ and is split in 12 segements around $\phi$. 
+The DT chambers consist of drift cells. 
+Each cell contains a gold plated stainless steel anode wire operating at $3.6\kV$, surrounded by a gas mixture of $85\%$ of Argon and $15\%$ $\mathrm{CO_{2}}$. 
+This results in a drift time of $400\ns$. Cathode plates on the sides of the cells operate at $\pm1.8\kV$. 
+An incident muon will release electrons in the gas volume that will drift to the anode and produce avalanches in the region close to the wire where the field strength is increased.
+Four layers of parallel cells form a super layer (SL) and a chamber consists of three SLs where one layer is oriented orthogonally to the other two in order to enable precise measurement in both the $r-\phi$ and the $r-z$ directions.
+\newpara
+\noindent\justify
+The muon system endcaps cover a region ($0.9\leq|\eta|\leq2.4$) where the expected rate of muons and neutron background is much higher than that in the barrel. 
+As this requires a faster response, Cathode Strip Chambers (CSCs) that are multiwire proportional counters are used, motivated by the shorter drift path than that of the DTs. 
+Additionally, the CSCs can tolerate the higher magnetic field that the muon endcap regions is subjected to. 
+Each endcap consist of four rings of chambers mounted on the face of the endcap steel disks. 
+A CSC consist of 6 layers, and the cathode strips are aligned radially outwards while the anode wires run perpendicularly to the strips, allowing for a position measurement in $r-\phi$. 
+Each layer has 80 cathode strips. 
+The chambers are filled with a gas mixture of $50\%$ $\mathrm{CO_{2}}$, $40\%$ Argon and $10\%$ $\mathrm{CF_{4}}$, and the anode wires operate at $2.9\kV$ to $3.6\kV$ depending on the ring. 
+Interspersed in the barrel DT layers and endcap CSC layers are resistive plate chambers (RPCs). 
+The purpose of these layers is to provide fast and independent triggering at lower \pt thresholds in the region $|\eta|\leq1.6$. 
+The RPCs are double gap chambers, where each gap consist of resistive Bakelite plates separated by a gas filled gap volume of the same thickness. 
+When a charged particle crosses the RPC, the gas in the gap volumes is ionized and an avalanche is created by the high electrid fiels (due to the application of a $9.6\kV$ voltage) and an image is induced that is picked up by the readout strips. 

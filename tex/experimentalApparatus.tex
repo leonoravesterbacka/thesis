@@ -1,23 +1,30 @@
-\chapter{Experimental Apparatus}\label{sec:LHC}
-This thesis uses data recorded with the Compact Muon Solenoid (CMS) experiment at the Large Hadron Collider (LHC) at the European Organization for Nuclear Research (CERN) near Geneva, Switzerland. 
-This chapter provides a short overview of CERN and its accelerators, the LHC, as well as a short description of the main hardware components of the CMS experiment.
-\section{The Large Hadron Collider}
-The Large Hadron Collider (LHC) is the worlds most powerful particle accelerator\cite{Brüning:782076}. 
-It is a circular superconducting accelerator that measures 27\km in circumference and is located 100\m underground in the same tunnel that hosted the Large Electron Positron (LEP) collider\cite{lep}.
-The ring is divided into 8 sectors separated by eight access points to the tunnel, named interaction points (IPs). 
+\part{EXPERIMENTAL SETUP}
+\chapter{The Large Hadron Collider}\label{sec:LHC}
+\noindent
+\justify
+This thesis uses data recorded with the Compact Muon Solenoid (CMS) experiment at the Large Hadron Collider at the European Organization for Nuclear Research (CERN) near Geneva, Switzerland. 
+The Large Hadron Collider is the worlds most powerful particle accelerator \cite{Brüning:782076}. 
+It is a circular superconducting accelerator that measures 27\km in circumference and is located 100\m underground in the same tunnel that hosted the Large Electron Positron (LEP) collider \cite{lep}.
+Around the LHC ring are four major particle physics experiments located. 
+This chapter provides a short overview of the accelerator complex at CERN and the LHC.
+\newpage
+\section{The accelerator chain}
+\noindent\justify
+The LHC ring is divided into 8 sectors separated by eight access points to the tunnel, named interaction points (IPs). 
 The purpose of the LHC is to accelerate protons or heavy ions up to center-of-mass energies of 14\TeV for protons and 2.76\TeV per nucleon for lead ions. 
 The two rings in the LHC accelerate protons or heavy ions in opposite directions, to be collided at four of the eight IPs where huge particle detectors are located.
-The multi-purpose high luminosity experiments along the LHC ring are the CMS (Compact Muon Solenoid) \cite{Chatrchyan:2008aa} and ATLAS (A Toroidal LHC ApparatuS) \cite{Armstrong:1994it} detectors located at IP5 and IP1, respectively. 
+The multi-purpose high luminosity experiments along the LHC ring are the CMS \cite{Chatrchyan:2008aa} and ATLAS (A Toroidal LHC ApparatuS) \cite{Armstrong:1994it} experiments located at IP5 and IP1, respectively. 
 Both experiments collect data from proton-proton (pp), proton-ion and ion-ion collisions.
-The dedicated heavy ion collision detector ALICE (A Large Ion Collider Experiment)\cite{alice} is located at IP2, that collect the same data as ATLAS and CMS. 
-The LHCb\cite{CERN-LHCC-98-004} experiment is dedicated to low luminosity B-physics and collect data from pp collisions at IP8. 
+The dedicated heavy ion collision detector ALICE (A Large Ion Collider Experiment) \cite{alice} is located at IP2, that collect the same data as ATLAS and CMS. 
+The LHCb \cite{CERN-LHCC-98-004} experiment is dedicated to low luminosity B-physics and collect data from pp collisions at IP8.                                  
+\noindent
+\justify
 \begin{figure}[!htp]
   \centering
    \includegraphics[width=0.7\textwidth]{images/detector/lhc.png}
    \caption{Sketch of the various accelerators and experiments hosted at CERN.}
    \label{fig:LHC}
 \end{figure}                                                                                                                                                                                    
-\subsection{The accelerator chain}
 In order to get the protons to the center-of-mass energies quoted above, a long chain of circular and linear accelerators are needed. 
 The protons start by being part of atoms in Hydrogen gas. 
 Upon passing through an electric field, protons are separated from their electron and injected into the Linear Accelerator 2 (Linac 2). 
@@ -28,19 +35,20 @@ Following the PS Booster is the PS which is a circular accelerator with a circum
 The protons are accelerated by conventional magnets to an energy of 25\GeV, and they are kept on the circular path by 100 bending dipole magnets.
 The Super Proton Synchrotron (SPS) is the next accelerator for the protons and the last step before injection to the LHC. 
 The SPS make use of the same technique as the PS but the larger circumference enables for the larger output energy of 450\GeV.
-Up until now, the protons have been travelling in "bunches", which are packets of hundred billion protons, that are separated in time by 25\ns (forming so called bunch trains). 
+Up until now, the protons have been travelling in "bunches", which are packets of hundred billion protons, that are separated in time by 25\ns\ (forming so called bunch trains). 
 Upon injection into the LHC, the proton bunch trains are split in to two trains that enter the LHC in two opposing directions. 
 The goal of the LHC accelerator is to get these protons from 450\GeV to the maximum design energy of 7\TeV. 
 This is achieved by letting the proton beams traverse radiofrequency (RF) cavities that are cooled down to 4.5$\,$K using liquid Helium (up until this stage all accelerators have been operating in room temperature). 
 The RF cavities provide a high frequency alternating electric field of 400.8 MHz.
 There are eight single-cell cavities per beam that produce the nominal voltage of 16 MV during storage that results in an energy gain per particle per turn is 485\keV.   
 In addition to the RF cavities there are 1232 dipole magnets keeping the protons on the circular path. 
-The dipole magnets measure 15 meters in length and weighing 30 tons each and are made of a niobium-titanium alloy\cite{Boussard:1999rf}. 
+The dipole magnets measure 15 meters in length and weighing 30 tons each and are made of a niobium-titanium alloy \cite{Boussard:1999rf}. 
 The magnets are superconductors that can be operated at a temperature of 1.9$\,$K and can reach a magnetic field of 8.33\T. 
 In addition to the dipole magnets for bending the path of the protons, variuos other magnets such as decapole, sextupole and quadropole magnets for controlling or correcting the path.      
 The accelerator chain is illustrated in Figure \ref{fig:LHC}. 
 Between 2010-2011 and during 2012, the LHC collided protons at a center-of-mass beam energy of $\sqrt{s}=7\TeV$ and $\sqrt{s}=8\TeV$ respectively, while the energy increased to $\sqrt{s}=13\TeV$ in 2015 and 2016. 
-\subsection{Beam parameters}
+\section{Beam parameters}
+\noindent\justify
 The number of events ($N_{event}$) that can be generated in a collision is dictated by an interplay between theoretical predictions and engineering capabilities, summarizes as
 \begin{equation}
 N_{process}=\mathcal{L}_{int}\sigma_{process}
@@ -76,166 +84,63 @@ By integrating the instantaneous luminosity $L$ (that has the unit of $\cm^{-2}s
 \label{tab:beam}
 \end{table}
 By integrating the instantaneous luminosity $L$ (that has the unit of $\cm^{-2}s^{-1}$) over time, the result is the so called integrated luminosity, denoted by $\mathcal{L}_{int}$. 
-The integrated luminosity has the unit $\cm^{-2}$ which is the inverse of the unit of cross section, which makes the resulting number of events in a process in Eq.~\ref{eq:nevents} unitless. 
+The integrated luminosity has the unit $\cm^{-2}$ which is the inverse of the unit of cross section, which makes the resulting number of events in a process in Equation \ref{eq:nevents} unitless. 
 The peak instantaneous stable luminosity reached by the LHC during 2016 was $1.527\times10^{34}\cm^{−2}s^{−1}$ and the total integrated luminosity greatly surpassed the predictions and expectations. 
-\section{The CMS experiment}\label{sec:CMS}
-The CMS experiment is located 100\m under ground at interaction point number five ("Point 5") in Cessy, France, along the LHC ring. 
-A full description of the CMS experiment can be found in \cite{Chatrchyan:2008aa} and a sketch is shown in Figure \ref{fig:CMS}.
-\begin{figure}[!htp]
-  \centering
-   \includegraphics[width=0.7\textwidth]{images/detector/cms_complete_labelled.png}
-   \caption{General view of the CMS detector. The major detector components are indicated, together with the acronyms for the various CMS construction modules.\cite{Chatrchyan:2009hb}}
-   \label{fig:CMS}
-\end{figure}                                                                                                                                                                                    
-This multi-purpose apparatus is built around the LHC beam line with circular layers of subdetectors with increasing radii, resulting in a cylindrical shape with a diameter of 16\m and length of 22\m.
-The $z-$axis is defined to be the direction along the LHC beamline inside CMS, with the positive direction pointing towards the Jura mountains from Point 5.  
-The cylindrical shape lends itself well to the use of cylindrical coordinates, where the the azimuthal angle $\phi$ is defined in the transverse $x-y$ plane perpendicular to the beam line and the polar angle $\theta$ is measured from the $z-$axis, as shown in Figure \ref{fig:cylindrical}.
+\section{Coordinate system and kinematic variables}\label{sec:kin}
+\noindent\justify
+The cylindrical shape of the multi-purpose high energy physics experiments, such as CMS and ATLAS, lend themselves well to the use of cylindrical coordinates. 
+In these coordinates, the the azimuthal angle $\phi$ is defined in the transverse $x-y$ plane perpendicular to the beam line and the polar angle $\theta$ is measured from the $z-$axis, as shown in Figure \ref{fig:cylindrical}.
 \begin{figure}[!htp]
   \centering
    \includegraphics[width=0.7\textwidth]{images/detector/Figures_T_Coordinate.png}
    \caption{Illustration of the CMS coordinate system.\cite{Schott:2014sea}}
    \label{fig:cylindrical}
 \end{figure}                                                                               
-For relativistic particles it is common practice to describe the trajectory of the particles using the so called $pseudorapidity$ $\eta$ rather than $\theta$, where $\eta$ is defined as
+The $rapidity$ $y$ is defined as:
 \begin{equation}
-\eta=-\mathrm{ln}\left[\mathrm{tan}\left(\frac{\theta}{2}\right)\right]=\frac{1}{2}\mathrm{ln}\left(\frac{|\bold{p}|+p_{z}}{|\bold{p}|-p_{z}}\right)
+y=\frac{1}{2}\mathrm{ln}\left(\frac{E+p_{L}}{E-p_{L}}\right)
+\label{eq:rapidity}
 \end{equation}
-where $\bold{p}$ is the three-momentum and $p_{z}$ the momentum along the $z-$axis. 
-This quantity will be heavily used in the rest of the section to define the coverage of the various subdetectors, and beyond this chapter to define the invariant angular distance between particles as $(\Delta R)^{2}=(\Delta \eta)^{2}+(\Delta \phi)^{2}$. 
-Additionally, the transverse component of variables is more commonly used in relativsitc collisions, e.g. transverse momentum \pt, transverse energy \ET and missing transverse momentum \ptmiss.
-In 2016, the CMS experiment recorded data from pp collisions at $\sqrt{s}=13\TeV$ corresponding to 37.8\fbinv of integrated luminosity, as seen in Figure \ref{fig:lumi}, of which 35.9\fbinv was declared to be good for analysis and used throughout this thesis. 
-\begin{figure}[!htp]
-  \centering
-   \includegraphics[width=0.7\textwidth]{images/detector/int_lumi_per_day_cumulative_pp_2016.pdf}
-   \caption{Illustration of the CMS coordinate system.\cite{lumi}}
-   \label{fig:lumi}
-\end{figure}                                                                               
-
-In the following subsections, the magnet and the various subdetectors are introduced. 
-\subsection{The Magnet}
-The word "Solenoid" in Compact Muon Solenoid refers to the superconducting solenoid magnet that the experiment is built around. 
-A strong magnetic field is a key feature at an experiment of this magnitude as it is essential for momentum resolution of charged particles in the tracker. 
-The solenoid measures a length of 12.9\m and six meters in inner diameter. 
-The large inner radius allows for the tracker and calorimeters to be fully contained within the solenoid. 
-This design reduces the material between the calorimeters and the IP which is desireable for precise momentum measurements. 
-The solenoid is composed of a conducting material, a NbTi alloy, subjected to a current of 19\kA that results in a magnetic field of 3.8\T. 
-The magnet system includes a return yoke to keep the magnetic field lines homogenous with the distance from the IP, and total weight including the solenoid is 11 000 tons.  
-\cite{CERN-LHCC-97-010}
-\subsection{The Tracker}
-The CMS inner tracker measures a length of $5.8\m$ and a diameter of $2.5\m$, and the overview that will be presented in the following is visualized in Figure \ref{fig:tracker} and follows the description in \cite{Chatrchyan:2014fea}. 
-\begin{figure}[!htp]
-  \centering
-   \includegraphics[width=0.9\textwidth]{images/detector/figs_2011_cmsTracker_TrackerLayout.png}
-   \caption{Schematic cross section through the CMS tracker in the $r$-$z$ plane. Each line-element represents a detector module. Closely spaced double line-elements indicate back-to-back silicon strip modules, in which one module is rotated through a `stereo' angle, so as to permit reconstruction of the hit positions in 3-D. Within a given layer, each module is shifted slightly in $r$ or $z$ with respect to its neighbouring modules, which allows them to overlap, thereby avoiding gaps in the acceptance \cite{Chatrchyan:2014fea}.}
-   \label{fig:tracker}
-\end{figure}                                                                                            
-
-In order to achieve a high efficiency in tagging b-jets, it is crucial that the tracker layers are as close to the LHC beamline as possible. 
-Closest to the beamline is the smallest subdetector of the tracker, the silicon pixel tracker, consisting of a barrel (BPix) of three layers of radii 4.4, 7.3, $10.2\cm$, and two pairs of endcap disks (FPix) at a distance of $|z|=34.5\cm$ and $|z|=46.5\cm$ away from the interaction point. 
-These layers provide a three dimensional position measurement with a transverse coordinate position cresolution of $10\mum$ and a longitudinal coordinate position resolution of $20-40\mum$.
-The total number of pixels in the BPix and FPix amounts to 66 million and cover in total an area of $1\m^{2}$. 
-Outside of the pixel tracker are four subsystems of 9.3 million silicon micro strips. 
-The tracker inner barrel (TIB) is composed of four layers and cover a region of radius $20\cm$ to $55\cm$. 
-The pitch\footnote{The pitch is the distance between the p+ implants in the n type $\mathrm{Si0_{2}}$ bulk.} is $80\mum$ for the first two layers of the TIB and $120\mum$ for the next two layers, and they are all oriented parallel to the beamline\cite{DAlfonso:2009vko}.
-The tracker inner disks (TID) complements the TIB with three disks on each side that extends to coverage in the $|z|$ direction to $\pm118\cm$. 
-The TID modules are built using radially placed sensors forming a wedge shape with pitch ranging from $81$ to $158\mum$. 
-Outside of the TIB, the tracker outer barrel (TOB) consisting of six barrel layers cover the region beyond $55\cm$ in radius and the same $|z|$ coverage as the TID along the beamline.
-The TOB has thicker strip sensors of $500\mum$ and the first four layers use strips with a pitch of $183\mum$ and the last two layers use strips with a pitch of $122\mum$.   
-Finally, the last tracker subsystem is the tracker endcap (TEC) that consist of nine disks on each side of the TIDs and TOB, with a total coverage of the region $124<|z|<282\cm$. 
-The TOB and TEC have a resolution of the position measurement ranging from $18-47\mum$. 
-Putting all of this together, the inner tracker fully covers the region $|\eta|<2.4$ and guarantees in total 9 hit measurements. 
-The performance is quantified in terms of the resolution of the \pt for single muons, which results in 0.65 to 1.5\% at $\eta=0$ and 1 to $2\%$ at $|\eta|=1.6$ for muons of 10 and $100\GeV$. 
-
-\subsection{The ECAL}
-The choice of a high resolution CMS electromagnetic calorimter (ECAL) is motivated by the physics potential that was forseen for the discovery of the Higgs boson in 2012, as photons and electrons are key ingredients in at least three decay channels\cite{Cockerill:2008td}
-This motivation lead to the choice of the design of a hermetic, homogeneous, fine grained scintillating calorimeter consisting of 75,848 lead tungstate ($PbWO_{4}$) crystals. 
-The crystals are arranged in a central barrel region ($|\eta|\leq1.48$) have a crystal length of $23\cm$ and a front face of $2.2\times2.2\cm^{2}$. 
-The crystals arranged in the two ECAL endcap regions (up to $|\eta|=3.0$) measure $22\cm$ in length and a front face of $2.86\times2.86\cm^{2}$. 
-In the barrel, the crystals are organized into 36 supermodules, each containing 1,700 crystals. 
-In the endcaps, the crystals are organized into dees each containing 3662 crystals. 
-The layout of the supermodules and dees is presented in Figure \ref{fig:ECAL}. 
-\begin{figure}[!htp]
-  \centering
-   \includegraphics[width=0.9\textwidth]{images/detector/ECAL.png}
-   \caption{Layout of the CMS ECAL, showing the barrel supermodules, the two endcaps and the preshower detectors. The ECAL barrel coverage is up to $|\eta|=1.48$, the endcaps extend the coverage to $|\eta|=3.0$ and the preshower detector fiducial area is approximately $1.65\leq|\eta|\leq2.6$.\cite{Chatrchyan:2013dga}.}
-   \label{fig:ECAL}
-\end{figure}                                                                                            
-  
-In addition to the barrel and endcaps, the ECAl also consists of a preshower detector which is based on lead absorber and silicon strip sensors. 
-The preshower covers a region of $1.65\leq|\eta|\leq2.6$ and is motivated by the ability to improve the differentiation of the $\pi^{0}\rightarrow\gamma\gamma$ process from $h\rightarrow\gamma\gamma$. 
-The lead tungstate scintillating crystals are of high density ($\rho=8.28g/\cm^{3}$) and have the nice feature of short radiation length ($X_{0}$) and small Moli\`ere radius ($R_{M}$), where these quantities are related according to
+with $p_{L}$ being the momentum in the longitudinal direction. 
+For relativistic particles it is common practice to describe the trajectory of the particles using the so called $pseudorapidity$ $\eta$ rather than $y$, where $\eta$ is defined as
 \begin{equation}
-R_{M} = 0.0265 X_{0}(Z+1.2)
+\eta=-\mathrm{ln}\left[\mathrm{tan}\left(\frac{\theta}{2}\right)\right]
 \end{equation}
-where $Z$ is the atomic number.
-The energy absorbed in the crystals by the incoming electrons and photons is emitted as light, 80\% of the timw within 25\ns. 
-The energy resolution obtained with this design has been quantified at beam tests and results in 
+This quantity will be heavily used in the next chapter to define the coverage of the various subdetectors, and beyond this chapter to define the invariant angular distance between particles as $(\Delta R)^{2}=(\Delta \eta)^{2}+(\Delta \phi)^{2}$. 
+As the purpose of high energy particle collisions is to use the available momentum of the protons at velocities close to the speed of light to produce heavier particles, or $resonances$. 
+A couple of essential kinematic variables used throughout the thesis will be identified using the kinematics of inelastic proton-proton scattering. 
+A momentum transfer scale of $\hat{s}=M^{2}$, is needed in order to produce a resonance of mass $M$ \cite{Dissertori:2010xe}. 
+Here $\hat{s}=x_{1}x_{2}s$ where $x_{1,2}$ are the fractions of the incoming hadrons momenta $p_{1,2}$ that partons 1 and 2 carry. 
+The square root of $s$ is the center-of-mass energy. 
+The energy and the longitudinal momentum of a state produced by colliding two hadrons $h_{1}$ and $h_{2}$ is given by:
 \begin{equation}
-\frac{\sigma_{E}}{E}=\frac{2.8\%}{\sqrt{E}}\oplus\frac{12\%}{E}\oplus0.3\%
+E=\frac{(x_{1}+x_{2})\sqrt{s}}{2}\, , \, p_{L}=\frac{(x_{1}-x_{2})\sqrt{s}}{2}
+\label{eq:kin}
 \end{equation}
-where the order of the terms are stochastic, noise and constant term respectively\cite{Chatrchyan:2013dga}. 
-The light produced in the scintillating crystals is collected by avalanche photodiodes (APDs) in the barrel and by vacuum phototriodes (VPTs) in the endcaps. 
-The APDs are sensitive to changes in temperature according to $-2.3\%^{\circ}C$. 
-In the very front end (VFE) cards the signals from the APDs are pre-amplified and shaped by an ASIC multi-gain pre-amplifier chip. 
-Trigger towers are formed by $5\times5$ crystals, and the trigger primitives are generated from the summed amplitudes of these 25 crystals in the front end (FE) cards. 
-\subsection{The HCAL}
-The hadronic calorimeter is located outside of the ECAL while still being, mostly, contained within the solenoid.
-In contrast to the ECAL, the HCAL has the purpose to identify a variety of particles, mainly hadronic jets but also help in identifying electrons, photons and muons with information from the ECAL and muon systems. 
-The ECAL is designed to fully contain the electromagnetic shower induced by electrons or photons, and the HCAL, being the next layer, is designed to contain hadronic showers and fully absorb hadrons before the solenoid. 
-As much larger depth of detector material is required compared to that of the ECAL, hadronic calorimetry is considered much more challenging. 
-Additionally, the HCAL energy resolution is also worse compared to that of the ECAL due to intrinsic fluctuations\footnote{Intrinsic fluctuations are a result of the significant incoming energy fraction being invisible, since it is employed in processes like nuclear break-up.}
-The HCAL layout consist of fours sections as shown in Figure \ref{fig:HCAL}. 
-\begin{figure}[!htp]
-  \centering
-   \includegraphics[width=0.8\textwidth]{images/detector/HCAL.png}
-   \caption{The HCAL tower segmentation for one-fourth of the HB, HO, and HE detectors. The numbers on top and on the left refer to the tower numbers. The numbers on the right and on the bottom (0-16) indicate the scintillator layers numbers inserted into slots in the absorber. The shading represents independent longitudinal readouts in the HB/HE overlap and the small angle regions.\cite{Baiatian:2007xva}.}
-   \label{fig:HCAL}
-\end{figure}                                                                                            
-
-The barrel (HB) covers the $0\leq|\eta|\leq1.4$ range and the endcaps (HE) cover the $1.4\leq|\eta|\leq3$ range, and both are sampling calorimeters made by layers of brass absorber alternated with plastic scintillator. 
-As the depth of the HB is limited to what can be contained within the solenoid, the thickness at $\eta=0$ only covers 5.8 nuclear interaction lengths ($\lambda_{I}$) which is increased to ~$10\lambda_{I}$ at $|\eta|=1.2$\footnote{The nuclear interaction length is the mean-free path that an incident hadron can travel in a medium before it is fully absorbed due to nuclear interaction. It is defined as $\frac{1}{\lambda_{I}}=\sigma_{inel}\frac{N_{A}\cdot\rho}{A}$, where $\sigma_{inel}$ is the inelastic cross-section, $\rho$ the density and A the atomic mass.}. 
-Only about 95\% of hadrons above $\pt\geq100\GeV$ are fully contained in the HCAL, leading to a small fraction of hadrons making it through the solenoid. 
-For this reason, an Outer HCAL (HO) is located outside of the solenoid to recover these hadrons, and uses the same plastic scintillator as HB and HE but the magnet material as the absorber. 
-The HB, HE and HO sections all use wave-length shifting fibers to extract the scintillating light that is guided to hybrid photodiodes (HPDs).  
-The forward part of the HCAL (HF) covers the range $3\leq|\eta|\leq5$ and is located $11.1\,$m from the interaction point. 
-The purpose of the HF is to improve the measurement of \ptmiss and to identify very forward jets, as those produced in vector boson fusion (VBF). 
-The region covered by the HF is subject to the largest particle flux with radiation doses reaching 100$\,$Mrad/year. 
-For this reason, a different construction choice is made for this region, exploiting Cherenkov calorimetry technique. 
-The HF is composed of steel absorber interspersed with quartz core and acrylic clad fibers in the longitudinal direction\cite{CERN-LHCC-97-031}.
-The fibers collect the Cherenkov light produced be the showers in the absorbers, and the light is sent to a photomultiplier tube (PMT).    
-\subsection{The muon system}
-The final layer of the CMS detector is dedicated to the measurement of muons, and is the origin of the "Muon" in Compact Muon Solenoid. 
-The objective of this subsystem is to identify muons, trigger on muons and measure the momentum and charge of muons. 
-A sketch of the experimental setup is shown in Figure \ref{fig:Muon} and the following descriptions follow closely that in\cite{Chatrchyan:2012xi}. 
-\begin{figure}[!htp]
-  \centering
-   \includegraphics[width=0.8\textwidth]{images/detector/muonsystem.png}
-   \caption{Cross section of a quadrant of the CMS detector with the axis parallel to the beam (\textit{z}) running horizontally and the radius (\textit{R}) increasing upward. The interaction point is at the lower left corner. The locations of the various muon stations and the steel flux-return disks (dark areas) are shown. The DTs are labeled MB (``Muon Barrel'') and the CSCs are labeled ME (``Muon Endcap''). RPCs are mounted in both the barrel and endcaps of CMS, where they are labeled RB and RE, respectively.\cite{Chatrchyan:2012xi}.}
-   \label{fig:Muon}
-\end{figure}                                                                                            
-A combination of three detector techniques is employed that are motivated by the various expected experimental implications. 
-Similarly to the subdetector systems described in the previous sections, the muon systems consists of a barrel and two endcaps, where the barrel is interleaved with layers of the steel flux-return yoke. 
-The detector technique employed in both the barrel and endcaps is gas ionization particle detectors and each of the modules are commonly referred to as chambers. 
-As the muon system is located outside of the solenoid, the effective magnetic field is diminished to below 0.4$\,$T between the yoke segments in the barrel. 
-This results in non-uniform magnetic field strengths and a reversion of the muon trajectory. 
-In addition to the relatively low magnetic field in the barrel, the expected rate of muons is low, thus making the use of drift tubes (DT) a suitable choice. 
-The barrel DT chambers cover a region of $|\eta|\leq1.2$ and is split in 12 segements around $\phi$. 
-The DT chambers consist of drift cells. 
-Each cell contains a gold plated stainless steel anode wire operating at $3.6\kV$, surrounded by a gas mixture of $85\%$ of Argon and $15\%$ $\mathrm{CO_{2}}$. 
-This results in a drift time of $400\ns$. Cathode plates on the sides of the cells operate at $\pm1.8\kV$. 
-An incident muon will release electrons in the gas volume that will drift to the anode and produce avalanches in the region close to the wire where the field strength is increased.
-Four layers of parallel cells form a super layer (SL) and a chamber consists of three SLs where one layer is oriented orthogonally to the other two in order to enable precise measurement in both the $r-\phi$ and the $r-z$ directions.
-The muon system endcaps cover a region ($0.9\leq|\eta|\leq2.4$) where the expected rate of muons and neutron background is much higher than that in the barrel. 
-As this requires a faster response, Cathode Strip Chambers (CSCs) that are multiwire proportional counters are used, motivated by the shorter drift path than that of the DTs. 
-Additionally, the CSCs can tolerate the higher magnetic field that the muon endcap regions is subjected to. 
-Each endcap consist of four rings of chambers mounted on the face of the endcap steel disks. 
-A CSC consist of 6 layers, and the cathode strips are aligned radially outwards while the anode wires run perpendicularly to the strips, allowing for a position measurement in $r-\phi$. 
-Each layer has 80 cathode strips. 
-The chambers are filled with a gas mixture of $50\%$ $\mathrm{CO_{2}}$, $40\%$ Argon and $10\%$ $\mathrm{CF_{4}}$, and the anode wires operate at $2.9\kV$ to $3.6\kV$ depending on the ring. 
-Interspersed in the barrel DT layers and endcap CSC layers are resistive plate chambers (RPCs). 
-The purpose of these layers is to provide fast and independent triggering at lower \pt thresholds in the region $|\eta|\leq1.6$. 
-The RPCs are double gap chambers, where each gap consist of resistive Bakelite plates separated by a gas filled gap volume of the same thickness. 
-When a charged particle crosses the RPC, the gas in the gap volumes is ionized and an avalanche is created by the high electrid fiels (due to the application of a $9.6\kV$ voltage) and an image is induced that is picked up by the readout strips. 
-
-
-
+where the partons masses are neglected. 
+Inserting the relations in Equation \ref{eq:kin} into the definition of the rapidity in Equation \ref{eq:rapidity}, the following is obtained:
+\begin{equation}
+e^{y}=\sqrt{\frac{x_{1}}{x_{2}}}\, , \,x_{1,2}=\frac{M}{\sqrt{s}}e^{\pm y}
+\end{equation}
+For a very large $M$, the two momentum fractions have to be very large with the result of $e^{y}\rightarrow 1$ i.e. $y\rightarrow 0$, called central rapidity. 
+This implies that the decay products of a massive resonance from an interesting hard scatter event should end up in the central part of the detector. 
+\newpara
+\noindent\justify
+The above argument, that most interesting physics events take place at central rapidities, motivates the design of the detector with higher precision in the most central region.
+Additionally, the use of the $transverse$ momentum \pt of a particle is preferred over the momentum $p$ or a particle. 
+Another key feature of high energy particle collisions is the energy conservation in the transverse plane perpendicular to the beam axis.
+This conservation is motivated by the fact that the transverse energy before the collision is well known (0). 
+Further, any energy that is lost due to the production of particles that travel close to along the beam axis will not be detected. 
+For these reasons, the conservation holds in the transverse plane only instead of for all components of the energy. 
+In addition to the transverse momentum \pt, the transverse energy \ET and missing transverse momentum \ptmiss are commonly used.
+\newpara
+\noindent\justify
+Another key variable is the $invariant$ $mass$, defined using kinematic and directional information of two particles, 1 and 2,
+\begin{align} 
+m_{1,2}=&\sqrt{(E_{1}+E_{2})^{2}-|\mathbf{p}_{1}+\mathbf{p}_{2}|^{2}}\\
+    =&\sqrt{2p_{T,1}p_{T,2}[\cosh(\eta_{1}-\eta_{2})-\cos(\phi_{1}-\phi_{2})]} 
+\end{align} 
+If the two particles  are in fact the decay products of a resonance of mass $M$, the $m_{1,2}$ would coincide with the mass $M$. 
+The invariant mass is thus a variable that can be used to $reconstruct$ a resonance with two visible decay products. 
+It will be used throughout this thesis as a means to reconstruct the \PZ boson using two leptons, and will be denoted with \mll. 
+If a  value of \mll is close to the \PZ boson mass, the leptons will be referred to as 'compatible with the \PZ boson'.  

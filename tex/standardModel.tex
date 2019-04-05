@@ -1,35 +1,42 @@
-\part{THEORY AND EXPERIMENTAL APPARATUS}
+\part{THEORETICAL FOUNDATIONS}
 \noindent\justify
-\chapter{The Standard Model of Particle Physics} \label{sec:theory}
+\chapter{The Standard Model} \label{sec:theory}
 \noindent\justify
-The theoretical motivation behind this thesis is summarized in the following, very well used, sentence: 
-The Standard Model of particle physics (SM) is an extremeley successful theory that is able to correctly describe almost all known particles, forces and phenomena that make up the Universe. 
-The success of the theory has been the countless discoveries and measurements of the predicted elementary particles throughout the last half of the 20th century and beginning of the 21st century.  
-The most recent triumph of the SM was the discovery of the predicted Higgs boson by the ATLAS \cite{Aad:2012tfa} and CMS \cite{Chatrchyan:2012xdj} collaborations in 2012.  
-The caveat lies in the word $almost$. 
-There are phenomena that the SM is unable to explain, like the origin of dark matter and the non-zero neutrino masses. 
+A well understood underlying theory is essential for interpreting the result of an experiment.
+There are theories behind all the phenomena surrounding us, that can predict the trajectory of a baseball or the temperature of a cup of coffee after it has been left to cool down. 
+For the physics of everyday life, classical mechanics and electromagnetism are remarkably successful. 
+However, the physics alters at velocities close to the speed of light, at different $energy$ $scales$ and for constituents smaller than atoms.
+In these regimes, other theories dictate the physical world. 
+Particle physics, or $high$ $energy$ $physics$, treats the physics of the smallest known constituents of matter, and the theoretical framework is called the Standard Model (SM) of particle physics.   
+The SM is an extremeley successful theory that is able to correctly describe almost all known particles, forces and phenomena that make up the Universe. 
+%The success of the theory has been the countless discoveries and measurements of the predicted elementary particles throughout the last half of the 20th century and beginning of the 21st century.  
+%The most recent triumph of the SM was the discovery of the predicted Higgs boson by the ATLAS \cite{Aad:2012tfa} and CMS \cite{Chatrchyan:2012xdj} collaborations in 2012.  
+Albeit its success, there are phenomena that the SM is unable to explain, such as the origin of dark matter and dark energy. 
+\newpara
+\noindent\justify
 This chapter provides an overview of all the SM particles and an introduction to the theoretical framework. 
-The convention is to formulate particle physics by giving the SM Lagrangian, and using quantum field theory all measurable quantities such as mass and cross sections can be calculated. 
-Before the SM Lagrangian can be formulated, the concept of symmetries and their relationship to groups has to be introduced.
+The convention is to formulate particle physics using the SM Lagrangian, and using quantum field theory. 
+From the Lagrangian all measurable quantities such as mass and cross sections can be calculated. 
+The chapter starts with an introduction of the concept of symmetries and their relationship to groups, that is crucial for the writing down the SM Lagrangian.
 After the SM Lagrangian has been formulated, the chapter concludes with the motivations for an extension of the theory in order to account for the unexplained phenomena.
 \newpage
 \section{Particles and interactions}  
 \noindent\justify
 All known matter is built by fundamental particles, and more precisely of so called $fermions$. 
 The fundamental interactions that act between the fermions are mediated by $bosons$. 
-Another way to categorize the paricles is by their spin. Fermions have half integer spin, whereas bosons have integer spin. 
+These particles are categorized according to their spin. Fermions have half integer spin, whereas bosons have integer spin. 
 \subsection*{Particle content of the SM}  
 \noindent\justify
-The most familiar fundamental particles are the electrons, and the up and the down quarks. 
-These are the building blocks that make up all everyday matter. 
+The most familiar fundamental particles are the electrons, $e^{-}$, and the so called up and down quarks, $u$ and $d$. 
+These are the building blocks that make up all the matter surrounding us. 
 The quarks are combined into protons and neutrons that in turn can combine into nuclei, that create atoms when combined with electrons. 
-Atoms and molecules account for all known matter around us. 
 The electron and the up and down quark are collectively referred to as fermions, as they have the common feature of having half integer spin. 
 The electron is a part of a larger $family$ of particles called $leptons$, and the up and down quarks are members of the $quark$ family.
 Both families of fermions come in three different generations, which are ordered by their mass. 
-Further, the organization of the SM particles associates an electron, $e^{-}$, to its $electron$ $neutrino$, $\nu_{e}$, and this pair is the first of the generations of the lepton family, where the heavier muon lepton, $\mu^{-}$, and its muon neutrino, $\nu_{\mu}$, is the second generation, and the heaviest tau lepton $\tau^{-}$ and its tau neutrino $\nu_{\tau}$ is the third generation.  
-The up and down quarks, $u$ and $d$, are the first generation of quarks, followed by the heavier charm and strange quarks, $c$ and $s$ in the second generation, and the heaviest top and bottom quarks,$t$ and $b$. 
-The difference between quarks and leptons is that quarks carry strong charge $Y_{s}$ whereas leptons do not. 
+Further, the organization of the SM particles associates an electron, $e^{-}$, to its $electron$ $neutrino$, $\nu_{e}$, into $doublets$, and this pair is the first of the generations of the lepton family, where the heavier muon lepton, $\mu^{-}$, and its muon neutrino, $\nu_{\mu}$, is the second generation, and the heaviest tau lepton $\tau^{-}$ and its tau neutrino $\nu_{\tau}$ is the third generation.  
+The up and down quarks, $u$ and $d$, are the first generation of quarks, followed by the heavier charm and strange quarks, $c$ and $s$ in the second generation, and the heaviest top and bottom quarks, $t$ and $b$. 
+The difference between quarks and leptons is that quarks carry strong charge $Y_{s}$ whereas leptons do not.
+There exists a quantum number in the SM, the lepton number $L$, that needs to be conserved in particle interactions.
 To each of the fermions introduced is a corresponding antiparticle, doubling the population of the particle zoo. 
 The antiparticle carries opposite electric charge $Q$ to the particle, and is denoted either by the sign of the charge or by a bar. 
 I.e. the antiparticle of an electron $e^{-}$ is $e^{+}$ (called positron), and the antiparticle of an up-quark $u$ is $\bar{u}$ (called anti-up). 
@@ -45,7 +52,7 @@ Table \ref{tab:fermions} facilitates the overview of the paricles introduced so 
 \setlength{\belowcaptionskip}{6pt}
 \small
 \centering
-\caption{}
+\caption{An overview of the fermions of the SM.}
 \label{tab:fermions}
 \begin{tabular}{l c c c c c c c}
         \hline \hline
@@ -70,7 +77,7 @@ Table \ref{tab:fermions} facilitates the overview of the paricles introduced so 
 The other set of particles in the SM, the bosons, have integer spin. 
 Between the fermions introduced in Table \ref{tab:fermions} act fundamental forces. 
 The forces are carried, or mediated, through gauge bosons which are responsible for the forming of more complex entities, like atoms or people. 
-The four spin 1 force carriers are the gluons, photon, the $\PW^{+}/\PW^{-}$ bosons and the \PZ boson. 
+The four spin-1 force carriers are the gluons, photon, the $\PW^{+}/\PW^{-}$ bosons and the \PZ boson. 
 The gluons mediate the strong force between particles with color charge, i.e. the quarks.
 The photon mediate the electromagnetic force between particles with electric charge, i.e. the leptons, the quarks and the charged gauge bosons. 
 The $\PW^{+}/\PW^{-}$ bosons and \PZ mediate the weak force between particles with isospin or weak hypercharge $Y_{W}$, such as the charged and neutral leptons, and the quarks.
@@ -80,7 +87,7 @@ The gauge bosons and their properties are summarized in Table \ref{tab:bosons}.
 \setlength{\belowcaptionskip}{6pt}
 \small
 \centering
-\caption{}
+\caption{An overview of the gauge bosons of the SM.}
 \label{tab:bosons}
 \begin{tabular}{l c c c c }
         \hline \hline
@@ -94,11 +101,11 @@ The gauge bosons and their properties are summarized in Table \ref{tab:bosons}.
 \end{table}                                                                    
 Common to the gauge bosons listed in Table \ref{tab:bosons} is that they all are spin-1 bosons. 
 In addition to the spin-1 bosons, the SM predicts a scalar (spin-0) boson, the Higgs boson. 
-This boson does not carry any force like the spin-1 bosons, but is responsible for giving masses to all the other bosons and the fermions, known as the $Higgs$ $mechanism$. 
+This boson does not carry any force like the spin-1 bosons, but is responsible for giving masses to all the other bosons and the fermions, in a procedure known as the $Higgs$ $mechanism$. 
 This section serves as an introduction to the SM particles and their properties. 
 What has seemed like an ad hoc organization of the masses and the couplings of the particles, in fact rely on a sound theoretical framework. 
 In the next chapter, the SM Lagrangian is introduced, that will provide more rigor to the chapter.  
-\section{Standard Model Lagrangian}
+\section{The SM Lagrangian}
 \noindent\justify
 The mathematical framework used to formulate the SM is quantum field theory (QFT), that treats the previously introduced particles as fields, represented by wave functions. 
 QFT enables calculation of measurable probabilities, such as the probability for two particles to collide and produce another set of particles, and the probability for a particle to decay into other particles, and the mass of the particles. 
@@ -106,8 +113,8 @@ These probabilities make the foundation that is used in experimental high energy
 The fundamental forces, that are the starting points to calculate these probabilities, are written in terms of Lagrangian densities. 
 \subsection*{Symmetries and groups}\label{sec:symmetries}
 \noindent\justify
-Before the SM Lagrangian density can be formulated, the concept of symmetries is crucial to introduce. 
-In classical mechanics, the Lagrangian $\mathcal{L}$\footnote{The term Lagrangian refers to the Lagrangian density, $\int d^{4}x\mathcal{L}(x,t)$, but as it is obvious from the context what is meant, I will continue to refer to the Lagrangian density as the Lagrangian. } is used to describe the energy of a system. 
+Before the SM Lagrange density can be formulated, the concept of symmetries is crucial to introduce. 
+In classical mechanics, the Lagrangian $\mathcal{L}$\footnote{The term Lagrangian refers to the Lagrange density, $\int d^{4}x\mathcal{L}(x,t)$, but as it is obvious from the context what is meant, I will continue to refer to the Lagrange density as the Lagrangian. } is used to describe the energy of a system. 
 For non-relativistic particles, it can simply be defined as:
 \begin{equation}
 \mathcal{L}=T-V
@@ -125,13 +132,13 @@ A group is defined as a set of elements and a composition rule.
 The criteria are summarized as: the combination of two elements, $E$, should give another element, there exists an identitiy element $I$ such that $E\cdot I=I\cdot E=E$, there exists an inverse $E^{-1}$ such that $E\cdot E^{-1}=E^{-1}\cdot E=I$ and the composition rule (denoted by $\cdot$) is associative \cite{Kane:2244793}.   
 Groups enter in to the formulation of particle physics as they describe the property of carrying out a transformation on a physical system that leaves the system unchaged. 
 The most simple example of a group is the one dimensional unitary group, or $U(1)$ group. 
-The set of all complex phases of a wave function $U(\theta)=e^{i\theta}$, with $\theta$ being a real parameter, form a group.
+The set of all complex phases of a wave function $U(\alpha)=e^{-i\alpha}$, with $\alpha$ being a real parameter, form a group.
 It is straight forward to verify that the criteria listed above hold. 
 Consider that some theory be invariant under 
 \begin{equation}
 \Psi(\vec{x},t)\rightarrow \Psi'(\vec{x},t)=e^{-i\alpha}\Psi(\vec{x},t)
 \end{equation}                                                         
-with $\alpha$ being a constant (not depending on $\vec{x}$ or $t$)\footnote{This might seem like a too rigorous explanation for a thesis in experimental high energy physics, but the following example helps understand the more advanced groups that make up the SM theory.}. 
+with $\alpha$ being a constant (not depending on $\vec{x}$ or $t$)\footnote{This might seem like a too rigorous explanation for a thesis on experimental high energy physics, but the following example helps understand the more advanced groups that make up the SM theory.}. 
 This is a global gauge transformation as $\Psi(\vec{x},t)$ transforms the same everywhere.  
 If one instead considers that the $\alpha$ depends on some $\vec{x}$, $\alpha(\vec{x},t)$, the theory needs to be invariant under 
 \begin{equation}
@@ -146,47 +153,287 @@ The idea is to introduce a field, $A_{\mu}$ that transforms as $A_{\mu}\rightarr
 \mathcal{D}_{\mu}=\partial_{\mu}-ieA_{\mu}.
 \end{equation}                                                         
 The covariant derivatives replaces the derivatives in the Lagrangian, and it can easily be shown that the the introduction of the field $A_{\mu}$ recovers the invariance. 
-The result can be interpreted in the following way. 
+The result can be interpreted in the following way: 
 Local phase invariance of a theory $requires$ the existence of a field $A_{\mu}$. 
 And more importantly, one can associate this $A_{\mu}$ field, which is a four-vector, to a vector, i.e. a spin-1 particle. 
 This example summarizes the principle at hand, by requiring local phase invariance of a group, the existence of an interaction field is required. 
 This principle will be used to identify the interaction fields through the more complex group structure. 
-\newline
+\newpara
+\noindent\justify
 The local symmetry group of the SM is $U(1)_{Y}\otimes SU(2)_{L}\otimes SU(3)_{C}$ and in the next section the electroweak forces, described by $U(1)_{Y}\otimes SU(2)_{L}$, will be introduced, followed by the strong force, described by the $SU(3)_{C}$ group. 
 In the end, all the gauge bosons introduced in Table \ref{tab:bosons} will have been identified in this local symmetry group. 
 \subsection*{The electroweak theory} 
 \noindent\justify
 In the same way that the invariance of the theory under the $U(1)$ transformation required the existence of a field $A_{\mu}$ and an associated spin-1 gauge boson, an internal invariance under a set of transformations that form a so called $SU(2)$ group will require the existence of more spin-1 gauge bosons. 
-The $SU(2)$ group can be called the electroweak $SU(2)$ invariance, and will be shown to have the associated gauge bosons $W^{\mu}_{i}$ with $i=1$, $2$ or $3$.
-In order to identify the gauge bosons $W^{\mu}_{i}$, we have to write down the $SU(2)_{L}\otimes U(1)_{Y}$ Lagrangian. 
-The starting point when writing down the Lagrangian is the Dirac Lagrangian, 
+The $SU(2)$ group can be called the electroweak $SU(2)$ invariance, and will be shown to have the associated gauge bosons $W_{\mu}^{i}$ with $i=1$, $2$ or $3$.
+In order to identify the gauge bosons $W_{\mu}^{i}$, we have to write down the $SU(2)_{L}\otimes U(1)_{Y}$ Lagrangian. 
+The starting point when writing down the SM Lagrangian is the Dirac Lagrangian, 
 \begin{equation}
 \mathcal{L}=\bar{\psi}(i\gamma^{\mu}\partial_{\mu}-m)\psi
 \end{equation}                                               
 where the $\psi$ is the fermion field, the $\gamma^{\mu}$ are the $\gamma$-matrices, the $\bar{\psi}=\gamma^{0}\psi$ is the conjugate fermion field and the $m$ is the fermion mass. 
-Particles with spin-$\frac{1}{2}$, fermions, are put in doublets\footnote{These doublets could have also been denoted as a lepton doublet $L=\begin{pmatrix} e^{-}\\ \nu_{e} \end{pmatrix}$, or quark doublet $Q=\begin{pmatrix} u\\ d \end{pmatrix}$}
+Particles with spin-$\frac{1}{2}$, fermions, are put in doublets\footnote{These doublets could have also been denoted as a lepton doublet $l=\begin{pmatrix} e^{-}\\ \nu_{e} \end{pmatrix}$, or quark doublet $q=\begin{pmatrix} u\\ d \end{pmatrix}$}
 \begin{equation}
 \Psi=\begin{pmatrix} \psi_{1}\\ \psi_{2} \end{pmatrix}.
 \end{equation}
-Similarly to what was done in Section \ref{sec:symmetries}, the local invariance of the theory under the $SU(2)$ group is achieved by the addition of the term $i\bar{\Psi}\gamma_{\mu}\frac{\sigma_{i}}{2}W^{\mu}_{i}\Psi$. 
-This term describes the interactions between three massive spin-1 fields $W_{i}^{\mu}$ and two spin-$\frac{1}{2}$ fields, where the $W_{i}^{\mu}$ transforms as $W_{i}^{\mu}\rightarrow W'^{\mu}_{i}=W_{i}^{\mu}+\partial_{\mu}a_{i}(x)$. 
+Similarly to what was done in Section \ref{sec:symmetries}, the local invariance of the theory under the $SU(2)$ group is achieved by the addition of the term $i\bar{\Psi}\gamma_{\mu}\frac{\sigma_{i}}{2}W_{\mu}^{i}\Psi$. 
+This term describes the interactions between three massive spin-1 fields $W^{i}_{\mu}$ and two spin-$\frac{1}{2}$ fields, where the $W^{i}_{\mu}$ transforms as $W^{i}_{\mu}\rightarrow W'^{i}_{\mu}=W^{i}_{\mu}+\partial_{\mu}a_{i}(x)$. 
 Putting aside the mass term for a second, the Lagrangian can now be written as
 \begin{equation}
-\mathcal{L}_{SU(2)}=i\bar{\Psi}\gamma_{\mu}\partial^{\mu}\Psi+ \bar{\Psi}\gamma_{\mu}\frac{\sigma_{i}}{2}W_{i}^{\mu}\Psi-\frac{1}{4}(W_{\mu\nu})_{j}(W^{\mu\nu})_{j} 
+\mathcal{L}_{SU(2)}=i\bar{\Psi}\gamma_{\mu}\partial^{\mu}\Psi+ \bar{\Psi}\gamma_{\mu}\frac{\sigma_{i}}{2}(W^{\mu})^{i}\Psi-\frac{1}{4}(W_{\mu\nu})^{j}(W^{\mu\nu})^{j} 
 \label{eq:dirac}
 \end{equation}                                               
-where $(W_{\mu\nu})_{j}=\partial_{\mu}(W_{\nu})_{j}-\partial_{\nu}(W_{\mu})_{j}$. 
+where $(W_{\mu\nu})^{j}=\partial_{\mu}(W_{\nu})^{j}-\partial_{\nu}(W_{\mu})^{j}$. 
 Equation \ref{eq:dirac} is thus $SU(2)$ invariant.  
-This locally $SU(2)$ invariant Lagrangian can be unified with a locally $U(1)$ invariant Lagrangian, namely
+This locally $SU(2)$ invariant Lagrangian can be unified with the locally $U(1)$ invariant Lagrangian:
 \begin{equation}
-\mathcal{L}_{U(1)}=-m\bar{\psi}\psi+\bar{\psi}\gamma_{\mu}(i\partial^{\mu}+g\frac{Y}{2}B^{\mu})\psi-\frac{1}{4}B_{\mu\nu}B^{\mu\nu}
+\mathcal{L}_{U(1)}=-m\bar{\psi}\psi+\bar{\psi}\gamma_{\mu}(i\partial^{\mu}+g'\frac{Y}{2}B^{\mu})\psi-\frac{1}{4}B_{\mu\nu}B^{\mu\nu}.
 \end{equation}                                               
-The $Y$ is the same as as the subscript of $U(1)$ in $U(1)_{Y}\otimes SU(2)_{L}\otimes SU(3)_{C}$, and denotes the weak hypercharge that was introduced in Table \ref{tab:fermions}. 
+The $Y$ is the same as as the subscript of $U(1)$ in $U(1)_{Y}\otimes SU(2)_{L}\otimes SU(3)_{C}$, and denotes the weak hypercharge $Y_{W}$ that was introduced in Table \ref{tab:fermions}. 
 The combined $\mathcal{L}_{U(1)}$ and $\mathcal{L}_{SU(2)}$ looks like
 \begin{equation}
-\mathcal{L}_{SU(2)\otimes U(1)}=\bar{\Psi}\gamma_{\mu}(i\partial^{\mu}+g\frac{Y}{2}B^{\mu}+g'\frac{\sigma_{i}}{2}W_{i}^{\mu})\Psi-\frac{1}{4}(W_{\mu\nu})_{j}(W^{\mu\nu})_{j}-\frac{1}{4}B_{\mu\nu}B^{\mu\nu} 
+\mathcal{L}_{SU(2)\otimes U(1)}=\bar{\Psi}\gamma_{\mu}(i\partial^{\mu}+g'\frac{Y_{W}}{2}B^{\mu}+g\frac{\sigma^{i}}{2}(W^{\mu})^{i})\Psi-\frac{1}{4}(W_{\mu\nu})^{j}(W^{\mu\nu})^{j}-\frac{1}{4}B_{\mu\nu}B^{\mu\nu} 
+\label{eq:ewkLagrange}
 \end{equation}                                                
-where $g'$ and $g$ denotes the coupling strengths of the three $W_{i}^{\mu}$ fields, and of the field $B^{\mu}$. The last two terms can be interpreted as the kinetic energies of the gauge fields $B^{\mu}$ and $W_{i}^{\mu}$
+where $g$ denotes the coupling strengths of the three $(\PW^{\mu})^{i}$ fields, and $g'$ denotes the coupling strength of the field $B^{\mu}$. 
+The last two terms can be interpreted as the kinetic energies of the gauge fields $\mathrm{B^{\mu}}$ and $(\PW^{\mu})^{i}$.
+At this point, the concept of symmetry breaking has to be introduced. 
+Gauge symmetries can be $broken$, meaning that the ground state wave function breaks the symmetry. 
+%When a gauge symmetry is broken the bosons are able to obtain an effective mass, even if the gauge symmetry did not allow for a boson mass in the fundamental equations. 
+The electroweak symmetry breaking converts the four massless bosons $(\PW^{\mu})^{i}$ ($i=1,2,3$) and $B^{\mu}$ into the three massive bosons $\PW^{+}$, $\PW^{-}$ and $\PZ^{0}$ that are the mediators of the weak interaction and a massless photon $\gamma$ that is the mediator of the electromagnetic interaction. 
+The \PW bosons are linear combinations of the $(\PW^{\mu})^{1}$ and $(\PW^{\mu})^{2}$  fields, according to:
+\begin{equation} 
+\PW^{\pm}=\frac{1}{\sqrt{2}}((\PW^{\mu})^{1}\mp i(\PW^{\mu})^{2})
+\label{eq:Widentities}
+\end{equation} 
+and the $Z^{\mu}$ and $A^{\mu}$ (the fields for the $\PZ$ boson and $\gamma$) are linear combinations of the $B^{\mu}$ and $\PW_{3}^{\mu}$: 
+\begin{equation} 
+\begin{pmatrix} A^{\mu}\\ Z^{\mu}\end{pmatrix}=
+\begin{pmatrix} 
+    \cos\theta_{W}  & \sin\theta_{W}\\
+    -\sin\theta_{W} & \cos\theta_{W}\\
+\end{pmatrix}
+\begin{pmatrix} \mathrm{B}^{\mu}\\ (\PW^{\mu})^{3}\end{pmatrix}.
+\label{eq:Zidentities}
+\end{equation} 
+This is the unification of the elecromagnetic and weak forces, and this procedure was introdcued by Sheldon L. Glashow, Abdus Salam and Steven Weinberg in the 60's \cite{Glashow:1961tr,Salam:1968rm,Weinberg:1967tq}. 
+The $\theta_{W}$ is called the weak mixing angle, and is determined through the ratio of the coupling constants $g$ and $g'$ according to:
+\begin{equation}
+\tan\theta_{W}=\frac{g'}{g}.
+\end{equation}
+At this point, it is worth pointing out that there are no mass terms for the boson or fermion fields present in Equation \ref{eq:ewkLagrange}. 
+If they were to be introduced "by hand", by adding mass terms associated to the boson and fermion fields, they would spoil the symmetry. 
+Instead, it will be shown in Section \ref{sec:higgs} that the symmetry of the electroweak interaction needs to be spontaneously broken via the Higgs mechanism in order for the particles to acquire mass.
+But before the Higgs mechanism is described, the Quantum Chromodynamics, QCD, or the theory of the strong interactions has to be introduced to complete the Lagrangian.  
 \subsection*{Quantum chromodynamics} 
 \noindent\justify
-hej
+The $SU(2)\otimes U(1)$ Lagrangian, $\mathcal{L}_{SU(2)\otimes U(1)}$ defined in the previous section is written in terms of fermion fields, $\psi$, and involves the introduction of the gauge fields $\mathrm{B^{\mu}}$ and $\PW_{i}^{\mu}$ and explains the electroweak interaction of fermions and bosons.  
+Similarly, the strong interaction, that acts on quarks through the strong $color$ charge, can be formulated as a Lagrangian. 
+The QFT explaining the color ("chromo") interactons is called Quantum Chromodynamics \cite{Han:1965pf,GellMann:1962xb,Greenberg:1964pe}. 
+Instead of using general fermion fields $\psi$ to formulate the QCD Lagrangian, it is only written in terms of quark fields. 
+It could be done in terms of general fermion fields, i.e. leptonic and quark fields, but the leptonic fields does not interact via the strong force and will thus render these terms meaningless.
+Requiring local gauge invariance under a set of transformations that form an $SU(3)$ group results in the following QCD Lagrangian \cite{PhysRevD.98.030001}:
+\begin{equation}  
+\mathcal{L}_{\mathrm{QCD}}=\sum_{q}\bar{\psi}_{q,a}(i\gamma^{\mu}\partial_{\mu}\delta_{a,b}-g_{s}\gamma^{\mu}t_{a,b}^{C}\mathcal{A}_{\mu}^{C})\psi_{q,b}-\frac{1}{4}F_{\mu\nu}^{A}G^{A\,\mu\nu}.
+\end{equation} 
+The first terms contain the interactions and kinematics of the quark fields $\psi_{j,a}$ where $q$ indicates the flavor and $a$ runs from 1 to $N_{C}=3$ where $N_{C}$ represents the number of colors.
+The $\mathcal{A}_{\mu}^{C}$ represent the gluon fields with the subscript $C$ running from 1 to $N_{C}^{2}-1$, resulting in 8 different gluons, and the $t_{a,b}^{C}$ are $3\times3$ matrices and represent the generators of the $SU(3)$ group.
+The $g_{s}$ is the strong coupling constant, and repeated indices are summed over.
+The last term is the gauge term that contains the field tensor $F_{\mu\nu}^{A}$ given by:
+\begin{equation}  
+F_{\mu\nu}^{A}=\partial_{\mu}\mathcal{A}_{\nu}^{A}-\partial_{\nu}\mathcal{A}_{\mu}^{A}-g_{s}f_{ABC}\mathcal{A}_{\mu}^{B}\mathcal{A}_{\nu}^{C}\,\, , \,\, [t^{A},t^{B}]=i f_{ABC}t^{C} 
+\label{eq:fst}
+\end{equation}  
+The last term in the field tensor, the $g_{s}f_{ABC}\mathcal{A}_{\mu}^{B}\mathcal{A}_{\nu}^{C}$ has remarkable consequences for the theory, as it introduces $self-interaction$ of the gauge bosons, that will be described in the following section.
+\subsection*{Screening, anti-screening, asymptotic freedom and confinement} 
+\noindent\justify
+A result of the non-abelian nature of the QCD leads to the self-interaction of the gluons.
+This is in contrast to QED that is an abelian theory, and does not have a self-interaction term of the gauge boson. 
+The immediate consequence of the self-interaction of gluons becomes evident when comparing the gauge boson exchage possible in QED and QCD. 
+In QED, a photon exchange diagram can just simply be a photon exchanged between two electrons, or involve an effect by which the vacuum around an electric charge can be polarized by photons splitting into $e^{+}e^{-}$ pairs that then disappears. 
+The so-called coupling strength $\alpha_{2}(q^{2})$, of the $SU(2)$ theory, is related to the probability of a higher order loop to occur, can be expressed as:  
+\begin{equation}
+\alpha_{2}(q^{2})=\frac{\alpha_{2}(\mu^{2})}{1+\frac{\alpha_{2}(\mu^{2})}{3\pi}\ln\frac{\mu^{2}}{(-q^{2})}}
+\label{eq:QEDalpha}
+\end{equation}
+where $q^{2}$ is the energy scale. 
+As the answer is dependent on $q^{2}$, the $\alpha_{2}$ must be measured at some particular $q^{2}$. The choice of $q^{2}$ can be $\mu^{2}$.
+The sign in the denominator leads to the following physical effect. 
+For very large $q^{2}$, the $\alpha_{2}(q^{2})$ becomes large. 
+Assuming a negative charge at some origin, like at an electron, surrounded particle anti-particle pairs, emerging from the vacuum and annihilating back. 
+The positively charged particle will be attracted to the negatively charged origin, and the negatively charged particle will be repelled.   
+The $q^{2}$ can be interpreted as a probe that can see more or less close to the origin. 
+A small $q^{2}$, corresponding to a probe at some distance, observes a shielding of the original charge due to the additional positive charges, meaning that the charge observed from a distance seems smaller. 
+On the other hand, for a large $q^{2}$, a probe that gets closer to the origin, the shielding is less, and the acctual charge or the origin is more accurate. 
+This effect is denoted $screening$, and is introduced in order to facilitate the introduction of the concept of $anti$-$screening$, which is the equivalent, but opposite, effect in QCD.
+\newpara
+\noindent\justify
+In QCD, a gluon exchange diagram has an additional contribution with respect to the photon exchange diagram in QED. 
+This additional contribution is due to the self-interaction of the gluons that provides one more diagram involving the production of a gluon loop, in addition to a quark anti-quark loop. 
+This diagram contributes more as the color charge of the gluon is larger than that of a quark. 
+Additionally, the contribution is opposite to that in the QED loop case. 
+This can be understood through the following example. Consider a quark of blue color charge at the origin. 
+A gluon exchage from this quark to another quark (say one of anti-red color charge) would carry the blue charge and the anti-red charge. 
+So instead more blue color charge is produced in the gluon cloud thus enhancing the blue color charge observed by a low energy probe. 
+If one instead approaches the charge with a higher $q^{2}$ probe, the screened charge is penetrated and measures a lower net charge.
+This is the concept of anti-screening.
+Mathematically, this can be represented by the QCD equivalence of Equation \ref{eq:QEDalpha} 
+\begin{equation}
+\alpha_{3}(q^{2})=\frac{\alpha_{3}(\mu^{2})}{1+\frac{\alpha_{3}(\mu^{2})}{12\pi}(33-2 n_{f})\ln\frac{(-q^{2})}{\mu^{2}}}
+\end{equation}
+where $n_{f}$ is the number of flavors, i.e. 6. 
+In the limit of a large $q^{2}$, the $\alpha_{3}(q^{2})$ decreases.\footnote{The $\alpha_{3}$, the $\alpha_{2}$ and the $\alpha_{1}$ (the last one has not been mentioned so far, but is the coupling strength associated to the $U(1)$ symmetry) are all dependent on the energy $q^{2}$ and have drastically different values. This will be treated more in depth in Chapter 3, where the introduction of Supersymmetric particles can manage to unify these three coupling constants at a certain energy scale.} 
+This is what is called $asymptotic$ $freedom$ \cite{Gross:1973id,Politzer:1973fx} and entails that gluons and quarks appear as quasi-free constituents within a bound object such as the proton or the neutron. 
+\newpara
+\noindent\justify
+Another pecuilar feature of QCD is $color$ $confinement$. It implies that colored particles can never be free, and are instead always contained within colorless protons or neutrons.  
+This can be understood in the following way. As two quarks separate, there is a force acting between them that increase until the point where it is energetically more favorable to split the energy into two quark anti-quark pairs in between the two original ones so that the charge is again zero.
+An experimental effect is that quarks can never be measured separately. 
+Instead, if a quark is produced in a collision of two protons, the quark will move away in a direction with respect to the quark to which it was originally bound. 
+Once the distance increases, instead of being released as a free quark, the energy available is used to produce a new formation of quarks in a colorless hadrons. 
+Eventually, the original quark will have travelled and produced new hadrons on the way, in a process called $hadronization$, that produces showers of hadrons known as $jets$. 
+The color confinement also result in the fact that bound quark states need to be colorless.
+Hadrons are divided according to how the quarks are combined to form a bound state.  
+Quark combinations that result in neutral color can be mesons, composed of two quarks of the same color charge and anti-color charge. This formation is known as mesons.  
+The other alternative is a combination of three quarks of different colors, such as red-blue-green (or anti-red-anti-blue-anti-green), and this formation is known as baryons. 
+Protons and neutrons are baryons, that consist of two up quarks and one down quark (proton), or one up quark and two down quarks (neutron). 
+There is an additive quantum number associated to hadrons, the baryon number ($B$), which is defined as $B=\frac{1}{3}(n_{q}-n_{\bar{q}})$. 
+For a baryon, consisting of three quarks, the baryon number is 1, whereas it is 0 for a meson, consisting of a quark and an anti-quark. This quantity is conserved in the SM.  
+\subsection*{The Higgs Mechanism}\label{sec:higgs}
+\noindent\justify 
+The outstanding issue after the formulation of the $SU(2)\otimes U(1)$ Lagrangian in Equation \ref{eq:ewkLagrange} is that of how the particles acquire mass. 
+Simply adding mass terms for the fermion and boson fields would break the local gauge invariance. 
+This problem, however, can be solved by the concept of $spontaneous$ $symmetry$ $breaking$. 
+The point of departure for acquiring masses is to introduce a four component complex scalar doublet field $\Phi$,
+\begin{equation}
+\Phi=\begin{pmatrix} \phi_{1}\\ \phi_{2}\end{pmatrix}
+\end{equation}
+and write the $\mathcal{L}_{SU(2)\otimes U(1)}$ in terms of these doublets, instead of what was previously done, namely write it in terms of doublets of fermion fields.  
+Equation \ref{eq:ewkLagrange} now becomes:
+\begin{equation}
+\mathcal{L}_{SU(2)\otimes U(1)}=
+\Phi^{\dagger}\left( ig'\frac{Y_{W}}{2}B_{\mu}+ig\frac{\sigma_{i}}{2}(W_{\mu})^{i}\right)^{\dagger}\left(ig'\frac{Y_{W}}{2}B^{\mu}+ig\frac{\sigma^{i}}{2}(W^{\mu})^{i}\right)\Phi
+%((\partial_{\mu}-ig'\frac{Y_{W}}{2}B_{\mu}-ig\frac{\sigma_{i}}{2}(W_{\mu})_{i})\Phi^{\dagger})((\partial^{\mu}-ig'\frac{Y_{W}}{2}B^{\mu}-ig\frac{\sigma_{i}}{2}(W^{\mu})_{i})\Phi)
++\rho^{2}\Phi^{\dagger}\Phi-\lambda(\Phi^{\dagger}\Phi)^{2}. 
+\label{eq:higgsPotential}
+\end{equation}
+The last two terms are known as the Higgs potential $-V(\Phi)$, and can be rewritten as a function of one of the spin-0 doublet fields, $V(\phi)=-\rho^{2}|\phi|^{2}+\lambda|\phi|^{4}$. 
+The minimum of $V(\phi)$ can be calculated in the traditional way, namely through $\frac{\partial V(\phi)}{\partial \phi}=0$. 
+The minimum is obtained for $\phi_{\mathrm{min}}=\sqrt{\frac{\rho^{2}}{2\lambda}}e^{i\phi}$, meaning that there exists a minimum for every $\phi$, i.e. an infinite number of minima which lie on a circle with radius $\sqrt{\frac{\rho^{2}}{2\lambda}}$
+The potential $V(\phi)$ is visualized in Figure \ref{fig:higgsPotential}, and has a sombrero shape with the circle of minima at the bottom.  
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[width=0.45\textwidth]{images/theory/higgspotential.png}
+    \caption{A prototypical effective `Sombrero' potential that leads to `spontaneous' symmetry breaking. 
+The vacuum, i.e., the lowest-energy state, is described by a randomly-chosen point around the bottom of the brim of the hat. }
+\label{fig:higgsPotential}
+\end{center}
+\end{figure}
+Spontaneous symmetry breaking occurs when one of the infinite possibilities of minima is chosen, in the same sense that a marble would roll down the slope of the sombrero and settle in one of the positions around the brim of the hat.  
+The spin-0 doublet at the minimum can be rewritten as:
+\begin{equation}
+\phi_{\mathrm{min}}=\begin{pmatrix} 0\\ \sqrt{\frac{\rho^{2}}{2\lambda}}\end{pmatrix}=\frac{1}{\sqrt{2}}\begin{pmatrix} 0\\ v\end{pmatrix}.
+\label{eq:minimum}
+\end{equation}
+Where the $v$ is just a redefinition for brevity. 
+Evaluating the relevant terms in the Lagrangian in Equation \ref{eq:higgsPotential} 
+\begin{equation}
+\phi^{\dagger}\left( ig'\frac{Y_{W}}{2}B_{\mu}+ig\frac{\sigma_{i}}{2}(W_{\mu})^{i}\right)^{\dagger}\left(ig'\frac{Y_{W}}{2}B^{\mu}+ig\frac{\sigma^{i}}{2}(W^{\mu})^{i}\right)\phi
+\end{equation}
+with $Y_{W}=1$ and using the minimum of the potential from Equation \ref{eq:minimum} yields:
+\begin{equation}
+\frac{1}{8}\left|\begin{pmatrix} g'B_{\mu}+gW_{\mu}^{3} & g(W_{\mu}^{1}-iW_{\mu}^{2}) \\ g(W_{\mu}^{1}+iW_{\mu}^{2}) & g'B_{\mu}-gW_{\mu}^{3} \end{pmatrix} \begin{pmatrix} 0\\ v\end{pmatrix}\right|^{2}
+\end{equation}
+\begin{equation}
+=\frac{1}{8}v^{2}g^{2}\left((W_{\mu}^{1})^{2} +(W_{\mu}^{2})^{2} \right)+\frac{1}{8}v^{2}(g'B_{\mu}-gW_{\mu}^{3})^{2}
+\end{equation}
+Remembering the identities of Equation \ref{eq:Widentities}, the first term can be written in terms of $W^{+}$ and $W^{-}$:
+\begin{equation}
+\left(\frac{1}{2}vg\right)^{2}W_{\mu}^{+}W^{\mu\,-}
+\end{equation}
+The mass term of a charged boson in the Lagrangian is $m^{2}W^{+}W^{-}$, hence the we can identify the $vg/2$ as the mass of the \PW boson!
+Similarly, remembering the identities in Equation \ref{eq:Zidentities}, the mass associated to the \PZ boson field can be obtained:
+\begin{equation}
+m_{\PZ}=\frac{v}{2}\sqrt{g'^{2}+g^{2}}
+\end{equation}
+Since no terms of $A_{\mu}A^{\mu}$ appear, one can conclude that the mass associated to this photon field is 0, such that $m_{\gamma}^{2}\cdot A_{\mu}A^{\mu}=0$
+The $v$ that was previously introduced for brevity is known as the vacuum expectation value. 
+To summarize, the gauge theory of massless gauge bosons acquired mass terms through spontaneous symmetry breaking of the Higgs potential.  
+The means by which fermions acquire mass is called Yukawa interactions and will be explained in the subsequent section. 
+\subsection*{Yukawa interactions}\label{sec:yukawa}
+\noindent\justify
+As has been shown in the previous section, the Higgs mechanism is responsible for giving masses to the gauge bosons. In this section, the origin of the fermion masses will be explained.
+As the Higgs field in an $SU(2)$ doublet is available, it is possible to add an $SU(2)$ invariant interaction of between fermions and the Higgs field to the Lagrangian. 
+The explanation will for simplicity be done for the interaction between the first generation of leptons and the Higgs field, but it can be done in the same way for the interaction between all the generations of leptons and quarks and the Higgs field. 
+The term to add to the Lagrangian to explain the interaction of the Higgs field with leptons is:
+\begin{equation}
+\mathcal{L}_{\mathrm{int}}=y_{f}(\bar{l}\phi e^{-}_{R}+\phi^{\dagger}\bar{e^{-}_{R}}l)
+\label{eq:yf}
+\end{equation}
+where the $y_{f}$ is the so called Yukawa coupling for fermions, and $l=\begin{pmatrix}\nu_{e}  \\ e^{-}\end{pmatrix}_{L}$. 
+Following the same steps as before, the interaction term of the Lagrangian can be evaluated at some field  
+\begin{equation}
+\phi=\frac{1}{\sqrt{2}}\begin{pmatrix} 0  \\ v+H\end{pmatrix}. 
+\end{equation}
+with $H$ being the Higgs boson. The $\mathcal{L}_{\mathrm{int}}$ then becomes:
+\begin{equation}
+\mathcal{L}_{\mathrm{int}}=\frac{y_{f}v}{\sqrt{2}}(\bar{e}^{-}_{L}e^{-}_{R}+\bar{e}_{R}^{-}e^{-}_{L})+ \frac{y_{f}}{\sqrt{2}}(\bar{e}^{-}_{L} e^{-}_{R}+\bar{e}_{R}^{-}e^{-}_{L})H
+\end{equation}
+The $\frac{y_{f}v}{\sqrt{2}}$ in the first term has the form of expected for a fermion mass, thus we can identify 
+\begin{equation}
+m_{e}=\frac{y_{f}v}{\sqrt{2}}
+\end{equation}
+Rewriting the interaction Lagrangian with the electron mass, and simplify the $\bar{e}^{-}_{L}e^{-}_{R}+\bar{e}_{R}^{-}e^{-}_{L}$ term to $\bar{e}e$:
+\begin{equation}
+\mathcal{L}_{\mathrm{int}}=m_{e}\bar{e}e+ \frac{m_{e}}{v}\bar{e}eH
+\end{equation}
+The second term indicates that there is a possible interaction between electrons and the Higgs field, with a coupling strength of $m_{e}/v$. 
+This can be used to calculate the probability for, for example, an electron and a positron to radiate a Higgs boson, or for a Higgs boson to decay into an electron and a positron. 
+A remarkable feature is that the coupling is $proportional$ to the fermion mass, meaning that the interaction with the Higgs fiels is more probable for more massive fermions. 
+\section{The success and shortcomings of the SM}
+\noindent\justify
+The SM of particle physics, formulated in the previous sections, provides a neat and comprehensible theory. 
+All the fermions and the bosons listed in Tables \ref{tab:fermions} and \ref{tab:bosons} have been predicted and later discovered throughout the later half of the 20th century. 
+Their properties have been measured to a very high precision.  
+The latest discovery was that of the Higgs boson, by the ATLAS \cite{Aad:2012tfa} and CMS \cite{Chatrchyan:2012xdj} collaborations in 2012. 
+Before then, there had not been a confirmation of the spontaneous breaking of the electroweak symmetry that makes fermions and bosons acquire mass. 
+Its discovery was a great success that solidifed the theoretical framework of the SM established in the 1970s. 
+%The discovery  and has a mass of $125.09\pm0.24\GeV$ \cite{Olive_2016}, and this constrains the vacuum expectation value to $245\GeV$
+What has not been covered so far in this thesis, is the various shortcomings of the theory. 
+In Table \ref{tab:bosons} the gauge bosons of the SM are summarized, and the interactions they represent. 
+The gravitational interaction is not included in this table as the SM lack a description of gravity, which renders the theory only able to describe three out of four fundamental interactions. 
+\newpara
+\noindent\justify
+Further, the claim that the SM is able to explain all known phenomena only holds for the immediate world that surrounds us. 
+Instead, there is overwhelming evidence from cosmological observations that the Universe largely consist of matter that the SM is not able to explain. 
+In fact, only 5\% of the energy and matter in the Universe is composed of the SM particles introduced in Tables \ref{tab:fermions} and \ref{tab:bosons}. 
+The remaining composition of the Universe is unknown, and is labelled $dark$ $energy$ and $dark$ $matter$ and make up 68\% and 27\% respectively \cite{Bertone:2004pz,Aguilar:2013qda,Peebles:2002gy}. 
+The evidence of the existence of non-luminous matter, hence the word "dark", is provided by data from weak and strong gravitational lensing by large scale structures \cite{Refregier:2003ct,Tyson:1998vp}. 
+There are numerous theories that predicts a particle compatible with a the features of dark matter, namely massive and decoupled from the electromagnetic, weak and strong interactions.
+One of these theories is Supersymmetry (SUSY), which will be presented in the next chapter and constitute the motivation for this thesis. 
+\newpara
+\noindent\justify
+An aethetical problem of the theory is the need for extreme fine tuning of the SM in order to encompass the known masses of the particles. 
+The problem is that $m_{H}^{2}$ receives large quantum corrections from the virtual effects of every particle that couple to the Higgs field \cite{Martin:1997ns}. 
+The corrections are of the form:
+\begin{equation}
+\delta m_{H}^{2}=-\frac{(y_{f})^{2}}{8\pi^{2}}\left[ \Lambda^{2} + \mathcal{O}\left(\ln\Lambda\right)\right] 
+\label{eq:loop}
+\end{equation}
+where the $y_{f}$ is the Yukawa coupling of the fermions which is proportional to the mass of the fermions, i.e. largest for the top quark. 
+The $\Lambda$ is a cutoff scale, that takes values of around the Planck scale.\footnote{The Planck-scale is defined through the Planck mass, $m_{P}=\sqrt{\frac{\hbar}{G}}$. With the gravitational constant $G$ of $6.67\times10^{-11}\m^{3}\kg^{-1}\s^{2}$ this corresponds to a value of the Planck-scale of around $10^{19}\GeV$. This denotes the scale at which descriptions of interaction in the SM fail.} 
+The mass of the Higgs boson is the sum of the tree-level mass and the sum of all loop-corrections, as shown in Equation \ref{eq:loop}, which is highly dependent on $\Lambda$. 
+As the Higgs boson mass is at $125\GeV$ extreme fine tuning is needed in order for it to be stable. 
+This problem is known as the hierarchy problem. 
+As will be shown in the subsequent chapter, the additional particles that SUSY predicts can instead cancel the $\Lambda^{2}$ terms in Equation \ref{eq:loop}, thus stabilizing the Higgs mass without need for fine tuning.
+\newpara
+\noindent\justify
+Another feature of the SM that was glanced over in the introduction, is the vast ranges that the masses of SM particles span over. 
+Recalling Table \ref{tab:fermions}, one can see that from the lightest fermions, the neutrinos, to the most massive fermion, the top quark, the masses range from sub-\eV scale to 173\GeV.
+The fermions in Table \ref{tab:fermions} are simply ordered after the time of discovery, that is dictated by the masses, the lighter the fermion, the easier it was to discover. 
+There is no known logic behind the masses of the fermions, nor does the SM manage to explain why there should be exactly three quark and lepton generations. 
+Additionally, the SM can not explain why there is more matter than anti-matter in the Universe, nor why neutrinos have masses. 
+The list of problems of the SM can go on, but then take-home message of this chapter is that it is still a very effective theory, with immense predictive power. 
+At this point, discarding the SM is not an option. 
+Instead, extensions of the SM, known as Beyond SM (BSM) theories that could provide answers to one or all of the above problems, are probed. 
+In the next chapter, the most promising of the BSM theories, SUSY, is introduced, followed by the means by which one can probe the existence of it using high energy physics experiments.  
