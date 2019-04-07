@@ -28,7 +28,7 @@
 %% This program consists of the files listed in manifest.txt
 %%
 \NeedsTeXFormat{LaTeX2e}[2000/06/01]
-\ProvidesClass{ufthesis}
+\ProvidesClass{eththesis}
    [2002/09/20 v2.0c UF Thesis Class (Ron Smith)]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%   Defining Class options and loading required   %
@@ -81,7 +81,7 @@
 \renewcommand{\filedate}{}%
 \renewcommand{\fileversion}{}%
 \RequirePackage[normalem]{ulem}%
-\RequirePackage{sectsty}[1999/04/12 v2.0.1 Commands to change all sectional heading styles]%
+%\RequirePackage{sectsty}[1999/04/12 v2.0.1 Commands to change all sectional heading styles]%
 \ifthenelse{\boolean{RS@Justify}}{}{%
 \RequirePackage{ragged2e}[1999/06/08 v1.02 Ragged2e Package (MS)]%
 \setlength{\RaggedRightRightskip}{0pt plus 4em}%
@@ -201,6 +201,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%   Formatting Chapter Headings                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%from here
 \setcounter{secnumdepth}{3}%
 \renewcommand{\chaptername}{CHAPTER}
 \renewcommand{\appendixname}{APPENDIX}
@@ -228,6 +229,7 @@
     \@makechapterhead{\uppercase{#2}}%
 \ifthenelse{\boolean{SetDSpace}}{\GoDouble}{}%
 }%
+%to here
 %\renewcommand{\@makechapterhead}[1]{%
 %\ifthenelse{\boolean{SetDSpace}}{\GoDouble}{}%
 %    \begin{RS@Cent}%
@@ -329,7 +331,7 @@
   \@dottedtocline{1}{\RS@secindent}{\RS@secnumwidth}}%
 \renewcommand*{\l@subsection}{\@dottedtocline{2}{\RS@subsecindent}%
               {\RS@subsecnumwidth}}%
-\renewcommand*{\l@subsubsection}{\@dottedtocline{3}{7.7em}{4.1em}}%
+%\renewcommand*{\l@subsubsection}{\@dottedtocline{3}{7.7em}{4.1em}}%
 \renewcommand*{\l@paragraph}{\@dottedtocline{4}{10em}{5em}}%
 \renewcommand*{\l@subparagraph}{\@dottedtocline{5}{12em}{6em}}%
 \renewcommand*{\l@figure}{\vspace{\BaseDiff\baselineskip}%
@@ -482,6 +484,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%        Title Page                               %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{ \normalsize \textsc{BE PROJECT\\
+%LITERATURE SURVEY}
+%        \\ [2.0cm]
+%        \HRule{0.5pt} \\
+%        \LARGE \textbf{\uppercase{Digital Signal Transmission over MIMO-OFDM System}}
+%        \HRule{2pt} \\ [0.5cm]
+%        \normalsize  \vspace*{5\baselineskip}}
+%
+%\date{}
+%
+%\author{
+%        Purushottam Patil \\ 
+%        Rakesh Rathod \\
+%        Sunil Nagare\\
+%        Guided By - Prof. Sukanya Kulkarni Madam \\
+%        Department of Electronics and Telecommunications\\ 
+%        Sardar Patel Institute of Technology , Andheri}
+%
 \renewcommand{\maketitle}{%
     \clearpage%
     \setboolean{SetDSpace}{false}%
@@ -489,15 +509,25 @@
     \GoSingle%
     \begin{RS@Cent}%
     %\BigMargin%
-    \Title%
+    \huge{\bf{
+    \HRule{0.5pt} \\
+    \Title}}%
+    \\
+    \HRule{0.5pt} \\ [0.5cm]
     \vfill%
-    By \\*[\BaseDiff\baselineskip]%
-    \MakeUppercase{\FullName}%
     \vfill%
-    A \MakeUppercase{\ThesisType} Doctor of Sciences  \\%
-    \MakeUppercase{\DegreeType} \\*[\BaseDiff\baselineskip]%
-    ETH Zurich \\*[\BaseDiff\baselineskip]%
-    \GradYear%
+    \small{\MakeUppercase{A thesis submitted to attain the degree of}} \\*[\BaseDiff\baselineskip]%
+    \large{DOCTOR OF SCIENCES of ETH ZURICH} \\*[\BaseDiff\baselineskip]%
+    \large{(Dr. sc. ETH Z\"{u}rich)}
+    \vfill%
+    \large{By \\*[\BaseDiff\baselineskip]%
+    \large{\FullName \\*[\BaseDiff\baselineskip]} 
+    %A \MakeUppercase{\ThesisType} Doctor of Sciences  \\%
+    \small{\MakeUppercase{\DegreeType} \\*[\BaseDiff\baselineskip]% 
+    \MakeUppercase{\Birth} \\*[\BaseDiff\baselineskip]%
+    \MakeUppercase{\Nationality} }
+    \\*[\BaseDiff\baselineskip]%
+    \large{\GradYear}}%
     \end{RS@Cent}%
     \vspace*{0in}
     \setboolean{SetDSpace}{true}%
@@ -560,18 +590,18 @@
     \addcontentsline{toc}{extrachapter}{\abstractname}%
     \begin{RS@Cent}%
     %\BigMargin%
-    Abstract of \ThesisType\  \\%
-    \DegreeType \\*[\BaseDiff\baselineskip]%
-    \Title \\*[\BaseDiff\baselineskip]%
-    By \\*[\BaseDiff\baselineskip]%
-    \FullName \\*[\BaseDiff\baselineskip]%
-    \GradMonth\ \GradYear \\*[\BaseDiff\baselineskip]%
+    \Large{ABSTRACT}  \\*[\BaseDiff\baselineskip]%
+    %\DegreeType \\*[\BaseDiff\baselineskip]%
+    %\Title \\*[\BaseDiff\baselineskip]%
+    %By \\*[\BaseDiff\baselineskip]%
+    %%FullName \\*[\BaseDiff\baselineskip]%
+    %\GradMonth\ \GradYear \\*[\BaseDiff\baselineskip]%
     \end{RS@Cent}%
-    {\raggedright Chair: \Chair \\%
+    %{\raggedright Chair: \Chair \\%
     %\raggedright Cochair: \Cochair \\%uncomment this line if you have a cochair
-    Major: \Department} %
-    \setboolean{SetDSpace}{true}%
-    \par%
+    %Major: \Department} %
+    %\setboolean{SetDSpace}{true}%
+    %\par%
     \GoDouble}%
     {\clearpage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -634,7 +664,13 @@
 \@onlypreamble{\SetThesisType}%
 \newcommand*{\SetDegreeType}[1]{\renewcommand*{\DegreeType}{#1}}%
 \newcommand*{\DegreeType}{UNDEFINED DEGREE}%
-\@onlypreamble{\SetDegreeType}%
+\@onlypreamble{\SetDegreeType}%                                     
+\newcommand*{\SetNationality}[1]{\renewcommand*{\Nationality}{#1}}%
+\newcommand*{\Nationality}{UNDEFINED DEGREE}%
+\@onlypreamble{\SetNationality}%                                     
+\newcommand*{\SetBirth}[1]{\renewcommand*{\Birth}{#1}}%
+\newcommand*{\Birth}{UNDEFINED DEGREE}%
+\@onlypreamble{\SetBirth}%                                     
 \newcommand*{\SetGradMonth}[1]{\renewcommand*{\GradMonth}{#1}}%
 \newcommand*{\GradMonth}{UNDEFINED MONTH}%
 \@onlypreamble{\SetGradMonth}%
@@ -746,8 +782,8 @@
                          \setlength{\hangindent}{\RS@TOChdent}}%
 \renewcommand{\subitem}{\par\setlength{\leftskip}{0.25in}%
                          \setlength{\hangindent}{\RS@TOChdent}}%
-\renewcommand{\subsubitem}{\par\setlength{\leftskip}{0.5in}%
-                         \setlength{\hangindent}{\RS@TOChdent}}%
+%\renewcommand{\subsubitem}{\par\setlength{\leftskip}{0.5in}%
+%                         \setlength{\hangindent}{\RS@TOChdent}}%
 \renewcommand{\indexspace}{}
 \renewcommand{\indxspace}{\par\vspace{\BaseDiff\baselineskip}}
 \renewenvironment{theindex}{%

@@ -8,11 +8,16 @@ Similarly to the formulation of the SM, that introduces particles with partners 
 This final symmetry is between fermions and bosons, and dictates that ther exists a fermionic SUSY partner to each boson and vice versa. 
 \newpara
 \noindent\justify
-This chapter contains a review of SUSY, closely following the excellent overview given in \cite{Martin:1997ns}. 
-An introduction to the so called Minimal Supersymmetric Standard Model (MSSM) is provided, along with the SUSY Lagrangian. 
-Further, explanations on how SUSY can solve the problems like unification of forces, the hierarchy problem, and dark matter, is given.  
+This chapter contains a review of the known problems of the SM, and how SUSY could solve them. , closely following the excellent overview given in \cite{Martin:1997ns}. 
+An introduction to the so called Minimal Supersymmetric Standard Model (MSSM) is provided in Section \ref{sec:mssm} that closely following the excellent overview given in \cite{Martin:1997ns}.
+The formulation of the MSSM Lagrangian is given, and the procedure in which SUSY breaks to give masses of the SUSY particles different to that of their SM partners. 
 \newpage
-\section{The hierarchy problem}
+\section{Problems of the SM}
+\noindent\justify
+As summarized at the end of the last chapter, the SM is far from a complete theory as it is unable to provide explanations of phenomena such as the origin of dark matter and neutrino masses. 
+The fact that it also relies on many parameters and requires extreme fine tuning in order to hold, motivates the introduction of a more aesthetically pleasing extension of the model. 
+The hierarchy problem of the SM and the problem with the non-converging coupling constants of the SM are introduced in the following. 
+\subsection*{The hierarchy problem}
 \noindent\justify
 The so called hierarchy problem, that was introdcued at the end of the last chapter, requires extreme fine tuning in order to stabilize the Higgs boson mass \cite{Martin:1997ns}. 
 Recalling the problem, the $m_{H}^{2}$ receives enormous quantum corrections that arise from virtual loops of all the particles that couple to the Higgs field. 
@@ -49,8 +54,16 @@ The remaining contribution to the Higgs mass is then \cite{Pape:2006ar}:
 \end{equation}                                                                                                                 
 As long as the masses of the new scalar bosons are not too far from that of their SM partners, the corrections to the Higgs mass are well-behaved.
 Provided their mass differences are of the order of the electroweak scale, the correction itself also remains of the order of the electroweak scale. 
-\section{Unification of forces}
+\subsection*{Unification of forces}
 \noindent\justify
+The coupling constants of the symmetry group of the SM $SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$, $\alpha_{1}$, $\alpha_{2}$ and $\alpha_{3}$ were first introduced in Section \ref{sec:alpha}. 
+From their definition, it is clear that they depend on the energy scale $q^{2}$, and that their values differ from eachother. 
+Instead of having three disctinct coupling constants, it is theorized that these couplings can instead converge to the same value at some energy scale, thus unifying the forces such that $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{\mathrm{GUT}}$ where the GUT stands for Grand Unified Theory. 
+If one were to calculate the evolution of the couplings using renormalization group equations with two-loop effetcs, the coupling constants evolve as is shown by dashed lines in Figure \ref{fig:unification} \cite{Martin:1997ns}.
+Here the $\alpha^{-1}$ fo the three couplings indeed meet each other but at different energy scales, thus not resulting in the desirable unification of all three forces.   
+As has already been hinted in the beginning of this chapter, SUSY introduces a new set of particles, thus modifying the slopes of the inverse of the coupling constants in Figure \ref{fig:unification}.
+By requiring that the three forces should meet, one can calculate at what energy scale that should be, and also the mass scale of the SUSY particles. 
+This is visualized in Figure \ref{fig:unification} by solid lines, where the scale at which the forces meet is the so called $m_{\mathrm{GUT}}=10^{16\pm 0.3}\GeV$ yielding a value of $\alpha_{\mathrm{GUT}}^{-1}=25.7\pm1.7$ \cite{Amaldi:1991cn}. 
 \begin{figure}[htbp!]
 \begin{center}
     \includegraphics[width=0.45\textwidth]{images/theory/unification.png}
@@ -58,7 +71,8 @@ Provided their mass differences are of the order of the electroweak scale, the c
 In the MSSM case, the sparticle masses are treated as a common threshold varied between 750 GeV and 2.5 TeV, and $\alpha_{3}(m_{\PZ})$ is varied between 0.117 and 0.120. \cite{Martin:1997ns}}
 \label{fig:unification}
 \end{center}
-\end{figure}                                                                                                                                                                                      
+\end{figure}                                                                         
+This unification of forces that would arise in SUSY is indeed an attractive phenomenon. 
 \section{Minimal Supersymmetric Standard Model}
 \noindent\justify
 In SUSY, the SM particles introduced in the previous chapter are have supersymmetric partner, or superpartner, associated to it. 
@@ -211,5 +225,61 @@ respectively. The final expression for the potential is:
 \begin{align}
 V(\phi)=F_{i}^{*}F_{i}+\frac{1}{2}D^{a}D^{a}
 \end{align}
-  
-
+\section{SUSY breaking mechanisms}\label{sec:breaking}
+\noindent\justify
+As the superpartners have not been discovered at the same masses as their SM partners, an assumption can be made that SUSY is a broken symmetry. 
+In order to accommodate for this required breaking of the symmetry while still maintaining the desirable feature of SUSY that cancels the divergences in Equation \ref{eq:loop}, a so called $soft$ SUSY breaking scenario is considered. 
+This is done by adding a new term, a soft SUSY breaking term, to the $\mathcal{L}_{SUSY}$ \cite{soft,Chung:2003fi}:
+\begin{equation}
+\mathcal{L}=\mathcal{L}_{\mathrm{SUSY}}+\mathcal{L}_{\mathrm{soft}}
+\label{eq:softterm}
+\end{equation}
+The $\mathcal{L}_{\mathrm{SUSY}}$ is the same as introduced previously in this chapter, and preserves the supersymmetric interactions. 
+%\begin{equation}
+%\mathcal{L}_{\mathrm{soft}}=-\sum_{\tilde{q},\tilde{l},H_{u,d}}m_{0,i}^{2}|\phi_{i}|^{2}+(-\frac{1}{2}m_{1/2,a}\lambda_{a}\lambda_{a}-A_{0,i}W_{3,i}-B_{0}\mu H_{u}H_{d})+\mathrm{h.c}    
+%\label{eq:softterm}
+%\end{equation}
+%Here the $m_{0,i}$ are the mass terms of the scalars and $m_{1/2,a}$ of the gauginos, $A_{0,i}$ and $B_{0}$ are parameters with (positive) dimension of mass and $W_{3,i}$ represents trilinear terms of the superpotential \cite{Pape:2006ar}.  
+The soft terms include the introduction of mass parameters that lift the mass degeneracy of the SM paricles and their superpartners. 
+As these parameters contribute to the radiative corrections discussed previously, they need to be less than a few \TeV in order to still solve the hierarchy problem. 
+Following the description in \cite{Martin:1997ns}, it is evident that SUSY breaking should occur in a “hidden sector” of particles that have very little direct couplings to the “visible sector” chiral supermultiplets of the MSSM. 
+The question is what these mediating interactions should be, that is the connection between the hidden sector and the visible sector. 
+There are countless proposals to the design of the mediating interactions in the soft term on the market, of which the two most popular will be introduced. 
+\subsection*{SUSY breaking in SUGRA}
+\noindent\justify
+The first proposal for what the mediating interactions are dates back to the beginning of the 1980s \cite{Chamseddine:1982jx,Barbieri:1982eh,Ibanez:1982ee,Hall:1983iz,Ellis:1982wr}
+It proposes that the mediating force is gravity, hence the name SUGRA, short for Supergravity theory, generalized to many different theories in various numbers of dimensions and involving $N$ supersymmetries. 
+mSUGRA means minimal supergravity theory, and is a special case of SUGRA with $N=1$. 
+%There is a direct coupling of the goldstino supermultiplets to the MSSM states with gravitational strength \cite{Pape:2006ar}.
+If SUSY is broken in the hidden sector by a vacuum expectation value $\braket{F}$ then soft terms in the Lagrangian becomes
+\begin{equation}
+m_{\mathrm{soft}}\approx\frac{\braket{F}}{M_{P}}
+\end{equation}
+where $M_{P}$ is the reduced Planck mass. 
+For $m_{\mathrm{soft}}$ of order a few hundred \GeV, the expected􏰛scale associated with the origin of SUSY breaking in the hidden sector should be around $\sqrt{\braket{F}}\approx10^{10}-10^{11}\GeV$.
+In mSUGRA the gravitino is supposed to be heavy (same order as $m_{\mathrm{soft}}$, interacting very weakly, and the LSP is most likely a neutralino. 
+\subsection*{SUSY breaking in GMSB}
+\noindent\justify
+Gauge mediated supersymmetry breaking \cite{Dine:1981gu,Nappi:1982hm,Dine:248065}, or GMSB for short, is a model that assumes the mediating interactions between the hidden sector and the visible sector to be ordinary electroweak and QCD gauge interactions with extra chiral supermultiplets. 
+As opposed to in SUGRA where the communication between the hidden sector and the visible sector happen through a mediator, in GMSB the hidden sector couple to a messenger sector instead of directly with the visible sector
+In this scenario the soft term arise due to loop diagrams that include a messenger particle. 
+The messengers are chiral supermultiplets that couple to the $\braket{F}$ and have the ordinary $SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$ interactions. 
+The soft term is now
+\begin{equation}
+m_{\mathrm{soft}}\approx\frac{\alpha_{a}}{4\pi}\frac{\braket{F}}{M_{\mathrm{messenger}}}
+\label{eq:gmsb}
+\end{equation}
+where the $\frac{\alpha_{a}}{4\pi}$ stems from the ordinary gauge interactions and the $M_{\mathrm{messenger}}$ is the mass of the messenger. 
+The immediate effect of Equation \ref{eq:gmsb} is that in order to yield a soft mass of the order of the weak scale, the scale of the SUSY breaking should be as low as $\sqrt{\braket{F}}\approx10^{10}-10^{11}\GeV$, which is much lower than that obtained in mSUGRA.
+As an effect of this low energy scale, the gravitino is assumed to be very light ($\approx1\eV$) and is thus always the LSP. 
+\newpara
+\noindent\justify
+What might not obvious from the discussions throughout this chapter is the unconstrained MSSM contains a huge number of free paramters (105 in addition to the 19 free parameters of the SM!) \cite{Dimopoulos:1995ju}.
+In order to be able to use the model in a reasonable way, one needs a way to reduce the number of parameters \cite{Djouadi:1998di}. 
+At hand are a couple of phenomenological constraints that can be used to bring down the number of parameters, that will be listed in the following. 
+Recalling the $\mathcal{CP}$ violation that was introduced in Section \ref{sec:yukawa}. 
+There is some evidence for $\mathcal{CP}$ violation, but the parameters of the MSSM can be reduced by assuming that there are no new sources of $\mathcal{CP}$ violation.  
+Further, an assupmtion is made that there are no so called flavor changing neutral currents, FCNC. 
+Finally, the assumption that the soft–SUSY breaking scalar masses are the same for the first and second generations \cite{Djouadi:1998di}.
+By imposing these phenomenological constraints, the number of parameters are reduced to only 19. 
+This model is known as phenomenological MSSM, or pMSSM for short.  

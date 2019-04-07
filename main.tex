@@ -1,5 +1,7 @@
 \RequirePackage{fix-cm}
-\documentclass[12pt,final,CPage]{eththesis} %Use this line for Windows OS
+%\documentclass[12pt,twoside]{eththesis} %Use this line for Windows OS
+\documentclass[12pt,final,CPage,twoside]{eththesis} %Use this line for Windows OS
+\usepackage[nobottomtitles]{titlesec}
 \include{packages}
 \usepackage{braket}
 \usepackage{etex}
@@ -10,6 +12,7 @@
 \usepackage{enumitem}
 \usepackage{ragged2e}
 \usepackage{wasysym}
+\usepackage{axodraw}
 \newenvironment{packed_item}{
 \begin{itemize}
   \setlength{\itemsep}{1pt}
@@ -20,6 +23,7 @@
 %\usepackage{feynmp}
 \usepackage[final]{pdfpages}
 \newcommand{\lint}{35.9\fbinv}
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 \newcommand{\EVTGEN} {{\textsc{evtgen}}\xspace}
 \newcommand{\FAMOS} {{\textsc{famos}}\xspace}
 \newcommand{\FASTJET} {{\textsc{FastJet}}\xspace}
@@ -63,6 +67,9 @@
 \newcommand{\mum}{\ensuremath{\,\mu\text{m}}\xspace}
 \newcommand{\micron}{\ensuremath{\,\mu\text{m}}\xspace}
 \newcommand{\m}{\ensuremath{\,\text{m}}\xspace}
+\newcommand{\kg}{\ensuremath{\,\text{kg}}\xspace}
+\newcommand{\ns}{\ensuremath{\,\text{ns}}\xspace}
+\newcommand{\s}{\ensuremath{\,\text{s}}\xspace}
 \newcommand{\km}{\ensuremath{\,\text{km}}\xspace}
 \newcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
 \newcommand{\mm}{\ensuremath{\,\text{mm}}\xspace}
@@ -74,6 +81,7 @@
 \newcommand{\MeV}{\ensuremath{\,\text{Me\hspace{-.08em}V}}\xspace}
 \newcommand{\MeVns}{\ensuremath{\text{Me\hspace{-.08em}V}}\xspace} % no leading thinspace
 \newcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
+\newcommand{\eV}{\ensuremath{\,\text{e\hspace{-.08em}V}}\xspace}
 \newcommand{\GeVns}{\ensuremath{\text{Ge\hspace{-.08em}V}}\xspace} % no leading thinspace
 \newcommand{\gev}{\GeV}
 \newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
@@ -107,6 +115,10 @@
 \newcommand{\et}{\ensuremath{E_{\mathrm{T}}}\xspace}
 \newcommand{\Em}{\ensuremath{E\hspace{-0.6em}/}\xspace}
 %\newcommand{\Pm}{\ensuremath{p\hspace{-0.5em}/}\xspace}
+\newcommand{\newpara}
+    {
+    \vskip 0.5cm
+    }
 \newcommand{\PTm}{\ensuremath{{p}_\mathrm{T}\hspace{-1.02em}/\kern 0.5em}\xspace}
 \newcommand{\PTslash}{\PTm}
 \newcommand{\ETm}{\ensuremath{E_{\mathrm{T}}^{\text{miss}}}\xspace}
@@ -127,6 +139,9 @@
 \newcommand{\PZZ}{\ensuremath{\mathrm{ZZ}}\xspace}
 \newcommand{\PWZ}{\ensuremath{\mathrm{WZ}}\xspace}
 \newcommand{\PWW}{\ensuremath{\mathrm{WW}}\xspace}
+\newcommand{\PWWZ}{\ensuremath{\mathrm{WWZ}}\xspace}
+\newcommand{\PWZZ}{\ensuremath{\mathrm{WZZ}}\xspace}
+\newcommand{\PZZZ}{\ensuremath{\mathrm{ZZZ}}\xspace}
 \newcommand{\htvecmiss}{\ensuremath{\vec{H}_{\text{T}}^{\text{miss}}}\xspace}
 \newcommand{\CL}{\ensuremath{\text{CL}}\xspace}
 \newcommand{\CLs}{\ensuremath{\text{CL}_\text{s}}\xspace}
@@ -134,20 +149,29 @@
 \newcommand{\ttbar}{\ensuremath{\mathrm{{t\overline{t}}}}\xspace} % t-tbar
 \newcommand{\bbbar}{\ensuremath{\mathrm{{b\overline{b}}}}\xspace} % t-tbar
 \newcommand{\ttZ}{\ensuremath{\mathrm{{t\overline{t}}\PZ}}\xspace} % t-tbarZ
+\newcommand{\tZq}{\ensuremath{\mathrm{t\PZ q}\xspace}} % t-tbarZ
 \newcommand{\ttW}{\ensuremath{\mathrm{{t\overline{t}}\PW}}\xspace} % t-tbarZ
+\newcommand{\tWZ}{\ensuremath{\mathrm{{t\PW\PZ}}\xspace}} % t-tbarZ
 \newcommand{\ttH}{\ensuremath{\mathrm{{t\overline{t}}\PH}}\xspace} % t-tbarZ
 \newcommand{\secondchi}{\PSGczDt}
 \newcommand{\firstchi}{\PSGczDo}
 \newcommand{\firstcharg}{\PSGcpmDo}
+\newcommand{\secondcharg}{\PSGcpmDoTwo}
 %\newcommand{\gravitino}{\sGra}
 \newcommand{\sbottom}{\ensuremath{\widetilde{b}}\xspace}
 \newcommand{\gluino}{\ensuremath{\widetilde{g}}\xspace}
+\newcommand{\wino}{\ensuremath{\widetilde{W}}\xspace}
+\newcommand{\bino}{\ensuremath{\widetilde{B}}\xspace}
 \newcommand{\gravitino}{\ensuremath{\widetilde{G}}\xspace}
 \providecommand{\PSGczDo}{\ensuremath{\widetilde{\chi}^{0}_{1}}\xspace} % neutralino
+\providecommand{\secondchi}{\ensuremath{\widetilde{\chi}^{0}_{2}}\xspace} % neutralino
+\providecommand{\thirdchi}{\ensuremath{\widetilde{\chi}^{0}_{3}}\xspace} % neutralino
+\providecommand{\fourthchi}{\ensuremath{\widetilde{\chi}^{0}_{4}}\xspace} % neutralino
 \providecommand{\PSGcmDo}{\ensuremath{\widetilde{\chi}^{-}_{1}}\xspace} % neutralino
 \providecommand{\PSGczDt}{\ensuremath{\widetilde{\chi}^{0}_{2}}\xspace} % neutralino
 \providecommand{\PSGcpm}{\ensuremath{\widetilde{\chi}^\pm}\xspace} % neutralino
 \providecommand{\PSGcpmDo}{\ensuremath{\widetilde{\chi}^\pm_{1}}\xspace} % neutralino
+\providecommand{\PSGcpmDoTwo}{\ensuremath{\widetilde{\chi}^\pm_{2}}\xspace} % neutralino
 \providecommand{\PSGcpDo}{\ensuremath{\widetilde{\chi}^{+}_{1}}\xspace} % neutralino
 %old
 
@@ -176,6 +200,15 @@
 \newcommand{\RT}{\ensuremath{R_{\text{T}}}\xspace}
 \newcommand{\mttwol}{\ensuremath{M_{\text{T2}}(\ell\ell)}\xspace}
 \newcommand{\mttwolb}{\ensuremath{M_{\text{T2}}(\ell b \ell b)}\xspace}
+\newcommand{\sneu}{\ensuremath{\widetilde{\nu}}\xspace}
+\newcommand{\sneuL}{\ensuremath{\widetilde{\nu}_{L}}\xspace}
+\newcommand{\sneuR}{\ensuremath{\widetilde{\nu}_{R}}\xspace}
+\newcommand{\sneuE}{\ensuremath{\widetilde{\nu}_{e}}\xspace}
+\newcommand{\sneuM}{\ensuremath{\widetilde{\nu}_{\mu}}\xspace}
+\newcommand{\sneuT}{\ensuremath{\widetilde{\nu}_{\tau}}\xspace}
+\newcommand{\lep}{\ensuremath{\ell}\xspace}
+\newcommand{\lepL}{\ensuremath{\ell}_{L}\xspace}
+\newcommand{\lepR}{\ensuremath{\ell}_{R}\xspace}
 \newcommand{\slep}{\ensuremath{\widetilde{\ell}}\xspace}
 \newcommand{\slepL}{\ensuremath{\widetilde{\ell}_{L}}\xspace}
 \newcommand{\slepR}{\ensuremath{\widetilde{\ell}_{R}}\xspace}
@@ -187,6 +220,31 @@
 \newcommand{\smuR}{\ensuremath{\widetilde{\mu}_{R}}\xspace}
 \newcommand{\stauL}{\ensuremath{\widetilde{\tau}_{L}}\xspace}
 \newcommand{\stauR}{\ensuremath{\widetilde{\tau}_{R}}\xspace}            
+\newcommand{\stauO}{\ensuremath{\widetilde{\tau}_{1}}\xspace}
+\newcommand{\stauT}{\ensuremath{\widetilde{\tau}_{2}}\xspace}
+%quarks and squarks
+\newcommand{\supR}{\ensuremath{\widetilde{u}_{R}}\xspace}            
+\newcommand{\supL}{\ensuremath{\widetilde{u}_{L}}\xspace}            
+\newcommand{\sdownR}{\ensuremath{\widetilde{d}_{R}}\xspace}            
+\newcommand{\sdownL}{\ensuremath{\widetilde{d}_{L}}\xspace}            
+\newcommand{\scR}{\ensuremath{\widetilde{c}_{R}}\xspace}            
+\newcommand{\scL}{\ensuremath{\widetilde{c}_{L}}\xspace}            
+\newcommand{\ssR}{\ensuremath{\widetilde{s}_{R}}\xspace}            
+\newcommand{\ssL}{\ensuremath{\widetilde{s}_{L}}\xspace}            
+\newcommand{\stR}{\ensuremath{\widetilde{t}_{R}}\xspace}            
+\newcommand{\stL}{\ensuremath{\widetilde{t}_{L}}\xspace}            
+\newcommand{\sbR}{\ensuremath{\widetilde{b}_{R}}\xspace}            
+\newcommand{\sbL}{\ensuremath{\widetilde{b}_{L}}\xspace}            
+\newcommand{\stO}{\ensuremath{\widetilde{t}_{1}}\xspace}  
+\newcommand{\stT}{\ensuremath{\widetilde{t}_{2}}\xspace}  
+\newcommand{\sbO}{\ensuremath{\widetilde{b}_{1}}\xspace}  
+\newcommand{\sbT}{\ensuremath{\widetilde{b}_{2}}\xspace}  
+
+
+\newcommand{\upR}{\ensuremath{u_{R}}\xspace}            
+\newcommand{\upL}{\ensuremath{u_{L}}\xspace}            
+\newcommand{\downR}{\ensuremath{d_{R}}\xspace}            
+\newcommand{\downL}{\ensuremath{d_{L}}\xspace}            
 \newcommand{\kt}{\ensuremath{k_{\mathrm{T}}}\xspace}
 \newcommand{\DR}{\ensuremath{\Delta\mathrm{R}}\xspace}
 \newcommand{\ptmisstrig}{\ensuremath{p_{\mathrm{T, trig}}^{\mathrm{miss}}}\xspace}
@@ -218,8 +276,7 @@
 \newcommand{\kHz}{kHz}                                        
 \newcommand{\GHz}{GHz}                                        
 \newcommand{\Hz}{Hz}                                        
-\newcommand{\ns}{ns}                                        
-\newcommand{\MHT}{\ensuremath{\slash{H_{T}}}\xspace}                                        
+\newcommand{\MHT}{\ensuremath{\slash{H_{T}}}\xspace}                                       
 %\input{preamble/general}
 %\def\UrlFont{\rmfamily} %use this line for Times New Roman
 %\def\UrlFont{\sffamily} %use this line for CMSS
@@ -234,16 +291,25 @@
 
 \SetFullName{Leonora Vesterbacka Olsson}%
 \SetThesisType{Dissertation}%{Dissertation} %{Thesis}
-\SetDegreeType{Doctor of Philosophy}% {Doctor of Philosophy} {Master of Science}
-\SetGradMonth{March}%
+\SetDegreeType{Master of Science, Lund University}% {Doctor of Philosophy} {Master of Science}
+%\SetDegree{Master of Science Lund University}% {Doctor of Philosophy} {Master of Science}
+\SetNationality{Citizen of Sweden}% {Doctor of Philosophy} {Master of Science}
+\SetBirth{Born 14 July 1989}% {Doctor of Philosophy} {Master of Science}
+\SetGradMonth{May}%
 \SetGradYear{2019}%
 \SetDepartment{Physics}%
 \SetChair{Professor Rainer Wallny}%
 % Type your title here in all CAPS %
-\SetTitle{Search for SUSY in opposite sign same flavor lepton final states with the CMS detector.}
+\SetTitle{Search for Supersymmetry in opposite sign same flavor lepton final states with the CMS detector}
 % user defined commands in order to geC:\Program Files\MiKTeX 2.5\miktexnerate new commands, macros, and redefine default commands %
 \include{usersetcommands}
 \pagestyle{fancy}
+\usepackage{color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Large}
+%\def\thepage{\textit{\arabic{page}}}
+
 \begin{document}
 \frenchspacing
 \raggedbottom%
@@ -288,9 +354,8 @@
 
 
 %-----------------------------------------------------------------------%
-
 \maketitle % % % % Creates the Title page from the information entered in userinfo.tex
-\makecopyright
+%\makecopyright
 
 %------------------------------------------%
 
@@ -303,18 +368,21 @@
 %\include{tex/acknowledgements} % % % %Required - There is no requirement to acknowledge a particular person
 
 % This file includes the file which creates the table of contents %
+\include{tex/abstract} %The abstract is created using this file and userinfo.tex
 \include{tex/TOC} %This file creates the Table of Contents, List of Figures, and List of Objects (if any)
 % % % % % % % %delete or comment the file you want to remove
 % This line adds the word CHAPTER to the TOC just before the listing of the chapter and subsections begins
 %\addtocontents{toc}{\protect\addvspace{10pt}\noindent{CHAPTER}\protect\hfill\par}{}% This extra line adds the word CHAPTER to the table of contents %
 \phantomsection
-\include{tex/abstract} %The abstract is created using this file and userinfo.tex
+\include{tex/introduction} %The abstract is created using this file and userinfo.tex
 \include{tex/standardModel}
 \include{tex/supersymmetry}
-\include{tex/experimentalApparatus}
-\include{tex/eventReconstructionSimulation}
-\include{tex/samplesObjects}
 \include{tex/search}
+\include{tex/experimentalApparatus}
+\include{tex/cms}
+\include{tex/eventReconstruction}
+\include{tex/samplesObjects}
+\include{tex/met}
 \include{tex/eventSelections}
 \include{tex/smPredictions}
 \include{tex/stats}
@@ -322,9 +390,9 @@
 \include{tex/strong}
 \include{tex/ewk}
 \include{tex/slepton}
-\include{tex/met}
 \include{tex/TwoOrMoreAppendices}
 
+\include{tex/end}
 \bibliography{bib/biblio}
 \end{document}
 

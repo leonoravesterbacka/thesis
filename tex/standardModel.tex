@@ -40,7 +40,7 @@ There exists a quantum number in the SM, the lepton number $L$, that needs to be
 To each of the fermions introduced is a corresponding antiparticle, doubling the population of the particle zoo. 
 The antiparticle carries opposite electric charge $Q$ to the particle, and is denoted either by the sign of the charge or by a bar. 
 I.e. the antiparticle of an electron $e^{-}$ is $e^{+}$ (called positron), and the antiparticle of an up-quark $u$ is $\bar{u}$ (called anti-up). 
-Further, all the fermions come in two chirality states, denoted as $right$ or $left$-handed, with a subscript of $R$ or $L$. 
+Further, all the fermions come in two chirality states, denoted as $right$ or $left$-handed, with a subscript of $R$ or $L$.
 In the same way that the electrical charge is the defining difference between a particle and its antiparticle, so is the so called $weak$ charge different between $right$ and $left$-handed particles. 
 The third component of the weak isospin is denoted $T_{3}$, and this quantity is used to relate the so-called weak hypercharge $Y_{W}$ to the charge $Q$ through the relationship $Y_{W}=2(Q-T_{3})$. 
 Neutrinos are a special case of this ordering. 
@@ -160,7 +160,7 @@ This example summarizes the principle at hand, by requiring local phase invarian
 This principle will be used to identify the interaction fields through the more complex group structure. 
 \newpara
 \noindent\justify
-The local symmetry group of the SM is $U(1)_{Y}\otimes SU(2)_{L}\otimes SU(3)_{C}$ and in the next section the electroweak forces, described by $U(1)_{Y}\otimes SU(2)_{L}$, will be introduced, followed by the strong force, described by the $SU(3)_{C}$ group. 
+The local symmetry group of the SM is $SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$ and in the next section the electroweak forces, described by $SU(2)_{L}\otimes U(1)_{Y}$, will be introduced, followed by the strong force, described by the $SU(3)_{C}$ group. 
 In the end, all the gauge bosons introduced in Table \ref{tab:bosons} will have been identified in this local symmetry group. 
 \subsection*{The electroweak theory} 
 \noindent\justify
@@ -189,7 +189,7 @@ This locally $SU(2)$ invariant Lagrangian can be unified with the locally $U(1)$
 \begin{equation}
 \mathcal{L}_{U(1)}=-m\bar{\psi}\psi+\bar{\psi}\gamma_{\mu}(i\partial^{\mu}+g'\frac{Y}{2}B^{\mu})\psi-\frac{1}{4}B_{\mu\nu}B^{\mu\nu}.
 \end{equation}                                               
-The $Y$ is the same as as the subscript of $U(1)$ in $U(1)_{Y}\otimes SU(2)_{L}\otimes SU(3)_{C}$, and denotes the weak hypercharge $Y_{W}$ that was introduced in Table \ref{tab:fermions}. 
+The $Y$ is the same as as the subscript of $U(1)$ in $SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$, and denotes the weak hypercharge $Y_{W}$ that was introduced in Table \ref{tab:fermions}. 
 The combined $\mathcal{L}_{U(1)}$ and $\mathcal{L}_{SU(2)}$ looks like
 \begin{equation}
 \mathcal{L}_{SU(2)\otimes U(1)}=\bar{\Psi}\gamma_{\mu}(i\partial^{\mu}+g'\frac{Y_{W}}{2}B^{\mu}+g\frac{\sigma^{i}}{2}(W^{\mu})^{i})\Psi-\frac{1}{4}(W_{\mu\nu})^{j}(W^{\mu\nu})^{j}-\frac{1}{4}B_{\mu\nu}B^{\mu\nu} 
@@ -245,7 +245,7 @@ F_{\mu\nu}^{A}=\partial_{\mu}\mathcal{A}_{\nu}^{A}-\partial_{\nu}\mathcal{A}_{\m
 \label{eq:fst}
 \end{equation}  
 The last term in the field tensor, the $g_{s}f_{ABC}\mathcal{A}_{\mu}^{B}\mathcal{A}_{\nu}^{C}$ has remarkable consequences for the theory, as it introduces $self-interaction$ of the gauge bosons, that will be described in the following section.
-\subsection*{Screening, anti-screening, asymptotic freedom and confinement} 
+\subsection*{Screening, anti-screening, asymptotic freedom and confinement}\label{sec:alpha} 
 \noindent\justify
 A result of the non-abelian nature of the QCD leads to the self-interaction of the gluons.
 This is in contrast to QED that is an abelian theory, and does not have a self-interaction term of the gauge boson. 
@@ -378,6 +378,7 @@ Following the same steps as before, the interaction term of the Lagrangian can b
 with $H$ being the Higgs boson. The $\mathcal{L}_{\mathrm{int}}$ then becomes:
 \begin{equation}
 \mathcal{L}_{\mathrm{int}}=\frac{y_{f}v}{\sqrt{2}}(\bar{e}^{-}_{L}e^{-}_{R}+\bar{e}_{R}^{-}e^{-}_{L})+ \frac{y_{f}}{\sqrt{2}}(\bar{e}^{-}_{L} e^{-}_{R}+\bar{e}_{R}^{-}e^{-}_{L})H
+\label{boom}
 \end{equation}
 The $\frac{y_{f}v}{\sqrt{2}}$ in the first term has the form of expected for a fermion mass, thus we can identify 
 \begin{equation}
@@ -390,6 +391,39 @@ Rewriting the interaction Lagrangian with the electron mass, and simplify the $\
 The second term indicates that there is a possible interaction between electrons and the Higgs field, with a coupling strength of $m_{e}/v$. 
 This can be used to calculate the probability for, for example, an electron and a positron to radiate a Higgs boson, or for a Higgs boson to decay into an electron and a positron. 
 A remarkable feature is that the coupling is $proportional$ to the fermion mass, meaning that the interaction with the Higgs fiels is more probable for more massive fermions. 
+\newpara
+\noindent\justify
+Equation \ref{eq:boom} gave the interaction term of the Lagrangian in terms of lepton doublets. 
+Of course, it can also be written in terms of quark doublets. 
+The quark doublets can be expressed as up-type and down-type, and have the form:
+\begin{equation}
+\begin{pmatrix} u \\ d'\end{pmatrix}_{L}\begin{pmatrix} c \\ s'\end{pmatrix}_{L} \begin{pmatrix} t \\ b'\end{pmatrix}_{L} 
+\end{equation}
+where the weak eigenstates are denoted with a prime. 
+In order to go from the weak eigenstates $(d',s',b')$ to their mass eigenstates the Cabbibo-Kobayashi-Maskawa (CKM) matrix is used, which is defined as:
+\begin{equation}
+\begin{pmatrix} d' \\ s' \\ b'\end{pmatrix} = \begin{pmatrix} V_{ud} & V_{us} & V_{ub} \\ V_{cd} & V_{cs} & V_{cb} \\ V_{td} & V_{ts} & V_{tb} \end{pmatrix}\begin{pmatrix} d \\ s \\ b\end{pmatrix}
+\end{equation}
+and the values are listed in 
+\begin{equation}
+\begin{pmatrix} V_{ud} & V_{us} & V_{ub} \\ V_{cd} & V_{cs} & V_{cb} \\ V_{td} & V_{ts} & V_{tb} \end{pmatrix} =\begin{pmatrix} 0.974 & 0.225 & 0.004 \\ 0.225 & 0.973 & 0.041 \\ 0.009 & 0.040 & 0.999 \end{pmatrix}.
+\end{equation}
+The CKM matrix is close to unity, indicating that transitions between the quark generations is heavily suppressed.  
+The CKM matrix can be incorporated in the Lagrangian throught the following term that describes the coupling of the quarks to the \PW boson through a charged current:
+\begin{equation}
+\mathcal{L}_{CC}=\frac{g}{\sqrt{2}}W^{+}_{\mu}(\nu_{L}\gamma^{\mu}e_{L} +V_{CKM}\bar{u}_{L}\gamma^{\mu}d_{L})+\frac{g}{\sqrt{2}}W^{-}_{\mu}(\bar{e}_{L}\gamma^{\mu}\nu_{L} +V_{CKM}\bar{d}_{L}\gamma^{\mu}u_{L}).
+\label{eq:cc}
+\end{equation}
+The $CC$ subscript stands for charged current.
+What is evident from Equation \ref{eq:cc} is that the $\PW^{\pm}$ only couple to the left-handed up-type and down-type quarks, and the charged and neutral leptons, indicating that there is a breaking of the parity $\mathcal{P}$ and charge conjugation $\mathcal{C}$ symmetries\footnote{These symmetries have not been introduced previously as there has been no need for it. Charge conjugation transforms a particle to its anti-particle ($C\ket{e^{-}_{L}}=\ket{e^{+}_{L}}$), whereas parity transformation changes the handedness ($P\ket{e^{-}_{L}}=\ket{e^{-}_{R}}$). They are both conserved in electromagnetic and strong interactions.}. 
+Instead, for this electroweak interaction, only the combined symmetry, the $\mathcal{CP}$, is conserved.
+To add to the complexity, for electroweak interactions it has been observed that in fact the $\mathcal{CP}$ symmetry is violated, called $\mathcal{CP}$ violation.  
+%The neutral current contribution tot eh Lagrangian is
+%\begin{equation}
+%\mathcal{L}_{NC}=\sum_{j}\bar{\psi}_{j} \gamma^{\mu}\left( A_{\mu} [g\frac{\sigma_{3}}{2}\sin\theta_{W}+g'y_{j}\cos\theta_{W}] + \PZ_{\mu}[g\frac{\sigma_{3}}{2}\cos\theta_{W}-g'y_{j}\sin\theta_{W}]\right)\psi_{j}
+%\label{eq:nc}
+%\end{equation}
+ 
 \section{The success and shortcomings of the SM}
 \noindent\justify
 The SM of particle physics, formulated in the previous sections, provides a neat and comprehensible theory. 
