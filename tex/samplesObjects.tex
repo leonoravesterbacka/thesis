@@ -13,15 +13,20 @@ The particular choices used in the analysis in terms of reconstruction and ident
 \noindent\justify
 General purpose high energy particle physics detectors are built on the principle of layers of sub-detectors around the beam axis. 
 The calorimeter layers and muon systems are designed for particles to get completely absorbed or produce hits in them. 
-Intuitively, one would think that each layer would lend it self useful for reconstructing a certain type of particle: electrons and photons could be reconstructed from electromagnetic showers in the ECAL, hadrons reconstructed from hadronic showers in the HCAL, jets from combined calorimeter signals, muons from hits in the muon system. 
+Intuitively, one could think that each layer would lend it self useful for reconstructing a certain type of particle: electrons and photons could be reconstructed from electromagnetic showers in the ECAL, hadrons reconstructed from hadronic showers in the HCAL, jets from combined calorimeter signals, muons from hits in the muon system. 
 However, the idea behind the PF algorithm is to instead optimally combine the information from the different sub-detector layers.   
 The following is a simplified description of the PF algorithm that closely follow that described in \cite{Sirunyan:2017ulk}.
+\newpara
+\noindent\justify
 The design of the CMS detector as described in Chapter \ref{sec:CMS} has proven to be well-suited for PF reconstruction of the physics objects. 
 Reasons behind this statement include the excellent muon detectors of CMS that provide efficient and pure identification of muons. 
 The combination of a fine-grained tracker and a strong magnetic field effectively measures charged particle tracks that make up $\sim65\%$ of the jet energy. 
 Additionally, the excellent resolution and the segmentation of the ECAL provides separation of energy deposits from particles in hadronic jets and accounts for $\sim25\%$ of the jet energy. 
 The segmentation of the HCAL allows to differentiate charged from neutral hadrons, and subsequently the measurement of the remaining $\sim10\%$ of the jet energy. 
-The algorithm can be summarized in the following sections.
+\subsection*{Summary of the PF algorithm}
+\noindent\justify
+The PF algorithm is summarized in the following sections. 
+The summary contains some detailed information on the reconstruction of the electrons and muons that will be covered later in this chapter.  
 \subsubsection*{Track extrapolation}
 \noindent\justify
 Tracks from the pixel and strip tracker are extrapolated from the last measured hit in the tracker to the calorimeters. 
@@ -58,7 +63,7 @@ To summarize; electrons, muons, photons, charged hadrons and neutral hadrons hav
 These $PF$ $candidates$ are subsequently used to reconstruct jets, \ptmiss and $\tau$ lepton candidates.   
 \newpara
 \noindent\justify
-Once the PF candidates, and higher level objects such as jets and \ptmiss, have been reconstructed, these can be used to select candidate events in the search for SUSY. 
+Once the PF candidates, and higher level objects such as jets, have been reconstructed, these can be used to select candidate events in the search for SUSY. 
 As has been mentioned in the Chapter \ref{sec:search}, two leptons of opposite charge and same flavor are expected in all the studied signal processes, either from the decay of an on-shell or off-shell \PZ boson, through a pair production of sleptons, or through a decay chain containing a slepton.  
 There are several SM background processes that can result in opposite sign same flavor leptons, and common to these are that they include a decay of a \PZ boson, virtual photon or a \PW boson. 
 Although these bosons decay democratically to each lepton generation, only the first and second lepton generations are considered in this thesis. 
@@ -108,7 +113,7 @@ The track is built using the combinatorial KF method which starts at the electro
 Electron candidates are constructed by associating a GSF track to an ECAL cluster. 
 ECAL-seeded electrons are now by construction associated to the ECAL cluster used to determine the ECAL-based seed. 
 The tracker-seeded electrons are associated to the aforementioned PF clusters.   
-\subsection*{Electron identification and isolation}
+\subsection*{Electron identification}
 \noindent\justify
 The rationale behind the electron identification is to efficiently differentiate prompt electrons from the PV, electrons from photon conversions, jets misidentified as electrons, and electrons from b-quark decays.  
 As there are many discriminating variables available, the electron identification can be performed by either a sequential set of selections on these variables, or combine them in a MVA for improved discrimination.
@@ -150,6 +155,7 @@ Additionally, to avoid including hits from converted bremsstrahlung photons in t
 In order to reject secondary electrons produced in the conversion of photons in the tracker material, a vertexing algorithm is used. 
 The hits in the tracker from the converted photon are fit to a common vertex using the well-defined topological constraint that tracks from conversions have virtually the same tangent at the conversion vertex in both the ($r$, $\phi$) and ($r$, $z$) planes. 
 The converted photon candidates are rejected according to the $\chi^{2}$ probability of the fit.
+\subsection*{Electron isolation}
 \newpara
 \noindent\justify  
 An isolation variable, the mini-isolation is used which features a shrinking cone-size with increasing \pt of the lepton. 
@@ -161,7 +167,9 @@ For \pt values below 50\GeV, this leads to a constant cone size of 0.2.
 For \pt values between 50\GeV and 200\GeV, the cone size shrinks from 0.2 to 0.05 at which it remains for higher \pt leptons.
 Corrections to the isolation are applied by subtracting the average energy density $\rho$ from the effective geometrical area of the lepton's isolation cone. 
 The variable cone size is taken into account for this correction.
-Table~\ref{tab:electrons} summarizes the identification and isolation criteria imposed on the electrons in order for them to be considered in the analysis. 
+\newpara
+\noindent\justify  
+Table \ref{tab:electrons} summarizes the identification, isolation and impact parameter (IP)\footnote{The impact parameter is defined as the distance between the primary vertex and the tracks at their closest point of approach.} criteria imposed on the electrons in order for them to be considered in the analysis.  
 The MVA trained discriminator is optimized on electrons from prompt W-boson decays in \ttbar versus leptons stemming from so-called ``fakes''\footnote{``Fake'' leptons are mostly semi-leptonic b-quark decays where $b \rightarrow cW \rightarrow c\ell \nu$} in \ttbar. 
 The working point used for the MVA identification discriminator corresponds to a ``tight'' value, developed at the end of 2016. 
 The actual MVA cut value depends on the lepton \pt and $|\eta|$. 
@@ -194,6 +202,8 @@ Additionally, conversion rejection cuts are applied.
 \noindent\justify
 The calorimeters of CMS are efficiently stopping electrons, photons, charged and neutral hadrons, resulting in muons (and of course neutrinos) being the only particles reaching the muon systems.  
 The muon track reconstruction and identification described below is based on \cite{Sirunyan:2018fpa}. 
+\subsection*{Muon reconstruction}
+\noindent\justify
 Inner tracks and tracks in the muon systems are used as input for the muon-track reconstruction, that can be categorized in the following three ways:
 \subsubsection*{Standalone-muon track}
 \noindent\justify
@@ -210,9 +220,11 @@ A standalone-muon track is matched to an inner track, if the position and moment
 The two tracks are combined and fitted using KF technique to form a global muon track. 
 The global muon track procedure improves the momentum resolution for muons of $\pt > 200\GeV$ compared to a tracker-muon track only fit. 
 This is because large \pt muons have a higher probability to reach more than one muon segment, which is required for the global muon reconstruction. 
+%\newpara
+%\noindent\justify
 Lower \pt muons benefit from the tracker-muon reconstruction as only one muon segment is required in the matching. 
 However, most muons are reconstructed as global muons, tracker muons or as both. The standalone-muon tracks have worse momentum resolution and can more often pick up cosmic muons. 
-\subsection*{Muon identification and isolation}
+\subsection*{Muon identification}
 \noindent\justify
 From an experimental point of view, muons are much easier to measure than electrons. 
 As the radiated power due to Bremsstrahlung is much lower for muons than for electrons\footnote{The radiated power due to Bremsstrahlung goes as $m^{-4}$, meaning that it is suppressed for more massive particles such as muons and protons.} there are less ambiguities in the muon reconstruction than in the electron reconstruction. 
@@ -238,15 +250,21 @@ The tracker and standalone tracks are matched according to their position.
 \subsubsection*{Normalized $\bm{\chi^{2}}$}
 \noindent\justify
 Requirement on the global fit required to have goodness-of-fit per degree of freedom. 
-\subsubsection*{$bm{d_{xy}}$ and $\bm{d_{z}}$}
+\subsubsection*{$\bm{d_{xy}}$ and $\bm{d_{z}}$}
 \noindent\justify
-Requirements on the transversal and longitudinal distance between the tracker track and the location of the PV. 
+Requirements on the transverse and longitudinal distance between the tracker track and the location of the PV. 
 This cut is applied to suppress events with cosmic muons, tracks from pile-up or muons originating from in-flight decays.
+\subsubsection*{$\bm{\mathrm{SIP}_{3D}}$}
+\noindent\justify
+Requirements on the 3D significance of the IP is further used to identify prompt muons.  
+\subsection*{Muon isolation}
+\noindent\justify  
+The isolation variable used for electrons, the mini-isolation, is also used for muons. 
 \newpara
 \noindent\justify  
 There are several identification categorizations developed in CMS for various analysis needs, with working points aimed to more or less efficiently suppress fakes from punch through hadrons while keeping a high muon identification efficiency.
-In this work, the medium muon ID is used. The medium muon ID is optimized for prompt muons and for muons from heavy flavor decay, and the definition is summarized in Table~\ref{tab:muonsID}. 
-The isolation variable used for electrons, the mini-isolation, is also used for muons. 
+In this work, the medium muon ID is used, which is optimized for prompt muons and for muons from heavy flavor decay. 
+The definition of the medium muon ID is summarized in Table \ref{tab:muonsID}, along with the muon isolation requirements and IP selection criteria. 
 \begin{table}[ht!]
 \def\arraystretch{1.2}
     \caption{Muon selection criteria.}
@@ -267,7 +285,7 @@ The isolation variable used for electrons, the mini-isolation, is also used for 
              Kick-finder    &   $<20$\\
              Tight Segment compatibility  & $>0.451$\\
         \multicolumn{2}{c}{\textbf{Isolation}}                \\
-             mini Isolation                 &   $<0.2$                         \\
+             mini isolation                 &   $<0.2$                         \\
         \multicolumn{2}{c}{\textbf{Impact parameter}}                \\
         $d_{xy}$ & $<5\mm$ \\
         $d_{z} $ & $<10\mm$ \\
@@ -303,17 +321,20 @@ where $\Delta_{ij}^{2}=(\eta_{i}-\eta_{j})^{2}+(\phi_{i}-\phi_{j})^{2}$, $\eta$ 
 The parameter $a$ determines the type of clustering algorithm. 
 The algorithm follows these steps: compute all distances $d_{ij}$ and $d_{iB}$, and find the smallest one. 
 If smallest is a $d_{ij}$, combine (sum four momenta) the two particles $i$ and $j$, update distances, proceed to find the next smallest distance. 
-If smallest is a $d_{iB}$, remove particle $i$ and call it a jet. Repeat the following steps until all particles are clustered into jets. 
-The predecessors to the anti$-k_t$ algorithms are recovered for $a=1$ ($k_{t}$ algorithm \cite{Salam:2009jx}) or $a=0$ (Cambridge/Aachen (CA) algorithm \cite{Dokshitzer:1997in}).  
-Setting the $a=-1$ is the basis of the anti$-k_t$ algorithm. 
+If smallest is a $d_{iB}$, remove particle $i$ and call it a jet. 
+The following steps are repeated until all particles are clustered into jets. 
+\newpara
+\noindent\justify
+The predecessors to the anti-$k_t$ algorithms are recovered for $a=1$ ($k_{t}$ algorithm \cite{Salam:2009jx}) or $a=0$ (Cambridge/Aachen (CA) algorithm \cite{Dokshitzer:1997in}).  
+Setting the $a=-1$ is the basis of the anti-$k_t$ algorithm. 
 The choice of a negative $a$ is motivated by the following reasoning. 
 Considering an event with a few hard particles and many soft particles. 
 The distance parameter $d_{i1}$ between the hard particle 1 and the various soft particles is dominated by the \pt of the hard particle, as a result of the negative exponent that makes the $d_{ij}$ small for a large \pt hard particle 1, and larger for equally separated soft particles. 
 As a result, the soft particles will more likely cluster with hard ones before they cluster with another soft particle. 
 A further consequence is that soft particles do not modify the shape of the jet whereas hard ones do, meaning that the jet boundary is resilient to soft radiation. 
 This is a desired feature, also known as infrared and collinear (IRC) safety. Namely that neither soft emissions or collinear splittings should not change the boundary of jets. 
-Comparing the shape of jets clustered with CA, $k_t$ and anti$-k_t$ algorithms respectively, the anti$-k_t$ algorithm results in more conical jets.
-In this work, jets are clustered with the anti$-k_t$ algorithm with a radius parameter of 0.4 (AK4). 
+Comparing the shape of jets clustered with CA, $k_t$ and anti-$k_t$ algorithms respectively, the anti$-k_t$ algorithm results in more conical jets.
+In this work, jets are clustered with the anti-$k_t$ algorithm with a radius parameter of 0.4 (AK4). 
 \subsection*{Jet identification}
 \noindent\justify
 Identification criteria are imposed on the PF jets in order to suppress noise contributions from the calorimeters. 
@@ -367,7 +388,9 @@ The bottom quark, on the other hand, have less options due to the suppression em
 The suppressed transition results in the relatively long lifetime ($\sim10^{-12}\s$) and consequently a non negligible flight distance (few millimeters). 
 As a result, this displacement leads to the possibility to reconstruct an additional vertex where the $b$ hadron decay takes place. 
 This makes for a perfect experimental handle for identifying $b$-quark jets, known as ``b-tagging''. 
-The additional vertex where the decay takes place is called the secondary vertex (SV), and is reconstructed from the displaced tracks that are characterized by their impact parameter (IP).\footnote{The impact parameter is defined as the distance between the primary vertex and the tracks at their closest point of approach.}
+\newpara
+\noindent\justify
+The additional vertex where the decay takes place is called the secondary vertex (SV), and is reconstructed from the displaced tracks that are characterized by their IP.
 The SV reconstruction algorithm used in CMS in the LHC Run 2 is the inclusive vertex finder (IVF) algorithm.
 This algorithm uses as input all reconstructed tracks in the event with $\pt\geq0.8\GeV$ and with longitudinal IP $\leq0.3\cm$. 
 The IVF algorithm is seeded by tracks with a three dimensional IP greater than 50$\mum$ and the significance of the two dimensional IP (IP divided by its uncertainty) greater than 1.2. 
@@ -376,12 +399,16 @@ The resulting track clusters are fitted using an adaptive vertex fitter.
 To resolve the track ambiguity when a track can be both associated to the PV and a SV, a track is discarded from the SV is it is more compatible with the PV. 
 Following this track arbitration, the SV position is refitted. 
 After the IVF algorithm is performed, the vertices found are used as input to the combined secondary vertex tagger version 2 (CSVv2), where in addition to the IVF vertex, two tracks per jet is required separated from the jet axis by $\Delta$R less than 0.3. 
+\newpara
+\noindent\justify
 The CSVv2 algorithm contains a step of training that is performed in the three independent vertex categories listed below.
 \begin{itemize}
 \item RecoVertex: a jet that contains more than one SV.
 \item PseudoVertex: no SV is found but at least two tracks with 2D IP significance larger than 2 and the combined invariant mass not compatible with a $K_{S}^{0}$. 
 \item NoVertex: when none of the above categories are filled. 
 \end{itemize}
+\newpara
+\noindent\justify
 The variables combined in the algorithms are: 
 \begin{itemize}
 \item SV 2D flight distance significance: the significance of the 2D flight distance of the SV with least uncertainty on its flight distance for jets in the RecoVertex category.
@@ -402,6 +429,8 @@ The variables combined in the algorithms are:
 \item The number of selected tracks.
 \item The jet $\pt$ and $\eta$.
 \end{itemize}
+\newpara
+\noindent\justify
 The above discriminating variables are combined in a neural network and the final discriminator is shown in Figure \ref{fig:CSVv2}.
 \begin{figure}[!h]
 \centering

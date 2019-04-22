@@ -16,14 +16,14 @@ The chapter concludes with a summary of the systematic uncertainties assigned to
 \section{Nuisance parameters}
 \noindent\justify
 Systematic uncertainties, or $nuisance$ $parameters$ as they are referred to by statisticians, are represented by $\theta_{k}$ with $k$ running over all the sources of uncertainties \cite{Lista:2016chp} in the likelihood introduced in Section \ref{sec:stats}.                                         
-Nominal values of nuisance parameters are random variables distributed according to some parton distribution function, pdf, denoted $\rho(\theta_{k})$. 
+Nominal values of nuisance parameters are random variables distributed according to some probability distribution function, PDF, denoted $\rho(\theta_{k})$. 
 Almost all uncertainties treated in this thesis are uncertainties that affect the normalization of a process. 
 These uncertainties are modeled using nuisance parameters with log-normal probability densities, defined as
 \begin{equation}
 \rho(\theta)=\frac{1}{\sqrt{2\pi}\ln \kappa }\frac{1}{\theta}\exp\left(-\frac{(\ln(\theta/\tilde{\theta}))^{2}}{2(\ln \kappa)^{2}}\right).
 \end{equation}   
 The $\kappa$ represents the spread of the distribution, and $\tilde{\theta}$ is the best estimate of the nuisance $\theta$. 
-The log-normal pdf is preferably used in cases with large uncertainties, as the distribution has a longer tail in comparison with a Gaussian pdf. 
+The log-normal PDF is preferably used in cases with large uncertainties, as the distribution has a longer tail in comparison with a Gaussian PDF. 
 This avoids the problem of negative parameter values obtained from a Gaussian probability density, as $\rho(\theta)\rightarrow0$ for $\theta\rightarrow0$.
 The uncertainties that are not modeled using nuisance parameters with log-normal probability densities are instead modeled using nuisance parameters with gamma distribution.
 The gamma distribution is useful for describing variables bounded at one side, for example $0<X<\infty$ and is used for the systematic uncertainties associated to the data-driven background prediction techniques. 
@@ -71,7 +71,7 @@ To account for possible mismodeling of the \ptmiss resolution in fast simulation
 The average of these \ptmiss quantities is taken as the central value, and half of the difference between the values as the uncertainty. 
 \subsection*{MC statistics} 
 \noindent\justify
-The number of generated events depends on the model and the specific point in the two-dimensional SUSY mass-scan and varies between 10 000 and 50 000.
+The number of generated events depends on the model and the specific point in the 2D SUSY mass-scan and varies between 10 000 and 50 000.
 Hundreds of SUSY signal mass scenarios are generated and for each scenario a decent sample size is required. 
 But as an effect of limited available computation power and storage, the limited sample sizes can result in a large systematic uncertainty related to the statistical power of the simulated samples in some parts of the phase space. 
 \section{Theoretical uncertainties}
@@ -100,15 +100,13 @@ $\sigma_{\geq N+1}$ in quadrature:
 \subsection*{Parton distribution function (PDF)}
 \noindent\justify
 The second type of theory uncertainties are those associated to the choice of parton distribution function. 
-The procedure is to reweight the simulation samples with 100 PDF replicas \cite{Butterworth:2015oua}. This uncertainty is evaluated only in the slepton search. 
+The procedure is to reweight the simulation samples with 100 PDF replicas \cite{Butterworth:2015oua}. 
+This uncertainty is evaluated only in the slepton search. 
 The reason to not perform it for the strong and electroweak search is that in these searches an additional uncertainty due to modeling of initial state radiation (ISR) is included. 
-This is already incorporated in the empirical
-uncertainty in the modeling of ISR as described in Section 4, and we therefore do not apply a
-dedicated uncertainty in signal acceptance from PDF variations
+This is already incorporated in the empirical uncertainty in the modeling of ISR as described in Chapter \ref{sec:theory}, and we therefore do not apply a dedicated uncertainty in signal acceptance from PDF variations.
 The Madgraph signal simulation is reweighted according to an initial state radiation reweighting procedures, which differ for strongly and electroweakly produced signals. 
 For the strongly produced signal model, the reweighting is based on the number of ISR jets, and the uncertainty is taken as half of the magnitude of the weights. 
 For electroweakly produced signals, the reweighting is based on the \PZ \pt agreement with simulation, as measured in dilepton events, and the full magnitude of the weights is taken as the uncertainty. 
-As the PDF variations are indirectly incorporated in the empirical uncertainty in the modeling of ISR, no dedicated evaluation of the uncertainty due to signal acceptance from PDF variations is performed for the strong and electroweak SUSY searches.
 \section{Uncertainties on background predictions}
 \noindent\justify
 The sources of systematic uncertainties listed so far are evaluated on the signal simulation. 

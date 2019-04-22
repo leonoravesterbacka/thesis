@@ -63,8 +63,10 @@ For this reason, variables such as the \pt and isolation of an object are used i
 The rate for triggering on a low \pt muon would be very high if no other requirements are imposed, but if one further requires a well isolated muon, this reduces the rate and possible misidentification of the muon. 
 Conversely, as the production rate of higher \pt muons is lower, one can afford to only impose a \pt requirement and still keep the rate low.   
 As will be seen later in the thesis, this is the reason for the use of the different HLT paths such as \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL} (involving isolation requirement on both muons) and \texttt{HLT\_Mu30\_TkMu11} (involving higher \pt requirements and no isolation requirements), to ensure triggering on all possible events with interesting physics.
+\newpara
+\noindent\justify
 Further, HLT paths can involve objects like the Calo \ptmiss (computed using only calorimeter deposits), PF \ptmiss (computed using only PF jets), \HT (scalar sum of all jet \pt above a threshold) and $\cancel{\HT}$ (the missing \HT). 
-The \ptmiss triggers are most sensitive to triggering on anomalous events where the large \ptmiss is originating from noise, beam halo or other sources, which will be discussed in \ref{sec:met}. 
+The \ptmiss triggers are most sensitive to triggering on anomalous events where the large \ptmiss is originating from noise, beam halo or other sources, which will be discussed in Chapter \ref{sec:met}. 
 In order to keep low rates for these triggers, noise cleaning algorithms are applied at the HLT, and energy deposits associated to beam halo or HB/HE noise is removed from the energy sum and the calorimeter based \ptmiss is recomputed. 
 The noise cleaning algorithms are fully efficient in Run 2 and reduce the rate by a factor of 2.5. 
 Additionally, there is even the possibility to get a better estimation of the \ptmiss at HLT, by propagating the jet energy corrections (JECs) to the jets and to the computation of the PF \ptmiss.\footnote{The JECs will get a proper introduction in Section \ref{sec:JEC}, and the \ptmiss calibration in Section \ref{sec:metcorrections}.} 
@@ -94,7 +96,7 @@ The reconstruction of the collision data is processed at the Tier-0 and is store
 In order to make the storage and analysis as easy as possible, a set of data tiers are processed that keeps the event sizes to a minimum.
 The first step in the data tier format processing is the Analysis Object Data (AOD) which has discarded much of the RAW detector information not needed for analysis, and decreased the event size greatly to around 300\kB.
 The next step is the MINIAOD format, that was introduced for the Run 2 of the LHC.
-The MINIAOD contains all high level physics objects, all high level corrections for jets and \ptmiss, all particles returned by Particle Flow algorithm, all generator truth information for simulation, and all trigger information.
+The MINIAOD contains all high level physics objects, all high level corrections for jets and \ptmiss, all particles returned by the Particle Flow algorithm, all generator truth information for simulation, and all trigger information.
 By only saving the above information needed for mainstream analyses, the event sizes are kept at $30$-$50\,$kB.
 In order to cope with the huge amounts of data collected during Run 2, and the various sets of MC samples specific to setup of each year, a further reduction in the event size is needed, and to this end the so called nanoAOD is developed, that manages to keep the event size at 1\kB.
 The MINIAOD data and MC samples are stored on the Tier-0 and Tier-1, and analysis specific frameworks are used to create subsets of samples containing the particlular datasets needed.
@@ -105,7 +107,9 @@ These trees are used on analysis level for plotting, counting, fitting and stati
 Any search or measurement at the LHC are relying on simulated events, so called Monte Carlo (MC) generated events. 
 Physical processes are simulated in a chain, starting from the foundations dictated by the theoretical framework as described in Chapter \ref{sec:theory}, followed by the decay, radiation and hadronization of the particles produced, and finally, the simulation of the interaction of the generated process with the detector material. 
 Events are generated from both known SM processes to predict some backgrounds in the searches, and in order to validate the data-driven background prediction methods. 
-As the SUSY signals analyzed in this thesis are mulitple, and include numerous assumptions on the masses of the SUSY particles, the full chain of generation for all signal scenarios would be too computationally heavy to be feasible for an experiment performing hundreds of measurement and searches simultaneously. 
+\newpara
+\noindent\justify
+As the SUSY signals analyzed in this thesis are multiple, and include numerous assumptions on the masses of the SUSY particles, the full chain of generation for all signal scenarios would be too computationally heavy to be feasible for an experiment performing hundreds of measurement and searches simultaneously. 
 For this reason, a faster simulation package is used for the SUSY signals on the level of the detector simulation step, that greatly reduces the computational time by parametrizing the interactions. 
 The gain in the reduction of the computational time is traded off with a slight decrease in precision, but is taken into account in the statistical analysis. 
 The subsequent chapters contain the description of the three levels of simulation, and the software packages used. 
@@ -132,7 +136,7 @@ The corresponding interpretation is that the LHC pp collisions are dominated by 
 This feature is explaining the necessity of the very high collision rate of $40\,$MHz, as most of the interactions are between low-energy carrying gluons, which do not have enough energy to creat ``interesting'' physics events.  
 \begin{figure}[!htp]
   \centering
-   \includegraphics[width=0.8\textwidth]{images/detector/NNPDF31.png}
+   \includegraphics[width=0.9\textwidth]{images/detector/NNPDF31.png}
    \caption{The NNPDF3.1 NNLO PDFs, evaluated at two resolution scales; $\mu^{2}=10\GeV^{2}$ (left) and  $\mu^{2}=10^{4}\GeV^{2}$ (right)\cite{Ball:2017nwa}.}
    \label{fig:NNPDF31}
 \end{figure}

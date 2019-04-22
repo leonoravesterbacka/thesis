@@ -1,8 +1,9 @@
 \chapter{Background Estimations}\label{sec:backgrounds}
-\noindent
-\justify
+\noindent\justify
 The SM background processes in this search are well known and allows for the use of data-driven background estimation techniques. 
 Further, some backgrounds are estimated from simulation with designated control region to validate the normalization. 
+\newpara
+\noindent\justify
 The background composition differs depending on if the search involves the production of an on-shell \PZ boson selection (such as for the colored and electroweak superpartner searches) or not (such as for the Edge and direct slepton search). 
 This results in, on the one hand, a significant contribution from Drell-Yan, on the other hand, a suppression thereof. 
 In the signal region where Drell-Yan is the dominant background, a data-driven technique is used that predicts the \ptmiss spectrum in \PZ+jets events by the \ptmiss spectrum in $\gamma$+jets events.
@@ -18,7 +19,7 @@ This chapter contains an overview of the SM background processes present in the 
 \newpage
 \section{Standard model processes}
 \noindent\justify
-I will first present the physical processes that constitute the backgrounds in these searches. 
+First, the physical processes that constitute the backgrounds in these searches are presented. 
 Of course, there are many more SM processes produced at the LHC, such as the overwhelming QCD multijet background, but these and other processes are effectively suppressed by requiring the baseline selection of two leptons of opposite charge and same flavor. 
 First, the SM processes that result in two of these leptons will be presented, followed by the technique used to estimate them. 
 \subsection*{Top related processes}
@@ -143,13 +144,14 @@ As these backgrounds all contain the production of a leptonically decaying \PW b
 \end{figure}                                                                                                                             
 
 \subsection*{Drell-Yan}
-\noindent
-\justify
+\noindent\justify
 The large cross section Drell-Yan process, where a \PZ boson decays to two leptons, is a major background in the search for electroweak superpartners and the search for gluino production.
 Both these signal scenarios involve the production of an on-shell \PZ boson, and thus require that the lepton pair should be compatible with a \PZ boson. 
 The first order Drell-Yan process is shown in Figure \ref{fig:Feynmandy}. 
 This process contain no production of neutrinos, with the result that the \ptmiss is solely due to jet resolution and detector effects. 
 This process will in the following be referred to as DY, DY+jets, Drell-Yan or $\PZ+$jets.
+\newpara
+\noindent\justify
 As was thoroughly described in the chapter on the \ptmiss performance, Chapter \ref{sec:met}, the DY is very similar to the single photon production in the sense that it does not contain any real \ptmiss from neutrinos. 
 Therefore, the \ptmiss contribution from DY can be estimated through the \ptmiss from single photon production. 
 This data-driven technique is referred to as "\ptmiss template method" and profits from the high statistical power of the single $\gamma$ process. 
@@ -185,6 +187,8 @@ Diagrams for diboson production are shown in Fig.~\ref{fig:Feynmandiboson}, wher
 The \PWW process, where both \PW bosons decay leptonically, is flavor symmetric and is estimated using the flavor symmetric background prediction method described in the subsequent chapters. 
 The \PZZ process and \PWZ process, when one \PZ boson decays to charged leptons and one \PZ boson decay to neutrinos, are dominant backgrounds in the direct slepton search as they fulfill the criteria of no hadronic activity and large \ptmiss from neutrinos. 
 If both bosons decay leptonically, the \PWZ process can result in opposite sign same flavor pairs and enter the signal regions of all searches as a background if one of the leptons is out of $\eta$ or \pt acceptance. 
+\newpara
+\noindent\justify
 The \PZZ and \PWZ are referred to as "\PZ+$\,\nu$ backgrounds" in this thesis and are estimated through simulation with translation factors derived from dedicated control regions. 
 As the strong, electroweak and slepton searches have different kinematic features, the translation factors for these processes are derived separately for the three searches.
 \begin{figure}[!htb]
@@ -386,12 +390,14 @@ These processes are \ttZ, \ttW, \ttH, \tWZ\ and \tZq\ and have the commonality t
 \justify
 Physical processes that feature decays into same flavor and opposite flavor lepton pairs with equal probability are comprised in this background estimation. 
 This is, mainly the \ttbar process, but also other processes such as \PWW, or \ttW production.
+\newpara
+\noindent\justify
 The idea behind the background prediction technique is visualized in Figure \ref{fig:rsfofMC} where a selection of same flavor and opposite flavor leptons is applied in an Edge-like signal region in simulation, showing that the \ttbar spectrum has the same shape and magnitude in both selections.    
 \begin{figure}[htbp!]
 \begin{center}
-    \includegraphics[width=0.45\textwidth]{images/rsfof/FSSF.pdf}
-    \includegraphics[width=0.45\textwidth]{images/rsfof/FSOF.pdf} 
-    \caption{The invariant dilepton mass distribution after requiring a baseline SR definition for the Edge search in addition to an opposite-sign, same-flavor (left) or opposite-sign opposite-flavor (right) lepton pair. The simulated background events are stacked on top of each other.}
+    \includegraphics[width=0.49\textwidth]{images/rsfof/FSSF.pdf}
+    \includegraphics[width=0.49\textwidth]{images/rsfof/FSOF.pdf} 
+    \caption{The dilepton invariant mass distribution after requiring a baseline SR definition for the Edge search in addition to an opposite sign, SF (left) or opposite sign OF (right) lepton pair.}
 \label{fig:rsfofMC}
 \end{center}
 \end{figure}                                                                               
@@ -461,6 +467,8 @@ Even though all signal regions are defined with a \mttwo cut, the choice is made
 The reason for this is the significant reduction of the \ttbar background and thus the available statistics that the \mttwo requirement would lead to.
 A large mass window around the \PZ boson mass is excluded to avoid the contamination with Drell-Yan backgrounds. 
 The measurement consist of counting the number of ee, $\mu\mu$ and SF events in this control region, and taking the ratio of this number to the number of OF events in the same region, to construct the \Reeof, \Rmmof and \Rsfof separately. 
+\newpara
+\noindent\justify
 The results are shown in Table \ref{tab:rSFOF} and the data and the simulation agree within 2\% for the combination of both flavors. 
 If the flavors are treated separately, the agreement between the data and the simulation is between 1 and 3\%. 
 As a closure test, the ratio of \Rsfof in the control and signal region (transfer factor) on simulation is studied. 
@@ -520,8 +528,8 @@ $a$ and $b$ are constants that are determined in a fit to data.
 The fit for this parameterization is shown in Figure \ref{fig:rMuEDependency}.
 \begin{figure}[htbp!]
 \begin{center}
-    \includegraphics[width=0.5\textwidth]{images/rsfof/rMuE_ZPeakControl_Run2016_36fb_TrailingPt_None.pdf}
-    \includegraphics[width=0.5\textwidth]{images/rsfof/rMuE_ZPeakControl_Run2016_36fb_TrailingPt_corrected.pdf}
+    \includegraphics[width=0.49\textwidth]{images/rsfof/rMuE_ZPeakControl_Run2016_36fb_TrailingPt_None.pdf}
+    \includegraphics[width=0.49\textwidth]{images/rsfof/rMuE_ZPeakControl_Run2016_36fb_TrailingPt_corrected.pdf}
     \caption{The \rmue dependency on the \pt of the second lepton for data and MC. The plots show the values for \rmue before (left) and after (right) the parameterization on the second lepton \pt is propagated to the dielectron events. The central value in the left plot indicates the \rmue value that would be obtained without the parameterization. The fit values of the parameterization are shown in the left plot.}
 \label{fig:rMuEDependency}
 \end{center}
@@ -555,8 +563,8 @@ The relative change of the mean value is used as the systematic uncertainty of t
 The quantity 0.5($r_{\mu/e}^{corr.}+1/r_{\mu/e}^{corr.}$) is especially stable with respect to \ptmiss and \mttwo, as can be seen in Figure \ref{fig:RDependency}, validating the extrapolation from the DY control region to the signal region.   
 \begin{figure}[htbp!]
 \begin{center}
-    \includegraphics[width=0.45\textwidth]{images/rsfof/rSFOFFromRMuE_ZPeakControl_Run2016_36fb_MET_corrected.pdf}
-    \includegraphics[width=0.45\textwidth]{images/rsfof/rSFOFFromRMuE_ZPeakControl_Run2016_36fb_MT2_corrected.pdf}
+    \includegraphics[width=0.49\textwidth]{images/rsfof/rSFOFFromRMuE_ZPeakControl_Run2016_36fb_MET_corrected.pdf}
+    \includegraphics[width=0.49\textwidth]{images/rsfof/rSFOFFromRMuE_ZPeakControl_Run2016_36fb_MT2_corrected.pdf}
     \caption{The 0.5($r_{\mu/e}^{corr.}+1/r_{\mu/e}^{corr.}$) dependency on \ptmiss (left) and \mttwo (right) for data and MC after the parameterization on the second lepton \pt is propagated to the dielectron events. The uncertainty introduced by shifting the fit parameters by its statistical uncertainty and the full prediction by 10\% is indicated by the orange band.}
 \label{fig:RDependency}
 \end{center}
@@ -674,13 +682,14 @@ The \PWZ produce three charged leptons at particle level and one neutrino and is
 However, if the third lepton is for some reason not reconstructed, this process enter the signal regions.  
 The \PZZ process produce two charged leptons and two neutrinos, and thus enter the signal regions through the large \ptmiss from the neutrinos. 
 This process contribute significantly to the slepton signal region, as to first order no jets are produced. 
+\newpara
+\noindent\justify
 The \ttZ process produce two leptons compatible with a \PZ boson, and jets and \ptmiss from the decay of the top quarks. 
 Although this is not a high cross section process, it still enters the on-Z signal regions. 
 All these processes are estimated from simulation, but as the signal region phase space is low in statistics and not always well modeled, it is important to validate the simulation in dedicated orthogonal control regions. 
 The control region validation for the three different processes is presented in the following, and with slightly different treatment depending on the signal region.  
 \subsection*{\PWZ$\rightarrow3l\nu$ background}
-\noindent
-\justify
+\noindent\justify
 Since the signal models considered should only contain a final state with two leptons, a veto is applied on events containing more than two leptons, more precisely in the form of additional isotracks
  detailed in Section \ref{sec:isotracks}. 
 As these additional isotracks are required to have a \pt $>$ 5 GeV and be within $|\eta|$ $<$ 2.4, there is still a possibility for these leptons to not be reconstructed if they fall out of acceptance, and thus the event is not vetoed. 
@@ -711,7 +720,7 @@ The simulation is validated for both scenarios separately, and transfer factors 
 Similarly as to the \PWZ$\rightarrow3l\nu$ background, the control regions and the final transfer factors are introduced for the various analysis strategies presented in Chapters \ref{sec:strong}, \ref{sec:ewk} and \ref{sec:slepton}. 
 \section{Rare background estimation}
 \noindent\justify
-A final category of Standard Model backgrounds are rare processes, such as  \ttW, \ttH, \tWZ\ and \tZq\ as introduced in Section \ref{search}. 
+A final category of Standard Model backgrounds are rare processes, such as \ttW, \ttH, \tWZ\ and \tZq\. 
 These processes are neither flavor symmetric nor have all their \ptmiss from instrumental effects. 
 Instead they can all result in final states with more two or more leptons, jets and neutrinos, and thus fall in to the various signal regions that require two or more jets. 
 Triboson processes, such as \PWWZ, \PWZZ and \PZZZ contribute in the signal regions of the direct slepton search. 

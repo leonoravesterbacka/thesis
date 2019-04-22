@@ -159,7 +159,7 @@ All the signal and control region criteria on the leptons is summarized in Table
         Subleading \pt         &  $>$ 20\GeV                              \\
         $|\eta|$    &  $<$ 2.4 and $\ni$ [1.4, 1.6]                                 \\
         \mll    &  $\in$ [86, 96] \GeV                       \\\hline                                                  
-        \multicolumn{2}{c}{\textbf{Edge search lepton selection}}                \\ \hline             
+        \multicolumn{2}{c}{\textbf{Edge SR lepton selection}}                \\ \hline             
         Flavor         &$e^{+}e^{-}$/$\mu^{+}\mu^{-}$                             \\
         Leading \pt         &  $>$ 25\GeV                              \\
         Subleading \pt         &  $>$ 20\GeV                              \\
@@ -198,7 +198,7 @@ In the slepton search no hadronic activity is expected, therefore a veto on jets
     \begin{center}
         \begin{tabular}{ l r}
         \hline \hline
-        \multicolumn{2}{c}{\textbf{Colored and electroweak search jet selection}}                \\\hline
+        \multicolumn{2}{c}{\textbf{Colored and electroweak SR jet selection}}                \\\hline
         \multicolumn{2}{c}{AK4 jets $\geq2$}                \\
         \pt         &  $>35\GeV$                              \\
         $|\eta|$    &  $<2.4$                                 \\
@@ -207,11 +207,11 @@ In the slepton search no hadronic activity is expected, therefore a veto on jets
         CSVv2 discriminator          &  Medium WP                              \\
         \pt         &  $>25\GeV$                              \\
         $|\eta|$    &  $<2.4$                                \\\hline
-        \multicolumn{2}{c}{\textbf{Slepton search jet selection}}                \\\hline
+        \multicolumn{2}{c}{\textbf{Slepton SR jet selection}}                \\\hline
         \multicolumn{2}{c}{AK4 jets $=0$}                \\
         \pt         &  $>25\GeV$                              \\
         $|\eta|$    &  $<2.4$                                 \\\hline
-        \multicolumn{2}{c}{\textbf{Control region jets}}                \\\hline
+        \multicolumn{2}{c}{\textbf{CR jet selection}}                \\\hline
         \multicolumn{2}{c}{AK4 jets $\geq2$}                \\
         \pt         &  $>35\GeV$                              \\
         $|\eta|$    &  $<2.4$                                \\
@@ -227,7 +227,8 @@ The LSPs are massive and escape detection, and would manifest themselves through
 For this reason, all signal regions exploit the \ptmiss variable either explicitly through a binning in the variable, or implicitly in the \mttwo variable that uses it as an input. 
 The "Type-I corrected" \ptmiss is used, with all \ptmiss filters applied to remove anomalous \ptmiss events. 
 Chapter \ref{sec:met} contains a thorough overview of the \ptmiss reconstruction algorithms and their performance.  
-\section{\mttwo}\label{sec:MT2}
+\section{\mttwo}
+\label{sec:MT2}
 \noindent\justify
 The leptonic \mttwo variable is used to define all signal regions. 
 It is a generalization of the transverse mass for pair-produced particles which decay into visible and invisible objects, as described in \cite{Lester:1999tx,Barr_2003}. 
@@ -272,7 +273,7 @@ As can be seen in Figure \ref{fig:mttwoSim} the \mttwo for dileptonic \ttbar doe
 This has to do with the possible mismeasurements of the jets, and other instrumental effects, that spoils the distribution and extends the \ttbar contribution beyond the \PW mass endpoint.
 \begin{figure}[htbp!]
 \begin{center}
-    \includegraphics[width=0.5\textwidth]{images/rsfof/MET_100_MT2_Run2016_36fb_SF_MCOnly.pdf}
+    \includegraphics[width=0.55\textwidth]{images/rsfof/MET_100_MT2_Run2016_36fb_SF_MCOnly.pdf}
     \caption{The \mttwo distribution after requiring a minimum of 2 jets and \ptmiss 100\GeV in addition to an opposite sign, same flavor lepton pair. 
 The cut value of \mttwo 80\GeV that is used in most parts of the analysis is indicated by a grey dashed line.}
 \label{fig:mttwoSim}
@@ -308,10 +309,10 @@ A Crystal-Ball function is used to fit the dilepton \pt and $\Sigma\mlb$ spectra
 The four variables in OF data and the fits are shown in Figure \ref{fig:pdfsNLL}.
 \begin{figure}[htbp!] 
 \begin{center}
-    \includegraphics[width=0.45\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-a.pdf}
-    \includegraphics[width=0.45\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-b.pdf} \\
-    \includegraphics[width=0.45\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-c.pdf} 
-    \includegraphics[width=0.45\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-d.pdf}
+    \includegraphics[width=0.49\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-a.pdf}
+    \includegraphics[width=0.49\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-b.pdf} \\
+    \includegraphics[width=0.49\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-c.pdf} 
+    \includegraphics[width=0.49\textwidth]{images/nll/CMS-SUS-16-034_Figure-aux_001-d.pdf}
     \caption{PDFs for the four input variables to the likelihood discriminant: \ptmiss (top left), dilepton \pt (top right),
     $|$\dphi$|$ between the leptons (bottom left), and \mlb (bottom right).}
 \label{fig:pdfsNLL}

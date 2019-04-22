@@ -1,0 +1,152 @@
+\part{EXPERIMENTAL SETUP}
+\chapter{The Large Hadron Collider}\label{sec:LHC}
+\noindent
+\justify
+This thesis uses data recorded with the Compact Muon Solenoid (CMS) experiment at the Large Hadron Collider at the European Organization for Nuclear Research (CERN) near Geneva, Switzerland. 
+The Large Hadron Collider is the worlds most powerful particle accelerator \cite{Brüning:782076}. 
+It is a circular superconducting accelerator that measures 27\km in circumference and is located 100\m underground in the same tunnel that hosted the Large Electron Positron (LEP) collider \cite{lep}.
+Around the LHC ring are four major particle physics experiments located. 
+This chapter provides a short overview of the accelerator complex at CERN and the LHC.
+\newpage
+\section{The accelerator chain}
+\noindent\justify
+The LHC ring is divided into 8 sectors separated by eight access points to the tunnel, named interaction points (IPs). 
+The purpose of the LHC is to accelerate protons or heavy ions up to center-of-mass energies of up to 14\TeV for protons and 2.76\TeV per nucleon for lead ions. 
+The two rings in the LHC accelerate protons or heavy ions in opposite directions, to be collided at four of the eight IPs where huge particle detectors are located.
+The multi-purpose high luminosity experiments along the LHC ring are the CMS \cite{Chatrchyan:2008aa} and ATLAS (A Toroidal LHC ApparatuS) \cite{Armstrong:1994it} experiments located at IP5 and IP1, respectively. 
+Both experiments collect data from proton-proton (pp), proton-ion and ion-ion collisions.
+The dedicated heavy ion collision detector ALICE (A Large Ion Collider Experiment) \cite{alice} is located at IP2, that collect the same data as ATLAS and CMS. 
+The LHCb \cite{CERN-LHCC-98-004} experiment is dedicated to low luminosity B-physics and collect data from pp collisions at IP8.                                  
+\noindent
+\justify
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.7\textwidth]{images/detector/lhc.png}
+   \caption{Sketch of the various accelerators and experiments hosted at CERN.}
+   \label{fig:LHC}
+\end{figure}                                                                                                                                                                                    
+In order to get the protons to the center-of-mass energies quoted above, a long chain of circular and linear accelerators are needed. 
+The protons start by being part of atoms in Hydrogen gas. 
+Upon passing through an electric field, protons are separated from their electron and injected into the Linear Accelerator 2 (Linac 2). 
+The Linac 2 accelerates the protons up to 50\MeV by passing them through alternating positive and negative cylindical conductors charged by radiofrequency cavities. 
+After the Linac 2, the protons are injected into a circular collider, the Proton Synchrotron (PS) Booster, where four superimposed synchrotron rings accelerate the protons to an energy of 1.4\GeV. 
+The protons in the Booster are kept in a circular path by magnetic dipole fields.
+Following the PS Booster is the PS which is a circular accelerator with a circumference of 628 meters. 
+The protons are accelerated by conventional magnets to an energy of 25\GeV, and they are kept on the circular path by 100 bending dipole magnets.
+The Super Proton Synchrotron (SPS) is the next accelerator for the protons and the last step before injection to the LHC. 
+The SPS make use of the same technique as the PS but the larger circumference enables for the larger output energy of 450\GeV.
+\newpara
+\noindent\justify
+Up until now, the protons have been travelling in "bunches", which are packets of hundred billion protons, that are separated in time by 25\ns\ (forming so called bunch trains). 
+Upon injection into the LHC, the proton bunch trains are split in to two trains that enter the LHC in two opposing directions. 
+The goal of the LHC accelerator is to get these protons from 450\GeV to the maximum design energy of 7\TeV. 
+This is achieved by letting the proton beams traverse radiofrequency (RF) cavities that are cooled down to 4.5$\,$K using liquid Helium (up until this stage all accelerators have been operating in room temperature). 
+The RF cavities provide a high frequency alternating electric field of 400.8 MHz.
+There are eight single-cell cavities per beam that produce the nominal voltage of 16 MV during storage that results in an energy gain per particle per turn is 485\keV.   
+In addition to the RF cavities there are 1232 dipole magnets keeping the protons on the circular path. 
+The dipole magnets measure 15 meters in length and weighing 30 tons each and are made of a niobium-titanium alloy \cite{Boussard:1999rf}. 
+The magnets are superconductors that can be operated at a temperature of 1.9$\,$K and can reach a magnetic field of 8.33\T. 
+In addition to the dipole magnets for bending the path of the protons, various other magnets such as decapole, sextupole and quadropole magnets are used for controlling or correcting the path.      
+The accelerator chain is illustrated in Figure \ref{fig:LHC}. 
+Between 2010-2011 and during 2012, the LHC collided protons at a center-of-mass beam energy of $\sqrt{s}=7\TeV$ and $\sqrt{s}=8\TeV$ respectively, while the energy increased to $\sqrt{s}=13\TeV$ in 2015 and 2016. 
+\section{Beam parameters}
+\noindent\justify
+The number of events ($N_{event}$) that can be generated in a collision is dictated by an interplay between theoretical predictions and engineering capabilities, summarizes as
+\begin{equation}
+N_{process}=\mathcal{L}_{int}\sigma_{process}
+\label{eq:nevents}
+\end{equation}
+where $\sigma_{event}$ is the cross section of a particular process. 
+The $\mathcal{L}_{int}$ is the so-called integrated luminosity that is defined through the $instantaneous$ luminosity. 
+The instantaneous luminosity depends only on the beam parameters and is defined as:
+\begin{equation}
+L=\frac{N_{b}^{2}n_{b}f_{rev}\gamma_{r}}{4\pi\epsilon_{n}\beta^{*}}F
+\end{equation}
+where $N_{b}$ is the number of particles per bunch, $n_{b}$ the number of bunches per beam $f_{rev}$ the revolution frequency of each bunch. 
+Further, the $\gamma_{r}$ is the relativistic gamma factor, $\epsilon_{n}$ is the normalized beam emittance, $\beta^{*}$ is the $\beta-$function at the collision point and $F$ a geometrical factor inversely proportional to the crossing angle of the two beams at the IP.  
+The peak design LHC instantaneous luminosity is $\mathcal{L}=10^{34}\cm^{-2}s^{-1}$, and is reached for the beam parameters summarized in Table \ref{tab:beam}
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+    \caption{Beam parameters for beams in the LHC at injection and collision energy \cite{Brüning:782076}.}
+    \begin{center}
+        \begin{tabular}{ l c c }
+        \hline \hline
+        Parameter &  Injection &  Collision  \\\hline
+        Beam energy [GeV] & 450  & 7000      \\
+        Relativistic gamma factor ($\gamma_{r}$)  & 479.6  & 7461     \\
+        Beam emittance  ($\epsilon_{n}$) [$\mu$ rad] &  3.5 &  3.75   \\
+        Half crossing angle  [$\mu$rad] &  $\pm160$ &  $\pm142.5$   \\
+        $\beta-$function ($\beta^{*}$) [m] &  18 &  0.55   \\
+        Revolution frequency ($f_{rev}$) [\Hz] & \multicolumn{2}{c}{11245}\\
+        Number of bunches ($n_{b}$) & \multicolumn{2}{c}{2808}\\
+        Particles per bunch ($N_{b}$) & \multicolumn{2}{c}{$1.15\times10^{11}$}\\
+\hline\hline
+\end{tabular}
+\end{center}
+\label{tab:beam}
+\end{table}
+By integrating the instantaneous luminosity $L$ (that has the unit of $\cm^{-2}s^{-1}$) over time, the result is the so called integrated luminosity, denoted by $\mathcal{L}_{int}$. 
+The integrated luminosity has the unit $\cm^{-2}$ which is the inverse of the unit of cross section, which makes the resulting number of events in a process in Equation \ref{eq:nevents} unitless. 
+The peak instantaneous stable luminosity reached by the LHC during 2016 was $1.527\times10^{34}$$\cm^{-2}s^{-1}$ and the total integrated luminosity greatly surpassed the predictions and expectations. 
+In the future High Luminosity run of the LHC that is forseen for 2025, the so called HL-LHC, the expected instantaneous luminosity will be up to $7.5\times10^{34}$$\cm^{-2}s^{-1}$. 
+The increase in instantaneous luminosity that the HL-LHC promises will grant the opportunity to achieve unprecedented precision of SM electroweak measurements, and a new window of exploration for physics beyond the SM.
+The main challenge will be to reduce effects from overlapping bunch crossings, and will be furter discusses in Chapter \ref{sec:met}.  
+\section{Coordinate system and kinematic variables}\label{sec:kin}
+\noindent\justify
+The cylindrical shape of the multi-purpose high energy physics experiments, such as CMS and ATLAS, lend themselves well to the use of cylindrical coordinates. 
+In these coordinates, the azimuthal angle $\phi$ is defined in the transverse $x-y$ plane perpendicular to the beam line. 
+The polar angle $\theta$ (that strictly speaking belongs to the spherical coordinates) is also used, and is measured from the $z-$axis, as shown in Figure \ref{fig:cylindrical}.
+\begin{figure}[!htp]
+  \centering
+   \includegraphics[width=0.7\textwidth]{images/detector/Figures_T_Coordinate.png}
+   \caption{Illustration of the CMS coordinate system.\cite{Schott:2014sea}}
+   \label{fig:cylindrical}
+\end{figure}                                                                               
+The $rapidity$ $y$ is defined as:
+\begin{equation}
+y=\frac{1}{2}\mathrm{ln}\left(\frac{E+p_{L}}{E-p_{L}}\right)
+\label{eq:rapidity}
+\end{equation}
+with $p_{L}$ being the momentum in the longitudinal direction. 
+For relativistic particles it is common practice to describe the trajectory of the particles using the so called $pseudorapidity$ $\eta$ rather than $y$, where $\eta$ is defined as
+\begin{equation}
+\eta=-\mathrm{ln}\left[\mathrm{tan}\left(\frac{\theta}{2}\right)\right].
+\end{equation}
+This quantity will be heavily used in the next chapter to define the coverage of the various subdetectors, and beyond this chapter to define the invariant angular distance between particles as $(\Delta R)^{2}=(\Delta \eta)^{2}+(\Delta \phi)^{2}$. 
+As the purpose of high energy particle collisions is to use the available momentum of the protons at velocities close to the speed of light to produce heavier particles, or $resonances$. 
+A couple of essential kinematic variables used throughout the thesis will be identified using the kinematics of inelastic proton-proton scattering. 
+A momentum transfer scale of $\hat{s}=M^{2}$, is needed in order to produce a resonance of mass $M$ \cite{Dissertori:2010xe}. 
+Here $\hat{s}=x_{1}x_{2}s$ where $x_{1,2}$ are the fractions of the incoming hadrons momenta $p_{1,2}$ that partons 1 and 2 carry. 
+The square root of $s$ is the center-of-mass energy. 
+The energy and the longitudinal momentum of a state produced by colliding two hadrons $h_{1}$ and $h_{2}$ is given by:
+\begin{equation}
+E=\frac{(x_{1}+x_{2})\sqrt{s}}{2}\, , \, p_{L}=\frac{(x_{1}-x_{2})\sqrt{s}}{2}
+\label{eq:kin}
+\end{equation}
+where the partons masses are neglected. 
+Inserting the relations in Equation \ref{eq:kin} into the definition of the rapidity in Equation \ref{eq:rapidity}, the following is obtained:
+\begin{equation}
+e^{y}=\sqrt{\frac{x_{1}}{x_{2}}}\, , \,x_{1,2}=\frac{M}{\sqrt{s}}e^{\pm y}
+\end{equation}
+For a very large $M$, the two momentum fractions have to be very large with the result of $e^{y}\rightarrow 1$ i.e. $y\rightarrow 0$, called central rapidity. 
+This implies that the decay products of a massive resonance from an interesting hard scatter event should end up in the central part of the detector. 
+\newpara
+\noindent\justify
+The above argument, that most interesting physics events take place at central rapidities, motivates the design of the detector with higher precision in the most central region.
+Additionally, the use of the $transverse$ momentum \pt of a particle is preferred over the momentum $p$ or a particle. 
+Another key feature of high energy particle collisions is the energy conservation in the transverse plane perpendicular to the beam axis.
+This conservation is motivated by the fact that the transverse energy before the collision is well known (0). 
+Further, any energy that is lost due to the production of particles that travel close to along the beam axis will not be detected. 
+For these reasons, the conservation of momentum holds in the transverse plane only, instead of for all components of the momentum. 
+In addition to the transverse momentum \pt, the transverse energy \ET and missing transverse momentum \ptmiss are commonly used.
+\newpara
+\noindent\justify
+Another key variable is the $invariant$ $mass$, defined using kinematic and directional information of two particles, 1 and 2,
+\begin{align} 
+m_{1,2}=&\sqrt{(E_{1}+E_{2})^{2}-|\mathbf{p}_{1}+\mathbf{p}_{2}|^{2}}\\
+    =&\sqrt{2p_{T,1}p_{T,2}[\cosh(\eta_{1}-\eta_{2})-\cos(\phi_{1}-\phi_{2})]} 
+\end{align} 
+If the two particles  are in fact the decay products of a resonance of mass $M$, the $m_{1,2}$ would coincide with the mass $M$. 
+The invariant mass is thus a variable that can be used to $reconstruct$ a resonance with two visible decay products. 
+It will be used throughout this thesis as a means to reconstruct the \PZ boson using two leptons, and will be denoted with \mll. 
+If a  value of \mll is close to the \PZ boson mass, the leptons will be referred to as 'compatible with the \PZ boson'.  

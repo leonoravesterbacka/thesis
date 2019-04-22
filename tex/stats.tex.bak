@@ -1,0 +1,174 @@
+\chapter{Statistical Analysis}\label{sec:stats}
+\noindent\justify
+The primary goal of a search for new physics, is to $discover$ new physics through an excess of events compatible with a particular model. 
+If no excess of events is observed, the goal is shifted from a $discovery$ to an $exclusion$, where the results are used to set exclusion limits on the models.
+As mentioned in the introduction of the thesis, the opposite sign lepton final state is a powerful search tool as it can target many SUSY production modes. 
+\newpara
+\noindent\justify
+This chapter contains a short recap of the signal models probed in the thesis, followed by an introduction to the statistical analysis used for the limit setting. 
+Concepts like the maximum likelihood and hypothesis testing are covered, and how they contribute to the limit setting procedure.
+\newpage
+\section{Signal models}
+\noindent
+\justify
+The SUSY signal models treated in this thesis are introduced in Section \ref{sec:search}. 
+Depending on the model, exclusion limits are set on either one SUSY particle, represented as a 1D band, or two SUSY particles represented in a 2D plane of one SUSY mass parameter versus the other.    
+As the SUSY mass spectrum is potentially very complex, exclusion limits can only be determined for one or two SUSY particles for each model, specified under the "Free parameters" column in Table \ref{tab:signal}. 
+Additionally, assumptions has to be made on the other SUSY particles.
+One common assumption is that all SUSY particles other than those interpreted in are heavy and decoupled. 
+Other assumptions, such as on the masses of the SUSY particles present in the decay chains are summarized under the "Other parameters" column in Table \ref{tab:signal}.  
+\begin{table}[!hbtp]
+\renewcommand{\arraystretch}{1.2}
+\setlength{\belowcaptionskip}{6pt}
+\small
+\centering                             
+\caption{Summary of SUSY models and the sparticle masses that are constrained.}
+\begin{tabular}{l l l l}
+\hline\hline
+Signal model                         & Free parameters    & Other parameters & Targeted by region:    \\
+\hline
+GMSB                                 & $m_{\gluino}$, $m_{\firstchi}$   & $m_{\PSGczDo}=1\GeV$   & Strong on-Z (6 SRs)\\                          
+Edge                                 & $m_{\sbottom}$, $m_{\secondchi}$  & $m_{\firstchi}=100\GeV$, $m_{\slep}=0.5(m_{\secondchi}+m_{\firstchi})$   & Edge SRs (18 SRs)\\                          
+Wino                                 & $m_{\firstcharg}$, $m_{\secondchi}$, $m_{\firstchi}$  & $m_{\firstcharg}=m_{\secondchi}$   & VZ SRs (4 SRs)\\                          
+Higgsino                             & $m_{\firstchi}$  & $m_{\firstcharg}\approx m_{\secondchi}\approx m_{\firstchi}$, $m_{\PSGczDo}=1\GeV$   & VZ/ZH SRs (7 SRs)\\                          
+Slepton                              & $m_{\slep}$, $m_{\slepL}$, $m_{\slepR}$  & -   & Slepton SRs (4 SRs)\\                          
+Selectron                            & $m_{\se}$, $m_{\seL}$, $m_{\seR}$  & -  & Slepton SRs (4 SRs)\\                          
+Smuon                                & $m_{\sm}$, $m_{\smuL}$, $m_{\smuR}$  & -   & Slepton SRs (4 SRs)\\                          
+\hline\hline
+\label{tab:signal}
+\end{tabular}
+\end{table}                                                                                                         
+In general, the production cross sections are computed at NLO plus next-to-leading-log (NLL) precision \cite{Kulesza:2008jb, Kulesza:2009kq,Borschensky:2014cia}.
+Two possible scenarios are assumed for the mixing of the binos, winos and higgsinos to form the \firstcharg and \secondchi. 
+The higgsino case, where the \firstcharg and \secondchi are mainly composed of higgsinos, the production cross sections are computed at NLO plus next-to-leading-log (NLL) precision in a limit of mass-degenerate higgsino \firstcharg, \secondchi, and \firstchi \cite{Beenakker:1999xh,Fuks:2012qx, Fuks:2013vua}. 
+In the other case, the wino case, where the \firstcharg and \secondchi are mainly composed of winos and binos, the production cross sections are computed at NLO plus next-to-leading-log (NLL) precision in a limit of mass-degenerate wino \secondchi and \firstcharg, light bino \firstchi \cite{Beenakker:1999xh, Fuks:2012qx, Fuks:2013vua}. 
+For the sleptons, the production cross sections are computed at NLO plus next-to-leading-log (NLL) precision for any single generation of left- or right-handed selectrons and smuons \cite{Beenakker:1999xh, Fuks:2013lya}. 
+For all these cases, all the other sparticles assumed to be heavy and decoupled.
+\newpara
+\noindent\justify
+The statistical analysis is outlined in the following section. 
+The goal of the section is to introduce the $\mathrm{CL}_{s}$ method used for interpretation, which is done through introducing a couple of essential concepts. 
+The model parameter estimation is first introduced, followed by a description of the hypothesis testing, which is performed in order to determine if a model should be rejected or accepted.
+The section is followed by the a description of the various sources of systematic uncertainties. 
+A more detailed discussion of the statistical methods can be found in \cite{Lista:2016chp}. 
+\section{Maximum likelihood}
+\noindent\justify
+As outlined in \cite{Lista:2016chp}, the outcome of an experiment can be modeled as a set of random variables $x_{1}, ..., x_{n}$ whose distribution takes into account both theoretical and experimental effects. 
+Theory and detector effects affecting the measurement are described according to $nuisance$ $parameters$ $\theta_{1}, ..., \theta_{k}$.
+The $likelihood$ function is the overall probability distribution function evaluated for the observations $x_{1}, ..., x_{n}$ and can be written as:
+\begin{equation}
+\mathcal{L}=f(x_{1}, ..., x_{n}, \theta_{1}, ..., \theta_{k})
+\end{equation}
+For $N$ independent measurements, such as events in a high energy physics collision, the likelihood function can be written as: 
+\begin{equation}
+\mathcal{L}=\prod_{i=1}^{N}f(x_{1}^{i}, ..., x_{n}^{i}, \theta_{1}, ..., \theta_{k})
+\end{equation}
+From this, the $extended$ $likelihood$ can be defined as:
+\begin{equation}
+\mathcal{L'}=P(N, \theta_{1}, ..., \theta_{k})\prod_{i=1}^{N}f(x_{1}^{i}, ..., x_{n}^{i}, \theta_{1}, ..., \theta_{k})
+\end{equation}
+with $P(N, \theta_{1}, ..., \theta_{k})$ the distribution of $N$. 
+The distribution is Poissonian and defined as:
+\begin{equation}
+P(N,\theta_{1}, ..., \theta_{k})=\frac{\lambda(\theta_{1}, ..., \theta_{k})^{N}e^{-\lambda(\theta_{1}, ..., \theta_{k})}}{N!}
+\end{equation}
+where $\lambda$ is the number of expected events in a bin containing contributions from both signal and background processes, such that $\lambda=\mu s+b$.  
+Here $b$ denotes the number of background events, $s$ the number of signal events, and the $\mu$ represents the signal strenght scaling that is 0 for a null hypothesis (null hypothesis) and 1 for a nominal signal hypothesis (test hypothesis). 
+Putting all this together, the extended likelihood for a Poissonian process looks like:
+\begin{equation}
+\mathcal{L'}(\vec{x}; s, b, \vec{\theta})=\frac{(s+b)^{N}e^{-(s+b))}}{N!}\prod_{i=1}^{N}\left( f_{s}P_{s}(x_{i}; \vec{\theta})+f_{b}P_{b}(x_{i};\vec{\theta})\right)
+\label{eq:maxLikelihood}
+\end{equation}
+where $\vec{x}=x_{1}, ..., x_{n}$ and $\vec{\theta}=\theta_{1}, ..., \theta_{n}$, and the $f_{s}$ and $f_{b}$ are the fraction of signal and background events, defined as:
+\begin{equation}
+f_{s}=\frac{s}{s+b}
+\end{equation}        
+\begin{equation}
+f_{b}=\frac{b}{s+b}
+\end{equation}        
+The $P_{s}$ and $P_{b}$ are the PDFs for signal and background. 
+Now Equation \ref{eq:maxLikelihood} becomes:
+\begin{equation}
+\mathcal{L}(\vec{x}; s, b, \vec{\theta})=\frac{e^{-(s+b))}}{N!}\prod_{i=1}^{N}\left( sP_{s}(x_{i}; \vec{\theta})+bP_{b}(x_{i};\vec{\theta})\right)
+\end{equation}
+The $\mathcal{L}(\vec{x}; s, b, \vec{\theta})$ clearly a function of the nuisance parameters, and the values of $\vec{\theta}$ that maximize the likelihood, the $maximum$ $likelihood$ are said to fit the observation best.
+\section{Hypothesis testing}
+\noindent
+\justify
+Hypothesis testing is the question whether some observed data sample is compatible with one theory model or another alternative one.
+Now that the maximum likelihood has been introduced, the frequentist test of a hypothesis can be performed. 
+The level of agreement between the test hypothesis and the observation is determined through the definition of a test statistic $q(\mu)$, which is a ratio of maximized likelihoods:
+\begin{equation}
+q(\mu)=-2\ln\frac{\mathcal{L}(data|\mu, \hat{\hat{\theta}}(\mu))}{\mathcal{L}(data|\hat{\mu}, \hat{\theta}(\mu))},\, \, \hat{\mu}\leq\mu
+\end{equation}
+The $\mu$ in the numerator is a fixed number and only the nuisance parameters $\theta$ are allowed to vary to obtain a maximum of the likelihood, where the $\hat{\hat{\theta}}(\mu)$ is the value that maximizes $\mathcal{L}$.
+In the denominator both the signal strength $\mu$ and the nuisance parameters are allowed to vary to maximize the likelihood, which happens at the $\hat{\mu}$ and $\hat{\theta}$, that are known as maximum likelihood estimators.
+The $\hat{\mu}$ is constrained by an upper bound, $\mu$, providing the test statistic a one-sided upper limit. 
+The $q(\mu)$ is one number, that can be calculated for the observed data. 
+If the experiment is repeated multiple times, the $q(\mu)$ would take on different values, spread according to a probability density function.    
+Moreover, the $q(\mu)$ would take different values depending on the hypothesis $H$ that is being tested. 
+\newpara
+\noindent\justify
+The concept of $p$-value can be introduced through the probability density functions of $q(\mu)$, 
+\begin{equation}
+p=\int_{q(\mu)^{\mathrm{obs.}}}^{\inf}P(q(\mu)|H)dq(\mu).
+\end{equation} 
+A $p$-value is the probability, assuming $H_{0}$ (the null hypothesis) to be true, of getting a value of the test statistic as result of our test at least as extreme as the observed test statistic.
+In this context, seeing a large enough discrepancy in the data from the null’s prediction leads to a low $p$-value, the rejection of the null, and a discovery. 
+With a model for the null and another for the expected data, the expected $p$-value can be quantified. 
+An analysis with a lower $p$-value represents more convincing evidence to rule out the null, and therefore an analysis with a lower expected $p$-value can be considered more sensitive. 
+The common practice in high energy physics, is to relate the $p$-value into a quantile of a unit Gaussian to express the significance level $Z$, defined as:
+\begin{equation}
+Z=\phi^{-1}(1-p)
+\end{equation}
+with the $\phi$ being the cumulative distribution function of a standard normal distribution. 
+The area of the tail starting at an upward fluctuation of Z standard deviations from the mean of the Gaussian random variable, should be equal to the $p$-value, as visualized in Figure \ref{fig:pvalue}.
+\begin{figure}[!hbtp]
+\centering
+\includegraphics[width=0.42\textwidth]{images/interpretation/figs_Significance.png}
+\caption{The standard normal distribution $\phi(x)=\frac{1}{\sqrt{2\pi}}\exp(-x^{2}/2)$ showing the relation between the significance $Z$ and the $p$-value \cite{Cowan:2010js}.}
+\label{fig:pvalue}
+\end{figure}
+A signal with a significance level of $3\sigma$ is refered to in the community as $evidence$, and corresponds to a $p$-value of $<1.35\times10^{-3}$. 
+A signal with a significance level of $5\sigma$ is refered to in the community as $observation$, and corresponds to a $p$-value of $<2.9\times10^{-7}$. 
+The above $p$-values will not be used in this thesis, as it has already been hinted that no evidence for new physics was found. 
+Instead, the so-called one-sided modified frequentist confidence level $\mathrm{CL}_{s}$ is used to set limits on the physics models.                                                                 
+The probability density functions $P$ of the $q(\mu)$ under the background only hypothesis and the background+signal hypothesis are used to define the $\mathrm{CL}_{b}$ and $\mathrm{CL}_{s+b}$:
+\begin{equation}
+\mathrm{CL}_{b}=P(q(\mu)\geq q(\mu)^{\mathrm{obs.}}|H_{0})
+\end{equation} 
+\begin{equation}
+\mathrm{CL}_{s+b}=P(q(\mu)\geq q(\mu)^{\mathrm{obs.}}|H_{1})
+\end{equation} 
+The practice in high energy physics at the LHC is to set upper limits on $\mu$ through the $\mathrm{CL}_{s}$, defined as:
+\begin{equation}
+\mathrm{CL}_{s}=\frac{\mathrm{CL}_{s+b}}{\mathrm{CL}_{b}}.
+\end{equation} 
+The $\mathrm{CL}_{s+b}$ could in principle also be used to set limits on the signal strength, but it turns out that the $\mathrm{CL}_{s}$ is less affected by under-fluctuating backgrounds. 
+The choice of $\mathrm{CL}_{s}$ thus gives more conservative limits. 
+A statistical tool is used that calculates the probabilities of the maximized likelihood ratios using simulated pseudo-experiments where the pseudo-data is randomly drawn from Poisson distributions of the mean of the predictions and nuisances parameters according to their pdfs, and an asymptotic formulation \cite{Cowan:2010js} is used, that takes into account the systematic and statistical uncertainties 
+The common practice in SUSY is to calculate the results at 95\% $\mathrm{CL}_{s}$ which is defined as the $\mu$ that produces $\mathrm{CL}_{s}=0.05$.
+This means that exclusion of a given model can be claimed if the observed $\mathrm{CL}_{s}$ is less than 0.05 for a signal strength $\mu>0$. 
+By deriving a number of events that correspond to the upper limit of the $\mathrm{CL}_{s}$ test statistic $q(\mu)$ that reach a value of 0.05, and this number of events corresponds the upper limit on the cross-section. 
+\section{Visualization of the interpretation}
+\noindent\justify
+In most searches presented in this thesis, the statistical analysis will be performed as a function of two SUSY particles, most commonly as a function of the SUSY particle initiating the decay chain and the LSP, see the free parameters column in Table \ref{tab:signal}. 
+The visualization of the upper limit on the cross-section will be shown as a colored 2D map in the plane of the exclusion limits, with a color band that spans from blue to red, corresponding to lower to higher values of the upper limit on the cross-section.  
+This leads to two possible scenarios can be interpreted in the following way.  
+If the cross-section is lower than the theoretical cross-section in a particular mass scenario, one can declare that this given point with the acceptances and cross-section is excluded.
+If the cross-section is higher, however, then the signal could still be present without it being noticed in the results.
+There is a solid black line that illustrate the observed limit on the SUSY particle masses assuming theory cross sections.
+The dashed red lines are the equivalent expected limit.
+The mass points are fully connected if the observed or expected upper limit on the $\mu$ is found to be 1.
+This means that the mass scenarios under the lines are excluded.
+The effect of varying the full experimental uncertainty $\pm 1 \sigma$ is visualized with thin red dashed lines, around the solid red line.
+Similarly, the thin black solid lines around the thicker solid black line visualize the effect of a variation of $\pm 1 \sigma$ of the theoretical uncertainty on SUSY production cross section.
+\newpara
+\noindent\justify
+In the search for higgsinos, the results will not be interpreted in terms of masses of two SUSY particles, instead, the mass of the Gravitino LSP is set to $1\GeV$.  
+Instead of having the upper limit on the cross section be displayed as a 2D color map as in the interpretation as a function of two masses, the upper limit is now visualized on the $y$-axis, with the $x$-axis representing the mass of the \firstchi. 
+The observed limit is again visualized as a solid dashed lines, but in this 1D interpretation the dashed line represent the expected limit. 
+The variation of the experimental uncertainties by $\pm 1 \sigma$ and $\pm 2 \sigma$ is visualized as a green and yellow band. 
+The theoretical cross section is visualized as a red line, with the thichkness of the line representing the theoretical uncertainty. 
+A model in this 1D interpretation can be considered excluded below the mass where the theoretical and observed limits intersect. 
+ 
