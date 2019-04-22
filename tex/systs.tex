@@ -1,20 +1,20 @@
 \chapter{Systematic uncertainties}\label{sec:systs}
 \noindent\justify
-When estimating the number of abckground and signal events that enter the signal regions, they are associated systematic effects arising from various different sources. 
+When estimating the number of background and signal events that enter the signal regions, they are associated systematic effects arising from various different sources. 
 These sources can be either experimental of theoretical. 
 Experimental uncertainties arise from detector effects, faulty reconstruction algorithms, and uncertainties on observables that are used to categorize the events. 
 Another experimental uncertainty is that related to the luminosity measurement, which affects the number of predicted signal and background events. 
 Theoretical uncertainties account for limited knowledge of the underlying theoretical models that calculate the cross section, proton PDFs and QCD scales, as described in Chapter \ref{sec:theory}. 
 \newpara
 \noindent\justify
-In the previous chapter, the procedure of how the results can be interpretated in terms of signal models was presented. 
+In the previous chapter, the procedure of how the results can be interpreted in terms of signal models was presented. 
 This procedure relies on an appropriate treatment of these systematic uncertainties. 
 This chapter contains a brief introduction on how the systematic uncertainties enter the statistical analysis used to interpret the results. 
-The chapter concludes with a summary of the sources of experimental and theoretical uncertainties that are present in the searches.
+The sources of experimental and theoretical uncertainties evaluated in the signal simulation, are described. 
+The chapter concludes with a summary of the systematic uncertainties assigned to the various background prediction techniques. 
 \newpage
 \section{Nuisance parameters}
-\noindent
-\justify
+\noindent\justify
 Systematic uncertainties, or $nuisance$ $parameters$ as they are referred to by statisticians, are represented by $\theta_{k}$ with $k$ running over all the sources of uncertainties \cite{Lista:2016chp} in the likelihood introduced in Section \ref{sec:stats}.                                         
 Nominal values of nuisance parameters are random variables distributed according to some parton distribution function, pdf, denoted $\rho(\theta_{k})$. 
 Almost all uncertainties treated in this thesis are uncertainties that affect the normalization of a process. 
@@ -27,44 +27,49 @@ The log-normal pdf is preferably used in cases with large uncertainties, as the 
 This avoids the problem of negative parameter values obtained from a Gaussian probability density, as $\rho(\theta)\rightarrow0$ for $\theta\rightarrow0$.
 The uncertainties that are not modeled using nuisance parameters with log-normal probability densities are instead modeled using nuisance parameters with gamma distribution.
 The gamma distribution is useful for describing variables bounded at one side, for example $0<X<\infty$ and is used for the systematic uncertainties associated to the data-driven background prediction techniques. 
+\newpara
+\noindent\justify
+In the following sections the sources of the experimental and theoretical uncertainties are explained. 
+The actual magnitude of the uncertainties will be described separately for each search, in Chapters \ref{sec:strong}, \ref{sec:ewk} and \ref{sec:slepton}. 
 \section{Experimental uncertainties}
 \noindent\justify
-The sources of experimental systematic uncertainties dominant in the analyses this thesis is based on are listed below. They are all modeled using nuisance parameters with log-normal probability densities, and are assumed to be fully correlated. 
+The sources of experimental systematic uncertainties dominant in the analyses this thesis is based on are listed below. 
+They are all modeled using nuisance parameters with log-normal probability densities, and are assumed to be fully correlated. 
 Due to the different kinematic features present in the slepton search, additional systematic uncertainties are introduced. 
 The systematic uncertainties specific to the slepton search are indicated in the description. 
-\subsubsection*{Integrated luminosity} 
+\subsection*{Integrated luminosity} 
 \noindent\justify
-The uncertatinty associated to the measurement of the integrated luminosity delivered by the LHC to the CMS experiment in 2016 amuonts to 2.5\% \cite{CMS-PAS-LUM-17-001}.
-\subsubsection*{Pileup modeling}
+The uncertainty associated to the measurement of the integrated luminosity delivered by the LHC to the CMS experiment in 2016 amounts to 2.5\% \cite{CMS-PAS-LUM-17-001}.
+\subsection*{Pileup modeling}
 \noindent\justify
-The number of proton-proton collisions per bunch crossings vary strongly with time. 
+The number of pp collisions per bunch crossings vary strongly with time. 
 Therefore, the distribution in simulation is difficult to model properly as only one distribution of pileup interactions is simulated. 
 This is done by drawing a number of so-called minimum-bias events from a simulated sample according to the input distribution, which clearly does not reflect the time varying pileup in data. 
 To this end, the number of true pileup interactions is reweighted to match the number of interactions in data by dividing the two quantities.
 The systematic uncertainty associated to this modeling is calculated with two different procedures for the first published paper \cite{Sirunyan:2017qaj} and the second published paper \cite{Sirunyan:2018nwe}. 
 The appropriate procedure to estimate the effect of the pileup modeling in simulation is to vary the total inelastic cross section, 68.6\mb, up and down by 5\% and evaluate the effect the variation has on the normalization \cite{Sirunyan:2018nqx}. 
-However, at the time of publcation of the first paper, the search for strong and electroweak SUSY, the pileup distribution in simulation was not properly modeled. 
+However, at the time of publication of the first paper, the search for strong and electroweak SUSY, the pileup distribution in simulation was not properly modeled. 
 For this reason, the normal procedure to estimate the impact of pileup on the analysis could not be performed, and an alternative approach was chosen. 
 Instead, the signal acceptance was evaluated in in high- and low-pileup regimes separately and the difference was treated as the magnitude of the effect.
-\subsubsection*{Lepton uncertainties} 
+\subsection*{Lepton uncertainties} 
 \noindent\justify
 The electron and muon selection efficiency amounts to 2\% per lepton, after varying the $\pt$ and $\eta$ dependent scale factors. 
 The total uncertainty of 5\% is taking into account both leptons. An additional uncertainty arise from the modeling of the lepton efficiency in the fast simulation used for signal. 
 The uncertainty related to the modeling of the dileptonic triggers is measured according to the procedure introduced in Section\ref{sec:rt}. 
-\subsubsection*{Jet energy uncertainties}
+\subsection*{Jet energy uncertainties}
 \noindent\justify
 The uncertainty in the jet energy scale (JES) is assessed by shifting the jet energy correction factors for each jet by one standard deviation up and down and recalculating the kinematic quantities such as the \ptmiss, \mttwo. 
 The uncertainty due to jet energy resolution (JER), assessed by comparing the nominal smearing of the jet's \pt to a smearing performed with a Gaussian of the nominal width plus the uncertainty on the width, is found to be negligible.  
-\subsubsection*{b-tag modeling} 
+\subsection*{$b$-tag modeling} 
 \noindent\justify
 The uncertainties in the b tagging efficiency and mistag probability are measured on independent control samples by varying the b-tagging scale factors up and down according to their uncertainties \cite{Sirunyan:2017ezt}. 
-\subsubsection*{\ptmiss uncertainties} 
+\subsection*{\ptmiss uncertainties} 
 \noindent\justify
 The unclustered energy, the electron and muon energy scales are varied up and down by one standard deviation and propagated to the \ptmiss. 
 The maximal difference between the nominal \ptmiss and the up or down variations are taken as the magnitude of the uncertainty. 
 To account for possible mismodeling of the \ptmiss resolution in fast simulation, the signal yields using the nominal reconstructed \ptmiss is compared to the generator level \ptmiss. 
 The average of these \ptmiss quantities is taken as the central value, and half of the difference between the values as the uncertainty. 
-\subsubsection*{MC statistics} 
+\subsection*{MC statistics} 
 \noindent\justify
 The number of generated events depends on the model and the specific point in the two-dimensional SUSY mass-scan and varies between 10 000 and 50 000.
 Hundreds of SUSY signal mass scenarios are generated and for each scenario a decent sample size is required. 
@@ -73,7 +78,7 @@ But as an effect of limited available computation power and storage, the limited
 \noindent\justify
 The theoretical systematic uncertainties are listed below. 
 They are all modeled using nuisance parameters with log-normal probability densities, and are assumed to be fully correlated.
-\subsubsection*{Factorization and renormalization scales} 
+\subsection*{Factorization and renormalization scales} 
 \noindent\justify
 The factorization and renormalization scale uncertainties, also known as QCD scale uncertainties, fall under the category of theory uncertainties, that are not accounting for experimental effects. 
 Instead, the QCD scale uncertainties estimate the effects due to missing corrections from higher order perturbative QCD calculations. 
@@ -81,18 +86,18 @@ The factorization scale, $\mu_{F}$ and renormalization scale, $\mu_{R}$, are hal
 A special treatment of the evaluation of the QCD scale uncertainties is performed for the slepton search. 
 The motivation behind the special treatment is the jet veto that defines the slepton signal region. 
 The so-called Stewart-Tackmann prescription on the treatment of theory uncertainties in a jet binned analysis is followed \cite{Stewart:2011cf}. 
-Following the Stewart-Tackmann precsription, that suggests that scale variations in exclusive fixed-order predictions can underestimate the perturbative uncertainty for the cross sections. 
+Following the Stewart-Tackmann prescription, that suggests that scale variations in exclusive fixed-order predictions can underestimate the perturbative uncertainty for the cross sections. 
 The underestimation can be due to the cancellations between the perturbative corrections, leading to large K factors and those that induce logarithmic sensitivity to the jet-bin boundary. 
 To account for this underestimation and to properly assess the uncertainty due to varying the renormalization and factorization scales, it is suggested to first evaluate the cross section in an inclusive $N$-jet selection and then use this to compute the uncertainty in the exclusive $N$-jet selection from the difference:
 \begin{equation}
     \sigma_{N jets} = \sigma_{\geq N jets} - \sigma_{\geq (N+1) jets}
 \end{equation}
-In the slepton analysis, this $N$ is of course 0, and the uncertainty on the cross seciton in the 0 jet selection is obtained after propagating the errors from the $ \sigma_{\geq N}$ and
+In the slepton analysis, this $N$ is of course 0, and the uncertainty on the cross section in the 0 jet selection is obtained after propagating the errors from the $ \sigma_{\geq N}$ and
 $\sigma_{\geq N+1}$ in quadrature:
 \begin{equation}
     \delta_{0 jet}^{2} = \delta_{\geq 0 jet}^{2} + \delta_{\geq 1 jet}^{2}
 \end{equation}
-\subsubsection*{Parton distribution function (PDF)}
+\subsection*{Parton distribution function (PDF)}
 \noindent\justify
 The second type of theory uncertainties are those associated to the choice of parton distribution function. 
 The procedure is to reweight the simulation samples with 100 PDF replicas \cite{Butterworth:2015oua}. This uncertainty is evaluated only in the slepton search. 
@@ -104,3 +109,46 @@ The Madgraph signal simulation is reweighted according to an initial state radia
 For the strongly produced signal model, the reweighting is based on the number of ISR jets, and the uncertainty is taken as half of the magnitude of the weights. 
 For electroweakly produced signals, the reweighting is based on the \PZ \pt agreement with simulation, as measured in dilepton events, and the full magnitude of the weights is taken as the uncertainty. 
 As the PDF variations are indirectly incorporated in the empirical uncertainty in the modeling of ISR, no dedicated evaluation of the uncertainty due to signal acceptance from PDF variations is performed for the strong and electroweak SUSY searches.
+\section{Uncertainties on background predictions}
+\noindent\justify
+The sources of systematic uncertainties listed so far are evaluated on the signal simulation. 
+The SM background estimation techniques also have systematic uncertainties assigned to them. 
+The sources and the magnitude of the uncertainties have been partly been mentioned in Chapter \ref{sec:backgrounds}, but will be summarized here for clarity. 
+\subsection*{Flavor Symmetric backgrounds}
+\noindent\justify
+The uncertainties associated to the FS background estimation techniques stem from several sources.
+The uncertainty assigned to the direct measurement of the \Rsfof is 4\%. 
+The factorization method uses both the \rmue and \RT as input. 
+The \rmue is assigned a 10\% uncertainty after simulation studies.  
+Similarly, the trigger efficiencies for the dielectron, dimuon and electron muon triggers are chosen to be 3\%, and when propagated to the \RT results in 4\%.   
+As the method is a data-driven technique, the largest limitation is the number of data events in the OF control region used to predict the number of SF events in the signal region. 
+This background is modeled using the gamma distribution, as this one is useful for describing variables bounded at one side.  
+An additional 30\% uncertainty is assigned to the FS prediction method in the on-Z searches, that will be described in more detail in Chapter \ref{sec:strong}. 
+\subsection*{Drell-Yan background}
+\noindent\justify
+For the other data-driven background prediction method, again, the statistics of the data sample is the limiting factor.
+The \ptmiss template method predicts the \ptmiss in $\PZ$+jets events by the \ptmiss in $\gamma$+jets events. 
+The systematic uncertainty assigned to the method is determined by a closure test in simulation, using $\gamma$+jets to predict the yield of $\PZ$+jets in each analysis bin. 
+An uncertainty is assigned from the results of the closure test as the larger of the difference between the $\gamma$+jets prediction and the $\PZ$+jets yield for each \ptmiss region or the simulation statistical uncertainty.  
+The final values range from $10--80\%$ depending on the region, with large values mainly driven by low statistical power in the control regions.  
+\newpara
+\noindent\justify
+The search for direct slepton production is designed to keep the DY contribution to a minimum. 
+Therefore the use of a data-driven method to predict this almost negligible background is redundant. 
+Instead, the DY is predicted using simulation and a conservative 50\% uncertainty is assigned to the method.  
+\subsection*{Z+$\nu$ background}
+\noindent\justify
+As will be thoroughly described in Chapters \ref{sec:strong}, \ref{sec:ewk} and \ref{sec:slepton}, the treatment of the Z+$\nu$ and slightly different in the three types of searches. 
+In the searches for electroweak and strong superpartner production, the transfer factors derived in the control regions to correct the simulation have large statistical uncertainties due to the sparsely populated control regions.
+Conservative systematic uncertainties are assigned to the transfer factors, of 30\% for the \PWZ and \ttZ backgrounds, and 50\% for the \PZZ background.   
+\newpara
+\noindent\justify
+For the \PWZ and \PZZ backgrounds in the search for direct slepton production, on the other hand, have a different treatment of the uncertainties. 
+As the control regions where the transfer factors have a higher statistical power, assigning a systematic uncertainty of the same size as the statistical uncertainty will not be sufficient. 
+Instead, an uncertainty on the transfer factor is taken as the statistical uncertainty from the control sample. 
+In addition to this uncertainty, experimental and theoretical uncertainties as listed previously in this chapter are taken into account. 
+A full description of the systematic uncertainties taken into account for these backgrounds are given in Section \ref{sec:slepStats} of Chapter \ref{sec:slepton}. 
+\subsection*{Rare backgrounds}
+\noindent\justify
+Any additional SM process that is not taken into account by the previously described methods are estimated from simulation. 
+These backgrounds have a conservative 50\% uncertainty assigned to them. 

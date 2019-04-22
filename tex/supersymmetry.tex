@@ -1,25 +1,25 @@
-\chapter{SUPERSYMMETRY} \label{susy}
+\chapter{SUPERSYMMETRY} \label{sec:susy}
 \noindent\justify
-As is clear from the previous chapter, there is a need for a theory that can answer the open questions of the Standard Model. 
+As is clear from the previous chapter, there is a need for a theory that can provide answers to the open questions of the SM. 
 Many attempts to formulate theories beyond the SM have been made, such as theories involving extra hidden dimensions \cite{ArkaniHamed:1998rs}, technicolor \cite{Hill:2002ap} and grand unified theories with an $SU(5)$ invariance \cite{Georgi:1974sy}.
 As providing a description of all the BSM theories on the market is out of the scope of this thesis, emphasis will be put on the most popular extension of the SM, namely $Supersymmetry$ (SUSY) \cite{Wess:1973kz, Fayet:1974pd, Nilles:1983ge}. 
-SUSY was formulated in the 1970s and able to tackle many of the problems listed in the end of the previous chapter. 
-Similarly to the formulation of the SM, that introduces particles with partners of opposite electric charge or chirality, SUSY adds a final symmetry to the theory. 
-This final symmetry is between fermions and bosons, and dictates that ther exists a fermionic SUSY partner to each boson and vice versa. 
+SUSY was formulated in the 1970s and is able to tackle many of the problems listed at the end of the previous chapter. 
+Similar to the formulation of the SM, that introduces particles with partners of opposite electric charge or chirality, SUSY adds a final symmetry to the theory. 
+This final symmetry is between fermions and bosons, and dictates that there exists a fermionic SUSY partner to each boson and vice versa. 
 \newpara
 \noindent\justify
-This chapter contains a review of the known problems of the SM, and how SUSY could solve them. , closely following the excellent overview given in \cite{Martin:1997ns}. 
-An introduction to the so called Minimal Supersymmetric Standard Model (MSSM) is provided in Section \ref{sec:mssm} that closely following the excellent overview given in \cite{Martin:1997ns}.
-The formulation of the MSSM Lagrangian is given, and the procedure in which SUSY breaks to give masses of the SUSY particles different to that of their SM partners. 
+This chapter contains a review of the known problems of the SM, and how SUSY could solve them, closely following the excellent overview given in \cite{Martin:1997ns}. 
+An introduction to the so called Minimal Supersymmetric Standard Model (MSSM) is provided in Section \ref{sec:mssm}. 
+The formulation of the MSSM Lagrangian is given, along with a description of the procedure by which SUSY breaks to give masses of the SUSY particles different to that of their SM partners. 
 \newpage
 \section{Problems of the SM}
 \noindent\justify
 As summarized at the end of the last chapter, the SM is far from a complete theory as it is unable to provide explanations of phenomena such as the origin of dark matter and neutrino masses. 
-The fact that it also relies on many parameters and requires extreme fine tuning in order to hold, motivates the introduction of a more aesthetically pleasing extension of the model. 
+The fact that it also relies on many parameters and requires extreme fine tuning in order to hold motivates the introduction of a more aesthetically pleasing extension of the model. 
 The hierarchy problem of the SM and the problem with the non-converging coupling constants of the SM are introduced in the following. 
 \subsection*{The hierarchy problem}
 \noindent\justify
-The so called hierarchy problem, that was introdcued at the end of the last chapter, requires extreme fine tuning in order to stabilize the Higgs boson mass \cite{Martin:1997ns}. 
+The so called hierarchy problem, that was introduced at the end of the last chapter, requires fine tuning in order to be able to stabilize the Higgs boson mass \cite{Martin:1997ns}. 
 Recalling the problem, the $m_{H}^{2}$ receives enormous quantum corrections that arise from virtual loops of all the particles that couple to the Higgs field. 
 If the Higgs field couples to a fermion $f$, corresponding to a term $y_{f}H\bar{f}f$ in the Lagrangian, and there are no chiral or local gauge symmetries, the correction to $m_{H}^{2}$ will be of the form
 \begin{equation}
@@ -32,15 +32,15 @@ The $y_{f}$, first introduced in Equation \ref{eq:yf} is the strength at which t
 As $y_{f}$ is proportional to the fermion mass, the top quark will contribute most to Equation \ref{eq:loop}.
 \begin{figure}[htbp!]
 \begin{center}
-    \includegraphics[width=0.45\textwidth]{images/theory/loop.jpg}
+    \includegraphics[width=0.49\textwidth]{images/theory/loop.jpg}
 \caption{One-loop quantum corrections to the Higgs squared mass parameter $m_H^2$, due to a Dirac fermion $f$ (left), and a scalar $S$ (right).}
 \label{fig:loop}
 \end{center}
 \end{figure}                                     
 The quadratic divergences introduced in Equation \ref{eq:loop} through the scale $\Lambda$ are not desirable. 
-They imply that there is extreme fine tuning at work that tame the divergences, spanning 30 orders of magnitude.
-Another, more aestheticaly pleasing, solution to this problem is outlined below.    
-The divergences can be cancelled through the introduction of a new set of particles, or more precisely, a new bosonic version of each fermion. 
+They imply that there is extreme fine tuning at work that tame the divergences, spanning many orders of magnitude.
+Another, more aesthetically pleasing, solution to this problem is outlined below.    
+The divergences can be canceled through the introduction of a new set of particles, or more precisely, a new bosonic version of each fermion. 
 Assume the existence of a scalar version of a SM fermion, of mass $m_{s}$, that couples to the Higgs field with a Lagrangian term of $-\lambda_{s}|H|^{2}|S|^{2}$. 
 The corrections to the Higgs mass due to this new boson is of the form
 \begin{equation}
@@ -53,30 +53,31 @@ The remaining contribution to the Higgs mass is then \cite{Pape:2006ar}:
 \delta m_{H,s+f}^{2}\approx\frac{\lambda_{f}^{2}}{4\pi^{2}}(m_{s}^{2}-m_{f}^{2})\ln\frac{\Lambda}{m_{s}}
 \end{equation}                                                                                                                 
 As long as the masses of the new scalar bosons are not too far from that of their SM partners, the corrections to the Higgs mass are well-behaved.
-Provided their mass differences are of the order of the electroweak scale, the correction itself also remains of the order of the electroweak scale. 
 \subsection*{Unification of forces}
 \noindent\justify
 The coupling constants of the symmetry group of the SM $SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$, $\alpha_{1}$, $\alpha_{2}$ and $\alpha_{3}$ were first introduced in Section \ref{sec:alpha}. 
-From their definition, it is clear that they depend on the energy scale $q^{2}$, and that their values differ from eachother. 
-Instead of having three disctinct coupling constants, it is theorized that these couplings can instead converge to the same value at some energy scale, thus unifying the forces such that $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{\mathrm{GUT}}$ where the GUT stands for Grand Unified Theory. 
-If one were to calculate the evolution of the couplings using renormalization group equations with two-loop effetcs, the coupling constants evolve as is shown by dashed lines in Figure \ref{fig:unification} \cite{Martin:1997ns}.
-Here the $\alpha^{-1}$ fo the three couplings indeed meet each other but at different energy scales, thus not resulting in the desirable unification of all three forces.   
+From their definitions, it is clear that they depend on the energy scale $q^{2}$, and that their values differ from each other. 
+Instead of having three distinct coupling constants, it is theorized that these couplings can instead converge to the same value at some energy scale, thus unifying the forces such that $\alpha_{1}=\alpha_{2}=\alpha_{3}=\alpha_{\mathrm{GUT}}$ where the GUT stands for Grand Unified Theory. 
+If one were to calculate the evolution of the couplings using renormalization group equations with two-loop effects, the coupling constants evolve as shown by dashed lines in Figure \ref{fig:unification} \cite{Martin:1997ns}.
+Here the $\alpha^{-1}$ of the three couplings indeed meet each other but at different energy scales, thus not resulting in the desirable unification of all three forces.   
+\newpara
+\noindent\justify
 As has already been hinted in the beginning of this chapter, SUSY introduces a new set of particles, thus modifying the slopes of the inverse of the coupling constants in Figure \ref{fig:unification}.
 By requiring that the three forces should meet, one can calculate at what energy scale that should be, and also the mass scale of the SUSY particles. 
 This is visualized in Figure \ref{fig:unification} by solid lines, where the scale at which the forces meet is the so called $m_{\mathrm{GUT}}=10^{16\pm 0.3}\GeV$ yielding a value of $\alpha_{\mathrm{GUT}}^{-1}=25.7\pm1.7$ \cite{Amaldi:1991cn}. 
 \begin{figure}[htbp!]
 \begin{center}
-    \includegraphics[width=0.45\textwidth]{images/theory/unification.png}
+    \includegraphics[width=0.49\textwidth]{images/theory/unification.png}
     \caption{Two-loop renormalization group evolution of the inverse gauge couplings $\alpha^{-1}$ in the SM (dashed lines) and the MSSM (solid lines). 
 In the MSSM case, the sparticle masses are treated as a common threshold varied between 750 GeV and 2.5 TeV, and $\alpha_{3}(m_{\PZ})$ is varied between 0.117 and 0.120. \cite{Martin:1997ns}}
 \label{fig:unification}
 \end{center}
 \end{figure}                                                                         
-This unification of forces that would arise in SUSY is indeed an attractive phenomenon. 
-\section{Minimal Supersymmetric Standard Model}
+This unification of forces that would arise in SUSY is indeed an attractive feature. 
+\section{Minimal Supersymmetric Standard Model}\label{sec:mssm}
 \noindent\justify
-In SUSY, the SM particles introduced in the previous chapter are have supersymmetric partner, or superpartner, associated to it. 
-Just like how the anti-particle of the electron is the positron that carries opposite charge, the superpartners of the SM particles carries spin that differ by $\frac{1}{2}$. 
+In SUSY, each SM particle is associated with a supersymmetric partner, called a superpartner.
+Just like how the anti-particle of the electron is the positron that carries opposite electric charge, the superpartners of the SM particles carries spin that differ by $\frac{1}{2}$. 
 Formally, this can be described by an operator $Q$ that changes a SM bosonic state $\ket{\mathrm{boson}}$ to a fermionic state $\ket{\mathrm{fermion}}$, and vice versa. 
 \begin{equation}
 Q\ket{\mathrm{fermion}}=Q\ket{\mathrm{boson}}  ,\,\,\,Q\ket{\mathrm{boson}}=Q\ket{\mathrm{fermion}}
@@ -88,7 +89,7 @@ Further, the operators need to satisfy the following commutation and anti-commut
 &\{Q,Q\}=\{Q^{\dagger},Q^{\dagger}\}=0\\
 &[P^{\mu},Q]=[P^{\mu},Q^{\dagger}]=0
 \end{align} 
-with the four-momentum generator of spacetime translations $P^{\mu}$, which is a bosonic operator.
+with the four-momentum generator of spacetime translations $P^{\mu}$, which is a bosonic operator \cite{Martin:1997ns}.
 $Q$ and $Q^{\dagger}$ form a supersymmetry algebra, $superalgebra$, and the fermions and bosons are arranged in the irreducible representations of this algebra. 
 The representations are referred to as $supermultiplets$, and contain fermions and bosons, where the boson is the so called $superpartner$ of the fermion in that supermultiplet. 
 The multiplets contain an equal number of fermions and bosons, $n_{\mathrm{fermion}} = n_{\mathrm{boson}}$. 
@@ -96,7 +97,7 @@ Further, particles in the same supermultiplet must have the same gauge interacti
 \subsection*{Particle content of the MSSM}
 \noindent\justify
 The simplest implementation of SUSY is the MSSM, when the number of copies of the operators $Q$ and $Q^{\dagger}$ is 1.\footnote{In general, there could be a multiple of copies of the operators $Q$ and $Q^{\dagger}$, up to 8 \cite{Haag:1974qh,Coleman:1967ad}.}
-The immediate result of this is that the number of particles is doubled, by including a superpartner of each SM particle, with the exact same quantum numbers except the spin. 
+The immediate implication is that the number of particles is doubled, by including a superpartner of each SM particle, with the exact same quantum numbers except the spin. 
 The superpartners of the SM fermions are scalars (spin-0) and are denoted $scalar$-fermions or $sfermions$ for short. 
 The superpartners of the SM charged leptons are scalar leptons, $sleptons$, and denoted $selectrons$, $smuons$ and $staus$ respectively. 
 Similarly, the superpartners of the quarks are called scalar-quarks, $squarks$. 
@@ -104,7 +105,8 @@ In the SM, only left-handed neutrinos exist, hence only superpartners to these l
 The superpartners of the SM gauge bosons have a postfix of $-ino$ on the SM boson name. The superpartner of the SM gluon is the glu-$ino$. 
 The SM particle symbols are denoted with a tilde in order to specify that they are the superpartner ($g\leftrightarrow\tilde{g}$). 
 The SM fermions, their superpartners of the first generation, the SM gauge bosons and their superpartners are listed in Table \ref{tab:susy}.  
-As the defining feature of supersymmetric partners is that the quantum numbers other than the spin are identical, this is represented by the last column, where the $(SU(3)_{C},SU(2)_{L},U(1)_{Y})$ charges are specified, that are by definition the same for the SM particle and the superpartner. 
+The defining feature of supersymmetric partners is that all other quantum numbers other than the spin are identical. 
+This feature is represented by the last column in Table \ref{tab:susy}, where the $(SU(3)_{C},SU(2)_{L},U(1)_{Y})$ charges for a SM particle and its superpartners are listed. 
 \begin{table}[ht!]
 \def\arraystretch{1.2}
 \setlength{\belowcaptionskip}{6pt}
@@ -112,9 +114,9 @@ As the defining feature of supersymmetric partners is that the quantum numbers o
 \centering
 \caption{An overview of the superpartners of the SM bosons and fermions \cite{Martin:1997ns}.}
 \label{tab:susy}
-\begin{tabular}{l c c c c l}
+\begin{tabular}{l c c c c c}
         \hline \hline
-        SM particle \& superpartner              & chirality         &spin-0                 & spin-$\frac{1}{2}$                              &spin-1 &\small{$(SU(3)_{C},SU(2)_{L},U(1)_{Y})$}\\\hline
+        SM \& SUSY particle              & chirality         &spin-0                 & spin-$\frac{1}{2}$                              &spin-1 &\small{$(SU(3)_{C},SU(2)_{L},U(1)_{Y})$}\\\hline
         \multirow{2}{*}{leptons \& sleptons}     & $L$               &($\slepL,\sneuL$)      & ($\nu_{L}$,$\lepL$)                             &$-$    & $(1,2,-\frac{1}{2})$ \\
                                                  & $R$               &$\slepR$               & $\lepR$                                         &$-$    & $(1,1,-1)$ \\\hline
         \multirow{3}{*}{quarks \& squarks}       & $L$               &($\supL,\sdownL$)      & ($\upL$,$\downL$)                               &$-$    & $(3,2,\frac{1}{6})$ \\
@@ -129,21 +131,23 @@ As the defining feature of supersymmetric partners is that the quantum numbers o
 \end{tabular}
 \end{table}                                                                                                                                                                                             
 One striking feature from Table \ref{tab:susy} is the existence of more than one SM Higgs boson. 
-Instead, SUSY $requires$ the existence of two Higgs doublets, $(H^{+}_{u},H^{0}_{u})$ and $(H^{+}_{d},H^{0}_{d})$, ordered in $SU(2)_{L}$ doublet complex scalar fields.\footnote{This might seem like a bold prediction, requiring four more Higgs bosons, but it turns out that the lightest Higgs boson could indeed be compatible with the 125\GeV one discovered. \cite{Ellis:1638463}}
+SUSY $requires$ the existence of two Higgs doublets, $(H^{+}_{u},H^{0}_{u})$ and $(H^{+}_{d},H^{0}_{d})$, ordered in $SU(2)_{L}$ doublet complex scalar fields.\footnote{This might seem like a bold prediction, requiring four more Higgs bosons, but it turns out that the lightest Higgs boson could indeed be compatible with the 125\GeV one discovered. \cite{Ellis:1638463}}
 The neutral scalar Higgs boson that we know and have discovered would be a linear combination of the $H^{0}_{u}$ and $H^{0}_{d}$.  
 To each of these SM Higgs bosons is a superpartner, a $higgsino$, associated to it. 
+\newpara
+\noindent\justify
 Another thing to notice in Table \ref{tab:susy} is the SM gauge bosons. 
 Following the discussion in the previous chapter, the usual $\PW$, $\PZ$ and $\gamma$ bosons are the mass eigenstates of the gauge eigenstates $W_{1,2,3}$ and $B$. 
 For this reason, the superpartners of the $W$ and $B$ are the ones listed, the so called $wino$ and $bino$. 
 Similarly to how the $\PW$, $\PZ$ and $\gamma$ bosons are mixtures of $W_{1,2,3}$ and $B$, the winos and binos mix to form the mass eigenstates \firstcharg, \secondcharg\firstchi, \secondchi and so on. 
-The ones with electric charged are called $charginos$, and the ones without charge $neutralinos$.   
-For an experimentalist the mass eigenstates are what you care about, and the mass eigenstates of the SUSY particles are listed in Table \ref{tab:eigenstates}.  
+The ones with electric charge are called $charginos$, and the ones that are neutral, $neutralinos$.   
+Only the mass eigenstates are observable via experiments. The mass eigenstates of the SUSY particles are listed in Table \ref{tab:eigenstates}.  
 \begin{table}[ht!]
 \def\arraystretch{1.2}
 \setlength{\belowcaptionskip}{6pt}
 \small
 \centering
-\caption{An overview of the gauge eigenstates and hte mass eigenstates of the SUSY particles. \cite{Martin:1997ns}.}
+\caption{An overview of the gauge eigenstates and the mass eigenstates of the SUSY particles. \cite{Martin:1997ns}.}
 \label{tab:eigenstates}
 \begin{tabular}{l c c}
         \hline \hline
@@ -162,27 +166,28 @@ For an experimentalist the mass eigenstates are what you care about, and the mas
 \end{tabular}
 \end{table}                                                                                                                                                                                             
 For the heaviest of the fermions, the $t$ and $b$ quarks and the $\tau$ leptons, the superpartners are mixed to form mass eigenstates. 
-Sfermion mixing for the first two families is assumed to be negligble.  
+Sfermion mixing for the first two families is assumed to be negligible.  
 If all other features than the spin is the same for the SM and SUSY particles, the masses would also be the same. 
-But as the superpartners have not been discovered at the same masses as their SM partners, it must include some mechanism that gives the SUSY particles different masses. 
-As we are already accustomed to the broken symmetry of the electroweak theory, it would be a safe bet that SUSY, if it exists, is a broken symmetry. 
+But as the superpartners have not been discovered at the same masses as their SM partners, there must be some mechanism included that gives the SUSY particles different masses. 
+As we are already accustomed to the broken symmetry of the electroweak theory, it is clear that SUSY, if it exists, is a broken symmetry. 
 \subsection*{$R$-parity}
 \noindent\justify
-Recalling the baryon and lepton numbers that were introduced in the previous chapter. 
+Recalling the baryon and lepton numbers ($B$ and $L$) that were introduced in the previous chapter. 
 In the SM, the baryon and lepton numbers need to be conserved in an interaction.\footnote{Consider a decay of a muon: $\mu^{-} (L_{e}=0, L_{\mu}=+1)\rightarrow e^{-} (L_{e}=+1, L_{\mu}=0) +\bar{\nu_{e}} (L_{e}=-1,L_{\mu}=0)+\nu_{\mu} (L_{e}=0,L_{\mu}=+1)$, the lepton numbers before and after are the same $L_{e}=0, L_{\mu}=+1$.}  
 The MSSM can allow for interactions that violate either baryon or lepton number, although no such processes have been observed. 
-Instead, a new quantity is formulated, the so-called $R$-parity \cite{Farrar:1978xj} defined using the baryon and lepton numbers, as well as the spin $s$:
+Instead, a new quantity is formulated, denoted $R$ \cite{Farrar:1978xj}, defined using the baryon and lepton numbers, as well as the spin $s$:
 \begin{equation}
-R=(-1)^{3(B-L)+2s}.
+R={3(B-L)+2s}.
 \end{equation}
-For SM particles, $R$ takes values of +1, whereas for SUSY particles $R$ takes values of -1. 
+From this quantity, the $R$-parity, $P_{R}$, is defined as $P_{R}=(-1)^{R}$.
+For SM particles, $P_{R}$ takes a value of +1, whereas for SUSY particles it takes a value of -1. 
 The MSSM is defined such that $R$-parity is conserved in each interaction vertex, and the conservation leads to a couple of experimental implications. 
-The first consequence is that SUSY particles are produced in pairs (so to conserve the $R=+1$). 
-The second consequence is that a SUSY particle must decay into another SUSY particle and a SM particle (to conserve $R=-1$), when it is kinematically allowed. 
-When it is not, i.e. when there are no ligther SUSY particles for a SUSY particle to decay into, this one particle is known as the $lightest$ $supersymmetric$ $particle$, or LSP. 
+The first consequence is that SUSY particles are produced in pairs. 
+The second consequence is that a SUSY particle must decay into another SUSY particle and a SM particle, when it is kinematically allowed. 
+When it is not, i.e. when there are no lighter SUSY particles for a SUSY particle to decay into, this one particle is known as the $lightest$ $supersymmetric$ $particle$, or LSP. 
 This feature of MSSM is what makes it a favorable theory in explaining the origin of dark matter. 
-If the LSP is electrically neutral, only interact weakly with ordinary matter and is stable due to the $R$-parity conservation, this is an attractive candidate for non-baryonic dark matter. 
-The MSSM is a $R$-parity conserving model (RPC), but there exist models that violate $R$-parity (RPV), that are missing the features described above.
+The LSP is electrically neutral, only interacts weakly with ordinary matter and is stable due to the $R$-parity conservation; hence it is an attractive candidate for dark matter.
+The MSSM is a $R$-parity conserving model (RPC), but there exist models that violate $R$-parity (RPV), that are lacking the features described above.
 \subsection*{The MSSM Lagrangian}
 \noindent\justify
 Similarly to what was done in the previous chapter, the theory can be written down in terms of a Lagrangian \cite{Pape:2006ar}. 
@@ -191,12 +196,12 @@ Neglecting for a second that MSSM must be a broken symmetry, the starting point 
 \mathcal{L}_{\mathrm{SUSY}}=\mathcal{L}_{\mathrm{int.}}+\mathcal{L}_{\mathrm{chiral.}}- V(\phi)
 \end{equation}
 The first term represents the kinetic terms and the gauge interactions, that can be written as:
-\begin{align} 
-\mathcal{L}_{\mathrm{int.}}=&-\mathcal{D}^{\mu}\phi^{*i}\mathcal{D}_{\mu}\phi_{i}-i\psi^{\dagger i}\bar{\sigma}^{\mu}\mathcal{D}_{\mu}\psi_{i}\\
-                   &-\frac{1}{4}F_{\mu\nu}^{4}F^{\mu\nu a}-i\lambda^{\dagger a}\bar{\sigma}^{\mu}\mathcal{D}_{\mu}\lambda^{a}\\
-                   &-\sqrt{2}g[(\phi^{*i}T^{a}\psi_{i})\lambda^{a}+\lambda^{\dagger a}(\psi^{\dagger i}T^{a}\phi_{i})].
+\begin{equation} 
+\mathcal{L}_{\mathrm{int.}}=-\mathcal{D}^{\mu}\phi^{*i}\mathcal{D}_{\mu}\phi_{i}-i\psi^{\dagger i}\bar{\sigma}^{\mu}\mathcal{D}_{\mu}\psi_{i}\\
+                   -\frac{1}{4}F_{\mu\nu}^{4}F^{\mu\nu a}-i\lambda^{\dagger a}\bar{\sigma}^{\mu}\mathcal{D}_{\mu}\lambda^{a}\\
+                   -\sqrt{2}g[(\phi^{*i}T^{a}\psi_{i})\lambda^{a}+\lambda^{\dagger a}(\psi^{\dagger i}T^{a}\phi_{i})].
 \label{eq:susyL}
-\end{align}
+\end{equation}
 The indices $i$ run over all chiralities and flavors, the $a$ is a label for the gauge bosons, and the $\mathcal{D}_{\mu}\phi_{i}$, $\mathcal{D}_{\mu}\psi_{i}$ and $\mathcal{D}_{\mu}\lambda^{a}$ are the covariant derivatives written as:
 \begin{align} 
 \mathcal{D}_{\mu}\phi_{i}=&\partial_{\mu}\phi_{i}+igA_{\mu}^{a}(T^{a}\phi)_{i},\\
@@ -225,30 +230,31 @@ respectively. The final expression for the potential is:
 \begin{align}
 V(\phi)=F_{i}^{*}F_{i}+\frac{1}{2}D^{a}D^{a}
 \end{align}
+The $\mathcal{L}_{\mathrm{SUSY}}$ will be the starting point for the next section, where the breaking of the SUSY is presented. 
 \section{SUSY breaking mechanisms}\label{sec:breaking}
 \noindent\justify
-As the superpartners have not been discovered at the same masses as their SM partners, an assumption can be made that SUSY is a broken symmetry. 
+As the superpartners have not been discovered at the same masses as their SM partners, SUSY is a broken symmetry. 
 In order to accommodate for this required breaking of the symmetry while still maintaining the desirable feature of SUSY that cancels the divergences in Equation \ref{eq:loop}, a so called $soft$ SUSY breaking scenario is considered. 
 This is done by adding a new term, a soft SUSY breaking term, to the $\mathcal{L}_{SUSY}$ \cite{soft,Chung:2003fi}:
 \begin{equation}
 \mathcal{L}=\mathcal{L}_{\mathrm{SUSY}}+\mathcal{L}_{\mathrm{soft}}
 \label{eq:softterm}
 \end{equation}
-The $\mathcal{L}_{\mathrm{SUSY}}$ is the same as introduced previously in this chapter, and preserves the supersymmetric interactions. 
+The $\mathcal{L}_{\mathrm{SUSY}}$ is the same as introduced previously, and preserves the supersymmetric interactions. 
 %\begin{equation}
 %\mathcal{L}_{\mathrm{soft}}=-\sum_{\tilde{q},\tilde{l},H_{u,d}}m_{0,i}^{2}|\phi_{i}|^{2}+(-\frac{1}{2}m_{1/2,a}\lambda_{a}\lambda_{a}-A_{0,i}W_{3,i}-B_{0}\mu H_{u}H_{d})+\mathrm{h.c}    
 %\label{eq:softterm}
 %\end{equation}
 %Here the $m_{0,i}$ are the mass terms of the scalars and $m_{1/2,a}$ of the gauginos, $A_{0,i}$ and $B_{0}$ are parameters with (positive) dimension of mass and $W_{3,i}$ represents trilinear terms of the superpotential \cite{Pape:2006ar}.  
-The soft terms include the introduction of mass parameters that lift the mass degeneracy of the SM paricles and their superpartners. 
+The soft terms include the introduction of mass parameters that lift the mass degeneracy of the SM particles and their superpartners. 
 As these parameters contribute to the radiative corrections discussed previously, they need to be less than a few \TeV in order to still solve the hierarchy problem. 
 Following the description in \cite{Martin:1997ns}, it is evident that SUSY breaking should occur in a “hidden sector” of particles that have very little direct couplings to the “visible sector” chiral supermultiplets of the MSSM. 
 The question is what these mediating interactions should be, that is the connection between the hidden sector and the visible sector. 
 There are countless proposals to the design of the mediating interactions in the soft term on the market, of which the two most popular will be introduced. 
 \subsection*{SUSY breaking in SUGRA}
 \noindent\justify
-The first proposal for what the mediating interactions are dates back to the beginning of the 1980s \cite{Chamseddine:1982jx,Barbieri:1982eh,Ibanez:1982ee,Hall:1983iz,Ellis:1982wr}
-It proposes that the mediating force is gravity, hence the name SUGRA, short for Supergravity theory, generalized to many different theories in various numbers of dimensions and involving $N$ supersymmetries. 
+The first proposal for what the mediating interactions are dates back to the beginning of the 1980s \cite{Chamseddine:1982jx,Barbieri:1982eh,Ibanez:1982ee,Hall:1983iz,Ellis:1982wr}.
+It proposes that the mediating force is gravity, hence the name SUGRA, short for SUperGRAvity theory, generalized to many different theories in various numbers of dimensions and involving $N$ supersymmetries. 
 mSUGRA means minimal supergravity theory, and is a special case of SUGRA with $N=1$. 
 %There is a direct coupling of the goldstino supermultiplets to the MSSM states with gravitational strength \cite{Pape:2006ar}.
 If SUSY is broken in the hidden sector by a vacuum expectation value $\braket{F}$ then soft terms in the Lagrangian becomes
@@ -257,11 +263,11 @@ m_{\mathrm{soft}}\approx\frac{\braket{F}}{M_{P}}
 \end{equation}
 where $M_{P}$ is the reduced Planck mass. 
 For $m_{\mathrm{soft}}$ of order a few hundred \GeV, the expected􏰛scale associated with the origin of SUSY breaking in the hidden sector should be around $\sqrt{\braket{F}}\approx10^{10}-10^{11}\GeV$.
-In mSUGRA the gravitino is supposed to be heavy (same order as $m_{\mathrm{soft}}$, interacting very weakly, and the LSP is most likely a neutralino. 
+In mSUGRA the gravitino is supposed to be heavy (same order as $m_{\mathrm{soft}}$, interacting very weakly, and the LSP is most likely a neutralino). 
 \subsection*{SUSY breaking in GMSB}
 \noindent\justify
 Gauge mediated supersymmetry breaking \cite{Dine:1981gu,Nappi:1982hm,Dine:248065}, or GMSB for short, is a model that assumes the mediating interactions between the hidden sector and the visible sector to be ordinary electroweak and QCD gauge interactions with extra chiral supermultiplets. 
-As opposed to in SUGRA where the communication between the hidden sector and the visible sector happen through a mediator, in GMSB the hidden sector couple to a messenger sector instead of directly with the visible sector
+As opposed to SUGRA where the communication between the hidden sector and the visible sector happen through a mediator, in GMSB the hidden sector couple to a messenger sector instead of directly with the visible sector.
 In this scenario the soft term arise due to loop diagrams that include a messenger particle. 
 The messengers are chiral supermultiplets that couple to the $\braket{F}$ and have the ordinary $SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$ interactions. 
 The soft term is now
@@ -270,16 +276,16 @@ m_{\mathrm{soft}}\approx\frac{\alpha_{a}}{4\pi}\frac{\braket{F}}{M_{\mathrm{mess
 \label{eq:gmsb}
 \end{equation}
 where the $\frac{\alpha_{a}}{4\pi}$ stems from the ordinary gauge interactions and the $M_{\mathrm{messenger}}$ is the mass of the messenger. 
-The immediate effect of Equation \ref{eq:gmsb} is that in order to yield a soft mass of the order of the weak scale, the scale of the SUSY breaking should be as low as $\sqrt{\braket{F}}\approx10^{10}-10^{11}\GeV$, which is much lower than that obtained in mSUGRA.
+The immediate effect of Equation \ref{eq:gmsb} is that in order to yield a soft mass of the order of the weak scale, the scale of the SUSY breaking should be as low as $\sqrt{\braket{F}}\approx10^{4}-10^{5}\GeV$, which is much lower than that obtained in mSUGRA.
 As an effect of this low energy scale, the gravitino is assumed to be very light ($\approx1\eV$) and is thus always the LSP. 
 \newpara
 \noindent\justify
-What might not obvious from the discussions throughout this chapter is the unconstrained MSSM contains a huge number of free paramters (105 in addition to the 19 free parameters of the SM!) \cite{Dimopoulos:1995ju}.
+What might not obvious from the discussions throughout this chapter is that the unconstrained MSSM contains a huge number of free parameters (105 in addition to the 19 free parameters of the SM!) \cite{Dimopoulos:1995ju}.
 In order to be able to use the model in a reasonable way, one needs a way to reduce the number of parameters \cite{Djouadi:1998di}. 
 At hand are a couple of phenomenological constraints that can be used to bring down the number of parameters, that will be listed in the following. 
 Recalling the $\mathcal{CP}$ violation that was introduced in Section \ref{sec:yukawa}. 
 There is some evidence for $\mathcal{CP}$ violation, but the parameters of the MSSM can be reduced by assuming that there are no new sources of $\mathcal{CP}$ violation.  
-Further, an assupmtion is made that there are no so called flavor changing neutral currents, FCNC. 
-Finally, the assumption that the soft–SUSY breaking scalar masses are the same for the first and second generations \cite{Djouadi:1998di}.
+Further, an assumption is made that there are no so called flavor changing neutral currents, FCNC. 
+Finally, the assumption that the soft SUSY breaking scalar masses are the same for the first and second generations \cite{Djouadi:1998di}.
 By imposing these phenomenological constraints, the number of parameters are reduced to only 19. 
 This model is known as phenomenological MSSM, or pMSSM for short.  

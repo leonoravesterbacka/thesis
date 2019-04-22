@@ -1,0 +1,91 @@
+\appendix %
+\chapter*{APPENDIX C\\ Fit functions for kinematic edge search} %puts the chapter title at the beginning of the
+\noindent\justify
+\chaptermark{Appendix}
+\markboth{Appendix}{Appendix}
+\addcontentsline{toc}{chapter}{APPENDIX C: Fit functions for kinematic edge search}
+\setcounter{chapter}{1}
+\label{sec:edgeFit}
+\noindent\justify
+In addition to a cut and count approach, a fit is performed to the mass spectrum to search for a kinematic edge. 
+The fit is carried out simultaneously to the \mll distribution in the dielectron, dimuon, and opposite flavor final state. 
+The fit consists of three separate components: the FS backgrounds, the Drell--Yan backgrounds and the signal, fitted to their corresponding shapes. 
+\section*{Model for FS backgrounds}
+\noindent\justify
+The FS background is described using a Crystal-Ball funtion:
+$\mathcal{P}_{FSCB}(m_{\ell\ell})$: 
+\begin{eqnarray}
+\mathcal{P}_{FSCB}(m_{\ell\ell}) = \begin{cases} 
+\textrm{exp}\left(-\frac{(m_{ll}-\mu_{FSCB})^2}{2\sigma_{FSCB}^2}\right) &\mbox{if } \frac{m_{ll}-\mu_{FSCB}}{\sigma_{FSCB}}<\alpha_{FS}, \\
+A (B+\frac{m_{ll}-\mu_{FSCB}}{\sigma_{FSCB}})^{-n_{FS}} &\mbox{if } \frac{m_{ll}-\mu_{FSCB}}{\sigma_{FSCB}}>\alpha_{FS}, \\
+\end{cases}
+\end{eqnarray}
+where
+\begin{eqnarray}
+A = \left(\frac{n}{|\alpha_{FS}|}\right)^{n_{FS}} \textrm{exp}\left(-\frac{|\alpha_{FS}|^2}{2}\right) \quad \textrm{and}\quad B = \frac{n_{FS}}{|\alpha_{FS}|}-|\alpha_{FS}| .
+\end{eqnarray}
+Because of the requirement that the function and its derivative both be continuous, the FS model is left with four independent parameters plus the normalization.
+While the three samples (dielectron, dimuon and opposite flavor) have different normalizations, they all use the same FS shape parameters: 
+\begin{equation*}
+\vec{p}_{FS} = (\mu_{FSCB},\sigma_{FSCB},\alpha_{FS},n_{FS})
+\end{equation*}
+\section*{Model for Drell-Yan backgrounds }
+\noindent\justify
+The shape for backgrounds containing a \PZ is based on the sum of an exponential function and a convolution of a Breit-Wigner $\mathcal{P}_{BW}(m_{ll};m_{Z},\sigma_{Z})$ (with physical mean $m_{Z}$ and width $\sigma_{Z}$) and a double-sided Crystal-Ball function $\mathcal{P}_{DSCB}(m_{\ell\ell})$: 
+\begin{eqnarray*}
+\mathcal{P}_{DSCB}(m_{\ell\ell}) = \begin{cases} A_{1} (B_{1}-\frac{m_{ll}-\mu_{CB}}{\sigma_{CB}})^{-n_{1}} &\mbox{if } \frac{m_{ll}-\mu_{CB}}{\sigma_{CB}}<-\alpha_{1} \\
+\textrm{exp}\left(-\frac{(m_{ll}-\mu_{CB})^2}{2\sigma_{CB}^2}\right) &\mbox{if } -\alpha_{1}<\frac{m_{ll}-\mu_{CB}}{\sigma_{CB}}<\alpha_{2} \\
+A_{2} (B_{2}+\frac{m_{ll}-\mu_{CB}}{\sigma_{CB}})^{-n_{2}} &\mbox{if } \frac{m_{ll}-\mu_{CB}}{\sigma_{CB}}>\alpha_{2} \\
+\end{cases}
+\end{eqnarray*}
+where
+\begin{eqnarray*}
+A_{i} = \left(\frac{n_{i}}{|\alpha_{i}|}\right)^{n_{i}} \cdot \textrm{exp}\left(-\frac{|\alpha_{i}|^2}{2}\right) \quad \textrm{and}\quad B_{i} = \frac{n_{i}}{|\alpha_{i}|}-|\alpha_{i}| .
+\end{eqnarray*}
+The full description is therefore 
+\begin{eqnarray*}
+\mathcal{P}_{DY} (m_{\ell\ell}) = f_{exp}\mathcal{P}_{exp}(m_{\ell\ell})+(1-f_{exp})\int \mathcal{P}_{DSCB}(m_{\ell\ell})\mathcal{P}_{BW}(m_{\ell\ell}-m') dm' .
+\end{eqnarray*}
+The model is fit separately for electrons and muons in a control region enriched in backgrounds containing \PZ bosons in order to extract the shape, which is then used with all parameters fixed (except the normalization) in the signal region. 
+The CR used to extract the shape is the same as the one used to extract \Routin, i.e. contains events with two or more jets, and an upper \ptmiss cut at 50 \GeV to improve DY purity. 
+The shapes for dielectron events and dimuon events are shown in Figure \ref{fig:ZShapeExtraction}.
+The electron and muon models use different values for the double-sided Crystal Ball function, and the relative normalization ($f_{exp}$) 
+between the exponential and the convoluted function. They do, however, use the same value 
+for $m_{Z}^{pdg}$ and $\sigma_{Z}^{pdg}$ (fixed to PDG values). The full parameter set in the fit for electrons is
+\begin{equation*}
+\vec{p}_{Z}^{e} = (\mu_{CB}^{ee}, \sigma_{CB}^{ee},\alpha_{1}^{ee},\alpha_{2}^{ee},n_{1}^{ee},n_{2}^{ee},f_{exp}^{ee},\mu_{exp}^{ee})
+\end{equation*}
+and for muons 
+\begin{equation*}
+\vec{p}_{Z}^{\mu} = (\mu_{CB}^{\mu\mu}, \sigma_{CB}^{\mu\mu},\alpha_{1}^{\mu\mu},\alpha_{2}^{\mu\mu},n_{1}^{\mu\mu},n_{2}^{\mu\mu},f_{exp}^{\mu\mu},\mu_{exp}^{\mu\mu})
+\end{equation*}
+
+%\begin{figure}[hbtp]
+%  \begin{center}
+%    \includegraphics[width=0.49\textwidth]{figures/Fit/expoFitEE_Log_Inclusive_Run2016_36fb.pdf}
+%    \includegraphics[width=0.49\textwidth]{figures/Fit/expoFitMM_Log_Inclusive_Run2016_36fb.pdf}
+%    \caption{Fitted shape for backgrounds containing a \Z\ for dielectron events (left) and dimuon events (right). 
+%    The fitted shape consists of an exponential (green) and a Breit-wigner convoluted with a double-sided Chrystal-Ball (red), 
+%    whose sum (blue) describes the backgrounds containing a \Z\ .}
+%    \label{fig:ZShapeExtraction}
+%  \end{center}
+%\end{figure}
+
+\section*{Signal Model}
+\noindent\justify
+The signal component is based on an edge model for two subsequent two-body decays with endpoint $m_{\ell\ell}^{edge}$, including a model for the dilepton mass resolution, $\sigma_{\ell\ell}$: 
+\begin{equation*}
+ {\mathcal{P}}_{S}(m_{\ell\ell}) = \frac{1}{\sqrt{2\pi}\sigma_{\ell\ell}} \int_{0}^{m_{\ell\ell}^{edge}} y \cdot \textrm{exp}\left( -\frac{(m_{\ell\ell}-y)^2}{2\sigma_{\ell\ell}^{2}}\right) dy
+\end{equation*}
+The function describes a triangle convoluted with a Gaussian to account for the mass resolution.
+The electron and muon models share the edge position $m_{\ell\ell}^{edge}$, but use their own value for $\sigma$ 
+(which comes from the model for backgrounds containing a \PZ\ ). The parameters are therefore
+\begin{equation*}
+\vec{p}_{S}^{e} = (m_{ll}^{edge},\sigma_{CB}^{ee})
+\end{equation*}
+for electrons and 
+\begin{equation*}
+\vec{p}_{S}^{\mu} = (m_{ll}^{edge},\sigma_{CB}^{\mu\mu})
+\end{equation*}
+for muons.
+                                                                                                                                                                                                                                                                                                                                                                                                                                           

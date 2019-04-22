@@ -186,7 +186,7 @@
 \newboolean{SetDSpace}%
 \setboolean{SetDSpace}{true}%
 \newcommand{\BaseDiff}{0}
-\newcommand{\GoSingle}{\renewcommand{\baselinestretch}{1}%
+\newcommand{\GoSingle}{\renewcommand{\baselinestretch}{1.1}%
 \normalfont\tiny\normalsize}%
 \ifthenelse{\value{RS@ptcnt} = 10}{%
 \newcommand{\GoDouble}{\renewcommand{\baselinestretch}{1.667}%
@@ -226,8 +226,9 @@
     }{%
       \addcontentsline{toc}{chapter}{\uppercase{#1} }}%
     \setcounter{footnote}{0}%
-    \@makechapterhead{\uppercase{#2}}%
-\ifthenelse{\boolean{SetDSpace}}{\GoDouble}{}%
+    \@makechapterhead{#2}%
+\ifthenelse{\boolean{SetDSpace}}{\GoSingle}{}%
+%\ifthenelse{\boolean{SetDSpace}}{\GoDouble}{}%
 }%
 %to here
 %\renewcommand{\@makechapterhead}[1]{%
@@ -481,53 +482,34 @@
        {\@latex@warning{Empty `thebibliography' environment}}%
       \endlist\clearpage}
 %% Special Pages
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%        Title Page                               %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\title{ \normalsize \textsc{BE PROJECT\\
-%LITERATURE SURVEY}
-%        \\ [2.0cm]
-%        \HRule{0.5pt} \\
-%        \LARGE \textbf{\uppercase{Digital Signal Transmission over MIMO-OFDM System}}
-%        \HRule{2pt} \\ [0.5cm]
-%        \normalsize  \vspace*{5\baselineskip}}
-%
-%\date{}
-%
-%\author{
-%        Purushottam Patil \\ 
-%        Rakesh Rathod \\
-%        Sunil Nagare\\
-%        Guided By - Prof. Sukanya Kulkarni Madam \\
-%        Department of Electronics and Telecommunications\\ 
-%        Sardar Patel Institute of Technology , Andheri}
-%
 \renewcommand{\maketitle}{%
     \clearpage%
     \setboolean{SetDSpace}{false}%
     \thispagestyle{empty}%
     \GoSingle%
     \begin{RS@Cent}%
+    \large{\MakeUppercase{Diss. ETH No ....}\\*[\BaseDiff\baselineskip]}%
     %\BigMargin%
-    \huge{\bf{
+    \Large{\bf{
     \HRule{0.5pt} \\
-    \Title}}%
-    \\
+    \Title}\\}%
     \HRule{0.5pt} \\ [0.5cm]
-    \vfill%
     \vfill%
     \small{\MakeUppercase{A thesis submitted to attain the degree of}} \\*[\BaseDiff\baselineskip]%
     \large{DOCTOR OF SCIENCES of ETH ZURICH} \\*[\BaseDiff\baselineskip]%
     \large{(Dr. sc. ETH Z\"{u}rich)}
     \vfill%
-    \large{By \\*[\BaseDiff\baselineskip]%
+    \small{\MakeUppercase{Presented by }\\*[\BaseDiff\baselineskip]%
     \large{\FullName \\*[\BaseDiff\baselineskip]} 
     %A \MakeUppercase{\ThesisType} Doctor of Sciences  \\%
-    \small{\MakeUppercase{\DegreeType} \\*[\BaseDiff\baselineskip]% 
-    \MakeUppercase{\Birth} \\*[\BaseDiff\baselineskip]%
-    \MakeUppercase{\Nationality} }
-    \\*[\BaseDiff\baselineskip]%
-    \large{\GradYear}}%
+    \small{\DegreeType \\*[\BaseDiff\baselineskip]% 
+    \Birth \\*[\BaseDiff\baselineskip]%
+    \Nationality \\*[\BaseDiff\baselineskip]% 
+    \vfill%
+    \small{\MakeUppercase{accepted on the recommendation of}}\\*[\BaseDiff\baselineskip]%  
+    \large{Prof. Dr. Rainer Wallny, examiner}\\*[\BaseDiff\baselineskip]%  
+    \large{Dr. Else Lytken, Senior Lecturer, co-examiner} \\*[\BaseDiff\baselineskip]%
+    \large{\GradYear}}}%}
     \end{RS@Cent}%
     \vspace*{0in}
     \setboolean{SetDSpace}{true}%
@@ -581,29 +563,61 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%        Abstract                                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\abstractname}{ABSTRACT}%
-\renewenvironment{abstract}{%
-    \clearpage%
-    \setboolean{SetDSpace}{false}%
-    \ifthenelse{\boolean{RS@Draft}}{\pagestyle{plain}}{\pagestyle{plain}}%
-    \GoSingle%
-    \addcontentsline{toc}{extrachapter}{\abstractname}%
-    \begin{RS@Cent}%
-    %\BigMargin%
-    \Large{ABSTRACT}  \\*[\BaseDiff\baselineskip]%
-    %\DegreeType \\*[\BaseDiff\baselineskip]%
-    %\Title \\*[\BaseDiff\baselineskip]%
-    %By \\*[\BaseDiff\baselineskip]%
-    %%FullName \\*[\BaseDiff\baselineskip]%
-    %\GradMonth\ \GradYear \\*[\BaseDiff\baselineskip]%
-    \end{RS@Cent}%
-    %{\raggedright Chair: \Chair \\%
-    %\raggedright Cochair: \Cochair \\%uncomment this line if you have a cochair
-    %Major: \Department} %
-    %\setboolean{SetDSpace}{true}%
-    %\par%
-    \GoDouble}%
-    {\clearpage}
+%\renewcommand{\abstractname}{ABSTRACT}%
+%\renewenvironment{abstract}{%
+%    \clearpage%
+%    \setboolean{SetDSpace}{false}%
+%    \ifthenelse{\boolean{RS@Draft}}{\pagestyle{plain}}{\pagestyle{plain}}%
+%    \GoSingle%
+%    \addcontentsline{toc}{extrachapter}{\abstractname}%
+%    \begin{RS@Cent}%
+%    %\BigMargin%
+%    \Large{ABSTRACT}  \\*[\BaseDiff\baselineskip]%
+%    %\DegreeType \\*[\BaseDiff\baselineskip]%
+%    %\Title \\*[\BaseDiff\baselineskip]%
+%    %By \\*[\BaseDiff\baselineskip]%
+%    %%FullName \\*[\BaseDiff\baselineskip]%
+%    %\GradMonth\ \GradYear \\*[\BaseDiff\baselineskip]%
+%    \end{RS@Cent}%
+%    %{\raggedright Chair: \Chair \\%
+%    %\raggedright Cochair: \Cochair \\%uncomment this line if you have a cochair
+%    %Major: \Department} %
+%    %\setboolean{SetDSpace}{true}%
+%    %\par%
+%    \GoSingle}%
+%    {\clearpage}                                                                          
+%%%%%%%%%%%%%%german
+%\renewcommand{\abstractnameGerman}{ABSTRACTGERMAN}%
+%\renewenvironment{abstractGerman}{%
+%    \clearpage%
+%    \setboolean{SetDSpace}{false}%
+%    \ifthenelse{\boolean{RS@Draft}}{\pagestyle{plain}}{\pagestyle{plain}}%
+%    \GoSingle%
+%    \addcontentsline{toc}{extrachapter}{ABSTRACT}%
+%    \begin{RS@Cent}%
+%    %\BigMargin%
+%    \Large{Zusammenfassung}  \\*[\BaseDiff\baselineskip]%
+%    %\DegreeType \\*[\BaseDiff\baselineskip]%
+%    %\Title \\*[\BaseDiff\baselineskip]%
+%    %By \\*[\BaseDiff\baselineskip]%
+%    %%FullName \\*[\BaseDiff\baselineskip]%
+%    %\GradMonth\ \GradYear \\*[\BaseDiff\baselineskip]%
+%    \end{RS@Cent}%
+%    %{\raggedright Chair: \Chair \\%
+%    %\raggedright Cochair: \Cochair \\%uncomment this line if you have a cochair
+%    %Major: \Department} %
+%    %\setboolean{SetDSpace}{true}%
+%    %\par%
+%    \GoSingle}%
+%    {\clearpage}                                                                          
+
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%        Biographical Sketch                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

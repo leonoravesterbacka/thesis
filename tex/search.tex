@@ -1,25 +1,25 @@
-\chapter{Leptonic SUSY searches} \label{search}
+\chapter{Leptonic SUSY searches} \label{sec:search}
 \noindent\justify
-The shortcomings of the SM has led to the proposal of myriad of BSM theories. 
-Using the worlds most powerful hadron collider, the Large Hadron Collider, new particles could be produed that embody the SM extensions. 
+The shortcomings of the SM has led to the proposal of myriad BSM theories.
+Using the worlds most powerful hadron collider, the Large Hadron Collider, new particles could be produced that embody the SM extensions. 
 As is clear from the previous chapter, SUSY is a very elegant theory that is able to provide solutions to almost all problems with the SM. 
-The only problem with SUSY is that it has not been found yet. 
+%The only problem with SUSY is that it has not been found yet. 
 The purpose of this thesis is thus to discover, or exclude the existence of, these SUSY particles. 
 \newpara
 \noindent\justify
-In this chapter, the hypotheses of the MSSM concerning production and decay mechanisms in pp collisions are the LHC are explored. 
+In this chapter, the hypotheses of the MSSM concerning production and decay mechanisms in proton-proton (pp) collisions at the LHC are explored. 
 A powerful tool for searching for particles that would give evidence for new physics is by looking for two leptons of same flavor and opposite charge. 
-This chapter provides an introduction to the many SUSY scenarios that can be explored by using this final states, that enables for searching for the production of colored and electroweak superpartners as well as direct slepton production. 
+This chapter provides an introduction to the many SUSY scenarios that can be explored by using this final state, that enables for searching for the production of colored and electroweak superpartners as well as direct slepton production. 
 \newpage
 \section{SUSY at the LHC}
 \noindent\justify
-SUSY particles could be produced in proton-proton collisions at the LHC. 
-As detailed in Chapter \ref{sec:susy}, SUSY particles are preferrably produced in pairs. 
+SUSY particles have the potential to be produced in pp collisions at the LHC. 
+As detailed in Chapter \ref{sec:susy}, SUSY particles are preferably produced in pairs. 
 The cross sections for the various production modes can be calculated using the theoretical framework detailed in the previous chapter. 
 For a center-of-mass energy of 13\TeV, which is what is used for the searches documented in this thesis, the cross sections calculated at NLO precision is visualized in Figure \ref{fig:xsecs}. 
 \begin{figure}[htbp!]
 \begin{center}
-    \includegraphics[width=0.55\textwidth]{images/theory/xsec10_13.pdf}
+    \includegraphics[width=0.65\textwidth]{images/theory/xsec10_13.pdf}
     \caption{Theory cross sections for selected SUSY processes \cite{Borschensky:2014cia}.}
 \label{fig:xsecs}
 \end{center}
@@ -27,55 +27,69 @@ For a center-of-mass energy of 13\TeV, which is what is used for the searches do
 As is clear from this visualization, the production of colored superpartners is greatly enhanced compared to the production of electroweak superpartners. 
 In natural SUSY \cite{Dimopoulos:1995mi,Barbieri:2009ev,Papucci:2011wy}, the partner of the top quark is expected to be light and can thus reduce the fine tuning of the quadratic divergences to the Higgs boson mass.
 The breaking of SUSY, as introduced in Section \ref{sec:breaking}, leading to mass differences between the SUSY particles and their SM partners, dictates that the MSSM particles should not be too massive. 
-The implications is that natural SUSY should have superpartner masses at the \TeV scale while still conserve R-parity, giving an LSP and at least one colored low mass superpartner around $1\TeV$. 
+The implication is that the so called natural SUSY should have superpartner masses at the \TeV scale while still conserve R-parity, giving an LSP and at least one colored low mass superpartner around $1\TeV$. 
 Historically, the proposed superpartner at the \TeV scale has been the lightest top squark. 
-After searches for top squarks at the CMS and ATLAS experiment, the top squark mass is excluded up to almost 2\TeV. 
+After searches for top squarks at the CMS and ATLAS experiment, the top squark mass is excluded up to more than 1\TeV \cite{Sirunyan:2017wif}. 
 Instead, the attention is turned to light higgsinos, that provide a promising avenue for discovery of natural SUSY. 
 Light higgsinos have the ability to solve the hierarchy problem as well as avoiding an unnatural fine-tuning of the SUSY particle masses \cite{Han:2014kaa,Giudice:2010wb}. 
 Searches for higgsinos have been performed prior to the ones at the LHC, at LEP, providing limits on the higgsino masses to around 100\GeV. 
 After the Run I of the LHC at a center-of-mass energy of 8\TeV, \cite{Kraml:2012er,Autermann:2016les}, the high expectations for a hint of natural supersymmetry were unfortunately not met. 
-Additionally, the discovery of the Higgs boson, adds constraints to the implementation of SUSY \cite{Arbey:2011ab}. 
-The further increment of the center-of-mass energy during the Run II of the LHC has provided hope to probe for \TeV-scale SUSY.
+Additionally, the discovery of the Higgs boson adds constraints to the implementation of SUSY \cite{Arbey:2011ab}. 
+But the further increment of the center-of-mass energy during the Run II of the LHC has provided hope to further probe for \TeV-scale SUSY.
 \section{Simplified models}
 \noindent\justify
 The full SUSY models, such as the pMSSM introduced in the previous chapter, are still relatively difficult to calculate despite the fact that the number of parameters are reduced in the constrained theories.  
-For this reason are the SUSY searches at the LHC performed using so called simplified model spectra (SMS) \cite{Alwall:2008ag,Alves:2011wf}, which is a collection of hypothetical models of SUSY particle production as they may occur in pp collisions at the LHC.
+For this reason, the SUSY searches at the LHC are performed using so called simplified model spectra (SMS) \cite{Alwall:2008ag,Alves:2011wf}, which is a collection of hypothetical models of SUSY particle production as they may occur in pp collisions at the LHC.
+Another reason to use SMS, apart from the computational aspect, is to try to be as agnostic as possible on the specific models and instead focus more on the topologies. 
 All the models treated in this thesis assume R-parity conservation, meaning that all models include pair production of SUSY particles, with subsequent decays leading to an LSP at the end of each leg.
+\newpara
+\noindent\justify
 In SMS, branching ratios of SUSY particles are often set to 100\% while the SM branching ratios are those measured. 
-In addition, different assumptions can be made on the SUSY particle masses. They can be either Majorana, or mass-degenerate. 
+In addition, different assumptions can be made on the SUSY particle masses. They can be either Majorana\footnote{A majorana fermion is a fermion that is its own antiparticle.}, or mass-degenerate. 
 Further, if there are more than two SUSY particles produced in the model, its mass is dictated by the masses of the other SUSY particles. 
-This is normally refered to as $mass$ $splitting$, which denotes the difference between the mass of the SUSY particles produced in the hard scatter and the mass of the LSP, $\Delta m = m_{\mathrm{hard\,scatter}}-m_{\mathrm{LSP}}$.
-If the $\Delta m$ is small, these scenarios are are referred to as $compressed$, meaning that there is not much available energy for the decay products, where as in the $uncompressed$ scenarios, enough energy is available to produce high \pt decay products. 
-This latter scenario can also be referred to as $boosted$, as enough energy is available to give the decay products of say a vector boson a boost.   
-Another effect of the uncompressed scenarios is the production of on-shell vector bosons, that would have been to massive to be produced given the available energy in a compressed signal scenario. 
-A case in which $m_{\mathrm{LSP}}>m_{\mathrm{hard\,scatter}}$ are kinematically forbidden.  25 All these simplifications are done to make the models easier to understand, but has the drawback that it is more complicated to fit in to a theoretical framework.
-This is done because if no assumption or simplifications are done, the SUSY mass spectrum would simply be too complicated to search for. 
+This is normally referred to as $mass$ $splitting$, which denotes the difference between the mass of the SUSY particles produced in the hard scatter and the mass of the LSP, $\Delta m = m_{\mathrm{hard\,scatter}}-m_{\mathrm{LSP}}$.
+If the $\Delta m$ is small, these scenarios are referred to as $compressed$, meaning that there is not much available energy for the decay products, where as in the $uncompressed$ scenarios, enough energy is available to produce high \pt decay products. 
+This latter scenario can also be referred to as $boosted$, as enough energy is available to give the decay products of, say, a vector boson a boost.   
+Another effect of the uncompressed scenarios is the production of on-shell vector bosons that would have been too massive to be produced given the available energy in a compressed signal scenario. 
+A case in which $m_{\mathrm{LSP}}>m_{\mathrm{hard\,scatter}}$ is kinematically forbidden.  
+\newpara
+\noindent\justify
+All these simplifications are done to make the models easier to understand, but this approach has the drawback that it is more complicated to fit in to a theoretical framework.
+This is done because if no assumptions are made or simplifications are done, the SUSY mass spectrum would simply be too complicated to search for. 
 The simplified models help us see where there might be hints of SUSY, and if there is, a thorough investigation of the full model can be performed in that phase space. 
 The simplified scenarios are categorized according to the interaction of the SUSY particles produced in the  hard scatter event. 
 Colored SUSY scenarios involve the production of SUSY particles that interact via the strong force, such as the gluinos or bottom squarks. 
 Electroweak SUSY scenarios involve the production of SUSY particles such as charginos, neutralinos and sleptons. 
-\section{SUSY with opposite sign same flavor leptons}
+\section{SUSY with opposite sign same flavor leptons}\label{sec:susyOS2l}
 \noindent\justify
 Two opposite sign same flavor leptons provide a powerful search tool for strong and electroweak SUSY. 
 This particular final state can appear in many SUSY scenarios, either through the production of an on-shell \PZ-boson or through the direct or intermediate production of sleptons. 
-The strength of this final state does not only lie in the ability to target many SUSY scenarios, the SM backgrounds are relatively small and very well understood, which makes them ideal for various data-driven background estimation techniques. 
+The strength of this final state does not only lie in the ability to target many SUSY scenarios, but the SM backgrounds are relatively small and very well understood, which makes them ideal for various data-driven background estimation techniques. 
 To put this into perspective, there are inclusive searches for strong SUSY prodcution in all hadronic final states that are completely swamped by QCD and $\PW+$jets processes. 
-On the other side of the spectrum, there are searches trageting electroweak SUSY production in multilepton final states that instead are low in SM backgrounds, but the backgrounds from charge misidentification of leptons and the jets faking leptons poses a major challenge. 
-The searches in this thesis is the middle ground between these two extreme final state scenarios with the strength of targeting a whole range of SUSY production modes.   
+On the other side of the spectrum, there are searches targeting electroweak SUSY production in multilepton final states that instead are low in SM backgrounds, but the backgrounds from charge misidentification of leptons and the jets faking leptons pose a major challenge. 
+The searches in this thesis represent the middle ground between these two extreme final state scenarios with the strength of targeting a whole range of SUSY production modes.   
 The strategy employed in this thesis is to define regions targeting both a high signal acceptance and purity, called signal regions (SRs).
+Throughout this thesis, this particular leptonic final state is referred to as ``opposite sign, same flavor'', ``opposite charge, same flavor'', or ``$e^{+}e^{-}$/$\mu^{+}\mu^{-}$'' interchangeably. 
 \newpara
 \noindent\justify
-This thesis is based on two papers. 
-The first paper \cite{Sirunyan:2017qaj} is a general search for SUSY in strong and electroweak production modes. 
-The second paper \cite{Sirunyan:2018nwe} presents a search targeting one particular SUSY production mode, namely direct selectron and smuon production.  
+This thesis is based on three results. 
+The first result \cite{Sirunyan:2017qaj} is a general search for SUSY in strong and electroweak production modes. 
+The second result \cite{Sirunyan:2018nwe} presents a search targeting one particular SUSY production mode, namely direct selectron and smuon production.  
 As all work performed in big collaborations such as the CMS experiment, no paper can be published independently. 
-Instead, the work of many people at different institutes is required, and all authors of the CMS experiment contribute to the collection of the data, validation fo reconstruction algorithms, derivation of corrections, developing of analysis methods, to name a few. 
-With this in mind, it is appropriate to mention that the first paper presented in this thesis relies on a collaboration of researchers at ETH Z\"{u}rich, RWTH Aachen, University of California at San Diego and University of Oviedo. 
+Instead, the work of many people at different institutes is required, and all authors of the CMS experiment contribute to the collection of the data, validation of reconstruction algorithms, derivation of corrections, developing of analysis methods, to name a few. 
+With this in mind, it is appropriate to mention that the first paper presented in this thesis relies on a collaboration of researchers at ETH Z\"{u}rich, RWTH Aachen, University of California at San Diego, University of Oviedo and The Institute of Physics of Cantabria. 
 I will highlight my contributions to the first paper, and cite the work of my collaborators when necessary. 
-Since my main contribution to the first paper was in the search for chargino-neutralino production (\firstcharg-\secondchi) and higgsino production, I will dedicate a large fraction of this thesis to a description of this search, and refer to it in the following as the "Electroweak superpartner search".
-A search for colored superpartners, more precisely targeting gluino (\gluino) and sbottom (\sbottom) production, will also be presented in this thesis, refered to in the following as "Colored superpartner search".
-The second paper that this thesis is based on, is a search for directly produced selectrons ($\seL$, $\seR$) and smuons ($\smuL$, $\smuR$), refered to in the following as "Slepton search". 
+Since my main contribution to the first paper was in the search for chargino-neutralino production (\firstcharg-\secondchi) and higgsino production, I will dedicate a large fraction of this thesis to a description of this search, and refer to it in the following as the ``Electroweak superpartner search''.
+A search for colored superpartners, more precisely targeting gluino (\gluino) and sbottom (\sbottom) production, will also be presented in this thesis, referred to in the following as ``Colored superpartner search''.
+The second paper that this thesis is based on, is a search for directly produced selectrons ($\seL$, $\seR$) and smuons ($\smuL$, $\smuR$), referred to in the following as ``Slepton search''. 
 The slepton search has many similarities to the searches for colored and electroweak superpartners, but has some main differences that needs other SM background prediction techniques. 
+What is common to the searches documented in \cite{Sirunyan:2017qaj} and \cite{Sirunyan:2018nwe}, is the assumption of $R$-parity conserving models. 
+These models thus predict one or more LSPs in the decay chain, that results in large missing transverse momentum (\ptmiss). 
+This variable is very complex and relies on the accurate identification and energy measurement of all particles in the event. 
+In order to have any ability to accurately differentiate large \ptmiss from SUSY particles, from other sources of \ptmiss such as due to mismeasured jets, from pileup or from neutrinos, highly performant \ptmiss reconstruction algorithms are needed. 
+The third paper \cite{Sirunyan:2019kia} is a study of the performance of this important discriminating variable. 
+This paper summarizes the performance of the two most common \ptmiss reconstruction algorithms during the 2016 running of the LHC. 
+My contributions to this paper are numerous, and the highlights are summarized in Chapter \ref{sec:met}. 
 \newpara
 \noindent\justify
 This chapter will contain a brief overview of the different SUSY production modes in the first section, followed by a description of the SM background processes common for the three searches. 
@@ -88,15 +102,16 @@ Lastly, the direct slepton search, which is the lowest cross section process, is
 The search for colored superpartners using opposite sign same flavor leptons can be done by targeting two production modes, that are presented in the following. 
 \subsubsection*{Gluino pair production}
 \noindent\justify
-The first production mode is Gauge mediated SUSY breaking (GMSB)~\cite{Matchev:1999ft,Meade:2009qv,Ruderman}, a model that assume strong production of a pair of gluinos (\gluino) that each decays into a pair of quarks ($u$, $d$, $s$, $c$, or $b$) and the lightest neutralino, \PSGczDo, shown on the left of Figure \ref{fig:feynmanStrong}. 
+The first production mode assumes GMSB, as introduced in Section \ref{sec:breaking}, a model that assumes strong production of a pair of gluinos (\gluino) that each decays into a pair of quarks ($u$, $d$, $s$, $c$, or $b$) and the lightest neutralino, \PSGczDo, shown on the left of Figure \ref{fig:feynmanStrong}. 
 The leptons are a result of the decay of the on-shell \PZ-boson at the end of the decay chain, and the large \ptmiss is due to the gravitino (\gravitino). 
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.45\textwidth]{images/strong/gluino.pdf}
-\includegraphics[width=0.45\textwidth]{images/strong/sbottom.pdf}
+\includegraphics[width=0.49\textwidth]{images/strong/gluino.pdf}
+\includegraphics[width=0.49\textwidth]{images/strong/sbottom.pdf}
 \caption{Diagrams for strong SUSY production. 
-The gluino GMSB model targeted by the strong on-Z search is shown on the left, that contains a one dilepton pair stemming from an on-shell \PZ boson decay. 
-On the right is a diagram showing a model in which bottom squarks are pair produced with subsequent decays that contain at least one dilepton pair. This model features a characteristic edge shape in the \mll spectrum given approximately by the mass difference of the \PSGczDt and \PSGczDo.}
+The gluino GMSB model targeted by the strong on-Z search is shown on the left, that contains one dilepton pair stemming from an on-shell \PZ boson decay. 
+On the right is a diagram showing a model in which bottom squarks are pair produced with subsequent decays that contain at least one dilepton pair. 
+This model features a characteristic edge shape in the \mll spectrum given approximately by the mass difference of the \PSGczDt and \PSGczDo.}
 \label{fig:feynmanStrong}
 \end{figure}                                                                                                                                          
 \subsubsection*{Sbottom pair production}
@@ -104,16 +119,27 @@ On the right is a diagram showing a model in which bottom squarks are pair produ
 The model involving the production of the superpartner of the bottom quark can also be targeted using opposite sign same flavor leptons.
 In this model, the \sbottom quarks decay to a bottom quark and \PSGczDt. 
 Two assumptions are made for the decay of the \PSGczDt. 
-In one case (upper half of the Feynman diagram in the right of Figure \ref{fig:feynmanStrong}), the \PSGczDt decay to a \slep and a lepton of the same flavor, where the \slep decays to a lepton of the same flavor but opposite charge, and the \PSGczDo LSP.   
-The sequential decay of the \slep (that in this work considered to be either a \se or \sm) results in the particular feature that the invariant mass of the two leptons has an edge shape with an endpoint dictated by the mass difference of the \PSGczDt and the \PSGczDo. 
-Further, the \sbottom and \PSGczDt masses are free parameters, the \PSGczDo is set to 100\GeV and the sleptons are assumed to be degenrate with the mass being average of the \PSGczDt and \PSGczDo masses. 
-The other decay mode of the \PSGczDt considered it visualized in the lower part of the Feynman diagram on the right of Figure \ref{fig:feynmanStrong}.
+In one case (upper half of the Feynman diagram in the right of Figure \ref{fig:feynmanStrong}), the \PSGczDt decay via a two-body decay via a real \slep and is allowed if at least one \slep is lighter than the mass difference of the neutralinos. 
+This scenario would result in an endpoint expressed through
+\begin{equation}
+(\mll^{max})^{2}=\frac{(m_{\PSGczDt}^{2}-m_{\slep}^{2})(m_{\slep}^{2}-m_{\PSGczDo}^{2})}{m_{\slep}^{2}}
+\label{eq:endpoint}
+\end{equation}
+where $m_{\slep}$ is the mass of the intermediate slepton, that in this work is considered to be either a \se or a \sm. . 
+This results in the particular feature that the invariant mass of the two leptons has a triangular, ``edge'', shape with an endpoint dictated by the $\mll^{max}$ in Equation \ref{eq:endpoint}. 
+The search for this model will from now on be called the the ``edge'', and the model is referred to as the sbottom or slepton edge model. 
+A potential excess in data compatible with this model would not only be a nice hint of SUSY, but the endpoint in the invariant mass spectrum would in fact give information on the mass hierarchy of the SUSY particles. 
+For this reason, a fit is performed to determine the position of the edge, which will be discussed further when the analysis strategy for the colored SUSY searches is presented in Chapter \ref{sec:strong}. 
+Further, the \sbottom and \PSGczDt masses are free parameters, the mass of the \PSGczDo is set to 100\GeV and the sleptons are assumed to be degenerate with the mass being average of the \PSGczDt and \PSGczDo masses. 
+\newpara
+\noindent\justify
+The other decay mode of the \PSGczDt considered is visualized in the lower part of the Feynman diagram on the right of Figure \ref{fig:feynmanStrong}.
 In this model, the \PSGczDt decays to a \PZ boson and the \PSGczDo LSP. 
 The \PZ boson can be on-shell or off-shell depending on the mass difference between the neutralinos, and can decay to any fermion pair allowed by the SM but in this work only the decay to an electron or muon pair is considered. 
 The branching fractions of the two \PSGczDt decay modes is considered to be 50\% each, and the model is interpreted in context of the exclusion of \sbottom and \PSGczDt. 
 \subsection*{Search for electroweak superpartners}\label{sec:searchEWK}
 \noindent\justify
-The SUSY models considered in the first paper assume electroweak superpartner production, that are presented in the following. 
+The SUSY models that assume electroweak superpartner production are presented in the following. 
 \subsubsection*{Chargino-Neutralino production}
 \noindent\justify
 The \firstcharg-\secondchi production is depicted in Figure \ref{sig:feynmanChargino}. 
@@ -122,40 +148,45 @@ The production cross sections for this model are computed in a limit of mass-deg
 All the other SUSY particles are assumed to be heavy and decoupled.
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.45\textwidth]{images/ewk/Figure_001-b.pdf}\\
+\includegraphics[width=0.49\textwidth]{images/ewk/Figure_001-b.pdf}\\
 \caption{Diagram corresponding to the chargino-neutralino production with the \firstcharg and \secondchi decaying into vector bosons (\PW and \PZ) and the LSP.} 
 \label{sig:feynmanChargino}
 \end{figure}                                                                                                                                                                    
 \subsubsection*{Higgsino production}
 \noindent\justify
 The remaining two models considered in the first paper assume the production of \firstchi-\firstchi pairs in GMSB.
-For bino- or wino-like neutralinos, the neutralino pair production cross section is very small, and thus a specific GMSB model is considered, with mass-degenerate higgsinos \firstcharg, \secondchi, and \firstchi as the next-to-lightest SUSY particles and a massless gravitino as the LSP~\cite{Matchev:1999ft,Meade:2009qv,Ruderman}.
-In the production of any two of these, \firstcharg\ or \secondchi\ decays immediately to \firstchi\ and low-momentum particles that do not impact the analysis, effectively yielding pair production of $\firstchi\firstchi$.
-Intermediate production of either \firstcharg\ or \secondchi\ is therefore not explicitly shown in the lower two diagrams of Figure \ref{sig:feynmanHiggsino} representing these models.
-In the first model (left of Figure \ref{sig:feynmanHiggsino}), the only allowed decay of the lightest neutralino is to a \PZ boson and a massless gravitino.
+For bino- or wino-like neutralinos, the neutralino pair production cross section is very small, and thus a specific GMSB model is considered, with four mass-degenerate higgsinos (\firstcharg, \secondchi, and \firstchi) and a massless gravitino as the LSP~\cite{Matchev:1999ft,Meade:2009qv,Ruderman}.
+In the production of any two of these higgsinos, \firstcharg\ or \secondchi\ decays immediately to \firstchi\ and low-momentum particles that do not impact the analysis, effectively yielding pair production of $\firstchi\firstchi$.
+The sum of the various higgsino production possibilities (\firstcharg\secondchi, \firstchi\secondchi, \firstcharg\firstcharg, \firstcharg\firstchi) describes the effective \firstchi\firstchi production mechanism. 
+Hence, none of the higgsino production possibilities are explicitly shown in Figure \ref{sig:feynmanHiggsino}, only the effective \firstchi\firstchi production is displayed.
+In the first model (left of Figure \ref{sig:feynmanHiggsino}), the only allowed decay of the lightest neutralino is a prompt decay of the \firstchi to a \PZ boson and a massless gravitino.
+\newpara
+\noindent\justify
 In the other model (right of Figure \ref{sig:feynmanHiggsino}), the lightest neutralino is allowed to decay to a gravitino and either a \PZ boson or an SM-like Higgs boson, with a 50\% branching fraction to each decay channel.
 The cross sections for higgsino pair production are computed in a limit of mass-degenerate higgsino states \secondchi, \firstcharg, and \firstchi.
 Again, all the other SUSY particles are assumed to be heavy and decoupled.
 Following the convention of real mixing matrices and signed neutralino masses \cite{Skands:2003cj}, the sign of the mass of \firstchi (\secondchi) are set to $+1$ ($-1$).
 The lightest two neutralino states are defined as symmetric (anti-symmetric) combinations of higgsino states by setting the product of the elements $N_{i3}$ and $N_{i4}$ of the neutralino mixing matrix $N$ to $+0.5$ ($-0.5$) for $i = 1$ ($2$).
-The elements $U_{12}$ and $V_{12}$ of the chargino mixing matrices $U$ and $V$ are set to 1.
-Common to these models is that they produce an on-shell \PZ boson giving the OCSF leptons, in association with a SM boson, and two LSPs resuting in large \ptmiss. 
+The elements $U_{12}$ and $V_{12}$ of the chargino mixing matrices $U$ and $V$ are set to 1 \cite{Skands:2003cj}.
+\newpara
+\noindent\justify
+Common to these models is that they produce an on-shell \PZ boson giving a pair of leptons of opposite charge and same flavor, in association with a SM boson, and two LSPs resuting in large \ptmiss. 
 The SM boson is either a \PW, \PZ or a H, and their decay mode to jets (or b-tagged jets in the case of the H) is targeted in the search.   
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.45\textwidth]{images/ewk/Figure_001-c.pdf}
-\includegraphics[width=0.45\textwidth]{images/ewk/Figure_001-d.pdf}
+\includegraphics[width=0.49\textwidth]{images/ewk/Figure_001-c.pdf}
+\includegraphics[width=0.49\textwidth]{images/ewk/Figure_001-d.pdf}
 \caption{Diagrams corresponding to the neutralino-neutralino model of where the neutralinos are allowed to decay to a gravitino and a \PZ boson (left) and where the neutralinos are allowed to decay to a gravitino and a \PZ boson or a Higgs boson, with a 50\% branching fraction to each decay channel (right).}
 \label{sig:feynmanHiggsino}
 \end{figure}                                                                                                                    
 \subsection*{Search for direct slepton production}\label{sec:searchSlepton}
 \noindent\justify
-Sleptons ($\seL$, $\smuL$, $\stauL$, $\seR$, $\smuR$, $\stauR$), are the superpartners of the charged left-handed and right-handed SM leptons\footnote{It is worth pointing out that the handedness does not refer to the helicity of sleptons (they are spin-0 particles!) but rather the handedness of the superpartners. The $\seL$ is thus the superpartner of the left-handed electron and nothing else.} 
+Sleptons ($\seL$, $\smuL$, $\stauL$, $\seR$, $\smuR$, $\stauR$), are the superpartners of the charged left-handed and right-handed SM leptons.\footnote{It is worth pointing out that the handedness does not refer to the helicity of sleptons (they are spin-0 particles!) but rather the handedness of the superpartners. The $\seL$ is thus the superpartner of the left-handed electron and nothing else.} 
 At sufficiently heavy slepton masses, the sleptons undergo a two-body decay into one of the heavier neutralinos or a chargino, while direct decays to a neutralino LSP are favored for light slepton masses.
 The second paper that this thesis is based on is on a search for directly produced selectrons and smuons, under the assumption of direct decays $\slep\to \ell\lsp$ with 100\% branching ratio, as sketched in Figure \ref{fig:feynmanSlepton}.
 \begin{figure}[!htp]
 \centering
-\includegraphics[width=0.55\textwidth]{images/slepton/Figure_001.pdf}
+\includegraphics[width=0.65\textwidth]{images/slepton/Figure_001.pdf}
 \caption{Diagram corresponding to the slepton model with two selectrons (smuons) directly produced and decay into electrons (muons) and a LSP} 
 \label{fig:feynmanSlepton}
 \end{figure}                                                                                                                                           
@@ -163,7 +194,7 @@ A search for slepton pair production has been performed with Run I 8 TeV data wi
 Figure~\ref{sig:xsec} shows the increase in cross section of the left handed sleptons with the higher center-of-mass energy of 13 TeV, and is showing promising prospects on discovery or exclusion for this search.
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.50\textwidth]{images/slepton/sleptons.pdf}
+\includegraphics[width=0.65\textwidth]{images/slepton/sleptons.pdf}
 \caption{Graphs showing the cross sections for slepton pair production at a center-of-mass energy of 8 TeV and 13 TeV.}
 \label{sig:xsec}
 \end{figure}                                                                                                                                                               

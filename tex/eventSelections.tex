@@ -1,19 +1,22 @@
-\chapter{EVENT SELECTIONS}\label{sec:eventSelection}
+\chapter{Event selections}\label{sec:eventSelection}
 \noindent\justify
-Common to the SUSY searches presented in this thesis is the final state containing two leptons of opposite charge and same flavor, and \ptmiss originating from the LSP.
-The difference lies in the hadronic activity and whether the lepton pair is compatible with a \PZ boson or not. 
+The \ptmiss variable, that has just been thoroughly described in the previous chapter, is the natural ingredient for any $R$-parity conserving SUSY search. 
+What is special with the searches presented in this thesis, is that in addition to just searching for event with large \ptmiss, the choice two leptons of opposite charge and same flavor provides a large signal sensitivity and discrimination from SM backgrounds.  
+This selection enables searches for both strongly and electroweakly produced SUSY, and for directly produced sleptons. 
+The common selections are the large \ptmiss and the two electrons or muons. 
+In addition, slightly different requirements on the hadronic activity in the events, and whether the lepton pair is compatible with a \PZ boson or not, are imposed to target the different signal models.  
 \newpara
 \noindent\justify
-This chapter contains an overview of the datasets and triggers used throughout this thesis. 
-The physics objects used to define the signal regions used for the colored and electroweak superpartner searches, and the direct slepton search, are introduced. 
+This chapter contains an overview of the datasets and triggers used for these analysis and the physics objects and selections applied to define the signal regions.
+%The physics objects used to define the signal regions used for the colored and electroweak superpartner searches, and the direct slepton search, are introduced. 
 In addition to the basic selections on leptons, jets, b-jets and \ptmiss, more specific variables such as the \mttwo variable and a \ttbar likelihood discriminator are presented.
 These variables are efficient in rejecting and categorizing SM background and are used in the design of the searches.   
 \newpage
 \section{Datasets}\label{sec:datasets}
 \noindent\justify
 As the searches presented in this thesis has the commonality that two same flavor opposite sign leptons are produced, naturally, the dielectron and dimuon streams of 13\TeV pp collision data are used.
-Further, additional datasets are used to predict a main SM background, collected with electron-muon, \ptmiss and JetHT triggers. 
-All datasamples are summarized in Table~\ref{tab:datasets}.  
+Additionally, an electron-muon datasets is used to collect events in a control regions needed for the background prediction, and JetHT and MET datasets are used to estimate the trigger efficiencies.
+All data samples are summarized in Table~\ref{tab:datasets}.  
 \begin{table}[ht!]
 \def\arraystretch{1.2}
     \caption{Datasets used in the strong, electroweak and slepton searches and \ptmiss study}
@@ -54,7 +57,7 @@ All datasamples are summarized in Table~\ref{tab:datasets}.
 \noindent\justify
 The trigger selection for the searches presented in this thesis is driven by the requirement of at least two leptons at the HLT.
 Due to the changes in instantaneous luminosity, different dilepton triggers were active at different times and with varying prescales. 
-This results in the need for a variety of triggers with slighlty different requirements.
+This results in the need for a variety of triggers with slightly different requirements.
 Non isolated double lepton paths are included to increase the efficiency in events with large dilepton system \pt. 
 Triggers with an isolation requirement on the leptons enable for the recording of lower \pt leptons. 
 The \pt requirements are asymmetric and depend on the flavor composition of the triggers.
@@ -117,7 +120,7 @@ All signal and supporting triggers are documented in Table~\ref{tab:triggers}.
 \noindent\justify
 Several MC event generators are used to simulate the background and signal processes in this analysis, with the different parts of the generators introduced in Section \ref{sec:MC}. 
 The simulation is normalized to luminosity using cross sections from \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns}.
-The \texttt{PYTHIA8} \cite{Sjostrand:2006za} package is used for parton showering, hadronization and undelying event simulation with the tune \texttt{CUETP8M1}, as described in Section \ref{sec:MC}.
+The \texttt{PYTHIA8} \cite{Sjostrand:2006za} package is used for parton showering, hadronization and underlying event simulation with the tune \texttt{CUETP8M1}, as described in Section \ref{sec:MC}.
 The various simulated samples used are presented in Appendix A.  
 \section{Lepton pair}\label{sec:lepSelection}
 \noindent\justify
@@ -127,7 +130,7 @@ This principle is reflected in the selections of the trigger requirement of the 
 Full efficiency for any of these values is reached at a \pt of 25(20) GeV for the leading (trailing) lepton, which is the requirement on the leptons for the control region. 
 One specific selection of this analysis is that not only the electrons are rejected if they appear in the transition region between the barrel and the endcap, but also the muons. 
 The reason for this is that the flavor symmetric background is taken from $e\mu$ events, thus the necessity of having symmetric cuts not only on the efficiency but also on the fiducial regions. 
-For this reason any lepton within the $|\eta|$ region of 1.4 to 1.6 is rejected, to keep the reconstruciton of electrons and muons as similar as possible. 
+For this reason any lepton within the $|\eta|$ region of 1.4 to 1.6 is rejected, to keep the reconstruction of electrons and muons as similar as possible. 
 \newpara
 \noindent\justify
 Since there are events with multiple lepton pairs, it is important to define an unambiguous way of selecting the ``relevant''  opposite-sign, same-flavor lepton pair. 
@@ -140,8 +143,8 @@ In the searches where an on-shell production of a \PZ boson is expected, natural
 This is the case for the electroweak superpartner search, and the colored superpartner search for gluinos. 
 On the other hand, the colored SUSY search with a sbottom induced process and an intermediate slepton decay result in a lepton pair that is not compatible with the \PZ boson mass. 
 This search instead utilizes bins in \mll outside of the \PZ mass window of 86-96\GeV. 
-Finally, the search for direct slepton production inlcudes two leptons that are not compatible with the \PZ mass. 
-To supress the Drell-Yan background, a generous veto on the \PZ boson mass of 76-106\GeV is applied in the signal region. 
+Finally, the search for direct slepton production includes two leptons that are not compatible with the \PZ mass. 
+To suppress the Drell-Yan background, a generous veto on the \PZ boson mass of 76-106\GeV is applied in the signal region. 
 All the signal and control region criteria on the leptons is summarized in Table \ref{tab:lepKin}.  
 \begin{table}[ht!]
 \def\arraystretch{1.2}
@@ -182,11 +185,11 @@ All the signal and control region criteria on the leptons is summarized in Table
 \justify
 The jets used throughout this thesis are clustered from PF objects using anti-$k_{t}$ algorithm with a distance parameter of 0.4, after excluding charged hadrons originating from pileup, as described in Section \ref{sec:objectsJets}.
 Further, the jets are corrected with JECs, as described in Section \ref{sec:objectsJets}. 
-Identification of jets originating from $b$ quark decays is done using the CSV v2 algortihm, introduced in Section \ref{sec:objectsBJets}.
+Identification of jets originating from $b$ quark decays is done using the CSV v2 algorithm, introduced in Section \ref{sec:objectsBJets}.
 Further, the scalar sum of all jet \pt is referred to as \HT and is used to design some of the signal regions.
 The colored and electroweak superpartner searches have a requirement on the $|\Delta\phi|$ between the leading jets and the \ptmiss to be larger than 0.4 to reduce contamination from fake \ptmiss events that can be aligned with the jets.   
 The \pt of the jets used for the control regions used for the background prediction methods is 35 GeV and the jets are required to be within $|\eta|<2.4$. 
-The jets are required to be seperated from selected leptons by 0.4 in $\Delta$R. 
+The jets are required to be separated from selected leptons by 0.4 in $\Delta$R. 
 In the slepton search no hadronic activity is expected, therefore a veto on jets of \pt greater than 25\GeV and $|\eta|<2.4$ is imposed.
 \begin{table}[ht!]
 \def\arraystretch{1.2}
@@ -222,30 +225,29 @@ In the slepton search no hadronic activity is expected, therefore a veto on jets
 Common to the various searches presented in this thesis is the existence of LSPs, as only R-parity conserving models are considered. 
 The LSPs are massive and escape detection, and would manifest themselves through the imbalance in the transverse plane as \ptmiss. 
 For this reason, all signal regions exploit the \ptmiss variable either explicitly through a binning in the variable, or implicitly in the \mttwo variable that uses it as an input. 
-The "Type-1 corrected" \ptmiss is used, with all \ptmiss filters applied to remove anomalous \ptmiss events. 
-Chapter \ref{sec:met} contains a throrugh overview of the \ptmiss reconstruction algorithms and their performance.  
+The "Type-I corrected" \ptmiss is used, with all \ptmiss filters applied to remove anomalous \ptmiss events. 
+Chapter \ref{sec:met} contains a thorough overview of the \ptmiss reconstruction algorithms and their performance.  
 \section{\mttwo}\label{sec:MT2}
-\noindent
-\justify
+\noindent\justify
 The leptonic \mttwo variable is used to define all signal regions. 
 It is a generalization of the transverse mass for pair-produced particles which decay into visible and invisible objects, as described in \cite{Lester:1999tx,Barr_2003}. 
 The variable is efficient in differentiating SM \ttbar from the signal final state scenarios, as it has a clear endpoint at the \PW boson mass for SM \ttbar. 
 The idea behind this powerful variable is summarized below. 
-The a leptonic decay of a top quark, the process can be summarized as follows
+Starting off with the leptonic decay of a top quark, 
 \begin{equation}
-t\rightarrow W^{+}b \rightarrow l^{+}\nu b 
+t\rightarrow W^{+}b \rightarrow l^{+}\nu b. 
 \end{equation}
-From a theoretical point of view, it is easy to construct the transverse mass (\mT) of the \PW boson using the kinematic variables of the lepton and the neutrino and energy and momentum conservation in the transverse plane,
+From a theoretical point of view, it is straight forward to construct the transverse mass (\mT) of the \PW boson using the kinematic variables of the lepton and the neutrino and energy and momentum conservation in the transverse plane,
 \begin{equation}
 M_{T}=\sqrt{m_{l}^{2}+m_{\nu}^{2}+2(E_{T}^{l}E_{T}^{\nu}-\vec{p}_{T}^{l}\vec{p}_{T}^{\nu})}
 \end{equation} 
 where the $\vec{p}_{T}^{l}$ and $\vec{p}_{T}^{\nu}$ are the transverse momenta of the lepton and the neutrino, and $E_{T}^{l}$ and $E_{T}^{\nu}$ the transverse energy of the same.
-In this case, the \mT gets a value very close to the \PW boson mass. 
-In the case of di-leptonic \ttbar, 
+In this case, the \mT has an endpoint very close to the \PW boson mass. 
+In the case of dileptonic \ttbar, 
 \begin{equation}
 pp\rightarrow t\bar{t}\rightarrow W^{+}b + W^{-}\bar{b}\rightarrow l^{+}\nu b +l^{-}\bar{\nu}\bar{b}
 \end{equation}
-the situation gets complicated. 
+the situation gets more complicated. 
 First of all, the pairing of the leptons and neutrinos that form the \PW bosons is not known. 
 Further, the neutrinos escape detection and the momenta they carry is just collectively summed up in the \ptmiss. 
 But let us disregard these experimental difficulties for a second. 
@@ -253,7 +255,7 @@ If one instead assume that the correct pairing is known, then one could create a
 \begin{equation}
 M_{W}^{2}\geq \mathrm{max}\{M_{T}^{2}\left(\vec{p}_{T}^{l^{+}},\vec{p}_{T}^{\nu}\right), M_{T}^{2}\left(\vec{p}_{T}^{l^{-}},\vec{p}_{T}^{\bar{\nu}}\right)\}.
 \end{equation}
-Meaning that in the case of di-leptonic \ttbar, if the lepton pairing is right the both transverse masses found would be close to the \PW boson mass. 
+Meaning that in the case of dileptonic \ttbar, if the lepton pairing is right the both transverse masses found would have endpoints very close to the \PW boson mass. 
 In order to cope with the problem of not knowing the \pt of the neutrinos, one can instead scan over all possible \ptmiss partitions: 
 \begin{equation}
 M_{W}\geq \mathrm{min}_{\vec{p}_{T}^{miss}=\vec{p}_{T1}^{miss}+\vec{p}_{T2}^{miss}}\left( \mathrm{max}\{M_{T}\left(\vec{p}_{T}^{l_{1}},\vec{p}_{T1}^{miss}\right), M_{T}\left(\vec{p}_{T}^{l_{2}},\vec{p}_{T2}^{miss}\right)\}\right).
@@ -264,14 +266,28 @@ M_{T2}= \mathrm{min}_{\vec{p}_{T}^{miss}=\vec{p}_{T1}^{miss}+\vec{p}_{T2}^{miss}
 \end{equation}
 For dileptonic \ttbar, the \mttwo will be very close to the \PW boson mass, whereas for signal scenarios, where the leptons are paired with the momentum of the LSPs, which will result in values much larger than the \PW boson mass. 
 The \mttwo variable is used to define all signal regions in all searches, as it effectively reduce contributions from SM \ttbar by imposing a cut around 80\GeV.
+The strength of this variable can be visualized in Figure \ref{fig:mttwoSim}, for a baseline signal region selection that is used for the search for colored superpartner production, in simulation. 
+The \mttwo requirement of 80\GeV is shown with a dashed line to indicate the reduction of SM backgrounds achieved above 80\GeV. 
+As can be seen in Figure \ref{fig:mttwoSim} the \mttwo for dileptonic \ttbar does not have a perfect endpoint at 80 GeV. 
+This has to do with the possible mismeasurements of the jets, and other instrumental effects, that spoils the distribution and extends the \ttbar contribution beyond the \PW mass endpoint.
+\begin{figure}[htbp!]
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{images/rsfof/MET_100_MT2_Run2016_36fb_SF_MCOnly.pdf}
+    \caption{The \mttwo distribution after requiring a minimum of 2 jets and \ptmiss 100\GeV in addition to an opposite sign, same flavor lepton pair. 
+The cut value of \mttwo 80\GeV that is used in most parts of the analysis is indicated by a grey dashed line.}
+\label{fig:mttwoSim}
+\end{center}
+\end{figure}
 \section{\ttbar likelihood discriminator}\label{sec:ttbarlikelihood}
 \noindent\justify
 The main SM background in the search for sbottom pair production in the slepton edge model is \ttbar. 
-In order to control this background, a likelihood discriminant is developed that categorizes how \ttbar-like an event is, and divide the events in \ttbar-like and non-\ttbar-like.
+The \mttwo variable introduced above is doing a great job in reducing the backgrounds from \ttbar. 
+However, a further reduction of the backgrounds and increase in sensitivity can be achieved by further controling the \ttbar background. 
+To this end, a likelihood discriminant is developed that categorizes how \ttbar-like an event is, and divide the events in \ttbar-like and non-\ttbar-like.
 \newpara
 \noindent\justify
-The \ttbar likelihood is constructed by picking four variables that are characteristic of \ttbar in opposite flavor events in data and MC.
-To calculate this likelihood the probability density functions of the four observables are determined by maximum likelihood fits in the opposite flavor control sample in the same kinematic region as the same-flavor SR.
+The idea is to use four, mostly uncorrelated, variables characteristic of the \ttbar process, extract their shapes from fits in an opposite flavor control regions, and interpret each of the shapes as PDFs describing the probability of one event to be \ttbar-like. 
+To calculate this likelihood the probability density functions of the four observables are determined by maximum likelihood fits in the opposite flavor control sample in the same kinematic region as the same flavor SR. 
 The four variables are:
 \begin{itemize}
 \item \ptmiss
@@ -279,6 +295,8 @@ The four variables are:
 \item $|\Delta\phi|$ between the leptons
 \item $\Sigma\mlb$
 \end{itemize}
+\newpara
+\noindent\justify
 The $\Sigma\mlb$ is the sum of the invariant masses of the two lepton and b-tagged jet systems, and should have an endpoint at $2\sqrt{m_{t}^{2}-m_{W}^{2}}$ for events resulting from top quarks.
 The \mlb is found by calculating all possible invariant mass combinations between the leptons and the jets in the event.
 The combination that gives the smallest value of \mlb is kept and the procedure is repeated for the remaining leptons and jets until the smallest value is found for that combination.

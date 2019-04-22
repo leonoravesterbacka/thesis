@@ -14,6 +14,7 @@
 \usepackage{ragged2e}
 \usepackage{wasysym}
 \usepackage{axodraw}
+\captionsetup[table]{skip=12pt}
 \newenvironment{packed_item}{
 \begin{itemize}
   \setlength{\itemsep}{1pt}
@@ -70,6 +71,7 @@
 \newcommand{\m}{\ensuremath{\,\text{m}}\xspace}
 \newcommand{\kg}{\ensuremath{\,\text{kg}}\xspace}
 \newcommand{\ns}{\ensuremath{\,\text{ns}}\xspace}
+\newcommand{\ps}{\ensuremath{\,\text{ps}}\xspace}
 \newcommand{\s}{\ensuremath{\,\text{s}}\xspace}
 \newcommand{\km}{\ensuremath{\,\text{km}}\xspace}
 \newcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
@@ -185,11 +187,13 @@
 \newcommand{\lsp}{\PSGczDo}
 \newcommand{\mcha}{\ensuremath{\PSGcpmDo}\xspace}
 \newcommand{\mneu}{\ensuremath{\PSGczDt}\xspace}
+\newcommand{\mumu}{\ensuremath{\mu^{+}\mu^{-}}\xspace}
 \newcommand{\MuMu}{\ensuremath{\mu^{\pm}\mu^{\mp}}\xspace}
 \newcommand{\ElEl}{\ensuremath{e^{\pm}e^{\mp}}\xspace}
+\newcommand{\ee}{\ensuremath{e^{+}e^{-  }}\xspace}
 \newcommand{\TauTau}{\ensuremath{\tau^\pm\tau^\mp}\xspace}
 \newcommand{\Tau}{\ensuremath{\tau}\xspace}
-\newcommand{\EM}{\ensuremath{\Pe^\pm\Pgm^\mp}\xspace}
+\newcommand{\EM}{\ensuremath{e^{\pm}\mu^{\mp}}\xspace}
 \newcommand{\rmue}{\ensuremath{r_{\mu/e}}\xspace}
 \newcommand{\rmueinv}{\ensuremath{r_{\mu/e}^{-1}}\xspace}
 \newcommand{\rmuec}{\ensuremath{r_{\Pgm/\Pe,\text{c}}}\xspace}
@@ -250,6 +254,7 @@
 \newcommand{\DR}{\ensuremath{\Delta\mathrm{R}}\xspace}
 \newcommand{\ptmisstrig}{\ensuremath{p_{\mathrm{T, trig}}^{\mathrm{miss}}}\xspace}
 \newcommand{\mhttrig}{\ensuremath{H_{\mathrm{T, trig}}^{\mathrm{miss}}}\xspace}
+\newcommand{\Zll}{\ensuremath{Z\to \mathrm{l}^+\mathrm{l}^-}}
 \newcommand{\Zmm}{\ensuremath{Z\to\mu^+\mu^-}}
 \newcommand{\Zee}{\ensuremath{Z\to \mathrm{e}^+\mathrm{e}^-}}
 \newcommand{\qt}{\ensuremath{{q}_{\mathrm T}}\xspace}
@@ -290,12 +295,12 @@
 %\renewcommand{\textfraction}{0.1}
 %\renewcommand{\floatpagefraction}{0.75}
 
-\SetFullName{Leonora Vesterbacka Olsson}%
+\SetFullName{Minna Leonora Vesterbacka Olsson}%
 \SetThesisType{Dissertation}%{Dissertation} %{Thesis}
 \SetDegreeType{Master of Science, Lund University}% {Doctor of Philosophy} {Master of Science}
 %\SetDegree{Master of Science Lund University}% {Doctor of Philosophy} {Master of Science}
 \SetNationality{Citizen of Sweden}% {Doctor of Philosophy} {Master of Science}
-\SetBirth{Born 14 July 1989}% {Doctor of Philosophy} {Master of Science}
+\SetBirth{Born on 14 July 1989}% {Doctor of Philosophy} {Master of Science}
 \SetGradMonth{May}%
 \SetGradYear{2019}%
 \SetDepartment{Physics}%
@@ -307,8 +312,9 @@
 \pagestyle{fancy}
 \usepackage{color}
 \definecolor{gray75}{gray}{0.75}
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
 \newcommand{\hsp}{\hspace{20pt}}
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Large}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{airforceblue}{|}\hsp}{0pt}{\huge}
 %\def\thepage{\textit{\arabic{page}}}
 
 \begin{document}
@@ -370,6 +376,7 @@
 
 % This file includes the file which creates the table of contents %
 \include{tex/abstract} %The abstract is created using this file and userinfo.tex
+\include{tex/abstractGerman} %The abstract is created using this file and userinfo.tex
 \include{tex/TOC} %This file creates the Table of Contents, List of Figures, and List of Objects (if any)
 % % % % % % % %delete or comment the file you want to remove
 % This line adds the word CHAPTER to the TOC just before the listing of the chapter and subsections begins
@@ -391,6 +398,7 @@
 \include{tex/strong}
 \include{tex/ewk}
 \include{tex/slepton}
+\include{tex/summary}
 \include{tex/TwoOrMoreAppendices}
 
 \include{tex/end}

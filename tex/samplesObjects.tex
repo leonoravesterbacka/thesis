@@ -1,6 +1,6 @@
 \chapter{PHYSICS OBJECTS}\label{sec:objects}
 \noindent\justify
-This chapter offers an overview reconstruction of physics objects produced in pp collisions in CMS. 
+This chapter contains an overview of the reconstruction of physics objects produced in pp collisions in CMS. 
 The Particle Flow algorithm (PF) is used in this thesis, which is an algorithm that combines subdetector information to form physics objects. 
 %This is followed by a description of the reconstruction of electrons, muons and jets is presented, along with the quality criteria imposed on the objects to be considered in a signal event or suitable to predict various SM background processes. 
 \newpara
@@ -149,7 +149,7 @@ Additionally, to avoid including hits from converted bremsstrahlung photons in t
 \noindent\justify  
 In order to reject secondary electrons produced in the conversion of photons in the tracker material, a vertexing algorithm is used. 
 The hits in the tracker from the converted photon are fit to a common vertex using the well-defined topological constraint that tracks from conversions have virtually the same tangent at the conversion vertex in both the ($r$, $\phi$) and ($r$, $z$) planes. 
-The convereted photon candidates are rejected according to the $\chi^{2}$ probability of the fit.
+The converted photon candidates are rejected according to the $\chi^{2}$ probability of the fit.
 \newpara
 \noindent\justify  
 An isolation variable, the mini-isolation is used which features a shrinking cone-size with increasing \pt of the lepton. 
@@ -200,12 +200,12 @@ Inner tracks and tracks in the muon systems are used as input for the muon-track
 DT and CSC hits are clustered and the track segments formed are used as seeds for the fitting. DT, CSC and RPC hits are used in the final fitting to reconstruct a standalone-muon track.
 \subsubsection*{Tracker-muon track}
 \noindent\justify
-An "inside-out" approach is used for the tracker-muon tracks. 
+An ``inside-out'' approach is used for the tracker-muon tracks. 
 If an inner track has $\pt > 0.5\GeV$ and $p > 2.5\GeV$, then it is extrapolated to the muon system. 
 If the extrapolated track and at least one track in a muon segment have an absolute difference in their position in $x$-coordinates less than 3\cm or the ratio of this distance to the uncertainty is less than 4, then tracks are considered to be matched.  
 \subsubsection*{Global-muon track}
 \noindent\justify
-In contrast to the tracker-muon track, an "outside-in" approach is used for global muon tracks. 
+In contrast to the tracker-muon track, an ``outside-in'' approach is used for global muon tracks. 
 A standalone-muon track is matched to an inner track, if the position and momentum of the two tracks are compatible. 
 The two tracks are combined and fitted using KF technique to form a global muon track. 
 The global muon track procedure improves the momentum resolution for muons of $\pt > 200\GeV$ compared to a tracker-muon track only fit. 
@@ -244,7 +244,7 @@ Requirements on the transversal and longitudinal distance between the tracker tr
 This cut is applied to suppress events with cosmic muons, tracks from pile-up or muons originating from in-flight decays.
 \newpara
 \noindent\justify  
-There are several identification categorizations developed in CMS for various analysis needs, with working points aimed to more or less efficienciently suppress fakes from punch through hadrons while keeping a high muon identification efficiency.
+There are several identification categorizations developed in CMS for various analysis needs, with working points aimed to more or less efficiently suppress fakes from punch through hadrons while keeping a high muon identification efficiency.
 In this work, the medium muon ID is used. The medium muon ID is optimized for prompt muons and for muons from heavy flavor decay, and the definition is summarized in Table~\ref{tab:muonsID}. 
 The isolation variable used for electrons, the mini-isolation, is also used for muons. 
 \begin{table}[ht!]
@@ -348,26 +348,29 @@ There are three different types of corrections, which are listed below and follo
 \subsubsection*{Pileup corrections}
 \noindent\justify
 The so-called pileup offset corrections or L1 corrections are determined to reduce the effect of pileup on the jet energy. 
-The corrections are determined in a simulated QCD dijet events, with and withoout pileup overlayed, before and after CHS applied. 
+The corrections are determined in a simulated QCD dijet events, with and without pileup overlayed, before and after CHS applied. 
 The corrections are parametrized as a function of a set of jet related quantities such as the jet area $A_{i}$, jet pseudorapidity $\eta$, jet \pt and the energy density $\rho$. \footnote{The energy density $\rho$ is defined as the median of the transverse momentum of the jets over their area, $\rho=\mathrm{median}(p_{\mathrm{T,i}}/ A_{i})$ } 
 \subsubsection*{MC-truth corrections} 
 \noindent\justify
-The MC-truth corrections, also known as L2L3 MC-truth corrections, are based on the comparison of a particle level jet and its corresponing reconstructed version. 
+The MC-truth corrections, also known as L2L3 MC-truth corrections, are based on the comparison of a particle level jet and its corresponding reconstructed version. 
 The corrections are derived from a QCD dijet simulated sample as a function of jet \pt and $\eta$. 
 \subsubsection*{Residual corrections}
 \noindent\justify
 The residual corrections, or L2L3 correction, are corrections to be applied on data only. 
 The relative, or $\eta$ dependent, correction is determined with QCD dijet events, where a tag jet in the barrel region is compared to a probe jet with no $\eta$ restriction of similar \pt. 
 The absolute correction is determined in $\gamma+$jets, Z($ee$/$\mu\mu$)+jets or multijet events, where a well-measured $\gamma$, \PZ boson or jet is compared to the recoiling jet 
-\subsection*{$b$-jet tagging}\label{sec:objectsBJets}
+\section{$b$-tagged jets}\label{sec:objectsBJets}
 \noindent\justify
-Heavy flavor jet identification algorithms are used in CMS as a means to select events containing top quark decays or SM bosons decaying through b quarks, and the following description of the algorithms follow that introduced in \cite{Sirunyan:2017ezt}. 
-As the lifetime of a hadron containing b-quarks is in the order of 1.5 ps, this results in a displacement of around a few millimeters up to a centimeter depending on the momentum available. 
-As a result, this displacement leads to the possibility to reconstruct an additional vertex where the b hadron decay takes place. 
-This secondary vertex (SV) is reconstructed from the displaced tracks that are characterized by their impact parameter (IP).\footnote{The impact parameter is defined as the distance between the primary vertex and the tracks at their closest point of approach.}
+Heavy flavor jet identification algorithms are used in CMS as a means to select events containing top quark decays or SM bosons decaying through $b$-quarks, and the following description of the algorithms follow that introduced in \cite{Sirunyan:2017ezt}. 
+Recalling the CKM matrix introduced in Section \ref{sec:yukawa}, the top quark decay almost exclusively to bottom quarks. 
+The bottom quark, on the other hand, have less options due to the suppression embedded in the $V_{cb}$ and $V_{ub}$ elements of the CKM matrix. 
+The suppressed transition results in the relatively long lifetime ($\sim10^{-12}\s$) and consequently a non negligible flight distance (few millimeters). 
+As a result, this displacement leads to the possibility to reconstruct an additional vertex where the $b$ hadron decay takes place. 
+This makes for a perfect experimental handle for identifying $b$-quark jets, known as ``b-tagging''. 
+The additional vertex where the decay takes place is called the secondary vertex (SV), and is reconstructed from the displaced tracks that are characterized by their impact parameter (IP).\footnote{The impact parameter is defined as the distance between the primary vertex and the tracks at their closest point of approach.}
 The SV reconstruction algorithm used in CMS in the LHC Run 2 is the inclusive vertex finder (IVF) algorithm.
 This algorithm uses as input all reconstructed tracks in the event with $\pt\geq0.8\GeV$ and with longitudinal IP $\leq0.3\cm$. 
-The IVF algorithm is seeded by tracks with a three dimensional IP greater thatn 50$\mum$ and the significance of the two dimensional IP (IP divided by its uncertainty) greater than 1.2. 
+The IVF algorithm is seeded by tracks with a three dimensional IP greater than 50$\mum$ and the significance of the two dimensional IP (IP divided by its uncertainty) greater than 1.2. 
 After this, the track clustering is performed by associating the seed track to any other track by imposing requirements on the distance at the point of closest approach and the angle between the tracks. 
 The resulting track clusters are fitted using an adaptive vertex fitter. 
 To resolve the track ambiguity when a track can be both associated to the PV and a SV, a track is discarded from the SV is it is more compatible with the PV. 
@@ -399,21 +402,21 @@ The variables combined in the algorithms are:
 \item The number of selected tracks.
 \item The jet $\pt$ and $\eta$.
 \end{itemize}
-The above discriminating variables are combined in a neural network and the final disciminator is shown in Figure \ref{fig:CSVv2}.
+The above discriminating variables are combined in a neural network and the final discriminator is shown in Figure \ref{fig:CSVv2}.
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.8\textwidth]{images/detector/Figure_031-c.png}\\
-\caption{The CSVv2 discriminator variable \cite{Sirunyan:2017ezt}}
+\includegraphics[width=0.7\textwidth]{images/detector/Figure_031-c.png}\\
+\caption{The CSVv2 discriminator for jets in a muon-enriched multijet sample. The simulated contributions of each jet flavor are shown with different colors \cite{Sirunyan:2017ezt}.}
 \label{fig:CSVv2}
 \end{figure}
-\subsection*{Isolated tracks}\label{sec:isotracks}
+\section{Isolated tracks}\label{sec:isotracks}
 \noindent
 \justify
 Isolated tracks will be used in this thesis as a means to improve the signal selection efficiency and background rejection. 
 The idea is to remove events that seem to contain more than two leptons. 
-Instead of removing events with a well-identified third lepton, a looser critera can be imposed, in the form of an isolated track.
+Instead of removing events with a well-identified third lepton, a looser criteria can be imposed, in the form of an isolated track.
 These tracks are defined using charged PF candidates with different requirements depending on the flavor. 
-PF electrons and PF muons, are required to pass $\pt>5\GeV$, $|\mathrm{dz}|<0.1\cm$, as well as being well associated to the PV, and track isolation cuts of isolation/\pt $<$ 0.2 and iso $<8\GeV$. 
+PF electrons and PF muons, are required to pass $\pt>5\GeV$, $|\mathrm{dz}|<0.1\cm$, as well as being well associated to the PV, and track isolation cuts of isolation/\pt $<$ 0.2 and isolation $<8\GeV$. 
 The track isolation sum is computed from all charged PF candidates within a cone of $\Delta$R$<0.3$, requiring them to pass $|\mathrm{dz}|<0.1\cm$ with respect to the PV. 
 Charged PF hadrons are required to pass $\pt>10\GeV$, $|\mathrm{dz}|<0.1\cm$, be well associated to the PV, and track isolation cuts of isolation$/\pt<0.1$ and isolation$<8\GeV$. 
 The track isolation is computed in the same way as for PF leptons above.
