@@ -11,9 +11,9 @@ This chapter provides a short overview of the accelerator complex at CERN and th
 \section{The accelerator chain}
 \noindent\justify
 The LHC ring is divided into 8 sectors separated by eight access points to the tunnel, named interaction points (IPs). 
-The purpose of the LHC is to accelerate protons or heavy ions up to center-of-mass energies of up to 14\TeV for protons and 2.76\TeV per nucleon for lead ions. 
+The purpose of the LHC is to accelerate protons or heavy ions to center-of-mass energies of up to 14\TeV for protons and 2.76\TeV per nucleon for lead ions. 
 The two rings in the LHC accelerate protons or heavy ions in opposite directions, to be collided at four of the eight IPs where huge particle detectors are located.
-The multi-purpose high luminosity experiments along the LHC ring are the CMS \cite{Chatrchyan:2008aa} and ATLAS (A Toroidal LHC ApparatuS) \cite{Armstrong:1994it} experiments located at IP5 and IP1, respectively. 
+The multi-purpose high luminosity experiments along the LHC ring are the CMS \cite{Chatrchyan:2008aa} and ATLAS\cite{Armstrong:1994it} experiments located at IP5 and IP1, respectively. 
 Both experiments collect data from pp, proton-ion and ion-ion collisions.
 The dedicated heavy ion collision detector ALICE (A Large Ion Collider Experiment) \cite{alice} is located at IP2, that collect the same data as ATLAS and CMS. 
 The LHCb \cite{CERN-LHCC-98-004} experiment is dedicated to low luminosity B-physics and collect data from pp collisions at IP8.                                  
@@ -21,8 +21,8 @@ The LHCb \cite{CERN-LHCC-98-004} experiment is dedicated to low luminosity B-phy
 \justify
 \begin{figure}[!htp]
   \centering
-   \includegraphics[width=0.95\textwidth]{images/detector/lhc.png}
-   \caption{Sketch of the various accelerators and experiments hosted at CERN.}
+   \includegraphics[width=0.8\textwidth]{images/detector/lhc.png}
+   \caption{Sketch of the various accelerators and experiments hosted at CERN \cite{Haffner:1621894}.}
    \label{fig:LHC}
 \end{figure}                                                                                                                                                                                    
 In order to get the protons to the center-of-mass energies quoted above, a long chain of circular and linear accelerators are needed. 
@@ -41,14 +41,14 @@ Up until now, the protons have been traveling in ``bunches'', which are packets 
 Upon injection into the LHC, the proton bunch trains are split in to two trains that enter the LHC in two opposing directions. 
 The goal of the LHC accelerator is to get these protons from 450\GeV to the maximum design energy of 7\TeV. 
 This is achieved by letting the proton beams traverse radiofrequency (RF) cavities that are cooled down to 4.5$\,$K using liquid Helium (up until this stage all accelerators have been operating in room temperature). 
-The RF cavities provide a high frequency alternating electric field of 400.8 MHz.
+The RF cavities provide a high frequency alternating electric field of $400.8\,$\MHz.
 There are eight single-cell cavities per beam that produce the nominal voltage of 16 MV during storage that results in an energy gain per particle per turn is 485\keV.   
 In addition to the RF cavities there are 1232 dipole magnets keeping the protons on the circular path. 
 The dipole magnets measure 15 meters in length and weighing 30 tons each and are made of a niobium-titanium alloy \cite{Boussard:1999rf}. 
 The magnets are superconductors that can be operated at a temperature of 1.9$\,$K and can reach a magnetic field of 8.33\T. 
 In addition to the dipole magnets for bending the path of the protons, various other magnets such as decapole, sextupole and quadropole magnets are used for controlling or correcting the path.      
 The accelerator chain is illustrated in Figure \ref{fig:LHC}. 
-Between 2010-2011 and during 2012, the LHC collided protons at a center-of-mass beam energy of $\sqrt{s}=7\TeV$ and $\sqrt{s}=8\TeV$ respectively, while the energy increased to $\sqrt{s}=13\TeV$ in 2015 and 2016. 
+Between 2010-2011 and during 2012, the LHC collided protons at a center-of-mass beam energy of $\sqrt{s}=7\TeV$ and $\sqrt{s}=8\TeV$ respectively, while the energy increased to $\sqrt{s}=13\TeV$ in 2015, 2016 and 2017. 
 \section{Beam parameters}
 \noindent\justify
 The number of events ($N_{event}$) that can be generated in a collision is dictated by an interplay between theoretical predictions and engineering capabilities, summarizes as
@@ -77,7 +77,7 @@ The peak design LHC instantaneous luminosity is $\mathcal{L}=10^{34}\cm^{-2}s^{-
         Beam emittance  ($\epsilon_{n}$) [$\mu$ rad] &  3.5 &  3.75   \\
         Half crossing angle  [$\mu$rad] &  $\pm160$ &  $\pm142.5$   \\
         $\beta-$function ($\beta^{*}$) [m] &  18 &  0.55   \\
-        Revolution frequency ($f_{rev}$) [\Hz] & \multicolumn{2}{c}{11245}\\
+        Revolution frequency ($f_{rev}$) [Hz] & \multicolumn{2}{c}{11245}\\
         Number of bunches ($n_{b}$) & \multicolumn{2}{c}{2808}\\
         Particles per bunch ($N_{b}$) & \multicolumn{2}{c}{$1.15\times10^{11}$}\\
 \hline\hline
@@ -99,7 +99,7 @@ The polar angle $\theta$ (that strictly speaking belongs to the spherical coordi
 \begin{figure}[!htp]
   \centering
    \includegraphics[width=0.7\textwidth]{images/detector/Figures_T_Coordinate.png}
-   \caption{Illustration of the CMS coordinate system.\cite{Schott:2014sea}}
+   \caption{Illustration of the CMS coordinate system \cite{Schott:2014sea}.}
    \label{fig:cylindrical}
 \end{figure}                                                                               
 The $rapidity$ $y$ is defined as:
@@ -108,7 +108,7 @@ y=\frac{1}{2}\mathrm{ln}\left(\frac{E+p_{L}}{E-p_{L}}\right)
 \label{eq:rapidity}
 \end{equation}
 with $p_{L}$ being the momentum in the longitudinal direction. 
-For relativistic particles it is common practice to describe the trajectory of the particles using the so called $pseudorapidity$ $\eta$ rather than $y$, where $\eta$ is defined as
+For relativistic particles it is common practice to describe the trajectory of the particles using the so called $pseudorapidity$ $\eta$ rather than $y$\footnote{This expression is obtained by rewriting the $E$ in Equation \ref{eq:rapidity} as $E=(p^{2} + m^{2})$ and identify $p_{L}/p=\cos\theta$.}, where $\eta$ is defined as
 \begin{equation}
 \eta=-\mathrm{ln}\left[\mathrm{tan}\left(\frac{\theta}{2}\right)\right].
 \end{equation}

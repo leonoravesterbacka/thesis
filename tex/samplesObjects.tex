@@ -121,7 +121,7 @@ The electron identification used in these searches use the MVA identification te
 \subsubsection*{$\bm{\sigma_{\eta}\sigma_{\eta}}$}
 \noindent\justify 
 The shower shape variable $\sigma_{\eta}\sigma_{\eta}$ is a measure of the spread of the electron shower along the $\eta$ direction.
-It is defined as $\sigma_{\eta}\sigma_{\eta}^{2}=\frac{[\Sigma (\eta_i-\bar{\eta})^{2}w_i]}{\Sigma w_i}$ where the sums run over the $5\times5$ matrix of crystals around the highest \ET crystal of SC, and $w_i$ denotes a weight that is logarithmically dependent on the contained energy.
+It is defined as $\sigma_{\eta}\sigma_{\eta}=\frac{[\Sigma (\eta_i-\bar{\eta})^{2}w_i]}{\Sigma w_i}$ where the sums run over the $5\times5$ matrix of crystals around the highest \ET crystal of SC, and $w_i$ denotes a weight that is logarithmically dependent on the contained energy.
 This variable exhibits a sharp peak for prompt electrons, whereas for misidentified electrons it is more spread, making it an ideal discrimination variable.  
 \subsubsection*{$\bm{|\Delta \eta| = |\eta_{SC}-\eta_{in}^{extrap}|}$}
 \noindent\justify 
@@ -216,14 +216,14 @@ If the extrapolated track and at least one track in a muon segment have an absol
 \subsubsection*{Global-muon track}
 \noindent\justify
 In contrast to the tracker-muon track, an ``outside-in'' approach is used for global muon tracks. 
-A standalone-muon track is matched to an inner track, if the position and momentum of the two tracks are compatible. 
+A standalone muon track is matched to an inner track, if the position and momentum of the two tracks are compatible. 
 The two tracks are combined and fitted using KF technique to form a global muon track. 
 The global muon track procedure improves the momentum resolution for muons of $\pt > 200\GeV$ compared to a tracker-muon track only fit. 
 This is because large \pt muons have a higher probability to reach more than one muon segment, which is required for the global muon reconstruction. 
 %\newpara
 %\noindent\justify
 Lower \pt muons benefit from the tracker-muon reconstruction as only one muon segment is required in the matching. 
-However, most muons are reconstructed as global muons, tracker muons or as both. The standalone-muon tracks have worse momentum resolution and can more often pick up cosmic muons. 
+However, most muons are reconstructed as global muons, tracker muons or as both. The standalone muon tracks have worse momentum resolution and can more often pick up cosmic muons. 
 \subsection*{Muon identification}
 \noindent\justify
 From an experimental point of view, muons are much easier to measure than electrons. 
@@ -232,7 +232,7 @@ Additionally, the unlikely process of photon conversion to two muons make a conv
 Instead, the different variables used for the muon identification is listed below:
 \subsubsection*{Reconstruction type}
 \noindent\justify
- A muon can be identified using the various muon-track reconstruction categorization, i.e. require standalone-muon track, tracker-muon track, or global-muon track. 
+ A muon can be identified using the various muon-track reconstruction categorization, i.e. require standalone muon track, tracker-muon track, or global-muon track. 
 PF muon identification requirement can also used imposed.
 \subsubsection*{Fraction of valid tracker hits}
 \noindent\justify
@@ -325,7 +325,7 @@ If smallest is a $d_{iB}$, remove particle $i$ and call it a jet.
 The following steps are repeated until all particles are clustered into jets. 
 \newpara
 \noindent\justify
-The predecessors to the anti-$k_t$ algorithms are recovered for $a=1$ ($k_{t}$ algorithm \cite{Salam:2009jx}) or $a=0$ (Cambridge/Aachen (CA) algorithm \cite{Dokshitzer:1997in}).  
+The predecessors to the anti-$k_t$ algorithms are recovered for $a=1$ ($k_{t}$ algorithm \cite{Salam:2009jx}) or $a=0$ (Cambridge /Aachen (CA) algorithm \cite{Dokshitzer:1997in}).  
 Setting the $a=-1$ is the basis of the anti-$k_t$ algorithm. 
 The choice of a negative $a$ is motivated by the following reasoning. 
 Considering an event with a few hard particles and many soft particles. 
@@ -434,7 +434,7 @@ The variables combined in the algorithms are:
 The above discriminating variables are combined in a neural network and the final discriminator is shown in Figure \ref{fig:CSVv2}.
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.7\textwidth]{images/detector/Figure_031-c.png}\\
+\includegraphics[width=0.49\textwidth]{images/detector/Figure_031-c.png}\\
 \caption{The CSVv2 discriminator for jets in a muon-enriched multijet sample. The simulated contributions of each jet flavor are shown with different colors \cite{Sirunyan:2017ezt}.}
 \label{fig:CSVv2}
 \end{figure}

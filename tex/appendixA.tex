@@ -1,0 +1,159 @@
+% The Editorial Office Requirements for the Table of Contents cause a significant problem
+% in Latex if there is only one Appendix. The Appendix is no longer labeled "A" in the TOC
+% but has the word "APPENDIX" placed in front of the title of the Appendix. This can be done
+% without issue IF nothing needs to be numbered by LaTeX in the Appendix. Unfortunately, most of the time
+% something needs to be numbered in that single Appendix. For this reason we have included
+% this document which makes the changes needed to set up the format changes needed for a single appendix.
+
+% There is no need to use the AppendixA.tex file just enter the appendix text after the chapter
+% setup is completed
+
+
+\appendix %
+
+\chapter*{APPENDIX A\\ Simulated samples for SUSY searches} 
+\noindent\justify
+\addcontentsline{toc}{chapter}{APPENDIX A: Simulated samples used for SUSY searches} 
+\chaptermark{Appendix}
+\markboth{Appendix}{Appendix}
+\setcounter{chapter}{1} 
+\label{app:MC}
+Several MC event generators are used to simulate the background and signal processes in this analysis, with the different parts of the generators introduced in Section \ref{sec:MC}. 
+The simulation is normalized to luminosity using cross sections from \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns}.
+The \texttt{PYTHIA8} \cite{Sjostrand:2006za} package is used for parton showering, hadronization and undelying event simulation with the tune \texttt{CUETP8M1}, as described in Section \ref{sec:MC}.
+In Tables~\ref{tab:MCsamples}, ~\ref{tab:4lMCsamples}, ~\ref{tab:3lMCsamples} and  ~\ref{tab:MCsamplesNonFS}, the various MC simulations used for the different background prediction methods 
+are listed.
+\begin{table}[ht!]
+\def\arraystretch{1.2}
+\caption{Simulated SM datasets used for the flavor symmetric (FS) background prediction. All samples are of the
+    \texttt{MINIAOD} data format and of the version \\ \texttt{RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6/}
+    and \texttt{Tune} is short for the pythia8 tune \texttt{CUETP8M1}.}
+    \label{tab:MCsamples}
+    \begin{center}
+        \begin{tabular}{|l l l|}
+        \hline \hline    
+        Process     &  Dataset  &  $\sigma$ (pb)          \\\hline
+        ttbar     &    &            \\
+        \scriptsize{\texttt{$t\bar{t}\rightarrow l^{+}\nu b + l^{-}\bar{\nu}\bar{b}$}}     & \scriptsize{\texttt{/TTTo2L2Nu\_TuneCUETP8M2\_ttHtranche3\_13TeV-powheg-pythia8}}     &  \scriptsize{831.76$\times0.1086^{2}\times$9}      \\
+        \scriptsize{\texttt{$t\bar{t}\rightarrow l^{-}\bar{\nu}+$jets}} &\scriptsize{\texttt{/TTJets\_SingleLeptFromTbar\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8}} &   \scriptsize{182.2}      \\
+        \scriptsize{\texttt{$t\bar{t}\rightarrow l^{+}\nu+$jets}}     & \scriptsize{\texttt{/TTJets\_SingleLeptFromT\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8}}     &   \scriptsize{182.2}      \\
+        Single Top     &    &            \\
+        \scriptsize{\texttt{$W^{+}\rightarrow t\bar{b}$}}     & \scriptsize{\texttt{/ST\_s-channel\_4f\_leptonDecays\_13TeV-amcatnlo-pythia8}}      &  \scriptsize{3.36}       \\
+        \scriptsize{\texttt{$\bar{b}\rightarrow \bar{t}W^{+}$}}     & \scriptsize{\texttt{/ST\_tW\_antitop\_5f\_NoFullyHadronicDecays\_13TeV-powheg}}  &   \scriptsize{11.7}      \\
+        \scriptsize{\texttt{$b\rightarrow t W^{-}$}}     & \scriptsize{\texttt{/ST\_tW\_top\_5f\_NoFullyHadronicDecays\_13TeV-powheg}}      &  \scriptsize{11.7}       \\
+        \scriptsize{\texttt{$q\bar{b}\rightarrow q'\bar{t}$}} & \scriptsize{\texttt{/ST\_t-channel\_antitop\_4f\_inclDecays\_13TeV-powhegV2-madspin-pythia8}}&  \scriptsize{124.0}       \\
+        \scriptsize{\texttt{$qb\rightarrow q't$}}     & \scriptsize{\texttt{/ST\_t-channel\_top\_4f\_inclDecays\_13TeV-powhegV2-madspin-pythia8}}      &  \scriptsize{208.0}       \\
+        Diboson (FS)    &    &            \\
+        \scriptsize{\texttt{$WW\rightarrow l^{+}\nu l^{-}\bar{\nu}$}}     & \scriptsize{\texttt{/WWTo2L2Nu\_13TeV-powheg-pythia8}}  &  \scriptsize{(118.7-3.974)$\times0.1086^{2}\times$9}      \\          
+        \scriptsize{\texttt{$gg\rightarrow WW\rightarrow l^{+}\nu l^{-}\bar{\nu}$}}     & \scriptsize{\texttt{/GluGluWWTo2L2Nu\_MCFM\_13TeV}}  &  \scriptsize{(3.974$\times0.1086^{2}\times$9$\times$1.4}      \\          
+        \scriptsize{\texttt{$gg\rightarrow H \rightarrow WW$}}     & \scriptsize{\texttt{/GluGluHToWWTo2L2Nu\_M125\_13TeV\_powheg\_JHUgen\_pythia8}}  &  \scriptsize{1.002}      \\          
+        \scriptsize{\texttt{$WW$}}     & \scriptsize{\texttt{/WW\_DoubleScattering\_13TeV-pythia8 }}  &  \scriptsize{1.617}      \\          
+        \scriptsize{\texttt{$WW$}}     & \scriptsize{\texttt{/WpWpJJ\_EWK-QCD\_TuneCUETP8M1\_13TeV-madgraph-pythia8  }}  &  \scriptsize{0.037}      \\          
+        \scriptsize{\texttt{$q\bar{q}\rightarrow l\nu\gamma$}}     & \scriptsize{\texttt{/WGToLNuG\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 }}  &  \scriptsize{405.3}      \\          
+        Triboson (FS)    &    &            \\
+        \scriptsize{\texttt{WWW}}     & \scriptsize{\texttt{/WWW\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{ 0.209}      \\      
+        \scriptsize{\texttt{WW$\gamma$}}     & \scriptsize{\texttt{/WWG\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{ 0.215}      \\      
+        Rare (FS)    &    &            \\
+        \scriptsize{\texttt{$t\bar{t}W$}}     & \scriptsize{\texttt{/TTWJetsToLNu\_Tune\_13TeV-amcatnlo-madspin-pythia8}}  &  \scriptsize{0.204}     \\           
+        \scriptsize{\texttt{$t\bar{t}W$}}     & \scriptsize{\texttt{/TTWJetsToQQ\_Tune\_13TeV-amcatnloFXFX-madspin-pythia8}}  &  \scriptsize{0.406}     \\           
+        \scriptsize{\texttt{$t\bar{t}H$}}     & \scriptsize{\texttt{/ttHToNonbb\_M125\_TuneCUETP8M2\_ttHtranche3\_13TeV-powheg-pythia8}}  &  \scriptsize{0.215}     \\       
+        \scriptsize{\texttt{$VH$}}     & \scriptsize{\texttt{/VHToNonbb\_M125\_13TeV\_amcatnloFXFX\_madspin\_pythia8}}  &  \scriptsize{0.952}      \\                           
+        \scriptsize{\texttt{$tttt$}}     & \scriptsize{\texttt{/TTTT\_TuneCUETP8M2T4\_13TeV-amcatnlo-pythia8}}  &  \scriptsize{0.009}      \\    
+        \scriptsize{\texttt{$W$+jets}}     & \scriptsize{\texttt{/WJetsToLNu\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8}}  &  \scriptsize{61527}      \\             
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                                 
+
+\begin{table}[ht!]
+\begin{center}
+\def\arraystretch{1.2}
+    \caption{Simulated SM datasets used for the ZZ to 4 lepton control regions. All samples are of the
+    \texttt{MINIAOD} data format and of the version  \\ \texttt{RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6/}
+and \texttt{Tune} is short for the pythia8 tune \texttt{CUETP8M1}. The k-factor referred to is specified in Subsection~\ref{higherOrderCorr}}
+    \label{tab:4lMCsamples}
+        \begin{tabular}{|l l l|}
+        \hline \hline    
+        Process     &  Dataset  &  $\sigma$ (pb)          \\\hline
+        ZZ $\rightarrow 4l$     &    &            \\
+        \scriptsize{\texttt{$ZZ\rightarrow 4l$}}     & \scriptsize{\texttt{/ZZTo4L\_13TeV\_powheg\_pythia8}}                                 &   \scriptsize{1.256$\times$ k-factor}      \\ 
+        \scriptsize{\texttt{$gg\rightarrow H \rightarrow ZZ$}}     & \scriptsize{\texttt{/GluGluHToZZTo4L\_M125\-13TeV\_powheg2\_JHUgenV6\_pythia8}}&   \scriptsize{0.013}      \\ 
+        \scriptsize{\texttt{$qq\rightarrow H \rightarrow ZZ$}}     & \scriptsize{\texttt{/VBF\_HToZZTo4L\_M125\_13TeV\_powheg2\_JHUgenV6\_pythia8}}&   \scriptsize{0.001}      \\ 
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 4e $}}     & \scriptsize{\texttt{/GluGluToContinToZZTo4e\_13TeV\_MCFM701\_pythia8}}  &  \scriptsize{0.001586 $\times$ 2.3}      \\    
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 4\mu$}}     & \scriptsize{\texttt{/GluGluToContinToZZTo4mu\_13TeV\_MCFM701\_pythia8}}  &  \scriptsize{0.001586 $\times$ 2.3}      \\    
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 4\tau$}}     & \scriptsize{\texttt{/GluGluToContinToZZTo4tau\_13TeV\_MCFM701\_pythia8}}  &  \scriptsize{0.001586 $\times$ 2.3}      \\    
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\tau$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2e2tau\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3}      \\    
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\mu$}} & \scriptsize{\texttt{/GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3}      \\    
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2\mu2\tau$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.003194 $\times$ 2.3} \\    
+        ZZ $\rightarrow 2l 2\nu$     &    &            \\
+        \scriptsize{\texttt{$ZZ\rightarrow 2l2\nu$}}     & \scriptsize{\texttt{/ZZTo2L2Nu\_13TeV\_powheg\_pythia8}}  &  \scriptsize{0.564$\times$ k-factor}      \\
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2e2\nu$}} & \scriptsize{\texttt{/GluGluToContinToZZTo2e2nu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.001720 $\times$ 2.3}      \\    
+        \scriptsize{\texttt{$gg \rightarrow ZZ\rightarrow 2\mu2\nu$}}& \scriptsize{\texttt{/GluGluToContinToZZTo2mu2nu\_13TeV\_MCFM701\_pythia8 }}  &  \scriptsize{0.001720 $\times$ 2.3} \\    
+        Others     &    &            \\
+        \scriptsize{\texttt{$ZZ\rightarrow 2l2q$}}     & \scriptsize{\texttt{/ZZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}}  &  \scriptsize{3.28}      \\
+        \scriptsize{\texttt{$ZZZ$}}     & \scriptsize{\texttt{/ZZZ\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{0.0139}      \\                               
+        \scriptsize{\texttt{$VH$}}     & \scriptsize{\texttt{/VHToNonbb\_M125\_13TeV\_amcatnloFXFX\_madspin\_pythia8}}  &  \scriptsize{0.952}      \\                           
+        \scriptsize{\texttt{$q\bar{q}\rightarrow l^{+}l^{-}\gamma$}}     & \scriptsize{\texttt{/ZGTo2LG\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8 }}         &   \scriptsize{123.9}      \\ 
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                                   
+
+
+\begin{table}[ht!]
+\begin{center}
+\def\arraystretch{1.2}
+    \caption{Simulated SM datasets used for the WZ control regions. All samples are of the
+    \texttt{MINIAOD} data format and of the version \\ \texttt{RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6/}
+    and \texttt{Tune} is short for the pythia8 tune \texttt{CUETP8M1}.}
+    \label{tab:3lMCsamples}
+        \begin{tabular}{|l l l|}
+        \hline \hline    
+        Process     &  Dataset  &  $\sigma$ (pb)          \\\hline
+        \scriptsize{\texttt{$WZ\rightarrow  l^{+}l^{-} l\nu$}}     & \scriptsize{\texttt{/WZTo3LNu\_TuneCUETP8M1\_13TeV-powheg-pythia8}}  &  \scriptsize{4.429 $\times$ 1.109}      \\             
+        \scriptsize{\texttt{$WZ\rightarrow  l^{+}l^{-}2q$}}     & \scriptsize{\texttt{/WZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8}}      &  \scriptsize{5.595 $\times$ 1.109}       \\    
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                                                                    
+
+\begin{table}[ht!]
+\begin{center}
+\def\arraystretch{1.2}
+    \caption{Various non flavor symmetric processes. All samples are of the \texttt{MINIAOD} data format and of the version 
+      \\  \texttt{RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6/} and \texttt{Tune} is short for the pythia8 tune \texttt{CUETP8M1}.}
+    \label{tab:MCsamplesNonFS}
+        \begin{tabular}{|l l l|}
+        \hline \hline    
+        Process     &  Dataset  &  $\sigma$ (pb)          \\\hline
+        Drell-Yan     &    &            \\
+        \scriptsize{\texttt{$Z/\gamma^{*}\rightarrow l^{+}l^{-} (50)$}}     & \scriptsize{\texttt{/DYJetsToLL\_M-50\_Tune\_13TeV-madgraphMLM-pythia8}}      &  \scriptsize{1921.8 $\times$ 3}       \\
+        \scriptsize{\texttt{$Z/\gamma^{*}\rightarrow l^{+}l^{-} (10-50)$}}     & \scriptsize{\texttt{/DYJetsToLL\_M-10to50\_Tune\_13TeV-madgraphMLM-pythia8}}  &  \scriptsize{18610}      \\
+        Various non FS     &    &            \\
+        \scriptsize{\texttt{$t\bar{t}Z$}}     & \scriptsize{\texttt{/TTZToLL\_M-1to10\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8}}  &  \scriptsize{0.049}     \\                
+        \scriptsize{\texttt{$t\bar{t}Z$}}     & \scriptsize{\texttt{/TTZToLLNuNu\_M-10\_Tune\_13TeV-amcatnlo-pythia8}}  &  \scriptsize{0.253}     \\                
+        \scriptsize{\texttt{$t\bar{t}Z$}}     & \scriptsize{\texttt{/TTZToQQ\_Tune\_13TeV-amcatnlo-pythia8}}  &  \scriptsize{0.530}     \\              
+        \scriptsize{\texttt{$tZq$}}     & \scriptsize{\texttt{/tZq\_ll\_4f\_13TeV-amcatnlo-pythia8}}  &  \scriptsize{0.076}      \\                           
+        \scriptsize{\texttt{$tWZ$}}     & \scriptsize{\texttt{/ST\_tWll\_5f\_LO\_13TeV-MadGraph-pythia8}}  & \scriptsize{0.011}      \\     
+        \scriptsize{\texttt{WWZ}}     & \scriptsize{\texttt{/WWZ\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{0.165}      \\      
+        \scriptsize{\texttt{WZZ}}     & \scriptsize{\texttt{/WZZ\_Tune\_13TeV-amcatnlo-pythia8}}  & \scriptsize{0.056}      \\      
+
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}                                                                                                                                                                              
+\subsection*{Higher order corrections}\label{higherOrderCorr}
+\noindent\justify
+For the $WZ\rightarrow  l^{+}l^{-} l\nu$ and $WZ\rightarrow  l^{+}l^{-}2q$ processes, a NLO to NNLO correction factor of 1.109 is applied \cite{Grazzini:2016swo}. For the qq$\rightarrow$ZZ 
+process, a QCD NLO to NNLO correction factor is applied as a function of generator-level \pt of the diboson system.
+\begin{figure}[!h]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=0.9\textwidth]{images/slepton/kfactors.pdf} \\
+\end{tabular}
+\caption{QCD NNLO/NLO k factors for the qq$\rightarrow$ZZ process in generator level variables of the diboson system. }
+\label{fig:ZZkfactor}
+\end{center}
+\end{figure}                                                                                                                                                                                
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

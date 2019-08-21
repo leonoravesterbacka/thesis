@@ -1,8 +1,8 @@
 \chapter{Event Reconstruction}
 \noindent\justify
 The basis of any LHC data analysis relies on the concept of an 'event'. 
-An event refers to a succesful collision of two protons that results in the full readout of the CMS detector, and subsequently the combination of subdetector information that forms physics objects. 
-The LHC delivers proton bunches at a rate of 40\MHz\ but only a small fraction of the protons in the bunches result in collisions of interest to the CMS physics program.
+An event refers to a collision of at least two protons that results in the full readout of the CMS detector, and subsequently the combination of subdetector information that forms physics objects. 
+The LHC delivers proton bunches at a rate of $40\,$\MHz but only a small fraction of the protons in the bunches result in collisions of interest to the CMS physics program.
 In fact, if all collisions would lead to a full readout of the detector, there would not be enough bandwidth to readout the information, nor space to store it for offline analysis. 
 With these limitations in mind, the CMS has developed a two-tier system to select events of physics interest, the Level 1 (L1) trigger and the high level trigger (HLT). 
 \newpara
@@ -18,9 +18,9 @@ This chapter describes how the physics processes are generated and how their int
 \noindent
 \justify
 During 2016 pp run of the LHC, the LHC delivered proton bunches with a time separation of 25\ns, and a peak luminosity reaching the unprecedented value of $10^{-34}\mathrm{cm}^{-2}\mathrm{s}^{-1}$. 
-At this peak luminosity, the pp interaction rate exceeds 1\GHz, as the mean of the number of interaction per bunch is 25, which is a rate impossible to readout with the technology to date.   
-A two tier triggering system helps differentiate which of the 1\GHz\ contain interesting events, while discarding the rest. 
-This enables a reduction of the rate down to 400\Hz, which is feasible for offline storage.   
+At this peak luminosity, the pp interaction rate exceeds $1\,$\GHz, as the mean of the number of interaction per bunch is 25, which is a rate impossible to readout with the technology to date.   
+A two tier triggering system helps differentiate which of the $1\,$\GHz contain interesting events, while discarding the rest. 
+This enables a reduction of the rate down to $400\,$\Hz, which is feasible for offline storage.   
 \subsection*{The Level 1 trigger}
 \noindent
 \justify
@@ -28,8 +28,8 @@ The L1 trigger is a hardware system that uses input from the calorimeters and th
 Tracking information is not included at this step, as track reconstruction is too time consuming. 
 \begin{figure}[!htp]
   \centering
-   \includegraphics[width=0.6\textwidth]{images/detector/figures_L1-overview.png}
-   \caption{Chart showing the organization of the various components of any L1-accept. The calorimetry and muons systems work in parallel and are combined into a global trigger.}
+   \includegraphics[width=0.49\textwidth]{images/detector/figures_L1-overview.png}
+   \caption{Chart showing the organization of the various components of any L1-accept. The calorimetry and muons systems work in parallel and are combined into a global trigger \cite{Khachatryan:2016bia}.}
    \label{fig:L1}
 \end{figure}                                                                           
 Instead, information from the calorimeters and the muon detectors is combined into a global trigger, as illustrated in Figure \ref{fig:L1}. 
@@ -43,7 +43,7 @@ Again, no information from the tracker is used at L1, but muons can still be mor
 Using the CSC and DT track finders, the tracks of muons can be identified along with their \pt. 
 This information, together with muon trigger candidate hits in the RPC, is sent to the global muon trigger (GMT). 
 The information from the GCT and GMT is combined and a decision is made whether to keep the event or not, so called L1-accept. 
-This trigger system has now brought down the rate of 1\GHz\ to 100\kHz, and the L1-accept is passed to all subdetectors that are read out and passed on to the HLT.
+This trigger system has now brought down the rate of $1\,$\GHz to $100\,$\kHz, and the L1-accept is passed to all subdetectors that are read out and passed on to the HLT.
 \newpara
 \noindent\justify
 A way to further reduce the rates is to scale them down. 
@@ -65,20 +65,20 @@ Conversely, as the production rate of higher \pt muons is lower, one can afford 
 As will be seen later in the thesis, this is the reason for the use of the different HLT paths such as \texttt{HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL} (involving isolation requirement on both muons) and \texttt{HLT\_Mu30\_TkMu11} (involving higher \pt requirements and no isolation requirements), to ensure triggering on all possible events with interesting physics.
 \newpara
 \noindent\justify
-Further, HLT paths can involve objects like the Calo \ptmiss (computed using only calorimeter deposits), PF \ptmiss (computed using only PF jets), \HT (scalar sum of all jet \pt above a threshold) and $\cancel{\HT}$ (the missing \HT). 
+Further, HLT paths can involve objects like the Calo \ptmiss (computed using only calorimeter deposits), Particle Flow (PF) \ptmiss (computed using only PF jets), \HT (scalar sum of all jet \pt above a threshold) and $\cancel{\HT}$ (the missing \HT). 
 The \ptmiss triggers are most sensitive to triggering on anomalous events where the large \ptmiss is originating from noise, beam halo or other sources, which will be discussed in Chapter \ref{sec:met}. 
 In order to keep low rates for these triggers, noise cleaning algorithms are applied at the HLT, and energy deposits associated to beam halo or HB/HE noise is removed from the energy sum and the calorimeter based \ptmiss is recomputed. 
 The noise cleaning algorithms are fully efficient in Run 2 and reduce the rate by a factor of 2.5. 
 Additionally, there is even the possibility to get a better estimation of the \ptmiss at HLT, by propagating the jet energy corrections (JECs) to the jets and to the computation of the PF \ptmiss.\footnote{The JECs will get a proper introduction in Section \ref{sec:JEC}, and the \ptmiss calibration in Section \ref{sec:metcorrections}.} 
 This results in an improved efficiency and a further rate reduction. 
-This thesis contains a detailed study on the performance of the \ptmiss in Run 2, and related to this, Figure \ref{fig:triggerMET} is showing the efficiencies of the different \ptmiss algorithms at L1 and at HLT compared to the offline \ptmiss.   
-\begin{figure}[!htp]
-  \centering
-   \includegraphics[width=0.6\textwidth]{images/met/Figure_006.pdf}
-   \caption{The \ptmiss trigger efficiency measured in the single-electron sample. The efficiency of each reconstruction algorithm, namely the L1, the calorimeter and the PF based \ptmiss algorithms, is shown separately. The numbers in parenthesis correspond to the online \ptmiss thresholds.}
-   \label{fig:triggerMET}
-\end{figure}                                                                         
-The HLT reduces the rate from the L1 output of 100\kHz\ to 1\kHz. 
+%This thesis contains a detailed study on the performance of the \ptmiss in Run 2, and related to this, Figure \ref{fig:triggerMET} is showing the efficiencies of the different \ptmiss algorithms at L1 and at HLT compared to the offline \ptmiss.   
+%\begin{figure}[!htp]
+%  \centering
+%   \includegraphics[width=0.6\textwidth]{images/met/Figure_006.pdf}
+%   \caption{The \ptmiss trigger efficiency measured in the single-electron sample. The efficiency of each reconstruction algorithm, namely the L1, the calorimeter and the PF based \ptmiss algorithms, is shown separately. The numbers in parenthesis correspond to the online \ptmiss thresholds.}
+%   \label{fig:triggerMET}
+%\end{figure}                                                                         
+The HLT reduces the rate from the L1 output of $100\,$\kHz to $1\,$\kHz. 
 The data that now have passed the L1 and HLT will be sent of the CERN Tier-0, described in the subsequent section. 
 As the following reconstruction of the data is very computing intense and time consuming, there is the possibility to only use the cores to process some of the data immediately, while some is left for later reconstruction. 
 %This concept of data-parking has been used during both Run 1 and 2 of the LHC, and is at the time of writing used to park some of the $b$-physics data collected during the end of the Run 2. 
@@ -92,13 +92,13 @@ Once the CMS HLT has decided what events to keep, the information is sent to the
 The CMS software, CMSSW, is a centrally maintained code base that reconstructs objects out of calorimeter deposits, hits in the muon chambers and tracks in the pixel and silicon trackers, and stores them in $Event$ $Data$ $Model$ format (EDM).    
 \subsection*{Dataformats}
 \noindent\justify
-The reconstruction of the collision data is processed at the Tier-0 and is stored in so-called RECO format, a format containing much of the detector information and is thus associated with very large event sizes of 1.2\MB.
+The reconstruction of the collision data is processed at the Tier-0 and is stored in so-called RECO format, a format containing much of the detector information and is thus associated with very large event sizes of $1.2\,$\MB.
 In order to make the storage and analysis as easy as possible, a set of data tiers are processed that keeps the event sizes to a minimum.
-The first step in the data tier format processing is the Analysis Object Data (AOD) which has discarded much of the RAW detector information not needed for analysis, and decreased the event size greatly to around 300\kB.
+The first step in the data tier format processing is the Analysis Object Data (AOD) which has discarded much of the RAW detector information not needed for analysis, and decreased the event size greatly to around $300\,$\kB.
 The next step is the MINIAOD format, that was introduced for the Run 2 of the LHC.
 The MINIAOD contains all high level physics objects, all high level corrections for jets and \ptmiss, all particles returned by the Particle Flow algorithm, all generator truth information for simulation, and all trigger information.
-By only saving the above information needed for mainstream analyses, the event sizes are kept at $30$-$50\,$kB.
-In order to cope with the huge amounts of data collected during Run 2, and the various sets of MC samples specific to setup of each year, a further reduction in the event size is needed, and to this end the so called nanoAOD is developed, that manages to keep the event size at 1\kB.
+By only saving the above information needed for mainstream analyses, the event sizes are kept at $30$-$50\,$\kB.
+In order to cope with the huge amounts of data collected during Run 2, and the various sets of MC samples specific to setup of each year, a further reduction in the event size is needed, and to this end the so called nanoAOD is developed, that manages to keep the event size at $1\,$\kB.
 The MINIAOD data and MC samples are stored on the Tier-0 and Tier-1, and analysis specific frameworks are used to create subsets of samples containing the particlular datasets needed.
 As the analyses presented in this thesis are based on different dileptonic datasets, the analysis specific framework used is aimed at picking data collected with dileptonic triggers and the various SM processes containing leptons, and store this in a format called Trees.
 These trees are used on analysis level for plotting, counting, fitting and statistical analysis.
@@ -133,11 +133,11 @@ To demonstrate the behavior of the parton distributions, the NNPDF3.1 NNLO are d
 The NNPDF3.1 is a successor of NNPDF3.0, and although it is not used for the MC in this thesis it lends itself well for a demonstration. 
 As can be seen in Figure \ref{fig:NNPDF31}, the red curve, corresponding to the gluon PDF scaled down by a factor of 10, is dominating at the low energies, for both resolution scales. 
 The corresponding interpretation is that the LHC pp collisions are dominated by low energy gluon induced processes, with a sub-dominant contribution of valence quarks at higher energy fractions. 
-This feature is explaining the necessity of the very high collision rate of $40\,$MHz, as most of the interactions are between low-energy carrying gluons, which do not have enough energy to creat ``interesting'' physics events.  
+This feature is explaining the necessity of the very high collision rate of $40\,$\MHz, as most of the interactions are between low-energy carrying gluons, which do not have enough energy to creat ``interesting'' physics events.  
 \begin{figure}[!htp]
   \centering
-   \includegraphics[width=0.9\textwidth]{images/detector/NNPDF31.png}
-   \caption{The NNPDF3.1 NNLO PDFs, evaluated at two resolution scales; $\mu^{2}=10\GeV^{2}$ (left) and  $\mu^{2}=10^{4}\GeV^{2}$ (right)\cite{Ball:2017nwa}.}
+   \includegraphics[width=0.8\textwidth]{images/detector/NNPDF31.png}
+   \caption{The NNPDF3.1 NNLO PDFs, evaluated at two resolution scales; $\mu^{2}=10\GeV^{2}$ (left) and  $\mu^{2}=10^{4}\GeV^{2}$ (right) \cite{Ball:2017nwa}.}
    \label{fig:NNPDF31}
 \end{figure}
 \subsubsection*{Hard scattering processes}
@@ -154,7 +154,7 @@ The complete list of samples used in this thesis is presented in Appendix A.
 \subsubsection*{Multiparton interactions and parton showers}
 \noindent
 \justify
-Multiparton interactions (MPI) are a result of the hadron collisions busy nature, where partons other than those involved in the hard scatter event interact. 
+Due to the busy nature of hadron collisions, partons other than those involved in the hard scatter interact. This is known as Multiparton interactions (MPI). 
 Initial state radiation (ISR) and final state radiation (FSR) are, as the names suggest, an emission of a gluon or a $\gamma$, either before or after the main interaction in the event.
 Apart from both types of radiation are adding a photon to the event, ISR and FSR result in slight kinematic differences. 
 To illustrate this, we assume a Drell-Yan production, \Zee, with ISR and FSR. 
@@ -210,7 +210,7 @@ This position is reconstructed using information from the tracking system, and i
 The number of interactions per bunch crossing is described by a Poissonian distribution, and has a mean of 27 interactions during the 2016 datataking, and is depicted in Figure \ref{fig:pileup} \cite{lumi}.
 \begin{figure}[!htp]
   \centering
-   \includegraphics[width=0.7\textwidth]{images/detector/pileup_pp_2016.pdf}
+   \includegraphics[width=0.49\textwidth]{images/detector/pileup_pp_2016.pdf}
    \caption{Mean number of interactions per bunch crossing for the 2016 pp run at 13\TeV. The cross section is taken to be 80 mb \cite{lumi}.}
    \label{fig:pileup}
 \end{figure}
